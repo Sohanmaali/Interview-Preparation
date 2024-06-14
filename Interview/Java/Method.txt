@@ -1,0 +1,332 @@
+---------------------------------
+Method interview questions
+---------------------------------
+
+1. What is a method,, What is the use of method?
+Ans -> a method is a block of code that performs a specific task or action. when it is called.
+
+2. What is the meaning of business logic?
+Ans -> Business logic refers to the rules and processes that govern how a business operates, makes decisions, and processes data to achieve its objectives. It encapsulates the specific operations and workflows unique to a particular business domain.
+3. Are both method & function same?
+
+4. What is the method creation syntax?
+Ans -> <Access Modifier> <Return Type> <Method Name>(<Parameter List>) {
+    // Method Body
+}
+
+5. Explain all 7 parts of the method creation syntax?
+Ans ->	1. Access Modifier : This optional component specifies the visibility of the method. It determines which other classes can access the method
+		2. Non-access Modifier : This is an optional keyword that provides additional information about the method. Common non-access modifiers include `static`, `final`, `abstract`, `synchronized`, etc. These modifiers change the behavior or characteristics of the method. For example, `static` indicates that the method belongs to the class rather than to any instance of the class.
+		3. Return Type : This component specifies the data type of the value that the method returns. It can be any valid data type in Java, including primitive types (such as `int`, `double`, `boolean`) or reference types (such as classes, interfaces, or arrays). If the method does not return any value, the return type is `void`.
+		4. Method Name : This is the identifier used to invoke the method. It follows the same naming conventions as variable names in Java. Method names should be descriptive and follow camelCase naming convention.
+		5. Parameter List : This specifies the parameters (if any) that the method accepts. Parameters are variables that hold the values passed to the method when it is called. They are enclosed within parentheses `()` and separated by commas `,`. Each parameter consists of a data type followed by a parameter name. If the method does not accept any parameters, the parameter list is empty.
+		6. Exception List : This optional component specifies the exceptions that the method may throw during its execution. It is enclosed within parentheses `()` and lists the exception types separated by commas `,`. If a method throws checked exceptions, they must be declared in the exception list using the `throws` keyword. If the method does not throw any exceptions, the exception list is empty.
+		7. Method Body : This component contains the statements that define the behavior of the method. It is enclosed within curly braces `{}`. The method body consists of the code that executes when the method is called. It can include variable declarations, control flow statements (such as `if`, `for`, `while`), method calls, and other Java statements.
+	In this example:
+	Access Modifier: `public`
+	Non-access Modifier: `static`
+	Return Type: `void`
+	Method Name: `myMethod`
+	Parameter List: `(int param1, String param2)`
+	Exception List: `throws IOException`
+	Method Body: `{...}`
+
+6. What is the difference between method prototype and signature?
+
+7. What is the difference between method parameter & argument? 
+
+8. What are the different modifiers allowed to a method?
+Ans -> Access Modifiers : Public,protected,private default.
+	   Non-Access Modifiers : static, final, abstract, synchronized, native
+
+9. What is the difference between public & static in accessing a method? 
+Ans -> Public Access Modifier : public is an access modifier that specifies the visibility of a method. When a method is declared as public, it means that the method can be accessed from any other class. It makes the method accessible to all other classes, regardless of whether they are in the same package or different packages.
+Static Modifier : static is a non-access modifier that specifies that the method belongs to the class rather than to instances of the class. Static methods can be called directly using the class name without the need to create an object of the class. They are shared among all instances of the class and can access static variables and other static methods without the need for an instance reference.
+
+10. Can we create a method inside another method?
+Ans -> no we can not create a method inside another method.
+
+11. What are the different types of methods do we have in java?
+Ans -> 1. Instance Methods :- Instance methods are associated with objects of a class and operate on the instance variables of those 
+		objects. They can access instance variables and other instance methods directly.Instance methods are not declared as static and require an object to be instantiated before they can be called.
+
+		2. Static Methods :- Static methods belong to the class rather than to instances of the class.They can be called directly using the class name without the need to create an object of the class. Static methods cannot access instance variables or instance methods directly, but they can access other static variables and methods.
+
+		3. Constructor Methods :- Constructor methods are special methods used to initialize objects of a class. They have the same name as the class and do not specify a return type, not even void.Constructors are called automatically when an object is created using the `new` keyword.
+
+		4. Accessor Methods (Getters) :- Accessor methods, also known as getters, are used to retrieve the values of private instance variables. They typically have names prefixed with "get" and return the value of the corresponding instance variable.
+
+		5. Mutator Methods (Setters) :- Mutator methods, also known as setters, are used to modify the values of private instance variables. They typically have names prefixed with "set" and take a parameter to set the value of the corresponding instance variable.
+
+		6. Abstract Methods :- Abstract methods are declared in abstract classes or interfaces and do not have a method body. They are meant to be implemented by subclasses or classes that implement the interface.
+
+		7. Final Methods :- Final methods cannot be overridden by subclasses. They are a final implementation of the method.
+
+		8.Synchronized Methods :- Synchronized methods ensure that only one thread can execute the method at a time, making them thread-safe?
+
+12. What are the differences between abstract method & concrete method?!
+Ans -> Abstract Method :
+		An abstract method is a method declared without an implementation (i.e., without a method body).
+		It is declared using the abstract keyword.
+		Abstract methods are meant to be overridden (i.e., provided with an implementation) by subclasses.
+		Abstract methods are typically declared in abstract classes or interfaces.
+		Subclasses must provide an implementation for all abstract methods defined in their superclass or interface, or else the subclass must also be declared as abstract.
+	  Concrete Method :
+		A concrete method is a method that has an implementation (i.e., a method body).
+		Concrete methods have a complete definition and provide the actual functionality of the method.
+		Concrete methods can be directly invoked and executed.
+		They are the standard type of methods that you encounter in most classes in Java.
+		Concrete methods are not declared using the abstract keyword.
+		
+12. What is a private and non-private method?
+Ans -> Private Method :
+		A private method is a method that is accessible only within the same class where it is declared.
+		It cannot be accessed or invoked from outside the class, including subclasses and other classes in the same package.
+		Private methods are typically used for internal implementation details that should not be exposed or accessed directly by other parts of the program.
+		They are declared using the private access modifier.
+	  Non-private Method:
+		A non-private method is a method that is accessible from outside the class where it is declared.
+		It can be accessed and invoked by other classes, subclasses, and instances of the class.
+		Non-private methods have various access modifiers (public, protected, or default) that determine their visibility and accessibility to other classes.
+		Non-private methods are often used to expose the behavior of a class to other parts of the program.
+
+3. What is a Static and non-static method?
+Ans -> Static Method :
+		A static method belongs to the class rather than to instances (objects) of the class.
+		It can be called directly using the class name without needing to create an object of the class.
+		Static methods cannot access instance variables or instance methods directly, as they are not associated with any particular instance of the class.
+		Static methods are typically used for utility methods or operations that do not require access to instance-specific data.
+	  Non-static Method (also known as Instance Method):
+		A non-static method belongs to instances (objects) of the class.
+		It operates on the instance variables and other instance methods of the class.
+		Non-static methods are called on instances of the class and can access and modify instance-specific data.
+		Non-static methods cannot be called directly using the class name; they require an instance of the class to be created first.
+	4. What is a Vold and non-vold method?
+	5. What is a Parameterized and Non-Parameterized method? 
+	6. What is a Final and new final method?
+	7. What is a Native and non-native method?
+	8. What is a Synchronized and non-synchronized method? 
+	9. What is a Strictfp and non-strictfp method?
+
+13. Is a native method an abstract method?
+
+14. What are the points we must consider in calling a method?
+
+15. What is the difference between calling a method & executing a method? 
+
+16. Can you identify when will you get below compile time errors?
+	1. CE: Illegal start of type
+	2. CE: non-static method cannot be referenced from static method 
+	3. CE: missing return type
+	4. CE: missing return value
+	5. CE: cannot return a value from a method whose result type is	void
+	6. CE: missing return type
+	7. CE: void type not allowed
+	8. CE: method cannot apply to given arguments
+	
+-----------------------------------
+main method interview questions
+-----------------------------------
+
+1. What is the purpose of main method?
+
+2. What is the valid main method syntax?
+
+3. If we create a class with name String, then will main method executed?
+
+4. Why main method should be public?
+
+5. Why main method should be static? 6. What is the right order to place public & static?
+
+7. Why main method has void, can we change void to some other type?
+
+8. Why main method name is main?
+
+9. What is the use of main method parameter? 
+
+10. Why main method parameter type should be String[], can we change it to other type?
+
+11. Which part of the main method can be changeable?
+
+12. Can we add final keyword to main method?
+
+13. Identify which syntax main method is executed by JVM?
+	a. public static void main(String[] args)
+	b. public static void main(String... args) 
+	c. public static void main(int[] args)
+	d. public static void mian(String[] args)
+	e. public static final void main(String[] args)
+	f. public static void main(String[5] args)
+	g. public static void main(String[] HariNareshIT) 
+
+14. Can we also call main method explicitly?
+
+15. What is the syntax to call main method?
+
+16. If we call main method in its own body, what will happen?
+
+17. Can we overload main method?
+
+18. If we overload main method which main method is executed?
+
+19. If a java file has multiple classes, can we define main method in all classes? 
+
+20. Why main method is called mediator method between programmer & JVM?
+
+21. Why main method is called initial point of class logic execution?
+
+22. Can we execute a class without main method?
+
+----------------------------------
+Static & non-static methods 
+----------------------------------
+
+1. What is a static method?
+
+2. What is a non-static method?
+
+3. Will JVM executes static or non-static methods automatically? 
+
+4. Inside JVM where static & non-static method logic is stored & where is it executed?
+
+5. What is the difference in memory location for non-static variable & non-static method, explain with JVM architecture?
+
+6. When should we create a method as static or non-static method? 
+
+7. Can we access static variables directly in static & non-static methods?
+
+8. Can we access non-static variables directly in static & non-static methods?
+
+9. How compiler & JVM will process the statement e.m1()? 
+
+10. What is the difference in e1.m1() & e2.m1()?
+
+11. In a non-static method or constructor if we modify non-static variable using this keyword in which object those modified values are stored?
+
+12. What will happen if we modify NSV using local object referenced variable, is that modification effected to current object?
+
+13. Will this keyword e..ist in a stic method?
+
+14. How can we differentiate non-restic variable from multiple objects In a static & non-static method?
+
+15. How can we pass input values /objects to a method for its logic execution?
+
+----------------------------------------
+Pass-By-Value interview questions
+----------------------------------------
+
+1. What is the meaning of pass-by-value?
+
+2. Will Java supports Pass-By-Reference? 
+
+3. In how many ways we can pass primitive value into a method?
+
+4. In how many ways we can pass object into a method? 
+
+5. When we pass object as a current object, inside that method where is It stored? 
+
+6. When we pass object as an argument object, inside that method where is it stored?
+
+7. Can we pass an object as current object to a static method? 
+
+8. Can we pass one class object to another class as current object?
+
+9. When we pass primitive value as an argument to a method, if we modify it using method parameter, will that modification affected to passed-in variable?
+
+10. When we pass object reference as an argument to a method, if we modify that object values using method parameter, will that modification affected to passed-in variable? 
+
+11. Assume we pass object reference as an argument to a method, we assigned new object to parameter, then if we modify that object values using method parameter, will that modification affected to passed-in variable?
+
+12. When we pass object as a current object to a method, if we modify that object values using this keyword, will that modification affected to passed-in variable
+
+======================================================================================================
+Q5. What is a final method ?
+Ans. It’s a method which cannot be overridden. Compiler throws an error if we try to override a method which has been declared 􀃕nal in the parent
+class.
+
+Q7. What are Default Methods?
+Ans. With Java 8, We can provide method de􀃕nitions in the Interfaces that gets carried down the classes implementing that interface in case they are
+not overridden by the Class. Keyword “default” is used to mark the default method
+
+Q14. Explain public static void main(String args[])
+Ans.Here public is an access modi􀃕er, which means that this method is accessible by any class.
+static – static keyword tells that this method can be accessed without creating the instance of the class.
+void – this main method returns no value.
+main – It is the name of the method.
+String args[] – The args is an array of String type. This contains the command line arguments that we can pass while running the program.
+
+Q23. What is static block?
+Ans.A static block gets executed at the time of class loading. They are used for initializing static variables.
+
+Q3. What’s the purpose of Static methods and static variables?
+Ans: When there is a requirement to share a method or a variable between multiple objects of a class instead of creating separate copies for each
+object, we use static keyword to make a method or variable shared for all object
+
+Q15. Can main() method in Java can return any data?
+Ans: In java, main() method can’t return any data and hence, it’s always declared with a void return type.
+
+Q21. Can we declare the main method of our class as private?
+Ans: In java, main method must be public static in order to run any application correctly. If main method is declared as private, developer won’t get
+any compilation error however, it will not get executed and will give a runtime error.
+
+Q22. How can we pass argument to a function by reference instead of pass by value?
+Ans: In java, we can pass argument to a function only by value and not by reference.
+
+Q41. How we can execute any code even before main method?
+Ans: If we want to execute any statements before even creation of objects at load time of class, we can use a static block of code in the class. Any
+statements inside this static block of code will get executed once at the time of loading the class even before creation of objects in the main method.
+
+Q47. Can we have two methods in a class with the same name?
+Ans: We can de􀃕ne two methods in a class with the same name but with di􀃡erent number/type of parameters. Which method is to get invoked will
+depend upon the parameters passed.
+For example in the class below we have two print methods with same name but di􀃡erent parameters. Depending upon the parameters, appropriate
+one will be called:
+
+Q61. A person says that he compiled a java class successfully without even having a main method in it? Is
+it possible?
+Ans: main method is an entry point of Java class and is required for execution of the program however; a class gets compiled successfully even if it
+doesn’t have a main method. It can’t be run though.
+
+Q62. Can we call a non-static method from inside a static method?
+Ans: Non-Static methods are owned by objects of a class and have object level scope and in order to call the non-Static methods from a static block
+(like from a static main method), an object of the class needs to be created 􀃕rst. Then using object reference, these methods can be invoked.
+
+
+Q79. Can we have any other return type than void for main method?
+Ans: No, Java class main method can have only void return type for the program to get successfully executed.
+Nonetheless , if you absolutely must return a value to at the completion of main method , you can use System.exit(int status)
+
+Q92. If an application has multiple classes in it, is it okay to have a main method in more than one class?
+Ans: If there is main method in more than one classes in a java application, it won’t cause any issue as entry point for any application will be a speci􀃕c
+class and code will start from the main method of that particular class only.
+
+15)What is method in java ?
+It contains the executable body that can be applied to the specific object of the class.
+Method includes method name, parameters or arguments and return type and a body of executable code
+
+17) Why main() method is public, static and void in java ?
+public : “public” is an access specifier which can be used outside the class. When main method is declared
+public it means it can be used outside class.
+static : To call a method we require object. Sometimes it may be required to call a method without the
+help of object. Then we declare that method as static. JVM calls the main() method without creating
+object by declaring keyword static.
+void : void return type is used when a method does’nt return any value . main() method does’nt return
+any value, so main() is declared as void.
+
+18) Explain about main() method in java ?
+Main() method is starting point of execution for all java applications.
+String args[] are array of string objects we need to pass from command line arguments.
+Every Java application must have atleast one main method.
+
+
+20) What is difference between length and length() method in java ?
+length() : In String class we have length() method which is used to return the number of characters in
+string.
+Ex : String str = “Hello World”;
+System.out.println(str.length());
+Str.length() will return 11 characters including space.
+length : we have length instance variable in arrays which will return the number of values or objects in
+array.
+For example :
+String days[]={” Sun”,”Mon”,”wed”,”thu”,”fri”,”sat”};
+Will return 6 since the number of values in days array is 6.

@@ -1,0 +1,52 @@
+----------------------------------
+Enum Interview Questions
+----------------------------------
+
+1. What is enum, what is the use of enum?
+
+2. How can we create enum in Java? 
+
+3. What is the rule based on enum keyword?
+
+4. What are the members we can place inside enum? 
+
+5. What is the importance of in enum?
+
+6. When ";" is mandatory in enum?
+
+7. What are the code changes done by compiler in enum.class file?
+
+8. What is a named constant, what is the type of named constant in enum?
+
+9. What is printed if we print named constant? 
+
+10. Will enum have constructor?
+
+11. What is the default accessibility modifier of enum constructor? 
+
+12. What is the difference between default constructor in class and enum?
+
+13. Can we create object of enum like normal class? 
+
+14. Can you draw enum object memory structure?
+
+15. Can we create variables, methods, blocks and constructors in enum? 
+
+16. What is the syntax to access static & non-static members of an enum?
+
+17. What is the superclass of enum?
+
+18. Can we create enum from another enum? 
+
+19. What is the separator of named constants, is it "," or ""?
+
+20. Is it possible to assign values to named constant using "=" operator?
+
+21. What is the procedure to assign values to named constants? 
+
+22. What are the rules we must satisfy to assign value to enum?
+
+23. Can we create inner enum inside a class?
+
+24. Can we create enum inside a method?
+============================================================================

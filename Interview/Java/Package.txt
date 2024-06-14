@@ -1,0 +1,216 @@
+-------------------------------------
+Package Keyword Interview Questions
+-------------------------------------
+
+1. What is pistage & sub parke?
+
+7. What is the use of package package?
+
+3. What is the syntax to create package & sub package? 
+
+4. What is the difference between?
+	1) package p1;
+	2) package p1.p2;
+
+5. What is the folder structure created for below package statement
+	1) package p1.p2.p3; 
+
+6. Can we place package statement anywhere in the source file?
+
+7. Can we place more than one package statement? 
+
+8. Will package keyword create package fo Ider in hard disk, what will it do?
+
+9. When should we call a folder is a package?
+
+10. What is the use of-d option of javac tool?
+
+11. If java file does not have package statement will-d option throws any error?
+
+12. What is the right syntax to compile and execute a packaged class?
+
+13. What is the difference between 
+	1) javac Example.java
+	2) javac-d. Example.java
+	3) javac -d C:\test Example.java
+
+14 . What is the difference between 
+	1) java Example
+	2) java p1.Example
+
+15. Assume we have created two java files with same class name without package statement, after compiling ja va files how many.class files are existed in the current working directory and what is the output we get when we run first class after second java file compilation? 
+
+16. In the above scenario how can we have both class files?
+
+17. We know that pubic class name & its java file name should be same, then how can we create two java files with same public class name?
+
+18. When should we create package manually? 
+
+19. How can we create two different public classes with same name in same package?
+
+-----------------------------------------
+Import Keyword Interview Questions
+-----------------------------------------
+
+1. How can we access one package classes from other package classes? 
+
+2. What is the difference between fully qualified name & Import statement?
+
+3. Can we place import statement anywhere in the source file?
+
+4. What is the difference between
+	1) Import p1.*; 
+	2) import p1.A;
+
+5. Why import p1.A;" syntax is recommended in project?
+
+6. if we place "import p1.A;" can we create a "class A{}" in the current source file?
+
+7. Assume in the current package p1 & imported package p2 we have "A.class", then for the below import statements from which package "A.class" is loaded
+	1) for import p2.*; I
+	2) for import p2.A; I
+
+8. Will import statement load a class into JVM?
+
+9. Can we place more than one import statement?
+
+10. What is the default predefined java package that we no need to import? 
+
+11. What is meaning of class naming conflict?
+
+12. When should we use both import statement & fully qualified name of a class?
+
+13. What is the difference between import statement & classpath? 
+
+14. In how many ways we can set classpath?
+
+15. What is the difference in below options in setting classpath
+	1) java option-cp
+	2) java option-classpath 
+	3) set classpath
+	4) permanent settings
+
+16. If we import parent package will sub package classes also imported?
+
+17. What is the difference between
+	1) import p1.*; 
+	2) import p1.A;
+	3) import p1.p2.*;
+	4) import p1.p2.A;
+
+18. What is the compiler algorithm for searching.class files? 
+
+19. Why public class name and java file name should be same?
+
+20. What is the Importance of "" in classpath variable?
+
+21. Assume we have placed Examyx class file in Current working directory & C:\test folder, then identify from which folder compiler & JVM loads Example.class file for the below classpath settings
+	Loaded from which folder?
+	1) set classpath=C:\test
+	2) set classpath=.
+	3) set classpath=.;C:\test
+	4) set classpath=C:\test;.
+	5) set classpath=NareshIT;C:\test
+	6) set classpath= NareshIT;;C:\test
+	7) set classpath=NareshIT;C:\test; 
+	8) set classpath=NareshIT
+	9) set classpath=NareshIT;
+
+22. What is difference in placing; in the middle of the paths & at end of the path? 
+
+23. What is difference in placing single; and multiple;s in the middle of the path? 
+
+24. Can we access a packaged class from a non-packaged class?
+
+25. Can we access a non-packaged class from a packaged class? 
+
+26. Can we access a non-packaged class from a non-packaged class?
+
+27. Can we access a packaged class from a packaged class?
+
+------------------------------------------
+Static Import Interview Questions
+------------------------------------------
+
+1. What is the need of static import? 
+
+2. What is the syntax of static import?
+Is it "static import" or "import static"
+
+3. In which version static import is added?
+
+4. What is the difference between import & static import?
+
+5. Using static import can we access non-static members of class?
+
+6. How can we differentiate imported class static members from local class members if both have same name?
+
+7. What is the difference between below statements?
+	1) import p1.*;
+	2) import p1.A;
+	3) import static p1.A.*;
+	4) import static p1.A.a;
+	5) import static p1.A.m1;
+
+8. In the above import statement, if m1 is a non-static method in class A, will compiler throw error?
+
+9. Can you write a program to print data using only "out.println()"? 
+
+10. If we use static import, will it give access class & its non-static members? 
+
+11. In the below program at which line number CE is raised?
+	package p1;
+	public class A{
+		public static void m1(){}
+	}
+	import p1.A.*;
+	class WrongAccess{
+		public static void main(String[] args){
+			m1();
+			A.m1();
+			p1.A.m1();
+		p1.A a1 = new A(); p1.A a1= new p1.A();
+	}
+}
+
+12. Find out valid syntaxes from the below list
+
+1) import java.lang."; 					2) import java.lang.System;
+3) import java.lang.System.";			4) import java.lang.System.out;
+5) import static java.lang. System.*; 	6) import static java lang System;	7) import static java lang System out:	8) import static java lang System.out. 
+9) static import java.lang.System.out:
+
+==============================================================================================
+Q16. What are Java Packages? What’s the signi􀃕cance of packages?
+Ans: In Java, package is a collection of classes and interfaces which are bundled together as they are related to each other. Use of packages helps
+developers to modularize the code and group the code for proper re-use. Once code has been packaged in Packages, it can be imported in other
+classes and used.
+
+
+Q20. Does Importing a package imports its sub-packages as well in Java?
+Ans: In java, when a package is imported, its sub-packages aren’t imported and developer needs to import them separately if required.
+For example, if a developer imports a package university.*, all classes in the package named university are loaded but no classes from the subpackage
+are loaded. To load the classes from its sub-package ( say department), developer has to import it explicitly as follows:
+import university.department.*
+
+39 ) What are packages in java?
+Package is a mechanism to group related classes ,interfaces and enums in to a single module.
+Package can be declared using the following statement :
+Syntax : package <package-name>
+Coding Convention : package name should be declared in small letters.
+package statement defines the namespace.
+The main use of package is
+1) To resolve naming conflicts
+2) For visibility control : We can define classes and interfaces that are not accessible outside the
+class.
+
+40) Can we have more than one package statement in source file ?
+We can’t have more than one package statement in source file. In any java program there can be atmost
+only 1 package statement. We will get compilation error if we have more than one package statement in
+source file.
+
+41) Can we define package statement after import statement in java?
+We can’t define package statement after import statement in java. package statement must be the first
+statement in source file. We can have comments before the package statement.
+
+

@@ -1,0 +1,73 @@
+--------------------------------------------
+Garbage Collection Interview Questions
+--------------------------------------------
+
+1. What is the meaning of garbage?
+
+2. What is the meaning of garbage collection?
+
+3. When will we get java.lang.OutOfMemoryError?
+
+4. How can we solve OOME, is it by using try-catch? 
+
+5. Do we have destructors in Java to destroy objects?
+
+6. How can we destroy an object? 
+
+7. What is a garbage collector
+
+8. What type of thread is Garbang collector thread?
+
+9. When gc will destroy the object?
+
+10. When an object is said to be eligible for garbage collection?
+
+11. What are different ways we have to unreference the object?
+
+12. What is the meaning of Island of Isolations?
+
+13. Garbage Collector is controlled by whom?
+
+14. Can we force Garbage Collector to start? 
+
+15. How can we request JVM to start Garbage Collector?"
+
+16. How is the difference between System.gc() & Runtime.gc()?
+
+17. What is the algorithm JVM internally uses for destroying objects?
+
+18. Which part of the memory is involved in Garbage Collection? Stack or Heap?
+
+19. What is the need of finalize() method, in which class it is defined?
+
+20. What is the meaning of clean-up code? 
+
+21. Can we call finalize method, if yes, then will the object destroyed?
+
+22. If an exception is thrown during the execution of the finalize() method, will the object destroyed?
+
+23. An unreachable Java object, can it become reachable again? 
+
+24. How many times will the garbage collector call the finalize() method for an object?
+
+25. If an object becomes eligible for Garbage Collection and its finalize() method has been called and inside this method the object becomes accessible by a live thread of execution and is not garbage collected. Later at some of point the same object becomes eligible for Garbage collection, will the finalize() method be called again? 
+
+26. How to enable/disable call of finalize() method?
+
+
+===================================================================================================
+1. What is the purpose of garbage collection in Java, and when is it used ?
+
+2. What does System.gc() and Runtime.gc() methods do ? 
+
+3. When is the finalize() called ? What is the purpose of finalization ?
+
+4. If an object reference is set to null, will the Garbage Collector immediately free the memory held by that object ? 
+
+5. What is structure of Java Heap ? What is Perm Gen space in Heap ? 
+
+6. What is the difference between Serial and Throughput Garbage collector ? 
+
+7. When does an Object becomes eligible for Garbage collection in Java ?
+
+8. Does Garbage collection occur in permanent generation space in JVM ?

@@ -1,0 +1,596 @@
+Servlets
+
+1. What is a Servlet ?
+Ans. -> A Servlet is a Java program that runs on a server and handles requests and responses in a web application.
+		Servlet is a server side webcomponent which is responsible to generate dynamic responses.
+
+Types of web containers?
+Ans. -> 1. Stand Alone web containers
+		2. In process web containers
+		3. Out process web containers
+
+Servlet Container
+
+whay use javax.servlet?
+Ans. -> This package defines several classes and interfaces used for developing protocol independent servlets(Generic Servlets)
+
+whay use javax.servlet.http?
+Ans. -> This package defines several classes and interfaces which can be used to develop Http protocol based servlets.
+
+Important interfaces of javax.servlet package
+Ans. -> 1.Servlet
+		2.ServletRequest
+		3.ServletResponse
+		4.ServletConfig
+		5.ServletContext
+		6.RequestDispatcher
+		7.SingleThreadModel
+
+what is RequestDispatcher(I)
+Ans. -> The RequestDispacher interface provides the facility of dispatching the request to another resource it may be html, servlet or jsp. This interceptor can also be used to include the content of antoher resource.
+
+Important classes of javax.servlet package:
+Ans. -> 1.GenericServlet
+		2.ServletInputStream
+		3.ServletOutputStream
+		4.ServletException
+
+How many method defines in Servlet interface?
+Ans. -> 1.init()
+		2.service()
+		3.destroy()
+		4.getServletConfig()
+		5.getServletInfo()
+
+Explane All five method work?
+Ans. -> 1.init() method: public void init(ServletConfig config) throws ServletException
+		This method will be called automatically by web container to perform initialization activities after servlet instantiation immediately.
+		Once init() method completes then only servlet is in a position to provide service.
+
+		2. service() method: public void service(ServletRequest req,ServletResponse resp)throws ServletException,IOException This method will be executed automatically by web container for every request to provide required response.
+		Total service logic,we have to write in this method only.
+		
+		3.destroy() method: public void destroy() This method will be executed only once by the web container to perform cleanup activities just before taking servlet object from out of service.
+		Once destroy() method completes automatically webcontainer destroys that servlet object.
+		This is usually happens at the time of server shutdown or at the time of application undeployment.
+		Note: init(),service() and destroy() methods are called life cycle methods of servlet.
+
+		4.getServletConfig(): public ServletConfig getServletConfig() This method returns ServletConfig object. By using this object servlet can get its configuration information.
+	
+		5. getServletInfo() public String getServletInfo() This method returns information about our servlet like author,version,copyright information etc..
+		
+		Note: init(),service() and destroy() methods are called callback methods because these methods will be executed automatically by the web container.
+
+What is Deployment Descriptor(web.xml)?
+Ans. -> For every web application we have to provide one xml file named with web.xml. This web.xml file is also known as Deployment Descriptor.
+
+how to Create web.xml file ?
+Ans. -> <web-app>
+			<servlet>
+				<servlet-name>DemoServlet</servlet-name>
+				<servlet-class>FirstServlet</servlet-class>
+			</servlet>
+
+			<servlet-mapping>
+				<servlet-name>DemoServlet</servlet-name>
+				<url-pattern>/test</url-pattern>
+			</servlet-mapping>
+		</web-app>
+
+we can define multiple url-patterns for the same servlet in web.xml?
+Ans. -> From Servlet 2.5 Version onwards we can define multiple url-patterns for the same servlet in web.xml as follows...
+		<web-app>
+			<servlet-mapping>
+				<servlet-name>DemoServlet</servlet-name>
+				<url-pattern>/test</url-pattern>
+				<url-pattern>/demo</url-pattern>
+				<url-pattern>/hello</url-pattern>
+			</servlet-mapping>
+		</web-app>
+
+Life Cycle of Servlet that implements Servlet interface
+Ans. -> 1. Client(Browser) sends a request to the server.
+		
+		2. Server will check whether the request is for static or for dynamic information based on url
+
+		3.If the request is for static information, then the server will search for the required static file.If the static file is available then web server provides that static file as response.If the required static file is not available then server will send 404 status code saying requested resource is not available.
+		
+		4.If the request is for dynamic information then web server forwards the request to the web container.
+		
+		5.Web container will identify the corresponding servlet class based on url pattern and with the help of web.xml
+		
+		6.web container will check whether servlet object is available or not If it is not already available,then web container will load servlet class,and create object for that servlet class and execute init() method.
+			servlet class loading(by Class.forName() method)
+			Servlet Instantiation( by uisng newInstance() method)
+
+		7. web container will call service() method which is responsible to provide required response.
+
+		8. Finally web container will call destroy() method to perform cleanup activities. This is usually happend at the time of application undeployment or at the time of server shutdown.
+
+If our servlet class does not contain any init() method
+Ans. -> If our servlet class does not contain any init() method then web container always calls init(SC config) method of GenericServlet.
+Inside this method config object will be saved for the future purpose and calls no-arg init() method.
+web container will check whether our servlet class contains no-arg init() method or not.If our servlet class does not contain no-arg init() method, then GenericServlet no-arg init() method will be called, which has empty implementation.
+In this case getServletConfig() method returns config object.
+
+If we override init(SC) in our servlet class
+Ans. -> public void init(ServletConfig config)throws SE{
+			SOP("initialization activities");
+		}
+		Web container will always calls our class init(SC) method. This is way of overriding init() method is not recommended b'z we are not saving config object for the future purpose. In this case getServletConfig() method returns null.
+		
+If we override no-arg init() method
+Ans. -> public void init()throws SE{
+			SOP("initialization activities");
+		}
+		In this case web container will always calls GenericServlet class init(SC) method, which saves config object for the future purpose and internally calls no-arg init() method.Then our servlet class no-arg init() method will be called.
+		In this case getServletConfig() method returns config object.
+		
+why GenericServlet class contains 2 init() methods?
+Ans. -> init(SC) is for web container purpose
+init() for programmer purpose
+
+In our servlet which init() method is recommended to override?
+Ans. -> no-arg init() method
+
+In GenericServlet class config variable declared as transient. what is the reason?
+Ans. -> due to security constraints config object should not be travelled across the network.
+
+What are differences b/w GET and POST?
+Ans. -> 1) We can use GET Method to GET Information from the Server.
+		1) We can use POST Method to POST Information to the Server.
+		
+		2) Usually GET requests are READ-ONLY. 
+		2) Usually POST Requests are WRITE or UPDATE Operations.
+		
+		3) End User provided Information will be append to the URL as the Part of Query String and send to the Server.
+		3) End User provided Information will be encapsulated in the Request Body and send to the Server.
+		
+		4) By using GET Request we can send only Character Data (ASCII) and we cannot send Binary Data like Images.
+		4) By using POST Request we can send both Binary and Character Data to the Server.
+		
+		5) By using GET Request we can send only limited Amount of Information, which is varied from Browser to Browser.
+		5) By using POST Request we can send huge Amount of Information to the Server.
+		
+		6) Security is less and hence we cannot send sensitive Information like User Name, Password etc.
+		6) Security is more and hence we can send sensitive Information like User Name, Password etc.
+
+		7) Book Marking of GET Request is possible. 7) Book Marking of POST Request is not possible.
+		8) Caching of GET Request is possible. 8) Caching of POST Request is not possible.
+		
+		9) GET Request is Idempotent. 9) POST Request is not Idempotent.
+		10) GET Request is safe. 10) POST Request is not safe.
+		
+Life cycle of HttpServlet
+Ans. -> 1. Whenever we submit form ,browser prepares HttpRequest and send to the server.
+		2.Web server checks whether request is for static or for dynamic information.
+		3.If the request is for static information then web server provides the required response if it is available,otherwise it will send 404 status code saying requested resource is not available.
+		4.If the request is for dynamic information then web server forwards the request to web container.
+		5.web container will identify corresponding servlet class based on url pattern and with the help of web.xml
+		6.web container will check whether servlet object is available or not.
+		7.If the servlet object is not available then web container loads servlet class,instantiate servlet and execute init() method.
+		[ execution of init() method is exactly same as GenericServlet life cycle]
+		8.web container creates ServletRequest and ServletResponse objects and invokes public service() method by passing these as arguments.
+		9.web container will check whether our servlet class contains public service(SR,SR) method or not.
+			If our servlet class contains public service(SR,SR) method then it will be executed and provides required response.
+		10.If our servlet class does not contain public service() method then parent class(HttpServlet) public service(SR,SR) method will be executed, which is implemented as follows...
+		public void service(SR req, SR resp) throws SE, IOE{
+			HttpServletRequest request=(HSR)req;
+			HttpServletResponse response=(HSR)resp;
+			service(request, response);
+		}
+		Inside HttpServlet public service() method, req and resp objects will be type casted to HttpServletRequest and HttpServletResponse and then invoke protected service(HSR,HSR) method.
+		web container will check whether our servlet class contains protected service(HSR,HSR) method or not.
+		If our servlet class contains protected service(HSR,HSR) method then it will be executed and provide required response to the end user.
+		If our servlet class does not contain protected service() method then web container will execute HttpServlet protected service() method.
+		HttpServlet protected service() method will identify request method(like get,post etc) and invoke corresponding doXxx() method.
+		protected void service(HSR req,HSR resp)throws SE,IOE{
+			String method = req.getMethod();
+			if(method.equals("GET")){
+				doGet(req,resp);
+			} elseif(method.equals("POST"))
+			{
+				doPost(req, resp);
+			}
+			else{
+				return 501 status code saying http method not implemented.
+			}
+		}
+		webcontainer will check whether our servlet class contains the corresponding doXxx() method or not.If our servlet class contains doXxx() method then it will be executed and provide required response.
+		If our servlet class does not contain doXxx() method then parent class HttpServlet doXxx() method will be executed,which is implemented as follows...
+		protected void doGet(HSR req,HSR resp)throws SE,IOE{
+			return 405|400 status code saying Http Method GET is not supported by this url.
+		}
+		HttpServlet doXxx() method wont do anything and just it will share error information to the end user.
+		
+		Note: Web Container will always calls the methods in the following order
+			public service(SR,SR)
+			protected service(HSR,HSR)
+			public doXxx(HSR,HSR)
+
+Why GenericServlet class is declared as abstract?
+Ans. -> GenericServlet implements Servlet interface and provides implementation for all methods except service() method.Hence GenericServlet class is declared as abstract.
+
+HttpServlet class does not contain any asbtract method, still it is declared as abstract.What is the reason?
+Ans. -> Most of the methods present inside HttpServlet class are implemented to send error information to the end user.B'z of this partial implementation HttpServlet class is declared as abstract.
+
+Internally how web container will create servlet object?
+Ans. -> If we know class name at the beginning then we can create object by using new operator.
+If we don't know class name at the beginning and it is available dynamically at runtime then we can create object by using newInstance() method.
+Web container don't know our servlet class names at the beginning and hence it is always using
+newInstance() method to create Servlet object.
+
+Why every servlet should contains public no-arg constructor?
+web container will create servlet object by using newInstance() method.Internally newInstance()
+method will call public no-arg constructor. Hence every servlet class should compulsary contain
+public no-arg constructor,otherwise we will get java.lang.InstantiationException.
+
+The main purpose of constructor is to perform initilization and every servlet compulsary contains public no-arg constructor.Then what is need of init() method?
+Ans. -> To perform initialization of servlet compulsary we should pass ServletConfig argument.But in servlets constructor cannot take any arguments b'z newInstance() method.
+		Hence we cannot use constructor concept to perform initialization of the servlet.
+		Some mechanism must be required to perform initialization which is nothing but init() method.
+		init()==>can take ServletConfig as argument
+		Constructor==>cannot take any argument
+		
+Is it possible to call destroy() method explicitly from init() and service() methods?
+Ans. -> Just before destroying servlet object web container will always calls destroy() method to perform clean up activities.
+		But based on our requirement we can call destroy() method explicitly from init() and service() methods,then it will be executed just like a normal method and servlet object wont be destroyed.
+		init(){	
+			destroy();
+		}
+		service(){
+			destroy();
+		}
+
+In how many ways we can develop a servlet?
+Ans. -> 3 ways
+		By implementing Servlet interface directly
+		By extending GenericServlet
+		By extending HttpServlet
+
+In Http based servlets , is it recommended to override service() method?
+Ans. -> No. If we override service() method then for any type of request same service() method will be executed.
+
+whay use getParameter();
+Ans. -> public String getParameter(String pname)
+		returns the value associated with specified parameter
+		If parameter associated with multiple values then it returns only first value.
+		If the specified parameter is not available then this method returns null.
+		Argument is case sensitive.
+		Eg: String user=req.getParameter("uname");
+
+whay use getParameterValues();
+Ans. -> public String[] getParameterValues(String pname)
+		It returns all values associated with the specified parameter.
+		If the specified parameter is not available then this method returns null.
+		Argument is case sensitive
+		Eg: String[] s = req.getParameterValues("course");
+		for(String s1: s){	
+			SOP(s1);
+		}
+whay use getParmeterNames()
+Ans. -> public Enumeration getParmeterNames()
+			returns all form parameter names.
+
+what is difference between PrintWriter And ServletOutputStream?
+Ans. -> By using PrintWriter we can send text data as response but by using ServletOutputStream we can send both text data and binary data as response.
+
+
+2. Explain the architecture of a Servlet ?
+
+3. What is the difference between an Applet and a Servlet ?
+Ans. -> Applet: Runs on the client side within a browser.
+		Servlet: Runs on the server side to handle web requests and responses.
+
+4. What is the difference between GenericServlet and HttpServlet ?
+Ans. -> It describes protocol-independent servlet	                        It describes protocol-dependent servlet.
+		
+		GenericServiet is not dependent on any particular protocol. 		HttpServlet is a dependent protocol and is 
+		It can be used with any protocol such as 							only used with HTTP protocol.
+		HTTP, SMTP, FTP, and so on.
+		
+		The service method is abstract.										The service method is non-abstract
+		
+		It is an immediate child class of Servlet interface.				It is an immediate child class of GenericServlet class.
+		
+		GenericServlet is a superclass of HttpServlet class.				HttpServlet is a subclass of GenericServlet class.
+		
+5. Explain the life cycle of a Servlet ?
+Ans. -> The web container maintains the life cycle of a servlet instance. Let's see the life cycle of the servlet:
+		Servlet class is loaded.
+		Servlet instance is created.
+		init method is invoked.
+		service method is invoked.
+		destroy method is invoked.
+		
+		Servlet class is loaded -> The classloader is responsible to load the servlet class. The servlet class is loaded when the first request for the servlet is received by the web container.
+
+		Servlet instance is created -> The web container creates the instance of a servlet after loading the servlet class. The servlet instance is created only once in the servlet life cycle.
+		
+		init method is invoked -> The web container calls the init method only once after creating the servlet instance. The init method is used to initialize the servlet. It is the life cycle method of the javax.servlet.Servlet interface. Syntax of the init method is given below:
+			public void init(ServletConfig config) throws ServletException  
+		
+		service method is invoked -> The web container calls the service method each time when request for the servlet is received. If servlet is not initialized, it follows the first three steps as described above then calls the service method. If servlet is initialized, it calls the service method. Notice that servlet is initialized only once. The syntax of the service method of the Servlet interface is given below:
+			public void service(ServletRequest request, ServletResponse response)throws ServletException, IOException 
+		
+		destroy method is invoked -> The web container calls the destroy method before removing the servlet instance from the service. It gives the servlet an opportunity to clean up any resource for example memory, thread etc. The syntax of the destroy method of the Servlet interface is given below:
+			public void destroy()  
+
+7. What is meant by a Web Application ? 
+Ans. -> A Web Application is a software application that runs on a web server and is accessed via a web browser over a network.
+
+8. What is a Server Side Include (SSI) ?
+Ans. -> A Server Side Include is a server-side scripting language used for including the contents of one file into another.
+
+9. What is Servlet Chaining ?
+Ans. -> Servlet Chaining is the process of passing a request from one servlet to another server.
+
+10. How do you find out what client machine is making a request to your servlet?
+Ans. -> By using request.getRemoteAddr() method.
+
+11. What is the structure of the HTTP response ?
+
+12. What is a cookie ? What is the difference between session and cookie ?
+
+13. Which protocol will be used by browser and servlet to communicate ?
+Ans. -> HTTP or HTTPS.
+
+14. What is HTTP Tunneling ? 
+
+15. What’s the difference between sendRedirect and forward methods ?
+Ans. -> RequestDispatcher Interface -> Servlets provide RequestDispatcher in javax.servlet package. It defines an object to dispatch the client request from one servlet to another servlet on the same server. Basically, this can be used to receive the client request object and send that object to any other resource such as Servlet, JSP, HTML file, etc. We can get the RequestDispatcher object using the below syntax:
+	RequestDispatcher r = req.getRequestDispatcher(String arg);
+
+	forward() method -> This method forwards a request from a servlet to another servlet on the same server. It allows one servlet to do the initial processing of a request, obtains the RequestDispatcher object, and forwards the request to another servlet to generate the response.
+	Syntax of forward():
+		// r - requestDispatcher object 
+		r.forward(req, resp);
+
+16. What is URL Encoding and URL Decoding ?
+
+what is SingleThreadModel 
+witch version SingleThreadModel is deprecated?
+
+SingleThreadModel is witch type of interface
+what is http based servlate?
+
+Q8. In Http based servlets , is it recommended to override service() method?
+No. If we override service() method then for any type of request same service() method will be
+executed.
+
+how many method for retriving form parameter
+Ans. -> getParameter()
+		getParameterValues()
+		getParameterNames()
+		getParameterMap()
+
+how many methods to retrieve header information at server side HttpServletRequest?
+Ans. -> getHeader()
+		getHeaders()
+		getHeaderNames()
+		getIntHeader()
+		getDateHeader()
+		
+To Retrieve Form Parameters
+	1) getParameter() 
+	2) getParameterValues()
+	3) getParameterNames() 
+	4) getParameterMap()
+
+To Retrieve Request Headers
+	1) getHeader() 
+	2) getHeaders()
+	3) getHeaderNames() 
+	4) getIntHeader()
+	5) getDateHeader()
+
+To Retrieve Cookies
+	Cookie() c = req.getCookies();
+
+To Retrieve Client And Server Information
+	1) getRemoteHost() 
+	2) getRemoteAddr()
+	3) getRemotePort() 
+	4) getServerName()
+	5) getServerPost()
+	
+To Set Response Headers
+	1) setHeader() 
+	2) addHeader()
+	3) setIntHeader() 
+	4) addIntHeader()
+	5) setDateHeader() 
+	6) addDateHeader()
+
+To Set Content-Type of Response
+	resp.setContentType("text/html");
+		OR
+	resp.setHeader("Content-Type","text/html");
+
+To Acquire Text Stream For Response
+	PrintWriter out = resp.getWriter();
+
+To Acquire Binary Stream For Response
+	ServletOutputStream os = resp.getOutputStream();
+	
+To Redirect Request to Another URL
+	resp.sendRedirect("/advapps1A/text");
+		OR
+	resp.setStatus(302);
+	resp.setHeader("Location", "/advapps1A/text ");
+
+CGI SERVLETS
+It is Process based i.e, for every request a separate process will be created and it is responsible to generate required response.
+It is thread-based i.e, for every request a new thread will be created and it is responsible to process the request.
+Creation and Destruction of process for every request is costly. If the number of requests increase it will effects performance of the system.Hence CGI technology fail to the destroy of scalable.
+Creation and Destruction of new thread for every request is not costly . Hence there is no effect on performance even though number of requests increases due to this it succeeds to delevary scalable.
+Two process never share same address space(memory).Hence there is no chance of concurrency, inconsistency problems and syncronization is not required.
+All threads share common address space hence there may be a chance of concurrency, inconsistency problems.
+CGI programs can be written in multiple languages.But most commonly used language is PERL.
+Servlets can be written only in Java.
+Most of the CGI languages are not object
+oriented.Hence we are missing benefits of OOPs.
+Java language itself is Object-Oriented .
+Hence we can get all benefits of OOPs.
+CGI technology is platform dependent.
+Servlet technology is platform
+independent.
+
+What is servlet collaboration?
+When one servlet communicates to another servlet, it is known as servlet collaboration. There are many ways of servlet collaboration:
+
+RequestDispacher interface sendRedirect() method etc.
+
+Can you call a jsp from the servlet?
+Yes, one of the way is RequestDispatcher interface for example:
+
+RequestDispatcher rd=request.getRequestDispatcher("/login.jsp");  
+rd.forward(request,response);  
+
+What is difference between ServletConfig and ServletContext?
+Ans. -> ServletConfig:
+		1) For every Sevlet Web Container creates one ServletConfig Object.
+		2) ServletConfig Object will be created at the time of Servlet Object Creation and destroyed at the	time of Servlet Object Destruction.
+		3) Web Container hand-over Config Object to the Servlet as an Argument to init() Method.
+		4) Within the Servlet we can get its Config Object as follows ServletConfig config = getServletConfig();
+		5) It is not Object of javax.servlet.ServletConfig(I). It is the Object of its Implementation Class provided by Web Server Vendor.
+		6) By using Config Object, Servlet can get its Configuration Information like Logical Name of the Servlet, Initialization Parameters etc.. by using the following Methods.
+			 getServetName()
+			 getInitParameter()
+			 getInitParameterNames()
+			 getServletContext()
+		
+		ServletContext:
+		1) For every Web Application, Web Container creates one ServletContext Object to hold Application Level Configuration Information.
+		2) Context Object will be created at the time of Application Deployment and destroyed at the time of Application Undeployment.
+		3) Within the Servlet we can get Context Object as follows: ServletContext context = config.getServletContext(); ServletContext context = getServletContext();
+		4) It is not Object of javax.servlet.ServletContext(I). It is the Object of its Implementation Class provided by Web Server Vendor.
+		5) On the ServletContext Object we can call the following Methods
+			 getRequestDispatcher()
+			 getInitParameter()
+			 getAttribute()
+			 getServletInfo()
+			 getResourcePaths()
+			 getContextPath()
+			 log()
+			 getMajorVersion()
+			 getMinorVersion()
+			
+What is the difference between Servlet Initialization Parameters and Servlet Context Parameters?
+Ans. -> 
+
+What is Session Tracking?
+
+What is the disadvantage of cookies?
+
+It will not work if cookie is disabled from the browser.
+
+How can we upload the file to the server using servlet?
+One of the way is by MultipartRequest class provided by third party.
+
+What is load-on-startup in servlet?
+The load-on-startup element of servlet in web.xml is used to load the servlet at the time of deploying the project or server start. So it saves time for the response of first request.
+
+What is different between web server and application server?
+Which HTTP method is non-idempotent?
+What is the difference between GET and POST method?
+What is MIME Type?
+What is a web application and what is its directory structure?
+What are the advantages of Servlet over CGI?
+What are common tasks performed by Servlet Container?
+What is ServletConfig object?
+Ans. -> javax.servlet.ServletConfig is used to pass configuration information to Servlet. Every servlet has its own ServletConfig object and servlet container is responsible for instantiating this object. We can provide servlet init parameters in web.xml file or through use of WebInitParam annotation.
+
+What is the use of HttpServletRequestWrapper and HttpServletResponseWrapper?
+
+Ans. -> Both HttpServletRequestWrapper and HttpServletResponseWrapper classes are used to help developers with a custom implementation of a servlet request and response types. Programmers can extend these classes and override only the specific methods that they need to implement for customized request and response objects.
+
+How do you get the IP address of the client in servlet?
+
+Ans: We can use the following code to get the client IP address in servlet.
+		request.getRemoteAddr()
+
+Explain Web Container.
+Ans. -> servlet container (also known as a web container or servlet engine) is a component that provides a runtime environment for executing Java servlets and Java Server Pages (JSP). It handles the lifecycle of servlets, manages incoming HTTP requests, and generates responses. A servlet container is responsible for servlet execution, request/response handling, and managing servlet-related functionalities like session management, URL mapping, and security. Examples of servlet containers include Apache Tomcat, Eclipse Jetty, and Undertow.
+
+What do you mean by the Servlet Chaining?
+Ans. -> 
+
+What is the difference between Context Parameter and Context Attribute?
+Ans: The main difference is, Context Parameter is a value stored in the deployment descriptor, which is the web.xml and is loaded during the deployment process. On the other hand, Context Attribute is the value which is set dynamically and can be used throughout the application.
+
+Why do we use sendredirect() method?
+Ans: The sendredirect() method basically works at the client-side. It is used to redirect the response to another resource like Servlet, JSP, HTML.
+
+Why doesn’t a Servlet include main()? How does it work?
+Ans. -> Servlets don’t have  a main() method. Because servlets are executed using web containers. When a client places request for a servlet, then the server hands the requests to the web container where the servlet is deployed.
+
+How can you create a session in servlet?
+Ans:  We can get HttpSession object by calling the public method getSession() of HttpServletRequest. The following code segment will help us.
+		HttpSession session = request.getSession();
+
+What are the differences between forward() and sendRedirect() methods?
+Ans. -> forward()
+			Performed on the server side;
+			The request is redirected to another resource within the same server;
+			It does not depend on the client request protocol of the client, as it is provided by the servlet container;
+			Cannot be used to inject a servlet in a different context;
+			The client does not know about the actually processed resource and the URL in the string remains the same;
+			It is faster than the method sendRedirect();
+			Defined in the interface RequestDispatcher.
+		
+		sendRedirect()
+			Performed on the client side;
+			A response is returned to the client 302 (redirect)and the request is redirected to another server;
+			It can only be used with HTTP clients;
+			Permitted to be used to implement a servlet in a different context;
+			The URL is changed to the address of the new resource;
+			Slower forward()because Requires creating a new request;
+			Defined in the interface HttpServletResponse.
+
+What is ServletContext object?
+Can we get PrintWriter and ServletOutputStream both in a servlet?
+How can we create deadlock situation in servlet?
+What is the use of servlet wrapper classes?
+What is SingleThreadModel interface?
+Do we need to override service() method?
+Is it good idea to create servlet constructor?
+What is the inter-servlet communication?
+Are Servlets Thread Safe? How to achieve thread safety in servlets?
+What is servlet attributes and their scope?
+How do we call one servlet from another servlet?
+How can we invoke another servlet in a different application?
+Why HttpServlet class is declared abstract?
+What are the phases of servlet life cycle?
+What are different methods of session management in servlets?
+What is URL Rewriting?
+How does Cookies work in Servlets?
+How to notify an object in session when session is invalidated or timed-out?
+What is the difference between encodeRedirectUrl and encodeURL?
+Why do we have servlet filters?
+Ans. -> A Servlet Filter is an object that is invoked before and after the execution of a servlet to filter the request. The Filter API (or interface) includes methods that help filter requests. Here's an example of a servlet filter
+
+Why do we need Servlet Filter?
+
+Ans. -> We need Servlet Filters for the following reasons:
+		Logging the request parameters to log files.
+		Authentication and Authorization of the request for the needed resources.
+		Formatting of the request body/header before sending it to the servlet.
+		Compressing response data sent to the client.
+		Change the response by adding some cookies and header information.
+
+What is load-on-startup in Servlet?
+Ans. -> The load-on-startup element of servlet in web.xml is used to load the servlet at the time of deploying the project or the server to start. This saves time for the response of the first request.
+
+What is the effective way to make sure all the servlets are accessible only when user has a valid session?
+Why do we have servlet listeners?
+How to handle exceptions thrown by application with another servlet?
+How to make sure a servlet is loaded at the application startup?
+How to get the actual path of servlet in server?
+How to get the server information in a servlet?
+Write a servlet to upload file on server.
+How do we go with database connection and log4j integration in servlet?
+How to get the IP address of client in servlet?
+What are important features of Servlet 3?
+What are different ways for servlet authentication?
+How can we achieve transport layer security for our web application?

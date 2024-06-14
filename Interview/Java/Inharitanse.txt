@@ -1,0 +1,122 @@
+Inheritance 
+
+1. what is inheritance ?
+ans -> use the exciting thing to develop something new and there are no changes in existing thing is called inheritance;
+
+2.	How many types of inheritance Java supports?
+Ans. -> Java supports only Single, Multilevel, and Hierarchical types of inheritance. Java does not support Multiple and Hybrid inheritance.
+
+3. Will Java support multiple inheritance?
+Ans. -> Java does not support multiple inheritances of classes.
+
+4.	What are the keywords we used to develop inheritance?
+Ans. -> To inherit from a class, use the extends keyword.
+ 
+5. Can we use implements keyword to derive a class from another class?
+Ans. No, in Java, the implements keyword is specifically used for implementing interfaces, not for deriving one class from another. If you want to derive a class from another class, you should use the extends keyword.
+
+6. What are the differences between extends & implements? 
+Ans. Extends (Class Inheritance): Used to create a subclass (child class) that inherits properties and behaviour’s from a superclass (parent class).
+Implements (Interface Implementation): Used to declare that a class provides specific behaviour defined by an interface.
+
+7. Explane it 
+	1) what is single-level inheritance.
+	Ans. -> in single level inheritance, there is only one base class and only one derive class. the derived class inherit the features of the base class.
+	
+	2) what is multilevel inheritance.
+	Ans. -> When creating a chain of single-level inheritance, it is known as multilevel inheritance.
+	
+	3) what is hierarchical inheritance.
+	Ans. -> when two or more class inherit a single class it is known as hierarchical inheritance.
+	
+	4) what is multiple inheritance.
+	Ans. -> in multiple inherence there are two base class and one derived class inherit features from all perent class.
+	
+	5) what is hybrid inheritance.
+	Ans. -> Hybrid inheritance is a combination of multiple inheritance and hierarchical inheritance. It's also known as multipath inheritance.
+	
+	6) Is it possible to develop a class without inheritance?
+	Ans. -> Yes, it is possible to develop a class without using inheritance. every class don't needs to be part of an inheritance hierarchy. In fact, many classes in a typical Java application are designed without extending any other class.
+
+	7) Can we derive a class from another class?
+	Ans. -> Yes, in Java, you can derive (or inherit) a class from another class using the extends keyword.
+	
+	8) Can we derive a class from an interface?
+	Ans. -> No, in Java, you do not use the extends keyword to derive a class from an interface. Instead, you use the implements keyword to indicate that a class is implementing an interface.
+	
+	9) Can we derive an interface from another interface?
+	Ans. -> Yes, in Java, you can derive (or extend) an interface from another interface using the extends keyword. This is a way to create a new interface that inherits the abstract methods of an existing interface and may declare additional methods. The new interface is then said to extend the existing interface.
+	
+	10) Can we deriver an interface from another class?
+	Ans. -> No, in Java, an interface cannot directly extend a class. Java supports single inheritance for classes, which means a class can only extend one other class. Since an interface can extend multiple interfaces but can't extend a class, it is not possible to derive an interface from a class.
+	
+8. What is multi level inheritance? 
+	2) What is the meaning of indirect super class?
+	Ans. -> he indirect superclass is any class above the direct superclass in the hierarchy.
+	
+	3) In a subclass super keyword references to which superclass?
+	
+	4) Is it possible to execute indirect superclass method that is overridden in direct superclass?
+	Ans. Yes, in Java, when a subclass overrides a method from its direct superclass and uses super.methodName(), it refers to the immediate (direct) superclass's version of the method. If that method in the direct superclass also uses super.methodName(), it refers to the version of the method in its superclass (indirect superclass). This chain continues up the class hierarchy.
+	
+	5) If we create single level inheritance, is it really single level inheritance?
+	Ans. No, if you have a class that directly extends another class, it is considered single-level inheritance. but all java class inherit object class indirectly so it is multilevel inheritance.
+
+9. Explane it.
+	1) How many subclasses can we develop from a single class?
+	Ans. In Java, there is no specific limit on the number of subclasses you can create from a single class. You can create as many subclasses as needed to model the relationships and hierarchy in your application. The number of subclasses often depends on the complexity of your design and the requirements of your program.
+
+	2) As a subclass developer can we stop multilevel inheritance? 
+	Ans. By using final
+	
+	3) As a subclass developer can we stop hierarchical inheritance?
+	Ans. Declare the class as final: If you declare a class with the final keyword, it means that the class cannot be extended by any other class.
+
+	4) What is the default inheritance you develop unknowingly in your practice?
+	Ans. in Java, the default inheritance is the Object class. All classes in Java inherit from the Object class 
+	directly or indirectly
+
+10. How can we solve ambiguous error if both interfaces have a variable with same name?
+Ans. If two interfaces have a variable with the same name, and a class implements both interfaces, you can solve the ambiguity by qualifying the variable access with the interface name. 
+
+11. Why Java does not support multiple inheritance with classes?
+	Ans. ->Java does not support multiple inheritance with classes because of the Diamond problem. This problem occurs when a class inherits from two or more parent classes that have the same method. The compiler then becomes confused about which method to call.
+
+12. Why compiler allow us to call java.lang.Object class method using interface type reference variable, even though Interface is not a subclass of Object class? For example: A a = null; a.toString(); here we do not get CE?
+Ans. When we assign a null value to an interface type reference variable, the compiler knows that the variable can refer to any object that implements the interface. Therefore, the compiler allows us to call any method that is declared in the interface or in the Object class.
+
+13. Identify is multiple Inheritance is possible in the below cases?
+	1) both Interfaces have a method with same prototype, how many times we must override it?
+	Ans. In Java, if a class implements multiple interfaces, and those interfaces declare a method with the same prototype (method signature), the class is only required to provide a single implementation for that method. The class satisfies the requirements of both interfaces with a single implementation.
+	
+	2) both interfaces have a method with same name, but with different parameters
+	Ans. If two interfaces declare a method with the same name but different parameter lists (different method signatures), then the implementing class must provide separate implementations for each version of the method. This is because Java considers methods with different parameter lists to be distinct, even if they have the same name.
+	
+	3)both interfaces have a method with same signature, but with different checked exceptions type? 
+	Ans. If two interfaces declare a method with the same signature (same name, same parameters), but with different checked exceptions types, the implementing class must handle all checked exceptions declared by both interfaces. This is because Java requires the implementing class to honor the contract specified by each interface it implements.
+	
+	4) both class and interface have method with same prototype, how many times we must override it?
+	Ans. If both a class and an interface have a method with the same prototype (same name, same parameters), and a class implements that interface, the class is not required to override the method. The reason is that the method in the class is considered to satisfy the method in the interface by virtue of having the same signature.
+	
+14. How can we access interface variable in subclass? 
+Ans. -> In Java, you can access interface variables in a subclass using the interface name followed by the variable name. Interface variables are implicitly public, static, and final. 
+
+15. What is IS-A relationship in java?
+Ans. -> Whenever one class inherits another class, it is called an IS-A relationship.
+
+16. What is HAS-A relationship in java?
+Ans. -> Whenever an instance of a class is used in another class, it is called HAS-A relationship.
+
+17. Difference between ‘IS-A’ and ‘HAS-A’ relationship in java?
+Ans. -> if we want to total funcnality of class automaticaly then we should go for IS-A relationship.
+		if we want to part of funcnality then we should got for HAS-A relationship.
+
+18. how many forms of HAS-A relationship. 
+Ans. -> there are two forms of HAS-A relationship Composition and Agregation.
+
+19. what is Composition.
+
+20. what is Agregation.
+
+21. differences between Composition and Agregation.
+Ans. -> 

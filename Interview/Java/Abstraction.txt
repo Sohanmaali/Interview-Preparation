@@ -1,0 +1,208 @@
+
+-----------------------------------------------
+Abstraction interview questions
+-----------------------------------------------
+
+1. What is an abstraction, advantages of abstraction?
+Ans. -> Abstraction is a process of hiding the implementation details and showing only functionality to the user it called abstraction. 
+
+2. What is the meaning of hiding implementation details?
+Ans. -> Hiding the inner workings of a function from the outside world is called hiding implementation .
+
+3. Is abstraction an OOP principle?
+Ans. -> Yes, abstraction is a central principle in object-oriented programming (OOP) 
+
+4. In which stage of project lifecycle abstraction is used?
+Ans. -> Abstraction is used in the project initiation phase of a project's lifecycle. The project initiation phase is the first stage of turning an abstract idea into a meaningful goal
+
+5. How many types of classes we will develop as per abstraction in object design?
+Ans. -> There are two main types of classes in object design: concrete classes and abstract classes.
+
+6.  How can we develop abstraction in java?
+Ans. -> Abstraction in Java is achieved using either an abstract class or an interface.
+
+-----------------------------------------------
+Abstract Keyword Interview Question
+-----------------------------------------------
+
+1. What is an abstract keyword?
+Ans. -> The abstract keyword is a non-access modifier The abstract keyword is used to declare abstract classes and methods. An abstract class is a class that cannot be instantiated, but can be subclassed. Abstract methods are methods that do not have an implementation, and must be implemented by subclasses.
+
+2. What is the use of abstract keyword?
+Ans. -> abstract keyword is used to create an abstract class and method in java. 
+
+3. what programming elements abstract keyword is allowed & not allowed?
+Ans. -> abstract is a non-access modifier it is applicable for classes, and methods but not variables. 
+
+4. Why abstract keyword is not allowed to variable, constructor, final class and enum?
+Ans. -> Abstract keyword is a class level modifier. Variables are instance of a entities. Hence, abstract keyword cannot be used with variables.
+
+5. What is the difference in declaring method as abstract & class as abstract?
+Ans. -> Abstract Method:
+		• An abstract method is a method declared without implementation.
+		• It is meant to be overridden by subclasses.
+		• It is declared using the abstract keyword and ends with a semicolon instead of a method body.
+		• Abstract methods must be defined within an abstract class.
+		• Any class containing one or more abstract methods must be declared as abstract itself.
+		• Subclasses of an abstract class must provide implementations for all abstract methods.
+		
+		Abstract Class:
+		• An abstract class is a class that cannot be instantiated.
+		• It may contain both abstract and non-abstract (concrete) methods.
+		• Abstract classes can have constructors, fields, and regular methods along with abstract methods.
+		• Abstract classes provide a way to define common behavior for subclasses.
+		• Abstract classes are declared using the abstract keyword.
+
+6. What are the modifiers not allowed in combination with abstract keyword?
+Ans. -> final, abstract native, abstract synchronized, abstract static, abstract private, abstract strictfp.
+
+-----------------------------------------------
+Abstract Method Interview Questions
+-----------------------------------------------
+
+1. What is an abstract method?
+Ans. -> An abstract method is a method that is declared without implementation in an abstract class or interface. It is a method that only has the method definition but does not contain implementation.
+
+2. What is the use of abstract method?
+Ans. -> abstract methods are used to create blueprints for classes or interfaces, and to define how other people will interact with an interface. 
+
+3. What are we doing by declaring a method as abstract?
+Ans. -> Abstract methods are those types of methods that don't require implementation for its declaration.
+
+4. In what type of class the abstract method is allowed? 
+Ans. -> Abstract method: can only be used in an abstract class, and it does not have a body.
+
+5. What are the rules we must follow in creating an abstract method?
+	1) Can we create a method without body?
+	Ans. -> Yas
+	
+	2) Can we provide body to abstract method?
+	Ans. -> No
+	
+	3) Can we declare abstract method as private, static, final, native, synchronized, strictfp?
+	Ans. -> No
+	
+	4) What are the modifiers only allowed to abstract method? 
+	Ans. -> Public
+	
+	5) Can we use abstract keyword two times? 
+	Ans. -> No
+	
+	6) Can an abstract method have return type other than void?
+	Ans. -> Yas
+	
+	7) If abstract method as non-void return type, who will return value?
+	Ans. -> The return value of a non-void method is the same type as the return type in the signature.
+	
+	8) Can an abstract method throw exception?
+	Ans. -> Yes, an abstract method can throw an exception.
+	
+	9) Can we call abstract method? 
+	Ans. -> Yes, an abstract method can be called from an abstract class constructor
+	
+	10) Can we execute abstract method?
+	Ans. -> Yes, you can implement abstract methods in a class which is declared as abstract
+
+6. In which class abstract method contains its logic?
+Ans. -> its subclass contains logic.
+
+7. How can we provide choice to subclass in overriding a method?
+Ans. -> In Java, a subclass can override an instance method in a superclass if the subclass method has the same signature.
+
+8. How can we force subclass to override a method?
+Ans. -> In Java, you can force a subclass to override a method by making the method abstract:
+
+9. How can we stop overriding a method in subclass?
+Ans. -> declare it as a final method.
+
+-----------------------------------------------
+Abstract Class Interview Questions
+-----------------------------------------------
+
+1. What is an abstract class?
+Ans. -> A class declared with an abstract keyword is called abstract class.
+
+2. What is the use of abstract class?
+Ans. -> achieving abstraction we use abstract class.
+
+3. What are we doing by declaring a class as abstract?
+
+4. When should we declare a class as object? 
+
+5. When should we use abstract class in project?
+Ans. -> When the child classes are closely related Abstract classes are used when the child classes of the base class are closely related to each other. When there is an "is-a" relationship Abstract classes are used when there is an "is-a" relationship between the base class and its subclasses.
+
+6. What are the rules we must follow in declaring abstract class?
+	1) Can we declare abstract class as final, strictfp?
+	Ans. -> No
+	
+	2) What are the modifiers only allowed to abstract class
+	Ans. -> default and public
+
+7. In addition to abstract method, What are the other members we can create in abstract class?
+Ans. -> Data member, Method body, Constructor, Main() method, Static methods, Final methods, Non-abstract static methods.
+
+8. Can we compile & exectite abstract method?
+Ans. -> No
+
+9. Can we instantiate abstract class?
+Ans. -> no we can’t instantiate an abstract method.
+
+10. Why can't we Instantiate abstract class?
+Ans. -> In Java, abstract classes cannot be instantiated because they are incomplete and cannot be used.
+
+11. Can we create referenced variable using an abstract class?
+Ans. -> Yas.
+
+12. What is the use of abstract class reference variable, when we cannot Instantiate it?
+Ans. -> 
+
+13. Can abstract class contain constructor?
+Ans. -> Yes, an Abstract class always has a constructor.
+
+14. Why constructor is allowed in abstract class when it cannot be Instantiated?
+Ans. -> The main purpose of the constructor is to initialize the newly created object. In abstract class, we have an instance variable, abstract methods, and non-abstract methods. We need to initialize the non-abstract methods and instance variables,
+
+15. How can we execute non-static members of abstract class?
+Ans. -> To execute non-static members (methods or fields) of an abstract class, you typically create concrete subclasses that extend the abstract class. These concrete subclasses provide implementations for the abstract methods and can then be instantiated to access the non-static members.
+
+16. What are the rules we must follow in creating subclass deriving from abstract class?
+	1) Is mandatory to override all abstract methods declared in abstract class?
+	Ans. -> Yas
+	
+	2) How can we create subclass by not overriding some the abstract methods? 
+	Ans. -> define subclass as abstract
+	
+	3) What is the meaning of concrete subclass?
+	Ans. -> A concrete class is the class that has the implentaion of an interface. A concrete subclass on the other hand has the implementation of an abstract superclass that is extended	
+
+17. Explain Abstract class's subclass execution flow? 
+	1) When we load subclass will static members executed from abstract class also?
+	Ans. -> No, when you load a subclass, the static members of the abstract class will not be executed. Static members are executed when the class is loaded by the Java Virtual Machine (JVM). When you load a subclass, only the static members of the subclass are executed.
+	
+	2) When we create subclass object will non-static members executed from abstract class also?
+	Ans. -> Yes, when we create a subclass object, the non-static members of the abstract class are also executed.
+	
+	3) Give me the memory diagram of an abstract class's subclass object?
+
+18 Is it mandatory that abstract class should contain abstract method?
+Ans. -> No.
+
+19. Can we declare concrete class as abstract, what is the use of it?
+Ans. -> No, we cannot declare a concrete class as abstract in Java
+
+20. Can you give me predefined classes which are declared as abstract without having abstract methods?
+Ans. -> 
+
+21. How should we define a class to allow subclass also to allow stantiation?
+
+22. Bow should we define a class not to allow subclass but should Instantiation? 
+
+23. How should we define a class to allow subclass but not to allow at the instantiation?
+
+24. How should we define a class not to allow subclass and not to allow instantiation?
+
+25. In an abstract class can we declare all its constructor as private?
+Ans. -> Yes, you can declare all constructors as private in an abstract class. Here are some reasons why you might want to do this:
+
+===========================================

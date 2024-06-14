@@ -1,0 +1,67 @@
+----------------------------------
+Operators interview Questions
+----------------------------------
+
+1. What is an operator & operand? 
+
+2. What is the meaning of operator precedence & operator associativity?
+
+3. What are the operators executed from RIGHT to LEFT in java? 
+
+4. How many types of operators Java supports?
+
+5. Totally how many operators Java has? 
+
+6. What is the overloaded operator in Java?
+
+7. When + operator act an Addition operator & Concatenation operator?
+
+8. What is the value of % in Java?
+
+9. When will we get ArithmeticException, Infinity & NaN from div operator?
+
+10. What is the difference between ++a & a++? 
+
+11. How can we compare two primitive values & two objects?
+
+12. What is the difference between
+	a.=, != operator 
+	b. equals() method
+	c. equalsIgnoreCase() method
+
+13. Can you identify when will you get below CEs? 
+	a. CE: bad operand types for the binary operator
+	b. CE: incomparable types
+
+14. What is the difference between &&, ||?
+
+15. What is the difference between &, |?
+
+16. What is the difference between &&, &? 
+
+17. What is the difference between ||, |?
+
+18. What the functionality ternary operator?
+
+-------------------------------
+Separator Interview questions
+-------------------------------
+
+1. What is a separator?
+
+2. How many separators java supports?
+
+3. What is the difference between separator & operator?
+
+4. Is + a separator or operator?
+
+5. is {} a separator or operator? 
+
+6. In which Java version the separator is added?
+
+7. What are the 3 places we can use as separator?
+
+8. Why ; is called terminator?
+
+9. Where ; is used as separator & terminator?
+==================================================================================================================

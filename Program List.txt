@@ -1,0 +1,3032 @@
+PROJECT’s
+1.	Mark sheet
+2.	Aadhar card
+3.	Ayushman card
+4.	Vaccinations card
+OPERATOR
+
+1.	WAP to add two int value
+
+2.	WAP to add two float value
+
+3.	WAP to add two double value
+
+4.	WAP to add two long value
+
+5.	WAP to subtraction two int value
+
+6.	WAP to subtraction two float value
+
+7.	WAP to subtraction two double value
+
+8.	WAP to subtraction two long value
+
+9.	WAP to multiplication two int value
+
+10.	WAP to multiplication two float value
+
+11.	WAP to multiplication two double value
+
+12.	WAP to multiplication two long value
+
+13.	WAP to division two int value
+
+14.	WAP to division two float value
+
+15.	WAP to division two double value
+
+16.	WAP to division two long value
+
+17.	WAP to find cube of a numb
+
+MENSURATION
+
+1.	WAP to calculate area of circle
+
+2.	WAP to calculate circle diameter
+
+3.	WAP to calculate circumference of circle
+
+4.	WAP to calculate diameter to radius
+
+5.	WAP to calculate radius of circle
+
+6.	WAP to calculate base area of cone
+
+7.	WAP to calculate volume of cone
+
+8.	WAP to calculate diagonal of cube
+
+9.	WAP to calculate surface area of cube
+
+10.	WAP to calculate volume of cube
+
+11.	WAP to calculate base area of cylinder
+
+12.	WAP to calculate height of cylinder
+
+13.	WAP to calculate lateral surface of cylinder
+
+14.	WAP to calculate volume of cylinder
+
+15.	WAP to calculate area of rectangle
+
+16.	WAP to calculate circumference of rectangle
+
+17.	WAP to calculate diagonal of rectangle
+
+18.	WAP to calculate perimeter of rectangle
+
+19.	WAP to calculate width of rectangle
+
+
+
+IF ELSE
+
+
+
+1.	WAP to check even odd numb
+
+2.	WAP to find greater among two number
+
+1.	WAP to find greater among three number
+
+2.	WAP to check eligible for voting or not
+
+3.	WAP to check negative positive or zero
+
+4.	WAP to check even or odd numb
+
+5.	WAP to check two numb equal or not
+
+6.	WAP to check Enter numb is divisively or not any numb
+
+7.	WAP to check to numb is greater or not
+
+8.	WAP to find sum of first and last digit any five digit numb
+
+9.	WAP to reverse of any four digit numb
+
+10.	WAP to check inter char Is upper case or lower case
+
+11.	WAP to check inter char is vowel or consonant
+
+12.	WAP to take any age and check age criteria (child, teen, young, old)
+
+13.	WAP to convert to lower case to upper case
+
+14.	WAP to convert to upper case to lower case
+
+15.	WAP to convert char to Assci value
+
+16.	WAP to calculate division of a student
+
+17.	WAP to Check given character is vowel or not
+
+18.	WAP to perform arithmetic operation (Calculator)
+
+19.	WAP to check given year is a leap year or not
+
+20.	WAP to convert temperature from Fahrenheit to Celsius and Celsius to Fahrenheit. 
+
+21.	WAP to check whether the triangle is equilateral, scalene, or isosceles. 
+
+22.	WAP to check whether a number is divisible by 5 and 11 or not.
+
+23.	WAP to input day number and print week day.
+
+24.	WAP to count total number of notes in given amount
+
+25.	WAP calculate profit or loss.
+
+26.	WAP to take input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer.
+
+	Calculate percentage and grade according to following:
+
+	Percentage >= 90%: Grade A
+
+	Percentage >= 80%: Grade B
+
+	Percentage >= 70%: Grade C
+
+	Percentage >= 60%: Grade D
+
+	Percentage >= 40%: Grade E
+
+	Percentage < 40%: Grade F
+
+27.	WAP to input electricity unit charges and calculate total electricity bill according to the given Condition: For first 100 units Rs. 5/unit for next 101 to 200 units Rs. 7/unit for next 201 to 300 units Rs. 12.0/unit for unit above 300 Rs. 16/unit 
+
+28.	WAP to take input month number and print month name.
+
+29.	WAP count total number of year & month & Week And day numb in given Day
+
+30.	WAP to input basic salary of an employee and calculate its Gross salary according to 12.5
+
+31.	WAP to check whether the triangle is valid or not
+
+32.	WAP to check elder men among three men
+
+
+
+SWITCH
+
+1.	WAP to calculate area of circle rectangle 
+
+2.	WAP to check negative positive or zero
+
+3.	WAP to check Vowel or consonant
+
+4.	WAP to take month numb and print month name
+
+5.	WAP to take day numb and print day name
+
+TERNARY
+
+1.	WAP to check eligible for voting or not
+
+2.	WAP to check inter char is alphabet or not
+
+3.	WAP to check negative positive or zero
+
+4.	WAP to check even or odd numb
+
+5.	WAP to check greatest numb in three numb
+
+6.	WAP to check profit or loss
+
+7.	WAP to check Enter numb is divisively or not any numb
+
+LOOP
+
+1.	WAP to print hello World 10 time
+
+2.	WAP to print 1 to n natural numb
+
+3.	WAP to sum of n natural numb
+
+4.	WAP to print Even odd series
+
+5.	WAP to print n even odd num
+
+6.	WAP to find factorial of any numb
+
+7.	WAP to print Fibonacci series
+
+8.	WAP to check a numb is Armstrong  or not
+
+9.	WAP to Print n to n Armstrong numb
+
+10.	WAP to Print n Armstrong numb
+
+11.	WAP to check a numb is palindrome or not
+
+12.	WAP to Print n to n palindrome numb
+
+13.	WAP to Print n palindrome numb
+
+14.	WAP to check a numb is perfect  or not
+
+15.	WAP to Print n to n perfect numb
+
+16.	WAP to Print n even Num square
+
+17.	WAP to Print n odd Numb Square
+
+18.	WAP to check prime or not
+
+19.	WAP to Print n prime numb
+
+20.	WAP to Print n to n prime numb
+
+21.	WAP to Print n to n strong num
+
+22.	WAP to Print numbers digit sum
+
+23.	WAP to Print product of n numb
+
+24.	WAP to print reverse of a numb
+
+25.	WAP to check strong numb or not
+
+26.	WAP to Print sum of even odd numb
+
+27.	WAP to Print Table of any numb
+
+28.	WAP to Find power of any numb
+
+29.	WAP to generate random numb of a to 6
+
+30.	WAP to convert decimal to binary
+
+31.	WAP to convert binary to decimal
+
+32.	WAP to convert decimal to octal
+
+33.	WAP to convert octal to decimal
+
+34.	WAP to Find HCF of two numb
+
+35.	WAP to print square series
+
+36.	WAP to print square series & sum
+
+37.	WAP to print Table sum
+
+SERIES
+
+	Factorial
+
+1.	1 – 2 + 3  - 4 + 5 
+
+2.	1! + 2! + 3! + 4! + 5! -> 101
+
+3.	1!/1 + 2!/2 + 3!/3 + 4!/5 + 5!/5  -> 34
+
+4.	1!/2 + 2!/3 + 3!/4 + 4!/5 + 5!/5  -> 27.466666666
+
+5.	2/1! + 3/2! + 4/3! + 5/4! + 6/5!  -> 4.425
+
+6.	1!/2 + 2!/4 + 3!/6 + 4!/8 + 5!/10 -> 17.0
+
+7.	2/1! + 4/2! + 6/3! + 8/4! +10/5!  -> 5.41667
+
+8.	1!/1 + 2!/3 + 3!/5 + 4!/7 + 5!/9  -> 19.62857
+
+9.	1/1! + 3/2! + 5/3! + 7/4! + 9/5!  -> 3.7
+
+10.   1/1! + 2/2! + 3/3! + 4/4! + 5/5! -> 2.7083335
+
+
+POWER
+
+10.	 x^1 + x^2 + x^3 + x^4 + x^5  -> x = 2 -> 62
+
+11.	 x^1/1 + x^2/2 + x^3/3 + x^4/4 + x^5/5  -> x = 2 -> 36.75
+
+12.	 1/x^1 + 2/x^2 + 3/x^3 + 4/x^4 + 5/x^5  -> x = 2 -> 1.78125
+
+13.	 x^1/2 + x^2/3 + x^3/4 + x^4/5 + x^5/6  -> x = 2 -> 12.866
+
+14.	 2/x^1 + 3/x^2 + 4/x^3 + 5/x^4 + 6/x^5  -> x = 2 -> 2.75
+
+15.	 x^1/1 + x^2/3 + x^3/5 + x^4/7 + x^5/9  -> x = 2 -> 10.77
+
+16.	 1/x^1 + 3/x^2 + 5/x^3 + 7/x^4 + 9/x^5  -> x = 2 -> 2.59375
+
+17.	 x^1/1! + x^2/2! + x^3/3! + x^4/4! + x^5/5!  -> x = 2 -> 6.26667
+
+18.	 1!/x^1 + 2!/x^2 + 3!/x^3 + 4!/x^4 + 5!/x^5  -> x = 2 -> 7.0
+
+
+
+POWER FACTORIAL
+
+19.	 2!  + 4!  + 6!  +8! + 10!  -> 746
+
+20.	 2!/2  + 4!/4  + 6!/6  -> 127
+
+21.	 2/2!  + 4/4!  + 6/6!  -> 1.175
+
+22.	 1!  + 3!  + 5!  -> 127
+
+23.	 1!/1  + 3!/3  + 5!/5  -> 27
+
+24.	 1/1!  + 3/3!  + 5/5!  -> 1.54166
+
+25.	 x^2  + x^4  + x^6  -> 819
+
+26.	 x^2/2  + x^4/4  + x^6/4  -> x = 2 -> 146.25
+
+27.	 2/x^2  + 4/x^4  + 6/x^6  -> x = 2 -> 0.2798354
+
+28.	 x^1  + x^3  + x^5  -> x = 2 -> 273
+
+29.	 x^1/1  + x^3/3  + x^5/5  -> x = 2 -> 60
+
+30.	 1/x^1  + 3/x^3  + 5/x^5  -> x = 2 -> 0.46502057
+
+31.	 x^1/X!  + x^3/X!  + x^5/X!  -> x = 2 -> 4559.175
+
+32.	 X!/x^1  + X!/x^3  + X!/x^5  -> x = 2 -> 1.0493827
+
+33.	 x^1/2!  + x^3/4!  + x^5/6!  -> x = 2 -> 2.9625
+
+34.	 2!/x^1  + 4!/x^3  + 6!/x^5  -> x = 2 -> 4.5185184
+
+35.	 2!/1  + 4!/2  + 6!/3  -> 254.0
+
+36.	 1/2!  + 2/4!  + 3/6!  -> 0.5875
+
+37.	 1!/1  + 3!/2  + 5!/3  -> 44.0
+
+38.	 1/1!  + 2/3!  + 3/5!  -> 1.3583333
+
+39.	 x^1/1  + x^3/2  + x^5/3  -> x = 2 -> 97.5
+
+40.	 1/x^1  + 2/x^3  + 3/x^5  -> x = 2 -> 0.41975307
+
+41.	 x^2/1  + x^4/2  + x^6/3  -> x = 2 -> 292.5
+
+42.	 1/x^2  + 2/x^4  + 3/x^6  -> x = 2 -> 0.1399177
+
+43.	 2!/1  + 4!/3  + 6!/5  -> x = 2 -> 154.0
+
+44.	 1/2!  + 3/4!  + 5/6!  -> 0.6319444
+
+45.	 1!/2  + 3!/4  + 5!/6  -> 22.0
+
+46.	 x^2/1  + x^4/3  + x^6/5  -> x = 2 -> 181.8
+
+47.	 1/x^2  + 3/x^4  + 5/x^6  -> x = 2 -> 0.15500686
+
+48.	 x^2/4  + x^4/6  + x^6/8  -> x = 2 -> 106.875
+
+49.	 4/2!   + 6/4!   + 8/6!  -> x = 2 -> 2.261111
+
+50.	 x^1/4  + x^3/6  + x^5/8  -> x = 2 -> 35.625
+
+51.	 4/x^1  + 6/x^3  + 8/x^5  -> x = 2 -> 1.5884774
+
+52.	 x^1/2! + x^3/4! + x^5/6!  -> x = 2 -> 2.9625
+
+53.	 2!/x^1 + 4!/x^3 + 6!/x^5  -> x = 2 -> 405185184
+
+54.	 x^2/1! + x^4/3! + x^6/5!  -> x = 2 -> 28.575
+
+55.	 1!/x^2 + 3!/x^4 + 5!/x^6  -> x = 2 -> 0.34979427
+
+
+
+
+Pattern
+
+Q.1 Write a program to generate a following structure:
+
+*****
+*****
+*****
+*****
+*****
+
+@@@@@
+@@@@@
+@@@@@ 
+@@@@@
+@@@@@
+
+12345
+12345
+12345
+12345
+12345
+
+54321
+54321
+54321
+54321
+54321
+
+55555
+44444
+33333
+22222
+11111
+
+11111
+22222
+33333
+44444
+55555
+
+Q.2 Write a program to generate a following #'s
+triangle:
+
+
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
+
+@ @ @ @ @
+  @ @ @ @
+    @ @ @
+      @ @
+	@
+
+# # # # #
+  # # # #
+    # # #
+      # # 
+  	#
+
+
+
+Q.3 Write a program to generate a following #'s
+triangle:
+
+
+
+# # # # #
+# # # #
+# # #
+# #
+#
+
+@ @ @ @ @
+@ @ @ @
+@ @ @
+@ @
+@
+
+* * * * *
+* * * *
+* * *
+* *
+*
+Q.4 Write a program to generate a following #'s
+triangle:-
+#
+# #
+# # #
+# # # #
+# # # # #
+
+*			
+* *   		
+* * * 		
+* * * * 
+* * * * *
+
+@
+@ @
+@ @ @
+@ @ @ @
+@ @ @ @ @
+
+
+
+
+
+
+Q.5 Write a program to generate a following #'s
+triangle:
+
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+
+	#
+      # #
+    # # #
+  # # # #
+# # # # #
+
+	@
+      @ @
+    @ @ @
+  @ @ @ @
+@ @ @ @ @
+
+Q.6 Write a program to print Pascal triangle:
+ *			
+ * * *				   
+ * * * * *			
+ * * * * * * *			    
+ * * * * * * * * *             	     
+ * * * * * * *		              
+ * * * * *
+ * * *
+ *
+Q.7 Write a  program to print Pascal triangle:
+    
+    *
+    *
+  * * *
+  * * *
+* * * * *
+* * * * *
+Q.8 Write a  program to print Pascal triangle:
+
+    1
+    1
+  3 3 3
+  3 3 3
+5 5 5 5 5
+5 5 5 5 5
+
+Q.10 Write a program to generate a following numbers
+structure:
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+Q.11 Write a program to generate a following numbers
+structure:
+1 2 3 4 5 
+1 2 3 4 
+1 2 3 
+1 2
+1
+
+Q.12 Write a program to generate a following numbers
+structure:
+	      1
+      1 2
+    1 2 3
+  1 2 3 4
+1 2 3 4 5
+
+Q.13 Write a program to generate a following numbers
+structure:
+5 4 3 2 1
+4 3 2 1
+3 2 1 
+2 1
+1
+
+Q.14 Write a program to generate a following numbers
+structure:
+1
+21
+321
+4321
+54321
+Q.15 Write a program to generate a following numbers
+structure:
+12345
+1234
+123
+12
+1
+
+Q.16 Write a program to generate a following numbers
+structure:
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+Q.17 Write a program to generate a following numbers
+structure:
+        1
+      1 2 1
+    1 2 3 2 1
+  1 2 3 4 3 2 1
+1 2 3 4 5 4 3 2 1
+
+Q.18 Write a program to generate a following numbers
+structure:
+1 2 3 4 5 4 3 2 1
+  1 2 3 4 3 2 1
+    1 2 3 2 1
+      1 2 1
+        1
+
+Q.19 Write a program to print the following
+triangle:
+	  *
+        * * *
+      * * * * *
+    * * * * * * *
+  * * * * * * * * *
+* * * * * * * * * * *
+
+Q.20 Write a program to print Floyd's triangle:
+1
+2 3
+4 5 6
+7 8 9 10
+
+Q.21 Write a program to print Pascal triangle:
+      1
+     1 1
+    1 2 1
+   1 3 3 1
+  1 4 6 4 1
+
+Q.22 Write a program to print following character
+triangle:
+A
+B B
+C C C
+D D D D
+
+Q.23 Write a program to print following character
+triangle:
+        A
+      A B A
+    A B C B A
+  A B C D C B A
+A B C D E D C B A
+
+Q.24 Write a program to print following character
+triangle:
+A B C D E D C B A
+  B C D E D C B
+    C D E D C
+      D E D
+        E
+
+Q.25 Write a program for following number structure:
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+4 4 4 4
+3 3 3
+2 2
+1
+
+Q.26 Write a program to display the string "INDIA"
+in following fashion:
+I
+IN
+IND
+INDI
+INDIA
+INDIA
+INDI
+IND
+IN
+I
+
+Q.27 Write a program to display the following
+character structure:
+A
+BB
+CCC
+DDDD
+CCC
+BB
+A
+
+Q.28 Write a program to display the following number
+triangle:
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+
+Q. 29 Write a program display the following number
+structure:
+123454321
+ 2345432
+  34543
+   454
+    5
+
+Q.30. Write a program to display the following number
+triangle structure:-
+    1
+   21
+  321
+ 4321
+54321
+
+Q.31. Write a program to display the following number
+triangle structure:
+54321
+4321
+321
+21
+1
+
+Q.32 Write a program to print the following number
+pyramid:
+     1
+    2 2
+   3 3 3
+  4 4 4 4
+ 5 5 5 5 5
+6 6 6 6 6 6
+
+Q.33 Write a program to print the following number
+structure:
+     1
+    1 2
+   1 2 3
+  1 2 3 4
+ 1 2 3 4 5
+1 2 3 4 5 6
+
+Q. 34 Write a program to display the following
+rhombus symbol structure:
+      *
+    * * *
+  * * * * *
+* * * * * * * 
+  * * * * * 
+    * * *
+      *
+
+Q. 35 Write a program to display the following
+number rhombus structure:
+      1
+    2 1 2
+  3 2 1 2 3
+4 3 2 1 2 3 4
+  3 2 1 2 3
+    2 1 2
+      1
+
+Q. 36 Write a program to display the following number
+rhombus structure:
+      1
+    1 2 1
+  1 2 3 2 1
+1 2 3 4 3 2 1
+  1 2 3 2 1
+    1 2 1
+      1
+
+Q.37 Write aprogram to display the following
+character rhombus structure:
+      A
+    A B A 
+  A B C B A
+A B C D C B A
+  A B C B A
+    A B A
+      A
+
+Q.38 Write a program to display the following square
+character triangle:
+      A
+    A B A 
+  A B C B A
+A B C D C B A
+
+Q.39 Write a program to display the following square
+character triangle:
+A B C D C B A
+  A B C B A 
+    A B A 
+      A
+
+Q.40 Write a program to display the following square
+character triangle:
+        A
+      A B
+    A B C
+  A B C D
+A B C D E
+  A B C D
+    A B C
+      A B
+        A
+
+Q.41 Write a program to display the following square
+character triangle:
+A
+B A
+C B A
+D C B A
+E D C B A
+D C B A
+C B A
+B A
+A
+
+Q.42 Write a program to print the following
+character triangle:
+EDCBA
+DCBA
+CBA
+BA
+A
+
+Q.43 Write a program to print the following number
+design/triangle:
+9
+0 1
+2 3 4
+5 6 7 8
+9 0 1 2 3
+
+Q. 44 Write a program to print the following number
+rectangle:
+12344321
+123__321
+12____21
+1______1
+
+Q. 45 Write a program to print the following number
+pyramid or number structure:
+1
+1 2 3
+1 2 3 4 5
+1 2 3 4 5 6 7
+1 2 3 4 5 6 7 8 9
+
+Q. 46 Write a program for print the following number
+pyramid:
+123456654321
+12345  54321
+1234    4321
+123      321
+12        21
+1          1
+
+Q. 47 Write a program for print the following
+character pyramid:
+ABCDEFFEDCBA
+ABCDE  EDCBA
+ABCD    DCBA
+ABC      CBA
+AB        BA
+A          A
+
+Q. 48 Write a program to print the following number
+pyramid:
+1
+222
+33333
+4444444
+555555555
+
+Q. 49 Write a program to print the following number
+triangle:
+9
+898
+78987
+6789876
+
+Q. 50 Write a program to print the following number
+triangle:
+5
+45
+345
+2345
+12345
+
+Q. 51 Write a program to print the following number
+triangle:
+5
+454
+34543
+2345432
+123454321
+
+Q. 52 Write a program to print the following star
+structure/fashion:
+* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
+      * * *
+    * * * * *
+  * * * * * * * 
+* * * * * * * * *
+
+Q. 53 Write a program to print the following rectangle
+number pyramid:
+33333
+32223
+32123
+32223
+33333
+
+Q. 54 Write a program to print the star triangle frame
+pyramid like as:
+*
+*  *
+*   *
+*    *
+*     *
+*      *
+*       *
+*        *
+*         *
+**********
+
+Q. 55 Write a program to print the following star
+pattern pyramid:
+*
+***
+******
+
+Q. 56 Write a program to display the reverse star
+pyramid as:
+**********
+****  ****
+***    ***
+**      **
+*        *
+
+Q. 57 Write a program to display odd number series
+pyramid as:
+1
+3 5 7
+9 11 13 15 17 19
+
+Q.58 Write a program to print the following number
+pyramid/triangle:
+54321
+5432
+543
+54
+5
+
+Q.59 Write a program to print the number character
+pyramid as:
+1
+AB
+123
+ABCD
+12345
+
+Q. 60 Write a program to print the following Floyd
+triangle as:
+1
+2 3
+4 5 6
+7 8 9 10
+Q.61 Write a program to print the following number
+pyramid:
+1 2 3 4 5
+2 3 4 5
+3 4 5
+4 5
+5
+Q.62 Write a program to print the following character
+pyramid:
+A
+BA
+ABA
+BABA
+ABABA
+Q.63 Write a program to accept the number of rows of
+pyramid and print the star pyramid as:if entered
+number by user is 7 then output would be:
+*
+**
+***
+****
+***
+**
+*
+Q.64 Write a program to print the following number
+pyramid:
+1
+232
+34543
+4567654
+
+Q.65 Write a program to print the following number
+rectangle structure:
+12321
+12 21
+1 1
+12 21
+12321
+
+Q.66 Write a program to print the following character
+rectangle design:
+ABCBA
+AB BA
+A   A
+AB BA
+ABCBA
+
+Q.67 Write a program to print the following star
+triangle structure:
+* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
+
+Q.68 Write a program to print the following number
+rectangle program:
+1234
+2341
+3412
+4123
+
+Q.69 Write a program to print the following character
+rectangle program:
+ABCD
+BCDA
+CDAB
+DABC
+
+Q.70 Write a program to print the following number
+pyramid program:
+1234
+341
+12
+3
+
+Q.71 Write a program to print the following character
+pyramid program:
+ABCD
+CDA
+AB
+C
+
+Q.72 Write a program to print the following number
+pyramid using function:
+1
+2 3
+4 5 6
+7 8 9 1
+2 3 4 5 6
+
+Q.73 Write a program to print the following number
+pyramid:
+1
+123
+12345
+1234567
+
+Q.74 Write a program to print the following number
+pyramid:
+1333
+2222
+3331
+
+Q.75 Write a program to print number character
+pyramid as:
+1 a
+21 ba
+321 cba
+4321 dcba
+54321 edcba
+
+Q.76 Write a program to print 0 and 1 number triangle
+as:
+1
+01
+010
+1010
+10101
+
+Q.77 Write the 1 and 0 number pyramid program as:
+1
+01
+101
+0101
+10101
+
+Q.78 Print Square star pyramid as:
+*****
+* *
+* *
+*****
+
+Q.79 Print Rectangle star pyramid as:
+******
+* *
+* *
+******
+
+Q.80 Even-odd number star pyramid as:
+1
+*2
+1*3
+*2*4
+1*3*5
+
+Q.81 Print continue character number pyramid as:
+1
+A B
+2 3 4
+C D E F
+5 6 7 8 9
+
+Q.82 Print below nested star pyramid as:
+* *** *** *
+** ** ** **
+*** * * ***
+
+Q.83 Print any random number pyramid as:
+4572
+572
+72
+2
+
+Q.84 Print the following number design:
+1
+23
+4
+56
+7
+89
+10
+
+Q.85 Design the following number pyramid:
+1
+121
+1231
+12341
+123451
+
+Q.86 Design the following continues number pyramid:
+1
+121
+12321
+1234321
+123454321
+
+Q.87 Print following alternative number-star pyramid
+as:
+1
+2*2
+3*3*3
+4*4*4*4
+4*4*4*4
+3*3*3
+2*2
+1
+
+Q.88 print diagonal star-zero pyramid as:
+*000000
+0*00000
+00*0000
+000*000
+0000*00
+00000*0
+000000*
+
+Q.89 Any number geometric sequence number pyramid as:
+7
+14 15
+28 29 30 31
+56 57 58 59 60 61 62 63
+
+Q.90 Print the nested hash-star pyramid as:
+#####*#####
+####*#*####
+###*###*###
+##*#####*##
+#*#######*#
+*#########*
+
+Q.91 Print half-square number triangle as:
+543212345
+4321234
+32123
+212
+1
+
+Q.92 Print equilateral triangle number as:
+5
+454
+34543
+2345432
+123454321
+
+Q.93 Print positive-negative number triangle as:
+9
+8 6
+7 5 3
+4 2 0 -2
+1 -1 -3 -5 -7
+
+Q.94 print Star-Zero nested pattern as:
+*000*000*
+0*00*00*0
+00*0*0*00
+000***000
+
+Q.95 Print the continuous vertical number pyramid as:
+1
+2 7
+3 8 13
+4 9 14 19
+5 10 15 20 25
+
+Q.96 Nested number character pyramid C program:
+A
+1
+BB
+22
+CCC
+333
+
+Q.97 Nested two types symbol pyramid  program:
+@
+#
+@@
+##
+@@@
+###
+
+Q.98 Square number pyramid program:
+1
+1 4 9
+1 4 9 16 25
+1 4 9 16 25 36 49
+1 4 9 16 25 36 49 64 81
+
+99. number pyramid program:
+55555
+4__4
+3_3
+22
+1
+
+100. number pyramid program:
+ABCDE
+A__D
+A_C
+AB
+A	
+
+101. number pyramid program:
+ABCDE
+ABCD
+ABC
+AB
+A	
+
+102. number pyramid program:
+11111
+2222
+333
+44
+5
+
+103. pyramid program:
+      A
+    B   B
+   C      C
+  D         D
+E E E E E E E E
+
+Array
+
+1.	WAP Take Array element and print Array.
+
+2.	WAP to Sum of Array Element
+
+3.	WAP to print 150 to 250 element
+
+4.	WAP to print element if element value greater 200
+
+5.	WAP to print element if element value greater 100
+
+6.	WAP Sort an Array using Bubble Sort
+
+7.	WAP Delete Duplicate Element of array
+
+8.	WAP Incres index value by 5
+
+9.	WAP Frequency of an element
+
+10.	WAP Frequency of array elements
+
+11.	WAP insert an element of a array
+
+12.	WAP Sort an Array using Insection sort
+
+13.	WAP Find Max Element of Array
+
+14.	WAP Find min Element of Array
+
+15.	WAP Find SMax Element of Array
+
+16.	WAP Find Smin Element of Array
+
+17.	WAP reverse of a array and sum
+
+18.	WAP search an element
+
+19.	WAP Sort an Array using Selection Sort
+
+20.	WAP to Find third min value of Array
+
+21.	WAP to count even and odd value of array
+
+22. Write a program to read n number of values in an array and display them in reverse order.
+
+23. Write a program to read n number of values in an array and display them in reverse order.
+Test Data :
+Input the number of elements to store in the array :3
+Input 3 number of elements in the array :
+element - 0 : 2
+element - 1 : 5
+element - 2 : 7
+Expected Output :
+The values store into the array are :
+2 5 7
+The values store into the array in reverse are :
+7 5 2
+
+24. Write a program to find the sum of all elements of the array.
+Test Data :
+Input the number of elements to be stored in the array :3
+Input 3 elements in the array :
+element - 0 : 2
+element - 1 : 5
+element - 2 : 8
+Expected Output :
+Sum of all elements stored in the array is : 15
+
+25. Write a program to copy the elements of one array into another array.
+Test Data :
+Input the number of elements to be stored in the array :3
+Input 3 elements in the array :
+element - 0 : 15
+element - 1 : 10
+element - 2 : 12
+Expected Output :
+The elements stored in the first array are :
+15 10 12
+The elements copied into the second array are :
+15 10 12
+
+26. Write a program to print all unique elements in an array.
+Test Data :
+Print all unique elements of an array:
+------------------------------------------
+Input the number of elements to be stored in the array: 4
+Input 4 elements in the array :
+element - 0 : 3
+element - 1 : 2
+element - 2 : 2
+element - 3 : 5
+Expected Output :
+The unique elements found in the array are:
+3 5
+
+27. Write a program to merge two arrays of the same size sorted in descending order.
+Test Data :
+Input the number of elements to be stored in the first array :3
+Input 3 elements in the array :
+element - 0 : 1
+element - 1 : 2
+element - 2 : 3
+Input the number of elements to be stored in the second array :3
+Input 3 elements in the array :
+element - 0 : 1
+element - 1 : 2
+element - 2 : 3
+Expected Output :
+The merged array in decending order is :
+3 3 2 2 1 1
+
+28. Write a program to count the frequency of each element of an array.
+Test Data :
+Input the number of elements to be stored in the array :3
+Input 3 elements in the array :
+element - 0 : 25
+element - 1 : 12
+element - 2 : 43
+Expected Output :
+The frequency of all elements of an array :
+25 occurs 1 times
+12 occurs 1 times
+43 occurs 1 times
+
+29. Write a program to count the total number of duplicate elements in an array.
+Test Data :
+Input the number of elements to be stored in the array :3
+Input 3 elements in the array :
+element - 0 : 5
+element - 1 : 1
+element - 2 : 1
+Expected Output :
+Total number of duplicate elements found in the array is : 1
+
+30. Write a program to separate odd and even integers into separate arrays.
+Test Data :
+Input the number of elements to be stored in the array :5
+Input 5 elements in the array :
+element - 0 : 25
+element - 1 : 47
+element - 2 : 42
+element - 3 : 56
+element - 4 : 32
+Expected Output :
+The Even elements are :
+42 56 32
+The Odd elements are :
+25 47
+
+31. Write a program to sort elements of an array in ascending order.
+Test Data :
+Input the size of array : 5
+Input 5 elements in the array :
+element - 0 : 2
+element - 1 : 7
+element - 2 : 4
+element - 3 : 5
+element - 4 : 9
+Expected Output :
+Elements of array in sorted ascending order:
+2 4 5 7 9
+
+32. Write a program to sort the elements of the array in descending order.
+Test Data :
+Input the size of array : 3
+Input 3 elements in the array :
+element - 0 : 5
+element - 1 : 9
+element - 2 : 1
+Expected Output :
+Elements of the array in sorted descending order:
+9 5 1
+
+33. Write a program to insert the values in the array (sorted list).
+Test Data :
+Insert New value in the sorted array :
+-----------------------------------------
+Input the size of array : 5
+Input 5 elements in the array in ascending order:
+element - 0 : 2
+element - 1 : 5
+element - 2 : 7
+element - 3 : 9
+element - 4 : 11
+Input the value to be inserted : 8
+The exist array list is :
+2 5 7 9 11
+After Insert the list is :
+2 5 7 8 9 11
+--------------------------------
+Process exited after 39.33 seconds with return value 10
+
+34. Write a program to insert values in the array (unsorted list).
+Test Data :
+Input the size of array : 4
+Input 4 elements in the array in ascending order:
+element - 0 : 1
+element - 1 : 8
+element - 2 : 7
+element - 3 : 10
+Input the value to be inserted : 5
+Input the Position, where the value to be inserted :2
+Expected Output :
+The current list of the array :
+1 8 7 10
+After Insert the element the new list is :
+1 5 8 7 10
+
+35. Write a program to delete an element at a desired position from an array.
+Test Data :
+Input the size of array : 5
+Input 5 elements in the array in ascending order:
+element - 0 : 1
+element - 1 : 2
+element - 2 : 3
+element - 3 : 4
+element - 4 : 5
+Input the position where to delete: 3
+Expected Output :
+The new list is : 1 2 4 5
+
+36. Write a program to find a pair with given sum in the array.
+Expected Output :
+The given array : 6 8 4 -5 7 9
+The given sum : 15
+Pair of elements can make the given sum by the value of index 0 and 5
+
+37. Write a program to find the majority element of an array.
+A majority element in an array A[] of size n is an element that appears more than n/2 times (and hence there is at most one such element).
+Expected Output :
+The given array is : 4 8 4 6 7 4 4 8
+There are no Majority Elements in the given array.
+
+38. Write a program to find the number occurring odd number of times in an array.
+All numbers occur even number of times except one number which occurs odd number of times.
+Expected Output :
+The given array is : 8 3 8 5 4 3 4 3 5
+The element odd number of times is : 3
+
+39. Write a program to find the largest sum of contiguous subarrays in an array.
+Expected Output :
+The given array is : 8 3 8 -5 4 3 -4 3 5
+The largest sum of contiguous subarray is : 21
+
+40. Write a program to find the missing number in a given array. There are no duplicates in the list.
+Expected Output :
+The given array is : 1 3 4 2 5 6 9 8
+The missing number is : 7
+
+41. Write a program to find the pivot element of a sorted and rotated array using binary search.
+Pivot element is the only element in input array which is smaller than it's previous element.
+A pivot element divided a sorted rotated array into two monotonically increasing array.
+Expected Output :
+The given array is : 14 23 7 9 3 6 18 22 16 36
+The Pivot Element in the array is : 3
+
+42. Write a program to merge one sorted array into another sorted array.
+Pivot element is the only element in input array which is smaller than it's previous element.
+A pivot element divided a sorted rotated array into two monotonically increasing array.
+Expected Output :
+The given Large Array is : 10 12 14 16 18 20 22
+The given Small Array is : 11 13 15 17 19 21
+After merged the new Array is :
+10 11 12 13 14 15 16 17 18 19 20 21 22
+
+43. Write a program to rotate an array by N positions.
+Expected Output :
+The given array is : 0 3 6 9 12 14 18 20 22 25 27
+From 4th position the values of the array are : 12 14 18 20 22 25 27
+Before 4th position the values of the array are : 0 3 6 9
+After rotating from 4th position the array is:
+12 14 18 20 22 25 27 0 3 6 9
+
+44. Write a program to find the ceiling in a sorted array.
+N.B.: Given a sorted array in ascending order and a value x, the ceiling of x is the smallest element in array greater than or equal to x, and the floor is the greatest element smaller than or equal to x.
+Expected Output :
+The given array is : 1 3 4 7 8 9 9 10
+The ceiling of 5 is: 7
+
+45. Write a program to find the Floor and Ceiling of the number 0 to 10 from a sroted array.
+Expected Output :
+The given array is : 1 3 5 7 8 9
+Number: 0 ceiling is: 1 floor is: -1
+Number: 1 ceiling is: 1 floor is: 1
+Number: 2 ceiling is: 3 floor is: 1
+Number: 3 ceiling is: 3 floor is: 3
+Number: 4 ceiling is: 5 floor is: 3
+Number: 5 ceiling is: 5 floor is: 5
+Number: 6 ceiling is: 7 floor is: 5
+Number: 7 ceiling is: 7 floor is: 7
+Number: 8 ceiling is: 8 floor is: 8
+Number: 9 ceiling is: 9 floor is: 9
+Number: 10 ceiling is: -1 floor is: 9
+
+46. Write a program to find the smallest missing element in a sorted array.
+Expected Output :
+The given array is : 0 1 3 4 5 6 7 9
+The missing smallest element is: 2
+
+47. Write a program to print the next greatest elements in a given unsorted array. Elements for which no superior element exists, consider the next greatest element as -1.
+Expected Output :
+The given array is : 5 3 10 9 6 13
+Next Bigger Elements are:
+Next bigger element of 5 in the array is: 10
+Next bigger element of 3 in the array is: 10
+Next bigger element of 10 in the array is: 13
+Next bigger element of 9 in the array is: 13
+Next bigger element of 6 in the array is: 13
+Next bigger element of 13 in the array is: -1
+Next Bigger Elements Array:
+10 10 13 13 13 -1
+
+48. Write a program to find the two repeating elements in a given array.
+Expected Output :
+The given array is : 2 7 4 7 8 3 4
+The repeating elements are: 7 4
+
+49. Write a program to find two elements whose sum is closest to zero.
+Expected Output :
+The given array is : 38 44 63 -51 -35 19 84 -69 4 -46
+The Pair of elements whose sum is minimum are:
+[44, -46]
+
+50. Write a program to find the smallest positive number missing from an unsorted array.
+Expected Output :
+The given array is : 3 1 4 10 -5 15 2 -10 -20
+The smallest positive number missed is: 5
+
+41. Write a program to find a subarray with a given sum from the given array.
+Expected Output :
+The given array is : 3 4 -7 1 3 3 1 -4
+[0..1] -- { 3 4 }
+[0..5] -- { 3 4 -7 1 3 3 }
+[3..5] -- { 1 3 3 }
+[4..6] -- { 3 3 1 }
+
+52. Write a program to find out if a given integer x appears more than n/2 times in a sorted array of n integers.
+Expected Output :
+The given array is : 1 3 3 5 4 3 2 3 3
+The given value is : 3
+3 appears more than 4 times in the given array[]
+
+53. Write a program to find the majority element of an array.
+Expected Output :
+The given array is : 1 3 3 7 4 3 2 3 3
+The majority of the Element : 3
+
+54. Write a program to print a matrix in spiral form.
+Expected Output :
+The given array in matrix form is :
+1 2 3 4 5
+6 7 8 9 10
+11 12 13 14 15
+16 17 18 19 20
+The spiral form of above matrix is:
+1 2 3 4 5 10 15 20 19 18 17 16 11 6 7 8 9 14 13 12
+
+55. Write a program to find the maximum circular subarray sum of a given array.
+Expected Output :
+The given array is : 10 8 -20 5 -3 -5 10 -13 11
+The maximum circular sum in the above array is: 29
+
+56. Write a program to return the minimum number of jumps to reach the end of the array.
+Expected Output :
+The given array is : 1 3 5 8 9 2 6 7 6 8 9 1 1 1
+The minimum of number of jumps is required to reach the end is: 3
+
+57. Write a program to find the minimum element in a sorted and rotated array.
+Expected Output :
+The given array is : 3 4 5 6 7 9 2
+The minimum element in the above array is: 2
+
+58. Write a program to move all zeroes to the end of a given array.
+Expected Output :
+The given array is : 2 5 7 0 4 0 7 -5 8 0
+The new array is:
+2 5 7 8 4 -5 7 0 0 0
+
+59. Write a program to return the counting sort of an array.
+Expected Output :
+The given array is : 4 14 8 0 2 5 2 1 0 17 9 0 5
+After sorting the elements in the array are: 0 0 0 1 2 2 4 5 5 8 9 14 17
+
+60. Write a program to count the number of triangles that can be formed from a given array.
+Expected Output :
+The given array is : 6 18 9 7 10
+Number of possible triangles can be formed from the array is: 5
+
+61. Write a program to find the maximum product subarray in a given array.
+Expected Output :
+The given array is : -4 9 -7 0 -15 6 2 -3
+The maximum product of a sub-array in the given array is: 540
+
+62. Write a program to find the largest subarray with an equal number of 0s and 1s.
+Expected Output :
+The given array is : 0 1 0 0 1 1 0 1 1 1
+Subarray found from the index 0 to 7
+
+63. Write a program to replace every element with the greatest element on its right side.
+Expected Output :
+The given array is : 7 5 8 9 6 8 5 7 4 6
+After replace the modified array is: 9 9 9 8 8 7 7 6 6 0
+
+64. Write a program to find the median of two sorted arrays of the same size.
+Expected Output :
+The given array - 1 is : 1 5 13 24 35
+The given array - 2 is : 3 8 15 17 32
+The Median of the 2 sorted arrays is: 14
+
+65. Write a program to find the product of an array such that product is equal to the product of all the elements of arr[] except arr[i].
+Expected Output :
+The given array is : 1 2 3 4 5 6
+The product array is: 720 360 240 180 144 120
+
+66. Write a program to count the number of inversions in a given array.
+Expected Output :
+The given array is : 1 9 6 4 5
+The inversions are: (9, 6) (9, 4) (9, 5) (6, 4) (6, 5)
+The number of inversion can be formed from the array is: 5
+
+67. Write a program to find the number of times a given number appears in an array.
+Expected Output :
+The given array is : 2 3 4 4 4 4 5 5 5 6 7 7
+The number of times the number 4 occurs in the given array is: 4
+
+68. Write a program to return the maximum sum such that no two elements are adjacent.
+Expected Output :
+The given array is : 1 3 5 9 7 10 1 10 100
+The maximum sum from the array such that no two elements are adjacent is: 122
+
+69. Write a program to find the maximum difference between any two elements such that the larger element appears after the smaller number.
+Expected Output :
+The given array is : 7 9 5 6 13 2
+The elements which provide maximum difference is: 5, 13
+The Maximum difference between two elements in the array is: 8
+
+70. Write a program to find two numbers that occur an odd number of times in an array.
+Expected Output:
+The given array is: 6 7 3 6 8 7 6 8 3 3
+The two numbers occuring odd number of times are: 3 & 6
+
+71. Write a program to find the median of two sorted arrays of different sizes.
+Expected Output:
+The given first array is : 90 240 300
+The given second array is : 10 13 14 20 25
+The median of two different size arrays are : 22.500000
+
+72. Write a program to sort an array of 0s, 1s and 2s.
+Expected Output :
+The given array is : 0 1 2 2 1 0 0 2 0 1 1 0
+After sortig the elements in the array are:
+0 0 0 0 0 1 1 1 1 2 2 2
+
+73. Write a program to check whether an array is a subset of another array.
+Expected Output :
+The given first array is : 4 8 7 11 6 9 5 0 2
+The given second array is : 5 4 2 0 6
+The second array is the subset of first array.
+
+74. Write a program to find the largest number possible from the set of given numbers.
+Expected Output:
+The given numbers are :
+15 628 971 9 2143 12
+The largest possible number by the given numbers are: 997162821431512
+
+75. Write a program to generate random permutations of array elements.
+Expected Output:
+The given array is:
+1 2 3 4 5 6 7 8
+The shuffled elements in the array are:
+2 8 7 3 4 5 1 6
+
+76. Write a program to find four array elements whose sum is equal to a given number.
+Expected Output:
+The given array is:
+3 7 1 9 15 14 6 2 5 7
+The elements are:
+3, 15, 14, 5
+
+77. Write a program to sort n numbers in the range from 0 to n^2.
+Expected Output:
+The given array is: 37 62 52 7 48 3 15 61
+Sorted array is: 3 7 15 37 48 52 61 62
+
+78. Write a program to count all distinct pairs for a specific difference.
+Expected Output:
+The given array is:
+5 2 3 7 6 4 9 8
+The distinct pairs for difference 5 are: [7, 2] [8, 3] [9, 4]
+Number of distinct pairs for difference 5 are: 3
+
+79. Write a program to find the maximum repeating number in a given array.
+The array range is [0..n-1] and the elements are in the range [0..k-1] and k<=n..
+Expected Output:
+The given array is:
+2 3 3 5 3 4 1 7 7 7 7
+The maximum repeating number is: 7
+
+80. Write a program to print all possible combinations of r elements in a given array.
+Expected Output:
+The given array is:
+1 5 4 6 8 The combination from by the number of elements are: 4
+The combinations are:
+1 5 4 6
+1 5 4 8
+1 5 6 8
+1 4 6 8
+5 4 6 8
+
+81. Write a program to find a pair with the given difference.
+Expected Output:
+The given array is:
+1 15 39 75 92
+The given difference is: 53
+The pair are: (39, 92)
+
+84. Write a program to find the minimum distance between two numbers in a given array.
+Expected Output:
+The given array is:
+7 9 5 11 7 4 12 6 2 11
+The minimum distance between 7 and 11 is: 1
+
+85. Write a program to count all possible paths from top left to bottom right of a m X n matrix.
+Expected Output:
+The size of matrix is : 4 x 4
+The all possible paths from top left to bottom right is: 20
+
+86. Write a program to find the equilibrium index of an array.
+Expected Output:
+The given array is:
+0 -4 7 -4 -2 6 -3 0
+The equilibrium index found at : 7 5 0
+
+87. Write a program to find the maximum element in an array that is first increasing and then decreasing.
+Expected Output:
+The given array is:
+2 7 12 25 4 57 27 44
+The maximum element which is increasing then decreasing is: 57
+
+88. Write a program to find the maximum n – m such that array[n] > array[m] from a given array[].
+Given an array arr[], find the maximum j – i such that arr[j] > arr[i]
+Expected Output:
+The given array is:
+7 5 8 2 3 2 4 2 1 0
+m = 0, n = 2, arr1[m] = 7 arr1[n] = 8 difference = 2
+m = 3, n = 6, arr1[m] = 2 arr1[n] = 4 difference = 3
+The maximum differcences between two position of array index is: 3
+
+89. Write a program to find the minimum number of swaps required to gather all elements less than or equal to k.
+Expected Output:
+The given array is:
+2 7 9 5 8 7 4
+The minimum swap required is: 2
+
+90. write a program  to rearrange the given array so that arr[i] becomes arr[arr[i]].
+Expected Output:
+The Original array is
+2 1 4 3 0 The modified array is:
+4 1 0 3 2
+
+91. An unsorted array of a specific size is given. Write a program to find the minimum length of a subarray such that sorting this subarray makes the whole array sorted.
+Expected Output:
+The given array is:
+10 12 15 17 28 32 42 18 56 59 67
+The minimum length of unsorted subarray which makes the given array sorted
+lies between the indeces 4 and 7
+
+92. Write a program to that checks whether the elements in an unsorted array appear consecutively or not.
+Expected Output:
+The given array is:
+7 4 3 5 6 2
+The appearence of elements in the array are consecutive.
+The given array is:
+7 4 4 5 6 2
+The appearence of elements in the array are not consecutive.
+The given array is:
+7 4 9 5 6 3
+The appearence of elements in the array are not consecutive.
+
+93. Write a program to rearrange positive and negative numbers alternatively in a given array.
+N.B.: If positive numbers are more they appear at the end and for also negative numbers, they too appear in the end of the array.
+Expected Output:
+The given array is:
+-4 8 -5 -6 5 -9 7 1 -21 -11 19
+The rearranged array is:
+-4 7 -5 1 -21 5 -11 8 -9 19 -6
+
+94. Write a program to find the largest element of each and every contiguous subarray of size k from a given array.
+Expected Output:
+The given array is:
+1 3 6 21 4 9 12 3 16 10
+The length of each subarray is: 4
+The contigious subarray of length 4 and their maximum value are:
+1 3 6 21 ----> 21
+3 6 21 4 ----> 21
+6 21 4 9 ----> 21
+21 4 9 12 ----> 21
+4 9 12 3 ----> 12
+9 12 3 16 ----> 16
+12 3 16 10 ----> 16
+
+95. Write a program to segregate 0s and 1s in an array.
+Expected Output:
+The given array is:
+1 0 1 0 0 1 0 1 1
+The array after segregation is: 0 0 0 0 1 1 1 1 1
+
+96. Write a program to segregate even and odd elements in an array.
+Expected Output:
+The given array is:
+17 42 19 7 27 24 30 54 73
+The array after segregation is: 54 42 30 24 27 7 19 17 73
+
+97. Write a program to find the index of the first peak element in a given array.
+Expected Output:
+The given array is:
+5 12 13 20 16 19 11 7 25
+The index of first peak element in the array is: 3
+
+98. Write a program to return the largest span found in the leftmost and rightmost appearances of the same value (values are inclusive) in a given array.
+Expected Output:
+The given array is:
+17 42 19 7 27 24 17 54 73
+The span between the same values in the array is: 7
+
+99. Write a program to return true if an array can be split in such a way that the left side of the splitting is equal to the sum of the right side.
+Expected Output:
+The given array is : 1 3 3 8 4 3 2 3 3
+The array can be split in a position where the sum of both side are equal.
+
+100. Write a program to return the number of clumps (a series of 2 or more adjacent elements of the same value) in a given array.
+Expected Output:
+The given array is:
+17 42 42 7 24 24 17 54 17
+The number of clumps in the array is: 2
+101. Write a program to rearrange an array such that arr[i]=i.
+
+N.B.: Given array contains N elements, from 0 to N – 1. All elements within the range may not be present in the array. There will be -1 if an element within the range is not present in the array.
+
+Expected Output:
+The given array is:
+2 5 -1 6 -1 8 7 -1 9 1
+The new array is: -1 1 2 -1 -1 5 6 7 8 9
+
+101. Write a program to convert an array in such a way that it doubles its value. This will replace the next element with 0 if the current and next elements are the same. This program will rearrange the array so that all 0's are moved to the end.
+Expected Output:
+The given array is: 0 3 3 3 0 0 7 7 0 9
+The new array is: 6 3 14 9 0 0 0 0 0 0
+
+102. Write a program to rearrange an array in such an order that– small, large, second smallest, second largest, etc.
+Expected Output:
+The given array is:
+5 8 1 4 2 9 3 7 6
+The new array is:
+1 9 2 8 3 7 4 6 5
+
+103. Write a program to update every array element with multiplication of previous and next numbers in array.
+Expected Output:
+The given array is:
+1 2 3 4 5 6
+The new array is:
+2 3 8 15 24 30
+
+104. Write a program to rearrange an array such that even index elements are smaller and odd index elements are greater than their next.
+Expected Output:
+The array given is:
+6 4 2 1 8 3
+The new array after rearranging:
+4 6 1 8 2 3
+
+105. Write a program to concatenate two given arrays of integers.
+Sample Data:
+({ 10, 20, 30, 40, 50, 60 }, { 70, 80, 90, 100, 110, 120 }) -> "10 20 30 40 50 60 70 80 90 100 110 120"
+
+
+2D Array
+
+1.	WAP to Sum of matrix Element.
+
+2.	WAP Ascending Order of matrix row
+
+3.	WAP Ascending Order of matrix Colom
+
+4.	WAP Discending Order of matrix row
+
+5.	WAP Discending Order of matrix Colom
+
+6.	WAP Ascending Order of Array row & Descending order of Colom.
+
+7.	WAP Ascending Order of Array colom & Descending order of row.
+
+8.	WAP Diagonal of matrix (3 program).
+
+9.	WAP print Lower triangular of matrix & sum.
+
+10.	WAP print upper triangular of matrix & sum.
+
+11.	WAP Find Max Element of matrix.
+
+12.	WAP Find Smax Element of matrix.
+
+13. WAP Find Min Element of matrix.
+
+14. WAP Find Smin Element of matrix.
+
+15. WAP to Transpose of Matrix.
+
+16. WAP to Sum of two Matrix.
+
+17. WAP to Multiplication of two Matrix.
+
+18. WAP Take matrix element and print matrix.
+
+19.	WAP to print 
+   	1	 2   3	 4	    5
+		6         		    10
+		11				        15
+		16 	  			      20
+		21 	22	 23	 24	  25
+20.	WAP to print 
+   		7	8	9	
+		12	13	14
+		17	18	19
+
+22. Write a program in to find the row with the maximum number of 1s.
+Expected Output :
+The given 2D array is :
+0 1 0 1 1
+1 1 1 1 1
+1 0 0 1 0
+0 0 0 0 0
+1 0 0 0 1
+The index of row with maximum 1s is: 1
+
+23. Write a program for a 2D array of size 3x3 and print the matrix.
+Test Data :
+Input elements in the matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 5
+element - [1],[2] : 6
+element - [2],[0] : 7
+element - [2],[1] : 8
+element - [2],[2] : 9
+Expected Output :
+The matrix is :
+
+1 2 3
+4 5 6
+7 8 9
+
+24. Write a program for adding two matrices of the same size.
+Test Data :
+Input the size of the square matrix (less than 5): 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Input elements in the second matrix :
+element - [0],[0] : 5
+element - [0],[1] : 6
+element - [1],[0] : 7
+element - [1],[1] : 8
+Expected Output :
+The First matrix is :
+
+1 2
+3 4
+The Second matrix is :
+
+5 6
+7 8
+The Addition of two matrix is :
+
+6 8
+10 12
+
+25. Write a program for the subtraction of two matrices.
+Test Data :
+Input the size of the square matrix (less than 5): 2
+Input elements in the first matrix :
+element - [0],[0] : 5
+element - [0],[1] : 6
+element - [1],[0] : 7
+element - [1],[1] : 8
+Input elements in the second matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Expected Output :
+The First matrix is :
+
+5 6
+7 8
+The Second matrix is :
+
+1 2
+3 4
+The Subtraction of two matrix is :
+
+4 4
+4 4
+
+26. Write a program for the multiplication of two square matrices.
+Test Data :
+Input the rows and columns of first matrix : 2 2
+Input the rows and columns of second matrix : 2 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Input elements in the second matrix :
+element - [0],[0] : 5
+element - [0],[1] : 6
+element - [1],[0] : 7
+element - [1],[1] : 8
+Expected Output :
+The First matrix is :
+
+1 2
+3 4
+The Second matrix is :
+
+5 6
+7 8
+The multiplication of two matrix is :
+
+19 22
+43 50
+
+27. Write a program to find the transpose of a given matrix.
+Test Data :
+Input the rows and columns of the matrix : 2 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Expected Output :
+The matrix is :
+
+1 2
+3 4
+
+The transpose of a matrix is :
+1 3
+2 4
+
+28. Write a program to find the sum of the right diagonals of a matrix.
+Test Data :
+Input the size of the square matrix : 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Expected Output :
+The matrix is :
+1 2
+3 4
+Addition of the right Diagonal elements is :5
+Elements in array are:
+
+29. Write a program to find the sum of the left diagonals of a matrix.
+Test Data :
+Input the size of the square matrix : 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Expected Output :
+The matrix is :
+1 2
+3 4
+Addition of the left Diagonal elements is :5
+
+30. Write a program to find the sum of rows and columns of a matrix.
+Test Data :
+Input the size of the square matrix : 2
+Input elements in the first matrix :
+element - [0],[0] : 5
+element - [0],[1] : 6
+element - [1],[0] : 7
+element - [1],[1] : 8
+Expected Output :
+The First matrix is :
+The matrix is :
+5 6
+7 8
+The sum or rows and columns of the matrix is :
+5 6 11
+7 8 15
+
+12 14
+
+31. Write a program to print or display the lower triangular of a given matrix.
+Test Data :
+Input the size of the square matrix : 3
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 5
+element - [1],[2] : 6
+element - [2],[0] : 7
+element - [2],[1] : 8
+element - [2],[2] : 9
+Expected Output :
+The matrix is :
+1 2 3
+4 5 6
+7 8 9
+
+Setting zero in lower triangular matrix
+
+1 2 3
+0 5 6
+0 0 9
+
+32. Write a program to print or display an upper triangular matrix.
+Test Data :
+Input the size of the square matrix : 3
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [0],[2] : 3
+element - [1],[0] : 4
+element - [1],[1] : 5
+element - [1],[2] : 6
+element - [2],[0] : 7
+element - [2],[1] : 8
+element - [2],[2] : 9
+Expected Output :
+The matrix is :
+1 2 3
+4 5 6
+7 8 9
+
+Setting zero in upper triangular matrix
+
+1 0 0
+4 5 0
+7 8 9
+
+33. Write a program to calculate the determinant of a 3 x 3 matrix.
+Test Data :
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 0
+element - [0],[2] : -1
+element - [1],[0] : 0
+element - [1],[1] : 0
+element - [1],[2] : 1
+element - [2],[0] : -1
+element - [2],[1] : -1
+element - [2],[2] : 0
+Expected Output :
+The matrix is :
+1 0 -1
+0 0 1
+-1 -1 0
+
+The Determinant of the matrix is: 1
+
+34. Write a program to accept a matrix and determine whether it is a sparse matrix.
+Test Data :
+Input the number of rows of the matrix : 2
+Input the number of columns of the matrix : 2
+Input elements in the first matrix :
+element - [0],[0] : 0
+element - [0],[1] : 0
+element - [1],[0] : 1
+element - [1],[1] : 0
+Expected Output :
+The given matrix is sparse matrix.
+There are 3 number of zeros in the matrix
+
+35. Write a program to accept two matrices and check whether they are equal.
+Test Data :
+Input Rows and Columns of the 1st matrix :2 2
+Input Rows and Columns of the 2nd matrix :2 2
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Input elements in the second matrix :
+element - [0],[0] : 1
+element - [0],[1] : 2
+element - [1],[0] : 3
+element - [1],[1] : 4
+Expected Output :
+The first matrix is :
+1 2
+3 4
+The second matrix is :
+1 2
+3 4
+The Matrices can be compared :
+Two matrices are equal.
+
+36. Write a program to check whether a given matrix is an identity matrix.
+Test Data :
+Input number of Rows for the matrix :3
+Input number of Columns for the matrix :3
+Input elements in the first matrix :
+element - [0],[0] : 1
+element - [0],[1] : 0
+element - [0],[2] : 0
+element - [1],[0] : 0
+element - [1],[1] : 1
+element - [1],[2] : 0
+element - [2],[0] : 0
+element - [2],[1] : 0
+element - [2],[2] : 1
+Expected Output :
+The matrix is :
+1 0 0
+0 1 0
+0 0 1
+The matrix is an identity matrix.
+
+
+37. Write a program to search for an element in a row wise and column wise sorted matrix.
+Expected Output :
+The given array in matrix form is :
+15 23 31 39
+18 26 36 43
+25 28 37 48
+30 34 39 50
+The given value for searching is: 37
+The element Found at the position in the matrix is: 2, 2
+
+
+38. Write a program to return only the unique rows from a given binary matrix.
+Expected Output:
+The given array is :
+0 1 0 0 1
+1 0 1 1 0
+0 1 0 0 1
+1 0 1 0 0
+The unique rows of the given array are :
+0 1 0 0 1
+1 0 1 1 0
+1 0 1 0 0
+
+39. Write a program to print all unique elements of an unsorted array.
+Expected Output:
+The given array is : 1 5 8 5 7 3 2 4 1 6 2
+Unique Elements in the given array are:
+1 5 8 7 3 2 4 6
+
+40. Write a program to find the sum of the upper triangular elements of a matrix.
+Expected Output:
+The given array is :
+1 2 3
+4 5 6
+7 8 9
+The elements being summed of the upper triangular matrix are: 2 3 6
+The Sum of the upper triangular Matrix Elements are: 11
+
+41. Write a program in C to find the sum of the lower triangular elements of a matrix.
+Expected Output:
+The given array is :
+1 2 3
+4 5 6
+7 8 9
+The elements being summed of the lower triangular matrix are: 4 7 8
+The Sum of the lower triangular Matrix Elements are: 19
+
+42. Write a program in C to find the largest square sub-matrix with all 1s.
+Expected Output:
+The given array in matrix form is :
+0 1 0 1 1
+1 1 1 1 0
+1 1 1 1 0
+1 1 1 1 0
+1 1 1 1 1
+0 1 0 1 0
+The maximum size sub-matrix is:
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+
+Recursion
+
+1. WAP to find the factorial of given num using recrtion.
+
+2. WAP to find power of any num.
+
+3. WAP to sum of 1 to n natural num.
+
+4. WAP to sum of Given number Digit Sum.
+
+5. WAP to check a num is armstrong num .
+
+6. WAP to check a num is Palindrome or not.
+
+7. WAP to reverse of a number.
+
+8. WAP to check a num is strong numb
+
+9. WAP to check a num is prime or not
+
+10.WAP to check a numb is perfect or not
+
+
+String
+
+1. Write a program to find the length of a string without using Method .
+
+2. Write a program to separate individual characters from a string.
+
+3. Write a program to print individual characters of a string in reverse order
+
+4. Write a program to count the total number of words in a string. 
+
+5. Write a program to compare two strings without using string library functions.
+
+6. Write a program to count the total number of alphabets, digits and special characters in a string.
+
+7. Write a program to copy one string to another string.
+
+8. Write a program to count the total number of vowels or consonants in a string.
+
+9. Write a program to find the maximum number of characters in a string.
+
+10. Write a program to sort a string array in ascending order.
+
+11. Write a program to read a string from the keyboard and sort it using bubble sort.
+
+12. Write a program to extract a substring from a given string.
+
+13. Write a program to check whether a substring is present in a string.
+
+14. Write a program to read a sentence and replace lowercase characters with uppercase and vice versa.
+
+15. Write a program to find the number of times a given word 'the' appears in the given string.
+
+16. Write a program to remove characters from a string except alphabets.
+
+17. Write a program to find the frequency of characters.
+
+18. Write a program to combine two strings manually.
+
+19. Write a program to find the largest and smallest words in a string.
+
+20. Write a program to convert a string to uppercase.
+
+21. Write a program to convert a string to lowercase.
+
+22. Write a program to check whether a character is a Hexadecimal Digit or not.
+
+23. Write a program to check whether a letter is uppercase or not.
+
+24. Write a program to replace the spaces in a string with a specific character.
+
+25. Write a program to count the number of punctuation characters present in a string.
+
+26. Write a program to print only the string before the new line character.
+
+27. Write a program to check whether a letter is lowercase or not.
+
+28. Write a program to read a file and remove the spaces between two words of its content.
+
+28. Write a program to check whether a character is a digit or not.
+
+29. Write a program to split strings by space into words.
+
+30. Write a program to find the repeated character in a string.
+
+31. Write a program to count each character in a given string.
+
+32. Write a program to convert vowels into uppercase characters in a string.
+
+33. Write a program to find the length of the longest substring of a given string without repeating characters.
+
+34. Write a program to check if the string is valid or not. The input string will be valid when open brackets and closed brackets are same type of brackets.
+
+35. Write a program to multiply two positive numbers as strings. Return a string representation of the product.
+
+36. Write a program to reverse all the vowels present in a given string. Return the newly created string.
+
+37. Write a program to find the longest palindromic substring from a given string. Return the substring.
+
+38. Write a program to replace each lowercase letter with the same uppercase letter of a given string. Return the newly created string.
+
+39. Write a program to calculate the length of the longest common subsequence of two given strings. The strings consist of alphabetical characters.
+
+40. Write a program to Reverse words in a given string
+
+41. Write a program to remove all duplicates from a given string?
+
+42. Write a program to print the duplicate characters from the given String?
+
+43. Write a program to remove characters from the first String which are present in the second String?
+
+44. Write a program to check if two strings are rotations of each other? 
+
+45. Write a program to reverse a given String?
+
+46. Write a program to reverse String without recursion?
+
+47. Write a program to print all permutation of a String?
+
+48. Write a program to find the first non-repeating character in a given String?
+
+49. Write a program to reverse the words in a given String sentence? 
+
+50. Write a program to find the smallest substring in a given string containing all characters of another string?
+
+51. Write a program do you check if a given String is Palindrome or not? 
+
+52. Write a program do you convert String to an integer?
+
+53. Write a program do you convert a Roman numeral String to Integer in Java? 
+
+54. Write a program to convert Integer to Roman String?
+
+55. Write a program do you remove a given character from String?
+
+56. Write a program do you count the number of words in String?
+
+57. Write a program do you find the longest palindromic substring of a given substring?
+
+58. Write a program to Equal point in a string of brackets	
+
+59. Write a program to Check if two strings are n-anagrams or not
+
+60. Write a program to Check if string is rotated by two places
+
+61. Write a program to Find the largest word in dictionary
+
+62. Write a program to Add Binary Strings	
+
+63. Write a program to Sum of two large numbers	
+
+64. Write a program to Multiply two strings
+
+65. Write a program to Minimum times A has to be repeated to make B a Substring
+
+66. Write a program to Find the N-th character	
+
+67. Write a program to Next higher palindromic number using the same set of digits	
+
+68. Write a program to Length of longest prefix suffix	Solve
+
+69. Write a program to Longest n unique characters substring	
+
+70. Write a program to Smallest window in string containing all characters	
+
+71. Write a program to Longest Palindromic Subsequence	Solve
+
+72. Write a program to Longest substring without repeating characters	
+
+73. Write a program to Substrings of length n with n-1 distinct elements	
+
+74. Write a program to Count number of substrings	
+
+75. Write a program to Print Anagrams together	
+
+76. Write a program to reverse each word of String.
+	Sample Input: “Java Is Plateform Independent”
+	Output: “avaJ sI mrofetalP tnednepednI”
+
+77. Write a program to find all possible palindrome of given String.
+	Sample Input: “aaabbbacccababacccaabb”
+
+78. WAP to remove the duplicate letters from given String.
+	Sample Input: “aabbccddd”
+	Output: “abcd”
+
+79. WAP to find out total occurrence of each letter in string.
+	 Sample Input: “aabbccddd”
+	 Output:   	a- 2 times
+			b- 2 times
+			c- 2 times
+			d- 3 times
+
+80. WAP to find word of maximum length in given String.
+	Sample Input: “Dear Student, you have need to work hard”
+	Output: “Student”
+
+81 WAP to count the word whose first letter is vowel.
+
+82 Input name of a person and count how many vowels it contains. Use String class methods.
+
+83 Input data exactly in the following format, and print sum of all integer values.
+
+84. WAP check if two Strings are anagrams of each other?
+    Hint Anagram words: LISTEN - SILENT 
+		TRIANGLE - INTEGRAL
+
+85. WAP check if a String contains only digits?
+
+86. Write a program to compare two strings lexicographically , ignoring case differences
+
+87. Write a program to concatenate a given string to the end of another string
+
+88. Write a program to test if a given string contains the specified sequence of char values
+
+89. Write a program to concatenate Two strings
+
+90. Write a program to get the character at the given index within the String
+
+91. Write a program to count a number of Unicode code points in the specified text range of a String
+
+92. Write a program to compare two strings lexicographically Two strings are lexicographically equal if they are the same length and contain the same characters in the same positions
+
+93. Write a program to get the contents of a given string as a byte array
+
+94. Write a program to get the canonical representation of the string object
+
+95. Write a program to create a character array containing the contents of a string
+
+96. Write a program to convert all the characters in a string to Lowercase
+
+97. Write a program to convert all the characters in a string to Uppercase
+
+98. Write a program to get the length of a given string
+
+99. Write a program to replace a specified character with another character
+
+100. Write a program to replace each substring of a given string that matches the given regular expression with the given replacement
+
+101. Write a program to check whether a given string ends with the contents of another string
+
+102. Write a program to check whether two String objects contain the same data
+
+101. Write a program to check whether a given string starts with the contents of another string
+
+102. Write a program to get a substring of a given string between two specified positions
+
+103. Write a program to trim any leading or trailing whitespace from a given string
+
+104. Write a program to create a new string repeating every character twice of a given string
+
+105. Write a program to return the sum of the digits present in the given string. If there is no digits the sum return is 0
+
+106. Write a program to Count words in Given String
+
+107. Write a program to Swap Two Strings
+
+108. Write a program to Swap Two Strings without using Third String Variable
+
+109. Write a program to Reverse Each Word of a String
+
+110. Write a program to search a word inside a string?
+
+111. Write a program to find first non-repeating character in a string
+
+112. Write a program to print after removing duplicates from a given string
+
+113. Write a program to find the maximum occurring character in a string
+
+114. Write a program to reverse words in a given string
+
+115. Write a program to find maximum between two string
+
+116. Write a program to check Palindrome String
+
+117. Write a program to check if the letter 'x' is present in the word 'String Exercises
+
+120. Write a program to Count Number of Uppercase and Lowercase letters
+
+121. Write a program to Trim a given string without using String.trim() method
+
+122. Write a program to Replace string with another string in java using String.replace() method
+
+123. Write a program to Convert any type of value to string value using String.valueOf() method
+
+125. Write a program to Compare the strings using equals(), compareTo() and == operator
+
+126. Write a program to First alphabet capital of each word in given string
+
+127. Write a program to Convert a character array to string
+
+128. Write a program to String concatenation with primitive data type values
+
+129. Write a program to separate all tokens (words) using StringTokenizer
+
+
+OOPS
+
+
+1. WAP to sum of time Make a Object.
+
+2. WAP to Add to persion hight.
+
+3. WAP to count total object is to be present in your program.
+
+
+
+Collection
+
+----------------------------------------------------------------
+Java Collection: ArrayList Exercises [22 exercises with solution]
+----------------------------------------------------------------
+
+1. Write a Java program to create an array list, add some colors (strings) and print out the collection.
+
+2. Write a Java program to iterate through all elements in an array list.
+
+3. Write a Java program to insert an element into the array list at the first position.
+
+4. Write a Java program to retrieve an element (at a specified index) from a given array list.
+
+5. Write a Java program to update an array element by the given element.
+
+6. Write a Java program to remove the third element from an array list.
+
+7. Write a Java program to search for an element in an array list.
+
+8. Write a Java program to sort a given array list.
+
+9. Write a Java program to copy one array list into another.
+
+10. Write a Java program to shuffle elements in an array list.
+
+11. Write a Java program to reverse elements in an array list.
+
+12. Write a Java program to extract a portion of an array list.
+
+13. Write a Java program to compare two array lists.
+
+14. Write a Java program that swaps two elements in an array list.
+
+15. Write a Java program to join two array lists.
+
+16. Write a Java program to clone an array list to another array list.
+
+17. Write a Java program to empty an array list.
+
+18. Write a Java program to test whether an array list is empty or not.
+
+19. Write a Java program for trimming the capacity of an array list.
+
+20. Write a Java program to increase an array list size.
+
+21. Write a Java program to replace the second element of an ArrayList with the specified element.
+
+22. Write a Java program to print all the elements of an ArrayList using the elements' position.
+
+----------------------------------------------------------------
+Java Collection: LinkedList Exercises [26 exercises with solution]
+----------------------------------------------------------------
+
+1. Write a Java program to append the specified element to the end of a linked list.
+
+2. Write a Java program to iterate through all elements in a linked list.
+
+3. Write a Java program to iterate through all elements in a linked list starting at the specified position.
+
+4. Write a Java program to iterate a linked list in reverse order.
+
+5. Write a Java program to insert the specified element at the specified position in the linked list.
+
+6. Write a Java program to insert elements into the linked list at the first and last positions.
+
+7. Write a Java program to insert the specified element at the front of a linked list.
+
+8. Write a Java program to insert the specified element at the end of a linked list.
+
+9. Write a Java program to insert some elements at the specified position into a linked list.
+
+10. Write a Java program to get the first and last occurrence of the specified elements in a linked list.
+
+11. Write a Java program to display elements and their positions in a linked list.
+
+12. Write a Java program to remove a specified element from a linked list.
+
+13. Write a Java program to remove the first and last elements from a linked list.
+
+14. Write a Java program to remove all elements from a linked list.
+
+15. Write a Java program that swaps two elements in a linked list.
+
+16. Write a Java program to shuffle elements in a linked list.
+
+17. Write a Java program to join two linked lists.
+
+18. Write a Java program to copy a linked list to another linked list.
+
+19. Write a Java program to remove and return the first element of a linked list.
+
+20. Write a Java program to retrieve, but not remove, the first element of a linked list.
+
+21. Write a Java program to retrieve, but not remove, the last element of a linked list.
+
+22. Write a Java program to check if a particular element exists in a linked list.
+
+23. Write a Java program to convert a linked list to an array list.
+
+24. Write a Java program to compare two linked lists.
+
+25. Write a Java program to check if a linked list is empty or not.
+
+26. Write a Java program to replace an element in a linked list.
+
+----------------------------------------------------------------
+
+Java Collection: HashSet Exercises [12 exercises with solution]
+----------------------------------------------------------------
+
+
+1. Write a Java program to append the specified element to the end of a hash set.
+
+2. Write a Java program to iterate through all elements in a hash list.
+
+3. Write a Java program to get the number of elements in a hash set.
+
+4. Write a Java program to empty an hash set.
+
+5. Write a Java program to test if a hash set is empty or not.
+
+6. Write a Java program to clone a hash set to another hash set.
+
+7. Write a Java program to convert a hash set to an array.
+
+8. Write a Java program to convert a hash set to a tree set.
+
+9. Write a Java program to find numbers less than 7 in a tree set.
+
+10. Write a Java program to compare two hash set.
+
+11. Write a Java program to compare two sets and retain elements that are the same.
+
+12. Write a Java program to remove all elements from a hash set.
+
+----------------------------------------------------------------
+Java Collection: TreeSet Exercises [16 exercises with solution]
+----------------------------------------------------------------
+
+1. Write a Java program to create a tree set, add some colors (strings) and print out the tree set.
+
+2. Write a Java program to iterate through all elements in a tree set.
+
+3. Write a Java program to add all the elements of a specified tree set to another tree set.
+
+4. Write a Java program to create a reverse order view of the elements contained in a given tree set.
+
+5. Write a Java program to get the first and last elements in a tree set.
+
+6. Write a Java program to clone a tree set list to another tree set.
+
+7. Write a Java program to get the number of elements in a tree set.
+
+8. Write a Java program to compare two tree sets.
+
+9. Write a Java program to find numbers less than 7 in a tree set.
+
+10. Write a Java program to get the element in a tree set which is greater than or equal to the given element.
+
+11. Write a Java program to get the element in a tree set less than or equal to the given element.
+
+12. Write a Java program to get the element in a tree set strictly greater than or equal to the given element.
+
+13. Write a Java program to get an element in a tree set that has a lower value than the given element.
+
+14. Write a Java program to retrieve and remove the first element of a tree set.
+
+15. Write a Java program to retrieve and remove the last element of a tree set.
+
+16. Write a Java program to remove a given element from a tree set.
+
+----------------------------------------------------------------
+Java Collection: PriorityQueue Exercises [12 exercises with solution]
+----------------------------------------------------------------
+
+1. Write a Java program to create a priority queue, add some colors (strings) and print out the elements of the priority queue.
+
+2. Write a Java program to iterate through all elements in the priority queue.
+
+3. Write a Java program to add all the elements of a priority queue to another priority queue.
+
+4. Write a Java program to insert a given element into a priority queue.
+
+5. Write a Java program to remove all elements from a priority queue.
+
+6. Write a Java program to count the number of elements in a priority queue.
+
+7. Write a Java program to compare two priority queues.
+
+8. Write a Java program to retrieve the first element of the priority queue.
+
+9. Write a Java program to retrieve and remove the first element.
+
+10. Write a Java program to convert a priority queue to an array containing all its elements.
+
+11. Write a Java program to convert a Priority Queue element to string representations.
+
+12. Write a Java program to change priorityQueue to maximum priority queue.
+
+----------------------------------------------------------------
+Java Collection: HashMap Exercises [12 exercises with solution]
+----------------------------------------------------------------
+
+1. Write a Java program to associate the specified value with the specified key in a HashMap.
+
+2. Write a Java program to count the number of key-value (size) mappings in a map.
+
+3. Write a Java program to copy all mappings from the specified map to another map.
+
+4. Write a Java program to remove all mappings from a map.
+
+5. Write a Java program to check whether a map contains key-value mappings (empty) or not.
+
+6. Write a Java program to get a shallow copy of a HashMap instance.
+
+7. Write a Java program to test if a map contains a mapping for the specified key.
+
+8. Write a Java program to test if a map contains a mapping for the specified value.
+
+9. Write a Java program to create a set view of the mappings contained in a map.
+
+10. Write a Java program to get the value of a specified key in a map.
+
+11. Write a Java program to get a set view of the keys contained in this map.
+
+12. Write a Java program to get a collection view of the values contained in this map.
+
+----------------------------------------------------------------
+Java Collection: TreeMap Exercises [26 exercises with solution]
+----------------------------------------------------------------
+
+1. Write a Java program to associate the specified value with the specified key in a Tree Map.
+
+2. Write a Java program to copy Tree Map's content to another Tree Map.
+
+3. Write a Java program to search for a key in a Tree Map.
+
+4. Write a Java program to search for a value in a Tree Map.
+
+5. Write a Java program to get all keys from a Tree Map.
+
+6. Write a Java program to delete all elements from a Tree Map.
+
+7. Write a Java program to sort keys in a Tree Map by using a comparator.
+
+8. Write a Java program to get a key-value mapping associated with the greatest key and the least key in a map.
+
+9. Write a Java program to get the first (lowest) key and the last (highest) key currently in a map.
+
+10. Write a Java program to get a reverse order view of the keys contained in a given map.
+
+11. Write a Java program to get a key-value mapping associated with the greatest key less than or equal to the given key.
+
+12. Write a Java program to get the greatest key less than or equal to the given key.
+
+13. Write a Java program to get the portion of a map whose keys are strictly less than a given key.
+
+14. Write a Java program to get the portion of this map whose keys are less than (or equal to, if inclusive is true) a given key.
+
+15. Write a Java program to get the least key strictly greater than the given key. Return null if there is no such key.
+
+16. Write a Java program to get a key-value mapping associated with the greatest key strictly less than the given key. Return null if there is no such key.
+
+17. Write a Java program to get the greatest key strictly less than the given key. Return null if there is no such key.
+
+18. Write a Java program to get a NavigableSet view of keys in a map.
+
+19. Write a Java program to remove and get a key-value mapping assocated with the least key in a map.
+
+20. Write a Java program to remove and get a key-value mapping associated with the greatest key in this map.
+
+21. Write a Java program to get the portion of a map whose keys range from a given key (inclusive) to another key (exclusive).
+
+22. Write a Java program to get the portion of a map whose keys range from a given key to another key.
+
+23. Write a Java program to get a portion of a map whose keys are greater than or equal to a given key.
+
+24. Write a Java program to get a portion of a map whose keys are greater than a given key.
+
+25. Write a Java program to get a key-value mapping associated with the least key greater than or equal to the given key. Return null if there is no such key.
+
+26. Write a Java program to get the least key greater than or equal to the given key. Returns null if there is no such key.
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Java Program to Get the Maximum Element From a Vector
+
+Binary Search on Java Vector
+
+LinkedList clear() Method in Java
+
+Convert an Array into Collection in Java
+
+Java Program to Change a Collection to an Array
+
+Java Program to Compare Elements in a Collection
+
+How to Print a Collection in Java?
+
+How to Make a Collection Read-Only in Java?
+
+Java Program to Remove a Specific Element From a Collection
+
+Collections.reverse() Method in Java with Examples
+
+Collections.shuffle() Method in Java with Examples
+
+How to Get a Size of Collection in Java?
+
+How to Iterate HashMap in Java?
+
+How to Use Enumeration to Display Elements of Hashtable in Java?
+
+Hashtable keySet() Method in Java with Examples
+
+Min and Max in a List in Java
+
+How to Find a Sublist in a List in Java?
+
+How to replace an element in a list?
+
+Java Program to Rotate Elements of the List

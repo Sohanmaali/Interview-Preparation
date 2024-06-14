@@ -1,0 +1,608 @@
+
+=============================PAWAV SIR=============================
+
+1. Write an SQL query to fetch “FIRST_NAME” from Worker table using the alias name as <WORKER_NAME>.
+Ans. -> SELECT FIRST_NAME AS WORKER_NAME FROM worker;    
+
+2. Write an SQL query to fetch “FIRST_NAME” from Worker table in upper case.
+Ans. -> SELECT upper(FIRST_NAME) as name FROM worker;
+
+3. Write an SQL query to fetch unique values of DEPARTMENT from Worker table.
+Ans. -> SELECT DISTINCT DEPARTMENT FROM worker;
+
+4. Write an SQL query to print the first three characters of FIRST_NAME from Worker table.
+Ans. -> SELECT substr(FIRST_NAME,1,3) as name FROM worker;
+
+5. Write an SQL query to find the position of the alphabet (‘b’) in the first name column ‘Amitabh’ from Worker table.
+Ans. -> SELECT LOCATE('b',FIRST_NAME) as position Form worker WHERE FIRST_NAME = "Amitabh";
+
+6. Write an SQL query to print the FIRST_NAME from Worker table after removing white spaces from the right side.
+Ans. -> SELECT RTRIM(FIRST_NAME) AS name FROM Worker;
+
+7. Write an SQL query to print the DEPARTMENT from Worker table after removing white spaces from the left side.
+Ans. -> SELECT LTRIM(DEPARTMENT) AS department FROM Worker;
+
+8. Write an SQL query that fetches the unique values of DEPARTMENT from Worker table and prints its length.
+Ans. -> SELECT DISTINCT DEPARTMENT, length(DEPARTMENT) AS length FROM worker;
+
+9. Write an SQL query to print the FIRST_NAME from Worker table after replacing ‘a’ with ‘A’.
+Ans. -> SELECT REPLACE(FIRST_NAME, 'a', 'A') AS name FROM Worker;
+
+10. Write an SQL query to print the FIRST_NAME and LAST_NAME from Worker table into a single column COMPLETE_NAME. A space char should separate them.
+Ans. -> SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS COMPLETE_NAME FROM Worker;
+
+11. Write an SQL query to print all Worker details from the Worker table order by FIRST_NAME Ascending.
+Ans. -> SELECT * FROM Worker ORDER BY FIRST_NAME ASC;
+
+12. Write an SQL query to print all Worker details from the Worker table order by FIRST_NAME Ascending and DEPARTMENT Descending.
+Ans. -> SELECT * FROM Worker ORDER BY FIRST_NAME ASC, DEPARTMENT DESC;
+
+13. Write an SQL query to print details for Workers with the first name as “Vipul” and “Satish” from Worker table.
+Ans. -> SELECT * FROM Worker WHERE FIRST_NAME IN ('Vipul','Satish');
+ 
+14. Write an SQL query to print details of workers excluding first names, “Vipul” and “Satish” from Worker table.
+Ans. -> SELECT * FROM Worker WHERE FIRST_NAME NOT IN ('Vipul','Satish');
+
+15. Write an SQL query to print details of Workers with DEPARTMENT name as “Admin*”.
+Ans. -> SELECT DEPARTMENT AS Admin FROM Worker;
+SELECT * FROM Worker WHERE DEPARTMENT LIKE 'Admin%';
+
+16. Write an SQL query to print details of the Workers whose FIRST_NAME contains ‘a’.
+Ans. -> SELECT * FROM Worker WHERE FIRST_NAME LIKE '%a%';
+ 
+17. Write an SQL query to print details of the Workers whose FIRST_NAME ends with ‘a’.
+Ans. -> SELECT * FROM Worker WHERE FIRST_NAME LIKE '%a';
+
+18. Write an SQL query to print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets.
+Ans. -> SELECT * FROM Worker WHERE FIRST_NAME LIKE '_____h';
+
+19. Write an SQL query to print details of the Workers whose SALARY lies between 100000 and 500000.
+Ans. -> SELECT * FROM Worker WHERE SALARY BETWEEN 100000 and 500000;
+
+20. Write an SQL query to print details of the Workers who have joined in Feb’2014.
+Ans. -> SELECT * FROM Worker WHERE MONTH(JOIN_DATE) = 2 AND YEAR(JOIN_DATE) = 2014;
+
+21. Write an SQL query to fetch the count of employees working in the department ‘Admin’.
+Ans. -> SELECT COUNT(*) AS employee_count FROM Worker WHERE DEPARTMENT = 'Admin';
+
+22. Write an SQL query to fetch worker full names with salaries >= 50000 and <= 100000.
+Ans. -> SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS full_name FROM Worker WHERE SALARY BETWEEN 50000 AND 100000;
+ 
+23. Write an SQL query to fetch the no. of workers for each department in the descending order.
+Ans. -> SELECT DEPARTMENT, COUNT(*) AS worker_count FROM Worker GROUP BY DEPARTMENT ORDER BY worker_count DESC;
+
+24. Write an SQL query to print details of the Workers who are also Managers.
+Ans. -> SELECT * FROM worker WHERE department = "Managers";
+ 
+25. Write an SQL query to fetch number (more than 1) of same titles in the ORG of different types.
+Ans. -> SELECT title FROM ORG GROUP BY title HAVING COUNT(*) > 1 AND  COUNT(DISTINCT type) > 1;
+
+26. Write an SQL query to show only odd rows from a table.
+Ans. -> select * from emp where mod(id,2)<>0;
+
+27. Write an SQL query to show only even rows from a table.
+Ans. -> select * from emp where mod(id,2)=0;
+
+28. Write an SQL query to clone a new table from another table.
+Ans. -> CREATE TABLE new_table_name AS SELECT * FROM existing_table_name;
+
+29. Write an SQL query to fetch intersecting records of two tables.
+Ans. -> SELECT * FROM table1 INTERSECT SELECT * FROM table2;
+
+30. Write an SQL query to show records from one table that another table does not have.
+Ans. -> 
+
+31. Write an SQL query to show the current date and time.
+Ans. -> SELECT CURRENT_TIMESTAMP() AS current_datetime;
+
+32. Write an SQL query to show the top n (say 5) records of a table order by descending salary.
+Ans. -> SELECT * FROM your_table_name ORDER BY salary DESC LIMIT 5;
+
+33. Write an SQL query to determine the nth (say n=5) highest salary from a table.
+Ans. -> SELECT DISTINCT salary FROM your_table_name ORDER BY salary DESC LIMIT 1 OFFSET 5;
+
+34. Write an SQL query to determine the 5th highest salary without using LIMIT keyword.
+Ans. -> SELECT DISTINCT salary FROM (SELECT salary, ROW_NUMBER() OVER (ORDER BY salary DESC) AS row_num FROM your_table_name ) AS ranked_salaries WHERE row_num = 5;
+
+35. Write an SQL query to fetch the list of employees with the same salary.
+Ans. -> SELECT salary, GROUP_CONCAT(employee_name) AS employees_with_same_salary
+FROM employees
+GROUP BY salary
+HAVING COUNT(*) > 1;
+
+36. Write an SQL query to show the second highest salary from a table using sub-query.
+Ans. -> SELECT MAX(salary) AS second_highest_salary
+FROM employees
+WHERE salary < (
+    SELECT MAX(salary) FROM employees
+);
+
+37. Write an SQL query to show one row twice in results from a table.
+Ans. -> SELECT * FROM your_table_name
+UNION ALL
+SELECT * FROM your_table_name
+LIMIT 1;
+
+38. Write an SQL query to list worker_id who does not get bonus.
+Ans. -> 
+
+39. Write an SQL query to fetch the first 50% records from a table.
+Ans. -> SELECT TOP 50 PERCENT * from Employee;
+
+40. Write an SQL query to fetch the departments that have less than 4 people in it.
+Ans. -> SELECT department FROM your_table_name GROUP BY department HAVING COUNT(*) < 4;
+
+41. Write an SQL query to show all departments along with the number of people in there.
+Ans. -> SELECT department, COUNT(*) AS number_of_people
+FROM your_table_name
+GROUP BY department;
+
+42. Write an SQL query to show the last record from a table.
+Ans. -> SELECT *
+FROM your_table_name
+ORDER BY some_column DESC
+LIMIT 1;
+
+43. Write an SQL query to fetch the first row of a table.
+Ans. -> SELECT *
+FROM your_table_name
+LIMIT 1;
+
+44. Write an SQL query to fetch the last five records from a table.
+Ans. -> SELECT *
+FROM your_table_name
+ORDER BY some_column DESC
+LIMIT 5;
+
+45. Write an SQL query to print the name of employees having the highest salary in each department.
+Ans. -> SELECT name, department, salary
+FROM employees
+WHERE (department, salary) IN (
+    SELECT department, MAX(salary) AS max_salary
+    FROM employees
+    GROUP BY department
+);
+
+46. Write an SQL query to fetch three max salaries from a table using co-related subquery.
+Ans. -> SELECT salary
+FROM employees e1
+WHERE 3 > (
+    SELECT COUNT(DISTINCT salary)
+    FROM employees e2
+    WHERE e2.salary > e1.salary
+);
+
+47. Write an SQL query to fetch three min salaries from a table using co-related subquery.
+Ans. -> SELECT slry
+FROM emp e1
+WHERE 3 > (
+    SELECT COUNT(DISTINCT slry)
+    FROM emp e2
+    WHERE e2.slry < e1.slry
+);
+
+48. Write an SQL query to fetch nth max salaries from a table.
+Ans. -> SELECT DISTINCT salary
+FROM employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET n - 1;
+
+49. Write an SQL query to fetch departments along with the total salaries paid for each of them.
+Ans. -> SELECT department, SUM(salary) AS total_salary_paid
+FROM employees
+GROUP BY department;
+
+50. Write an SQL query to fetch the names of workers who earn the highest salary.
+Ans. -> SELECT name
+FROM workers
+WHERE salary = (SELECT MAX(salary) FROM workers);
+
+
+=============================================PAWAV SIR END =============================================================
+
+1. What is SQL?
+Ans. -> SQL (Structured Query Language) is a programming language used for managing relational databases. It allows users to store, manipulate, and retrieve data from databases.
+
+2. What are the different types of SQL statements?
+Ans. -> SQL statements can be categorized into three types:
+i. Data Definition Language (DDL): Used for creating, altering, and dropping database objects.
+ii. Data Manipulation Language (DML): Used for querying, inserting, updating, and deleting Data
+iii. Data Control Language (DCL): Used for controlling access to the database, granting or revoking privileges.
+
+3.What is a primary key?
+Ans. -> A primary key is a column or a set of columns that uniquely identifies each record in a table. It ensures data integrity and allows efficient retrieval of database
+
+4. What is a foreign key?
+Ans. -> A foreign key is a column or a set of columns in a table that refers to the primary key of another table. It establishes a relationship between the two tables.
+
+5. What is a composite key?
+Ans. -> A composite key is a primary key composed of two or more columns. Together, these columns uniquely identify each record in a table.
+
+6. What is the difference between DELETE and TRUNCATE?
+Ans. -> DELETE is a DML statement used to remove specific rows from a table, 
+where as 
+TRUNCATE is a DDL statement used to remove all rows from a table, effectively resetting the table.
+
+7. What is a subquery?
+Ans. -> A subquery is a query nested within another query. It can be used to retrieve data from one table based on values from another table or perform complex calculations.
+
+8. What is the difference between a subquery and a join?
+Ans. -> A subquery is a query nested within another query, whereas a join is used to combine rows from two or more tables based on related columns.
+
+9. What is a self-join?
+Ans. -> A self-join is a join operation where a table is joined with itself. It is useful when you want to compare rows within the same table.
+
+10. What are the different types of JOIN operations?
+Ans. -> The different types of JOIN operations are:
+i. INNER JOIN: Returns only the matching rows from both tables.
+ii. LEFT JOIN: Returns all rows from the left table and matching rows from the right table.
+iii. RIGHT JOIN: Returns all rows from the right table and matching rows from the left table.
+iv. FULL JOIN: Returns all rows from both tables.
+
+11.What is normalization in SQL?
+Ans. -> Normalization is the process of organizing data in a database to eliminate redundancy and dependency issues. It involves splitting tables into smaller, more manageable entities.
+
+12. What are the different normal forms in database normalization?
+Ans. -> The different normal forms are:
+i. First Normal Form (1NF): Eliminates duplicate rows and ensures atomicity of values.
+ii. Second Normal Form (2NF): Ensures that each non-key column depends on the entire primary key.
+iii. Third Normal Form (3NF): Ensures that each non-key column depends only on the primary key and not on other non-key columns.
+iv.Fourth Normal Form (4NF): Eliminates multi-valued dependencies.
+v. Fifth Normal Form (5NF): Eliminates join dependencies.
+
+13. What is an index?
+Ans. -> An index is a database structure that improves the speed of data retrieval operations on database tables. It allows faster searching, sorting, and filtering of data
+
+ 14. What is a clustered index?
+Ans. -> A clustered index determines the physical order of data in a table. Each table can have only one clustered index, and it is generally created on the primary key column(s).
+
+15. What is a non-clustered index?
+Ans. -> A non-clustered index is a separate structure from the table that contains a sorted list of selected columns. It enhances the performance of searching and filtering operations.
+
+16. What is the difference between a primary key and a unique key?
+Ans. -> A primary key is a column or a set of columns that uniquely identifies each record in a table and cannot contain NULL values. A unique key, on the other hand, allows NULL values and enforces uniqueness but does not automatically define the primary identifier of a table.
+
+17. What is ACID in database transactions?
+Ans. -> ACID stands for Atomicity, Consistency, Isolation, and Durability. It is a set of properties that ensure reliability and integrity in database transactions.
+
+18. What is the difference between UNION and UNION ALL?
+Ans. -> UNION combines the result sets of two or more SELECT statements and removes duplicates, whereas UNION ALL combines the result sets without removing duplicates.
+
+19. What is a view?
+Ans. -> A view is a virtual table derived from one or more tables. It does not store data but provides a way to present data in a customized or simplified manner.
+
+20. What is a stored procedure?
+Ans. -> A stored procedure is a precompiled set of SQL statements that performs a specific task. It can be called and executed multiple times with different parameters.
+
+21. What is a trigger?
+Ans. -> A trigger is a set of SQL statements that are automatically executed in response to a specific event, such as INSERT, UPDATE, or DELETE operations on a table.
+
+22. What is a tranction?
+Ans. -> A tranction is a logical unit of work that consists of one or more database operations. It ensures that all operations within the transaction are treated as a single unit, either all succeeding or all failing.
+
+23. What is a deadlock?
+Ans. -> A deadlock is a situation where two or more transactions are unable to proceed because each is waiting for a resource held by another transaction. This can result in a perpetual wait state.
+
+24. What is the difference between CHAR and VARCHAR data types?
+Ans. -> CHAR is a fixed-length character data type that stores a specific number of characters, while VARCHAR is a variable-length character data type that stores a varying number of characters.
+
+25. What is the difference between a function and a stored procedure?
+Ans. -> A function returns a value and can be used in SQL statements, whereas a stored procedure does not return a value directly but can perform various actions.
+
+26. What is the difference between GROUP BY and HAVING clauses?
+Ans. -> GROUP BY is used to group rows based on one or more columns, while HAVING is used to filter grouped rows based on specific conditions.
+
+27. What is the difference between a database and a schema?
+Ans. -> A database is a collection of related data that is stored and organized. A schema, on the other hand, is a logical container within a database that holds objects like tables, views, and procedures.
+
+28. What is a data warehouse?
+Ans. -> A data warehouse is a large repository of data collected from various sources, structured and organized to support business intelligence and reporting.
+
+29. What is the difference between OLTP and OLAP?
+Ans. -> OLTP (Online Transaction Processing) is used for day-to-day transactional operations and focuses on real-time processing. OLAP (Online Analytical Processing) is used for complex analytical queries and focuses on historical data analysis.
+
+30. What is a correlated subquery?
+Ans. -> A correlated subquery is a subquery that references columns from the outer query. It is executed for each row of the outer query, making it dependent on the outer query's results.
+
+31. What is the difference between a temporary table and a table variable?
+Ans. -> A temporary table is a physical table that is created and used temporarily within a session or a specific scope, whereas a table variable is a variable with a structure similar to a table and exists only within the scope of a user-defined function or a stored procedure.
+
+32. What is the difference between UNION and JOIN?
+Ans. -> UNION combines rows from two or more tables vertically, while JOIN combines columns from two or more tables horizontally based on related columns.
+
+33. What is the difference between WHERE and HAVING clauses?
+Ans. -> WHERE is used to filter rows before grouping in a query, while HAVING is used to filter grouped rows after grouping.
+
+34. What is the difference between a database and a data warehouse?
+Ans. -> A database is a collection of related data organized for transactional purposes, while a data warehouse is a large repository of data organized for analytical purposes.
+
+35. What is the difference between a primary key and a candidate key?
+Ans. -> A candidate key is a column or a set of columns that can uniquely identify each record in a table. A primary key is a chosen candidate key that becomes the main identifier for the table.
+
+36. What is the difference between a schema and a database?
+Ans. -> A database is a collection of related data, while a schema is a logical container within a database that holds objects like tables, views, and procedures.
+
+37. What is a self-join?
+Ans. -> A self-join is a join operation where a table is joined with itself. It is used when you want to compare rows within the same table.
+
+38. What is a recursive SQL query?
+Ans. -> A recursive SQL query is a query that refers to its own output in order to perform additional operations. It is commonly used for hierarchical or tree-like data structures.
+
+39. What is the difference between a correlated subquery and a nested subquery?
+Ans. -> A correlated subquery is a subquery that references columns from the outer query, while a nested subquery is a subquery that is independent of the outer query.
+
+40. What is the difference between a natural join and an equijoin?
+Ans. -> A natural join is a join operation that automatically matches columns with the same name from both tables, whereas an equijoin is a join operation that explicitly specifies the join condition using equality operators.
+
+41. What is the difference between an outer join and an inner join?
+Ans. -> An inner join returns only the matching rows from both tables, whereas an outer join returns all rows from one table and matching rows from the other table(s).
+
+42. What is the difference between a left join and a right join?
+Ans. -> A left join returns all rows from the left table and matching rows from the right table, whereas a right join returns all rows from the right table and matching rows from the left table.
+
+43. What is a full outer join?
+Ans. -> A full outer join returns all rows from both tables, including unmatched rows, and combines them based on the join condition.
+
+44. What is a self-referencing foreign key?
+Ans. -> A self-referencing foreign key is a foreign key that references the primary key of the same table. It is used to establish hierarchical relationships within a single table.
+
+45. What is the purpose of the GROUP BY clause?
+Ans. -> The GROUP BY clause is used to group rows based on one or more columns. It is typically used with aggregate functions to perform calculations on each group.
+
+46. What is the purpose of the HAVING clause?
+Ans. -> The HAVING clause is used to filter grouped rows based on specific conditions. It operates on the results of the GROUP BY clause.
+
+47. What is the purpose of the ORDER BY clause?
+Ans. -> The ORDER BY clause is used to sort the result set based on one or more columns in ascending or descending order.
+
+48. What is the purpose of the DISTINCT keyword?
+Ans. -> The DISTINCT keyword is used to retrieve unique values from a column in a result set, eliminating duplicate rows.
+
+49.What is the purpose of the LIKE operator?
+Ans. -> The LIKE operator is used in a WHERE clause to search for a specified pattern in a column. It allows wildcard characters like % (matches any sequence of characters) and _ (matches any single character).
+
+50. What is the purpose of the IN operator?
+Ans. -> The IN operator is used in a WHERE clause to check if a value matches any value in a list or a subquery.
+
+51. What is the purpose of the BETWEEN operator?
+Ans. -> The BETWEEN operator is used in a WHERE clause to check if a value lies within a specified range of values, inclusive of the endpoints.
+
+52. What is the purpose of the EXISTS operator?
+Ans. -> The EXISTS operator is used in a WHERE clause to check if a subquery returns any rows. It returns true if the subquery result set is not empty.
+
+53. What is the purpose of the COUNT() function?
+Ans. -> The COUNT() function is used to count the number of rows or non-null values in a column.
+
+54. What is the purpose of the SUM() function?
+Ans. -> The SUM() function is used to calculate the sum of values in a column.
+
+55. What is the purpose of the AVG() function?
+Ans. -> The AVG() function is used to calculate the average value of a column.
+
+56. What is the purpose of the MAX() function?
+Ans. -> The MAX() function is used to retrieve the maximum value from a column.
+
+57. What is the purpose of the MIN() function?
+Ans. -> The MIN() function is used to retrieve the minimum value from a column.
+
+58. What is the purpose of the GROUP_CONCAT() function?
+Ans. -> The GROUP_CONCAT() function is used to concatenate values from multiple rows into a single string, grouped by a specific column.
+
+59. What is the purpose of the JOIN keyword?
+Ans. -> The JOIN keyword is used to combine rows from two or more tables based on related columns.
+
+60. What is a self-referencing table?
+Ans. -> A self-referencing table is a table that has a foreign key column referencing its own primary key. It is used to represent hierarchical relationships within a single table.
+
+61. What is the difference between UNION and UNION ALL?
+Ans. -> UNION combines the result sets of two or more SELECT statements and removes duplicate rows, whereas UNION ALL combines the result sets without removing duplicates.
+
+62. What is the purpose of the ROW_NUMBER() function?
+Ans. -> The ROW_NUMBER() function assigns a unique sequential number to each row within a result set. It is often used for pagination or ranking purposes.
+
+63. What is the purpose of the RANK() function?
+Ans. -> The RANK() function assigns a rank to each row within a result set based on a specified criteria, such as ordering by a column. It allows you to identify the ranking of each row.
+
+64. What is the purpose of the DENSE_RANK() function?
+Ans. -> The DENSE_RANK() function is similar to the RANK() function but assigns consecutive ranks to rows without gaps. If two rows have the same rank, the next rank is skipped.
+
+65. What is the purpose of the LAG() function?
+Ans. -> The LAG() function is used to access the value of a previous row within a result set based on a specified column. It allows you to compare values across adjacent rows.
+
+66. What is the purpose of the LEAD() function?
+Ans. -> The LEAD() function is used to access the value of a subsequent row within a result set based on a specified column. It allows you to compare values across adjacent rows.
+
+67. What is the purpose of the COALESCE() function?
+Ans. -> The COALESCE() function is used to return the first non-null value from a list of expressions. It is often used to provide a default value when a column value is null.
+
+68. What is the purpose of the CASE statement?
+Ans. -> The CASE statement is used to perform conditional logic within a SQL statement. It allows you to evaluate multiple conditions and return different values based on the result.
+
+69. What is the purpose of the TRUNCATE TABLE statement?
+Ans. -> The TRUNCATE TABLE statement is used to remove all rows from a table, while keeping the table structure intact. It is faster than deleting all rows using the DELETE statement.
+
+70. What is the purpose of the CONSTRAINT keyword?
+Ans. -> The CONSTRAINT keyword is used to define rules and relationships on columns within a table. It ensures data integrity and enforces business rules.
+
+71. What is the purpose of the PRIMARY KEY constraint?
+Ans. -> The PRIMARY KEY constraint is used to uniquely identify each record in a table. It ensures that the primary key column(s) have unique values and cannot contain null values.
+
+72. What is the purpose of the FOREIGN KEY constraint?
+Ans. -> The FOREIGN KEY constraint is used to establish a relationship between two tables based on a common column. It ensures referential integrity by enforcing that values in the foreign key column exist in the referenced table's primary key.
+
+73. What is the purpose of the INDEX keyword?
+Ans. -> The INDEX keyword is used to create an index on one or more columns of a table. It improves query performance by allowing faster data retrieval based on the indexed columns.
+
+74. What is the purpose of the CASCADE keyword in a FOREIGN KEY constraint?
+Ans. -> The CASCADE keyword is used to specify that changes made to the primary key values in the referenced table should be propagated to the foreign key values in the referring table. This ensures that the relationship remains valid.
+
+75. What is the purpose of the UPDATE statement?
+Ans. -> The UPDATE statement is used to modify existing records in a table. It allows you to change the values of one or more columns based on specified conditions.
+
+76. What is the purpose of the DELETE statement?
+Ans. -> The DELETE statement is used to remove one or more records from a table. It allows you to delete rows based on specified conditions.
+
+77. What is the purpose of the COMMIT statement?
+Ans. -> The COMMIT statement is used to permanently save all changes made within a transaction to the database. Once committed, the changes are visible to other users.
+
+78. What is the purpose of the ROLLBACK statement?
+Ans. -> The ROLLBACK statement is used to undo all changes made within a transaction and restore the database to its previous state. It is typically used when an error occurs or when the transaction needs to be canceled.
+
+79. What is the purpose of the SAVEPOINT statement?
+Ans. -> The SAVEPOINT statement is used to define a specific point within a transaction to which you can roll back. It allows you to undo changes up to a specific savepoint without rolling back the entire transaction.
+
+80.What is the purpose of the CONSTRAINT keyword in the ALTER TABLE statement?
+Ans. -> The CONSTRAINT keyword in the ALTER TABLE statement is used to add, modify, or drop constraints on columns within an existing table.
+
+81. What is the purpose of the DISTINCT keyword in the SELECT statement?
+Ans. -> The DISTINCT keyword in the SELECT statement is used to retrieve unique values from a column in the result set, eliminating duplicate rows.
+
+82. What is the purpose of the AS keyword in the SELECT statement?
+Ans. -> The AS keyword in the SELECT statement is used to assign an alias to a column or a table. It allows you to refer to the column or table by the assigned alias in subsequent parts of the query.
+
+83. What is the purpose of the ORDER BY clause in the SELECT statement?
+Ans. -> The ORDER BY clause in the SELECT statement is used to sort the result set based on one or more columns in ascending or descending order.
+
+84. What is the purpose of the GROUP BY clause in the SELECT statement?
+Ans. -> The GROUP BY clause in the SELECT statement is used to group rows based on one or more columns. It is typically used with aggregate functions to perform calculations on each group.
+
+85. What is the purpose of the HAVING clause in the SELECT statement?
+Ans. -> The HAVING clause in the SELECT statement is used to filter grouped rows based on specific conditions. It operates on the results of the GROUP BY clause.
+
+86. What is the purpose of the LIMIT clause in the SELECT statement?
+Ans. -> The LIMIT clause in the SELECT statement is used to restrict the number of rows returned by a query. It allows you to specify the maximum number of rows to be retrieved.
+
+87. What is the purpose of the OFFSET clause in the SELECT statement?
+Ans. -> The OFFSET clause in the SELECT statement is used in conjunction with the LIMIT clause to skip a specified number of rows before starting to return the result set.
+
+88. What is the purpose of the JOIN keyword in the SELECT statement?
+Ans. -> The JOIN keyword in the SELECT statement is used to combine rows from two or more tables based on related columns. It allows you to retrieve data from multiple tables in a single query.
+
+89. What is the purpose of the INNER JOIN?
+Ans. -> The INNER JOIN is a join operation that returns only the matching rows from both tables based on the specified join condition. It combines rows that have matching values in the joined columns.
+
+90. What is the purpose of the LEFT JOIN?
+Ans. -> The LEFT JOIN is a join operation that returns all rows from the left table and the matching rows from the right table based on the specified join condition. If no match is found, null values are returned for the right table columns.
+
+91. What is the purpose of the RIGHT JOIN?
+Ans. -> The RIGHT JOIN is a join operation that returns all rows from the right table and the matching rows from the left table based on the specified join condition. If no match is found, null values are returned for the left table columns.
+
+92. What is the purpose of the FULL OUTER JOIN?
+Ans. -> The FULL OUTER JOIN is a join operation that returns all rows from both tables, including unmatched rows, and combines them based on the join condition. If no match is found, null values are returned for the respective columns.
+
+93. What is the purpose of the UNION operator?
+Ans. -> The UNION operator is used to combine the result sets of two or more SELECT statements into a single result set. It removes duplicate rows from the final result set.
+
+94. What is the purpose of the UNION ALL operator?
+Ans. -> The UNION ALL operator is used to combine the result sets of two or more SELECT statements into a single result set, including duplicate rows.
+
+95. What is the purpose of the LIKE operator in the WHERE clause?
+Ans. -> The LIKE operator is used in the WHERE clause to search for a specified pattern in a column. It allows wildcard characters like % (matches any sequence of characters) and _ (matches any single character).
+
+96. What is the purpose of the IN operator in the WHERE clause?
+Ans. -> The IN operator is used in the WHERE clause to check if a value matches any value in a list or a subquery.
+
+97. What is the purpose of the EXISTS operator in the WHERE clause?
+Ans. -> The EXISTS operator is used in the WHERE clause to check if a subquery returns any rows. It returns true if the subquery result set is not empty.
+
+98. What is the purpose of the GROUP BY clause in the SELECT statement?
+Ans. -> The GROUP BY clause in the SELECT statement is used to group rows based on one or more columns. It is typically used with aggregate functions to perform calculations on each group.
+
+99. What is the purpose of the ORDER BY clause in the SELECT statement?
+Ans. -> The ORDER BY clause in the SELECT statement is used to sort the result set based on one or more columns in ascending or descending order.
+
+100. What is a database?
+Ans. -> A database is an organized collection of data storedand accessed electronically. It provides a way tostore, organize, and retrieve large amounts of dataefficiently.
+
+===================================================================
+
+1. What is the difference between a primary keyand a unique key?
+Ans. -> A primary key is used to uniquely identify a row in atable and must have a unique value. On the otherhand, a unique key ensures that a column orcombination of columns has a unique value but doesnot necessarily identify the row.
+
+2. What is the difference between UNION and UNION ALL?
+Ans.-> UNION and UNION ALL are used to combine theresult sets of two or more SELECT statements.
+UNION
+removes duplicate rows from the combinedresult set.
+whereas
+UNION ALL
+includes all rows, includingduplicates.
+
+3. What is a tranction in SQL?
+Ans.-> A tranction is a sequence of SQL statements thatare executed as a single logical unit of work. Itensures data consistency and integrity by eithercommitting all changes or rolling them back if anerror occurs.
+
+4. What is the difference between a clusteredand a non-clustered index?
+Ans.-> clustered index determines the physical order ofdata in a table. It changes the way the data is storedon disk and can be created on only one column. Atable can have only one clustered index.
+non-clustered index does not affect the physicalorder of data in a table. It is stored separately andcontains a pointer to the actual datAns. -> A table canhave multiple non-clustered indexes.
+Clustered Index
+Non-Clustered Index
+
+5.What is the difference between a cross joinand an inner join?
+Ans. -> A cross join (Cartesian product) returns thecombination of all rows from two or more tables.
+An inner join returns only the matching rows basedon a join condition.
+
+6. What is the purpose of the NULL value inSQL?
+Ans.. -> NULL represents the absence of a value or unknownvalue. It is different from zero or an empty string andrequires special handling in SQL queries.
+
+7. What is the difference between a view and amaterialized view?
+Ans. -> A materialized view is a physical copy of the view'sresult set stored in the database, which is updatedperiodically. It improves query performance at thecost of data freshness.
+
+8. What is a correlated subquery?
+Ans. -> A correlated subquery is a subquery that refers to acolumn from the outer query. It executes once foreach row processed by the outer query.
+
+9. What is the difference between the IN and EXISTS operators?
+Ans. -> The IN operator checks for a value within a set ofvalues or the result of a subquery. The EXISTSoperator checks for the existence of rows returnedby a subquery.
+
+10. What is the purpose of the TRIGGER statement?
+Ans. -> The TRIGGER statement is used to associate a set of SQL statements with a specific event in thedatabase. It is executed automatically when theevent occurs
+
+11. What is the difference between a unique constraint and a unique index?
+Ans. -> A unique constraint ensures the uniqueness ofvalues in one or more columns, while a unique indexenforces the uniqueness and also improves queryperformance.
+
+12. What is the purpose of the TOP or LIMIT clause?
+Ans. -> The TOP (in SQL Server) or LIMIT (in MySQL) clause isused to limit the number of rows returned by aquery. It is often used with an ORDER BY clause.
+
+13. What is the difference between a primary key and a candidate key?
+Ans. -> A primary key is a chosen candidate key thatuniquely identifies a row in a table.
+A candidate key is a set of one or more columns thatcould potentially become the primary key.
+
+14. What is the purpose of the GRANT statement?
+Ans. -> The GRANT statement is used to grant specificpermissions or privileges to users or roles in adatabase.
+
+15. What is a correlated update?
+Ans. -> A correlated update is an update statement that refers to a column from the same table in asubquery. It updates values based on the result ofthe subquery for each row.
+
+16. What is the purpose of the CASE statement?
+Ans. -> The CASE statement is used to perform conditionallogic in SQL queries. It allows you to return differentvalues based on specified conditions.
+
+17. What is the purpose of the COALESCEfunction?
+Ans. -> The COALESCE function returns the first non-nullexpression from a list of expressions. It is often usedto handle null values effectively.
+
+18. What is the purpose of the ROW_NUMBER()function?
+Ans. -> The ROW_NUMBER() function assigns a uniqueincremental number to each row in the result set.
+It is commonly used for pagination or rankingpurposes.ll values effectively.
+
+19. What is the difference between a naturaljoin and an inner join?
+Ans. -> A natural join is an inner join that matches rowsbased on columns with the same name in the joinedtables. It is automatically determined by thedatabase.
+
+20. What is the purpose of the CASCADE DELETE constraint?
+Ans. -> The CASCADE DELETE constraint is used toautomatically delete related rows in child tableswhen a row in the parent table is deleted.
+
+21. What is the purpose of the ALL keyword in SQL?
+Ans. -> The CASCADE DELETE constraint is used toautomatically delete related rows in child tableswhen a row in the parent table is deleted.
+
+22. What is the difference between the EXISTS and NOT EXISTS operators?
+Ans. -> The EXISTS operator returns true if a subqueryreturns any rows, while the NOT EXISTS operatorreturns true if a subquery returns no rows.
+
+23. What is the purpose of the CROSS APPLY operator?
+Ans. -> The CROSS APPLY operator is used to invoke a table-valued function for each row of a table expression. Itreturns the combined result set.
+
+24. What is an ALIAS command?
+Ans. -> ALIAS command in SQL is the name that can be given to any table or a column. This alias name can bereferred in WHERE clause to identify a particulartable or a column.
+
+25. Why are SQL functions used?
+Ans. -> To perform some calculations on the data
+To modify individual data items
+To manipulate the output
+To format dates and numbers
+To convert the data types
+SQL functions are used for the following purposes:

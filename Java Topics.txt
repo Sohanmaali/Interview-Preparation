@@ -1,0 +1,68 @@
+1. Data types and variable
+   a.Data types in java 
+   b.variables in java 
+   c.Rules for naming a variable in java 
+   d.what are literals in java
+
+2. Features and Architechure in java 
+   a. Compiler vs interpreter
+   b. How java is Platforme independent
+   c. JVM Architechure
+   d. Features of java
+
+3. Operaters and Expressions
+	a.Arithmetic Operators and Expressions
+	b.Bitwise Operators
+	c.Increment and Decrement operators
+	d.Bit Masking and Merging  
+4.Conditional Statements
+5.Loops
+6.Arrays
+7.Methods
+8.Object-oriented Programming
+9.Constructor
+10.Inheritance
+11.Abstract Class
+12.Interfaces
+	a.Default,Static and Private
+	b.Functional Interface,Marker Interfaces
+	c.Lambda Expression
+13.Inner classes
+14.Static members and blocks
+15.Final Keywords
+16.Exception Handling
+	a.What are exceptions 
+	b.How to handle Exception 
+	c. try and catch block and try with resources 
+	d. Multiple and nested try catch 
+	e. Checked and unchecked
+	f. Throws and throw
+	g. Finally block
+17.Multi-threading
+	a.Multiprogramming
+	b.Multithreading and thread classes
+	c.Runnable Interface
+	d.States of Thread
+	e.Thread Priorities
+	f.Thread :Daemon,join and yield
+	g.Synchronization
+	h.Inter-thread communication
+18.Java IO Streams
+19.Java Generics 
+	a.Introduction
+	b.Generic Methods
+20.Collection Frameworks
+	a.What are Collections?
+	b.Why they are required?
+	c.Collection classes   
+ 	d.Hashmap and its internal working
+	e.Hashset and treeset
+	f.Compare Interface
+	g.LinkedHashset
+	h.Bitset
+	i.Arrays and comparators
+21.JDBC
+22.Servlet
+23. JSP
+24.MVC
+25.Collection

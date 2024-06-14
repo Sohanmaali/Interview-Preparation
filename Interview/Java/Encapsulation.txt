@@ -1,0 +1,42 @@
+---------------------------------------
+Encapsulation
+---------------------------------------
+
+1. What is encapsulation ?
+Ans. -> The Wrapping up of data and methods into a single unit is known as Encapsulation. 
+
+2.Explain the benefits of encapsulation in Java.
+Ans. -> we can achieve Security.
+		Enhancement Will become very Easy.
+		it improves maintainability and modularing of the application.
+
+3. Why is it important to make variables private in a class?
+
+4. What are getter and setter methods, and how do they relate to encapsulation?
+
+5. Explain the concept of data hiding in encapsulation.
+
+7. Can encapsulation be achieved without using private access modifiers?
+
+9. Explain the concept of an immutable class. How does it relate to encapsulation?
+
+10. Discuss the challenges and potential issues associated with overusing encapsulation.
+
+11. How does encapsulation relate to the principle of information hiding?
+
+12. Explain the difference between encapsulation and abstraction.
+
+13. How does encapsulation contribute to the principle of "loose coupling" in software design?
+
+14. Explain the difference between encapsulation and encapsulation in Java.
+
+15. How does encapsulation contribute to the concept of "state encapsulation" in Java classes?
+
+16. Discuss the differences between encapsulation and data hiding.
+
+17. Why is it recommended to use getter and setter methods instead of making variables public in a class?
+
+18. How does the Java Virtual Machine (JVM) handle encapsulation at runtime?
+
+19. Explain the concept of "heap memory" and how encapsulation influences the allocation and deallocation of objects in the heap.
+

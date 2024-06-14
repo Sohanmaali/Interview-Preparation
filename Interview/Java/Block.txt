@@ -1,0 +1,116 @@
+----------------------------
+Blocks interview questions
+----------------------------
+
+1. What is a block?
+
+2. How many types of block do we have in Java? 
+
+3. What is the difference between static block, instance block & local block?
+
+------------------------------------
+Local block interview questions
+------------------------------------
+
+1. What is local block?
+
+2. What is the use of local block?
+
+3. How can we restrict local variable scope in a method?
+
+4. Can we declare a variable in a local block that is already declared in its method? 
+
+5. Can we declare a variable in a method that is already declared in a local block?
+
+6. Can we create multiple local blocks?
+
+--------------------------------------
+Static block interview questions
+--------------------------------------
+
+1. What is a SB?
+
+2. What is the use of static block?
+
+3. Why static block does not have name?
+
+4. What are the statements not allowed Inside a SB?
+
+5. Why "return;" is not allowed in a static block?
+
+6. Will JVM execute SB automatically?
+
+7. Can developer execute SB?
+
+8. When static block logic is executed & how many times? 
+
+9. Where Static Blocks logic is stored and where its logic is executed in JVM?
+
+10. How many static blocks we can define in a class?
+
+11. What is the order of execution of all SBs?
+
+12. If we create multiple static blocks why only one static block will be there in class file?
+
+13. Can we create a static block in side another static block?
+
+14. If we nest static block what will happen, is it leads to CE?
+
+15. What is the order of execution of SB and MM?
+
+16. What is the output we get if we run a class only with SB?
+
+17. How can we execute class logic without using SB & MM? 
+
+18. How can we execute main method at the time of class loading?
+
+19. What is the order of execution of SV and SB?
+
+20. When will we get CE: illegal forward reference?
+
+21. Explain 4 steps involved in executing SV, SB, MM & SM when class is loaded into JVM?
+
+----------------------------------------
+Non-Static block interview questions
+----------------------------------------
+
+1. What is a NSB?
+
+2. What is the use of NSB?
+
+3. Why NSB does not have name?
+
+4. What are the statements not allowed inside a NSB? 
+
+5. Why "return;" is not allowed in a NSB?
+
+6. Will JVM execute NSB automatically?
+
+7. Can developer execute NSB?
+
+8. When NSB is executed & how many times?
+
+9. Where NSB logic is stored and where its logic is executed in JVM?
+
+10. How many NSBs we can define in a class? 
+
+11. What is the order of execution of ail NSBs?
+
+12. Can we create a NSB In side another NSB?
+
+13. If we nest NSB, we don't get CE, why?
+
+14. What is the order of execution of NSB and constructor?
+
+15. What is the output we get if we run a class only with NSB?
+
+16. Can we execute a class only with non-static members?
+
+17. When we create a NSB in a class, why we will not find NSB in a .class file?
+
+18. Where NSB code is placed inside.class file?
+
+19. What is the order of execution of NSV and NSB? 20. When will we get CE: illegal forward reference?
+
+21. Explain 4 steps involved in executing NSV, NSB, constructor & NSM when a class object is created?
+==============================================================================================================

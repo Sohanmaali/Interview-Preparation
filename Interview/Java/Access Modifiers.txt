@@ -1,0 +1,142 @@
+1. what is modifiers?
+Ans -> In programming, modifiers are keywords or annotations that provide additional information or behavior to various program elements such as classes, methods, variables, and interfaces. Modifiers are used to control access, visibility, behavior, and other characteristics of these program elements. They help define the structure, behavior, and interactions within a program.
+
+2. List out All 13 Modifier?
+Ans -> Access Modifiers:
+		public : The element is accessible from any other class.
+		protected : The element is accessible within the same package or by subclasses, even if they are in different packages.
+		private:  The element is accessible only within the same class.
+		Default : (no modifier): The element is accessible only within the same package.
+	  
+	  Non-Access Modifiers:
+		static : The element belongs to the class rather than to instances of the class.
+		final:  The element cannot be modified (e.g., variables cannot be reassigned, methods cannot be overridden).
+		abstract : The element does not have a complete implementation and must be implemented by subclasses.
+		synchronized : The element is thread-safe and can be accessed by multiple threads concurrently.
+		volatile : The value of a variable can be modified by different threads.
+		transient : The element should not be serialized when the object is serialized.
+		native : The element is implemented in platform-dependent code, typically written in another programming language.
+		strictfp:   Floating-point calculations in the element adhere strictly to the IEEE 754 standard.
+
+3. is the interface a modifier keyword?
+Ans -> "interface" is a keyword in Java, not a modifier.
+		In Java, "interface" is used to declare interfaces, 
+
+4. what is right place to use modifier in a programming elements's declaration ?
+
+5. What is the difference between accessibility modifiers & other modifiers?
+Ans -> Accessibility Modifiers:
+
+Accessibility modifiers, also known as access modifiers, control the visibility of classes, methods, and variables, determining which other parts of the program can access them.
+They specify the accessibility or visibility of program elements from within the same class, from within other classes in the same package, and from subclasses in different packages.
+Examples of accessibility modifiers in Java include public, protected, private, and the default (package-private) modifier.
+Other Modifiers:
+
+Other modifiers, also known as non-access modifiers, provide additional behavior or characteristics to classes, methods, variables, and other program elements beyond controlling their visibility.
+They affect aspects such as behavior, inheritance, thread safety, immutability, serialization, and platform-dependent features.
+Examples of other modifiers in Java include static, final, abstract, synchronized, transient, volatile, native, strictfp, and more.
+
+6. Can we apply more than one accessibility modifier?
+Ans -> In Java, you cannot apply more than one accessibility modifier to a single class, method, or variable declaration. Each element can have only one accessibility modifier, which determines its visibility within the program.
+
+7. Can we apply more than one execution level modifier?
+Ans -> No, in Java, you cannot apply more than one execution level modifier (such as static, final, abstract, etc.) to a single method or variable declaration. Each method or variable can have only one execution level modifier, which specifies a particular aspect of its behavior or characteristics.
+
+8. Explain the functionality of all 13 modifiers?
+Ans -> 1. public:
+   - Makes the class, method, or variable accessible from any other class.
+   - Allows the element to be accessed from anywhere in the program.
+
+2. protected:
+   - Makes the method or variable accessible within the same package or by subclasses, even if they are in different packages.
+   - Provides visibility to subclasses and classes within the same package.
+
+3. private:
+   - Restricts access to the method or variable to only within the same class.
+   - The element cannot be accessed from outside the class, including subclasses and other classes.
+
+4. static:
+   - Indicates that the method or variable belongs to the class itself rather than to instances of the class.
+   - Static methods and variables are shared among all instances of the class and can be accessed using the class name.
+
+5. final:
+   - Specifies that the method or variable cannot be modified.
+   - For variables, it indicates that the value cannot be changed once assigned.
+   - For methods, it indicates that the method cannot be overridden by subclasses.
+
+6. abstract:
+   - Declares a method without an implementation.
+   - The method must be implemented by subclasses (in the case of abstract classes) or by classes that implement the interface (in the case of interfaces).
+
+7. synchronized:
+   - Ensures that only one thread can access the method at a time.
+   - Provides thread safety by preventing concurrent access to the method by multiple threads.
+
+8. volatile:
+   - Indicates that the value of the variable may be modified by different threads.
+   - Ensures that changes to the variable are immediately visible to other threads.
+
+9. transient:
+   - Specifies that the variable should not be serialized when the object is serialized.
+   - Used to exclude certain variables from the serialization process.
+
+10. native:
+    - Indicates that the method is implemented in platform-dependent code, typically written in another programming language.
+    - Used for methods that require low-level system interaction, such as accessing hardware devices.
+
+11. strictfp:
+    - Ensures that floating-point calculations in the method adhere strictly to the IEEE 754 standard.
+    - Provides consistent floating-point behavior across different platforms.
+
+9. What are the modifiers allowed for variable, method, constructor, block, & class?
+Ans. -> 	Variables : For instance variables (fields) : public protected private final static transient volatile 
+		For local variables : No access modifiers (they are accessible only within the block or method where they are declared) final
+		Methods : public protected private abstract static final synchronized native strictfp default (only for interface methods in Java 8 and later)
+		Constructors : public protected private 
+		Blocks (initializer blocks) : static final
+		Classes : public abstract final strictfp final (for inner classes within methods or blocks)
+
+10. Why only final modifier allowed to parameter & local variable?"
+Ans -> In Java, the final modifier is allowed for parameters and local variables, but other modifiers such as public, private, protected, static, etc., are not. This restriction exists due to the nature and scope of parameters and local variables within methods.
+Immutability: The final modifier ensures that the value of the parameter or local variable cannot be changed after initialization. This promotes immutability, which can be desirable in many situations, particularly when dealing with concurrency or ensuring predictable behavior.
+
+11. what is execution level modifier?
+Ans -> In Java, an execution level modifier, also known as a non-access modifier, is a keyword or annotation that provides additional behavior or characteristics to methods, variables, and other program elements beyond controlling their visibility. Execution level modifiers affect the behavior, execution, and other aspects of these program elements within the context of program execution.
+-------------------------------------------
+Accessibility Modifiers Interview Questions
+-------------------------------------------
+
+1. What is an Accessibility modifler?
+Ans -> In Java, an accessibility modifier, also known as an access modifier, is a keyword used to specify the accessibility or visibility of classes, variables, methods, and constructors. There are four types of access modifiers in Java: Public,protected,private default
+
+2. What is the difference between Accessibility modifiers and accessibility specifies?
+
+3. How many accessibility modifiers Java supports? 
+Ans -> Public,protected,private default.
+
+4. What are the different levels of accessibility permission levels?
+Ans -> 	Public : The most permissive access level. Classes, methods, and variables that are public can be accessed by any other class.
+		Protected : Allows access within the same package or by subclasses even if they are in different packages.
+		Default (no modifier): Also known as package-private, it allows access only within the same package.
+		Private : The most restrictive access level. Variables, methods, and constructors that are private can only be accessed within the same class.
+
+5. What the accessibility modifier keywords? 
+Ans -> Public,protected,private default.
+
+6. Why accessibility modifiers are not allowed for local variables inside a method?
+Ans -> Accessibility modifiers like public, protected, and private are not allowed for local variables inside a method in Java because local variables are confined to the scope of the method in which they are declared.
+
+7. Why private & protected are not allowed to outer class?
+
+8. Can we declare inner class as private or protected or static?
+Ans -> Yes, in Java, you can declare inner classes as private, protected, or static.
+
+9. What is the default accessibility modifier of class and its members?
+Ans -> In Java, the default accessibility modifier, also known as package-private, is applied when no explicit access modifier is specified. This means that the class and its members are accessible only within the same package.
+
+10. What is the default accessibility modifier of interface and its members? 
+Ans -> In Java, the default accessibility modifier for interfaces and their members is implicitly public. This means that interfaces and their members are accessible from any other class or interface, regardless of the package they belong to.
+
+11. How can create a class member to be accessed only in subclass from other package?
+Ans -> In Java, if you want to create a class member that is accessible only in subclasses from other packages, you can use the protected access modifier. Members marked as protected are accessible within the same package or by subclasses, even if they are in different packages.
+

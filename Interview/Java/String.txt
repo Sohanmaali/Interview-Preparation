@@ -1,0 +1,697 @@
+------------
+STRING
+------------
+
+1. What is the meaning of Immutable in the context of String class in Java?
+Ans. -> In the context of the String class in Java, "immutable" means that once a String object is created, its content cannot be changed. Any 
+		operation that appears to modify a String actually creates a new String with the modified content, leaving the original String unchanged.
+
+2. Why a String object is considered immutable in Java?
+Ans. -> String objects are considered immutable in Java for several reasons :
+		Security: Since String objects cannot be modified, they are often used to store sensitive information like passwords or API keys without fear of their values being changed accidentally.
+		Thread Safety: Immutable Strings are inherently thread-safe, making them safe for concurrent access in a multi-threaded environment.
+		Caching: The immutability of Strings allows Java to optimize memory usage by caching frequently used strings in a pool, which can improve performance.
+
+3. Explain String pool in Java?
+Ans. -> The String pool in Java, also known as the String Constant Pool, is a special area of memory where String literals are stored and can be 
+		reused. It is an optimization to reduce memory usage and improve performance by ensuring that identical String values are shared among multiple references..
+
+4. How many ways are there in Java to create a String object?
+Ans. -> There are several ways to create a String object in Java, including:
+     - Using string literals: String str = "Hello";
+     - Using the new keyword: String str = new String("Hello");
+     - Using character arrays: char[] charArray = {'H', 'e', 'l', 'l', 'o'}; 
+		String str = new String(charArray);
+     - Using the StringBuffer or StringBuilder class: String str = new StringBuffer("Hello").toString();
+
+5. How can you remove all the white spaces in a string?
+Ans. -> You can remove all the white spaces in a string in Java using the replaceAll() method with a regular expression to replace all 	
+		whitespace characters with an empty string. For example:
+		String stringWithSpaces = "Hello,  World!";
+		String withoutSpaces = stringWithSpaces.replaceAll("\\s", "");
+
+6. What is String interning?
+Ans. -> String interning is a process in Java where String objects with the same content are stored in a common pool, so that they can be 
+		shared among multiple references. This is done to save memory and improve performance. When you create a string using a string literal, it is automatically interned.
+
+7. Why Java uses the String literal concept?
+Ans. -> Java uses the String literal concept to save memory and improve performance. By reusing String literals in the constant pool, it reduces the overhead of creating multiple identical String objects with the same value.
+
+8. What is the basic difference between a String and StringBuffer object?
+Ans. -> The basic difference is that Strings are immutable, while StringBuffers are mutable. This means you can't change the content of a String after it's created, but you can modify a StringBuffer's content without creating a new object.
+
+9. How will you create an immutable class in Java?
+Ans. -> To create an immutable class in Java, you can follow these steps:
+     - Make the class final to prevent subclassing.
+     - Declare all fields private and final.
+     - Provide no setter methods for the fields.
+     - If the class has mutable objects as fields, return defensive copies in accessor methods.
+     - Ensure that any methods that can modify the state of the object create and return a new instance rather than modifying the current one.
+
+10. What is the use of toString() method in Java?
+Ans. -> The toString() method in Java is used to convert an object to its string representation. It is often overridden in custom classes to provide a meaningful string representation of the object's state.
+
+11. Arrange the three classes String, StringBuffer, and StringBuilder in the order of efficiency for String processing operations?
+Ans. -> In terms of efficiency for string processing operations:
+      - String is the least efficient due to its immutability.
+      -StringBuilder is more efficient than String for most operations because it's mutable.
+      -StringBuffer is similar to StringBuilder but is synchronized, making it less efficient in a single-threaded environment.
+
+12. What is a StringJoiner in Java 8?
+Ans. -> StringJoiner is a class introduced in Java 8 for joining strings with a specified delimiter and optional prefix and suffix. It's useful for creating comma-separated values or other structured strings.
+
+13. How can you convert an array of bytes to String?
+Ans. -> You can convert an array of bytes to a String in Java using the constructor of the String class that takes a byte array and an encoding as parameters, like this:
+      byte[] byteArray = {72, 101, 108, 108, 111}; // Example byte array
+      String str = new String(byteArray, "UTF-8"); // Convert to String
+
+14. What is the difference between StringBuffer and StringBuilder?
+Ans. -> The main difference between StringBuffer and StringBuilder is that StringBuffer is synchronized (thread-safe), while StringBuilder is not. This synchronization makes StringBuffer less efficient in a single-threaded environment compared to StringBuilder.
+
+15. Which Can we use String in the switch case statement in Java?
+Ans. -> Yes, you can use a String in a switch-case statement in Java starting from Java 7.
+
+16. You have a character array and a String. Which one is more secure to store sensitive data (like password, date of birth, etc.)?
+Ans. -> A character array is more secure than a String for storing sensitive data because character arrays can be explicitly cleared from memory after use, while Strings are immutable and may linger in memory, posing a security risk.
+
+17. To store sensitive data (like password, date of birth, etc.), how can you check if a String is a number by using regular expression?
+Ans. -> You can check if a String is a number using regular expressions. For example, to check if a String contains a valid integer, you can use the following regular expression: boolean isNumber = str.matches("-?\\d+");
+
+18. What is the difference between the expressions String s = "Temporary" and String s = new String("Temporary ")? Which one is better and more efficient?
+Ans. -> The difference is that the first expression String s = "Temporary"; creates a String literal in the string pool if it doesn't already exist, and both s and the literal reference the same object. The second expression String s = new String("Temporary "); explicitly creates a new String object, even if the content already exists in the string pool. The first expression is generally more efficient because it leverages string interning to reuse existing objects.
+
+19. Why is the String class Immutable or Final in Java?
+Ans. -> The String class is declared as both final and immutable in Java to ensure that the content of a String object cannot be changed. This immutability has various benefits, including thread-safety, security, and performance optimizations like string interning.
+
+20. Difference between Character Constant and String Constant in java?
+Ans. -> A character constant in Java is a single character enclosed in single quotes, like 'A'. A string constant is a sequence of characters enclosed in double quotes, like "Hello, World!". The primary difference is the use of single quotes for characters and double quotes for strings.
+
+21. What is the purpose of the "StringBuilder" class in Java?
+Ans. -> The "StringBuilder" class in Java is used to create mutable sequences of characters. It is typically used when you need to perform a series of modifications on a character sequence, and you want to avoid the overhead of creating multiple new String objects.
+
+22. What is the purpose of the "StringBuffer" class in Java?
+Ans. -> The "StringBuffer" class in Java is similar to "StringBuilder" in that it is used to create mutable sequences of characters. However, it is synchronized, making it suitable for multi-threaded applications where thread-safety is required.
+
+23. What is String in Java?
+Ans. -> In Java, a String is a class that represents a sequence of characters. It is widely used for working with text and is part of the Java Standard Library.
+
+24. Is String a class or data type in Java?
+Ans. -> String is a class in Java. It is not a primitive data type.
+
+25. How many ways can we create string object in Java?
+Ans. -> You can create a String object in Java in multiple ways, including using string literals, the new keyword, character arrays, and the StringBuffer or StringBuilder classes.
+
+26. What is String Constant Pool in Java?
+Ans. -> The String Constant Pool in Java is a pool of String objects that are cached by the JVM. When you create a String using a string literal, the JVM checks the pool to see if an identical String already exists. If it does, the new String references the existing one, saving memory.
+
+27. Why string object is immutable in java?
+Ans. -> String objects are immutable in Java to ensure that their content cannot be changed once created. This immutability has benefits in terms of security, thread-safety, and performance.
+
+28. What is the superclass of the string class in Java?
+Ans. -> The superclass of the String class in Java is the Object class.
+
+29. What is String literal in java? How is string literal stored in memory?
+ Ans. -> A String literal in Java is a sequence of characters enclosed in double quotes, like "Hello, World!". String literals are stored in the String Constant Pool, which allows the JVM to optimize memory usage.
+
+30. Why Java uses the concept of string literal?
+Ans. -> Java uses the concept of String literals to save memory and improve performance by caching frequently used String values in the String Constant Pool. This reduces the overhead of creating multiple identical String objects.
+
+31. How are String literals cleared from String constant pool?
+    - String literals are cleared from the String Constant Pool when there are no references to them. The Java Garbage Collector may remove them when they are no longer in use.
+
+32. What are the drawbacks of creating a large number of string literals in the memory pool?
+Ans. -> The drawbacks of creating a large number of string literals in the memory pool include increased memory usage, potential for memory leaks (if references are not properly managed), and slower performance due to increased Garbage Collector activity.
+
+33. How many objects will create for the identical string?
+Ans. -> Identical strings in Java that are created using string literals or are interned will reference the same object in the String Constant Pool, so only one object is created.
+
+34. Can we use reflection to clear a string object?
+Ans. -> You cannot use reflection to clear a String object. The immutability of Strings prevents their modification, even via reflection.
+
+35. Why is the String class declared as final in Java?
+Ans. -> The String class is declared as final in Java to prevent it from being subclassed. This ensures the immutability and security of String objects.
+
+36. How many interfaces are implemented by String class?
+Ans. -> The String class in Java implements several interfaces, including Serializable, Comparable, and CharSequence.
+
+37. Is String thread-safe in Java?
+Ans. -> String objects are thread-safe in Java because they are immutable, meaning their content cannot be changed once created. This inherent immutability makes them safe for concurrent access by multiple threads.
+
+38. What is the disadvantage of the String class in Java?
+Ans. -> The main disadvantage of the String class in Java is its immutability. Any operation that appears to modify a String actually creates a new String object, which can be inefficient in terms of memory usage and performance for certain tasks.
+
+39. Is String a wrapper class?
+Ans. -> No, String is not a wrapper class. Wrapper classes in Java are used to represent primitive data types as objects. For example, Integer is the wrapper class for the int primitive data type.
+
+40. How to compare two Strings in Java?
+Ans. -> You can compare two Strings in Java using the equals() method. For example:
+      String str1 = "Hello";
+      String str2 = "World";
+      boolean areEqual = str1.equals(str2);
+
+41. What is the difference between == (double equal operator) and the equals method in Java?
+Ans. -> The == operator in Java is used to compare the reference equality of two objects, while the equals() method is used to compare the content equality of two objects. When comparing Strings for content equality, you should use the equals() method.
+
+42. What are the best ways to concatenate strings in Java?
+Ans. -> The best ways to concatenate strings in Java include using the + operator, the concat() method, or the StringBuilder or StringBuffer classes for more complex or performance-critical concatenation operations.
+
+43. How to check if a string is empty or not?
+Ans. -> You can check if a string is empty or not by using the isEmpty() method or by comparing it to an empty string, like this:
+      String str = "Hello";
+      boolean isEmpty = str.isEmpty(); // Checks if the string is empty
+      boolean notEmpty = !str.equals(""); // Checks if the string is not empty
+
+44. How to get a character or multiple characters from a string in Java?
+Ans. -> To get a character or multiple characters from a string in Java, you can use the charAt() method to get a single character at a specific index, or you can use the substring() method to get a substring of characters.
+
+45. What are the most widely used methods of the Java String class?
+Ans. -> Some of the most widely used methods of the Java String class include length(), charAt(), substring(), equals(), equalsIgnoreCase(), indexOf(), lastIndexOf(), split(), trim(), and many more.
+
+46. Why StringBuffer objects in Java are mutable?
+Ans. -> StringBuffer objects in Java are mutable because they allow you to modify the content of the string without creating a new object. This mutability can be beneficial when you need to perform a series of modifications on a character sequence efficiently.
+
+47. What is the difference between length and capacity in Java StringBuffer?
+Ans. -> In Java, the length() method of a StringBuffer returns the length of the character sequence it currently holds, whereas the capacity() method returns the total allocated capacity of the StringBuffer. The capacity is typically greater than or equal to the length.
+
+48. When will you use StringBuffer if String class is already available?
+Ans. -> You should use StringBuffer when you need a mutable sequence of characters in a multi-threaded environment where thread-safety is required. If you are in a single-threaded environment, or thread-safety is not a concern, you can use StringBuilder, which is more efficient due to its lack of synchronization.
+
+49. What are the most widely used methods of StringBuffer class in Java?
+Ans. -> Some widely used methods of the StringBuffer class in Java include append(), insert(), delete(), reverse(), replace(), and toString().
+
+50. Why do we need StringBuilder in Java?
+Ans. -> StringBuilder in Java is needed for efficient string manipulation when thread-safety is not a concern. It allows you to modify the contents of a string without creating new objects, which can improve performance for string concatenation and other operations.
+
+51. Which class is more preferable: StringBuffer or StringBuilder? Why?
+Ams -> StringBuilder is more preferable in most cases over StringBuffer because it provides the same mutable functionality but is not synchronized. In a single-threaded environment, this lack of synchronization makes StringBuilder more efficient. Only use StringBuffer when thread-safety is a requirement.
+
+52. When should you use StringBuilder?
+    - You should use StringBuilder when you need a mutable sequence of characters and are working in a single-threaded environment or can manage thread-safety at a higher level.
+
+53. What is an immutable class in Java?
+Ans. -> An immutable class in Java is a class whose instances cannot be modified after they are created. The state of an immutable object remains constant throughout its lifetime. Immutable classes are typically used for objects that should not change, such as dates, mathematical values, or elements of a data structure.
+
+54. What is a mutable class and mutable object in Java?
+Ans. -> A mutable class is a class whose instances can be modified after they are created, i.e., their state can change. A mutable object is an instance of a mutable class. Mutable objects can be modified, which can lead to issues in multi-threaded or concurrent environments.
+
+55. How to create/make an Immutable Class in Java?
+Ans. -> To create an immutable class in Java, follow these steps:
+      - Declare the class as final to prevent subclassing.
+      - Declare all fields as private and final.
+      - Provide no setters for fields.
+      - Return defensive copies of mutable objects in getter methods.
+      - Ensure that methods that may modify the state of the object return a new instance with the modified state.
+
+56. What is the use of toString() method in Java?
+Ans. -> The toString() method in Java is used to obtain a string representation of an object. It is often overridden in custom classes to provide a meaningful and human-readable representation of the object's state.
+
+57. What is the purpose of intern() method in Java?
+Ans. -> The intern() method in Java is used to add the invoking String to the String Constant Pool if it's not already there. This can be useful in cases where you want to ensure that identical strings share the same memory reference.
+
+58. What is the purpose of format() method in Java String?
+Ans. -> The format() method in Java's String class is used to format a string by replacing placeholders with formatted values. It is similar to the printf function in other programming languages.
+
+59. Is it possible to convert String to Int and vice versa in Java?
+Ans. -> Yes, it is possible to convert a String to an int and vice versa in Java. To convert a String to an int, you can use the Integer.parseInt() or Integer.valueOf() methods. To convert an int to a String, you can use Integer.toString() or simply concatenate the int with an empty string.
+
+60. What is the split() method? Can we split a string in Java?
+Ans. -> The split() method in Java is used to split a string into an array of substrings based on a specified delimiter. It's a handy way to break a string into parts.
+
+61. How can you remove all the white spaces in a string?
+Ans. -> You can remove all the white spaces in a string in Java using the replaceAll() method with a regular expression to replace all whitespace characters with an empty string. For example:
+      String stringWithSpaces = "Hello,  World!";
+      String withoutSpaces = stringWithSpaces.replaceAll("\\s", ""); 
+
+========================================================================================================
+
+1. What is a string?
+Ans. -> In Java, a String is a class that represents a sequence of characters. It is widely used for storing and manipulating text in Java programs. Strings in Java are immutable, meaning once created, their values cannot be changed.
+
+2. What is string handling?
+Ans. -> String handling refers to the process of manipulating and working with strings in a programming language. In Java, string handling involves various operations such as creating strings, concatenating strings, searching within strings, extracting substrings, modifying strings, and comparing strings.
+
+3. How can we store string literal in StringBuffer and StringBuilder objects?
+Ans. -> In Java, you can store string literals in StringBuffer and StringBuilder objects by using their append() method. Both StringBuffer and StringBuilder provide an append() method that allows you to append string literals or other string representations to the underlying character sequence.
+
+4. Why String class is given when char array is already available?
+
+5. Why StringBuffer class is given when we have String class to store string data?
+
+6. What is meaning the immutable and mutable objects?
+
+Ans. -> Immutable Objects: Objects whose state cannot be changed after they are created.
+		Mutable Objects: Objects whose state can be changed after they are created.
+
+7. Can we create custom (user defined) immutable object?
+Ans. -> Yes, we can create custom (user-defined) immutable objects in Java. To create an immutable object, follow these guidelines:
+Make the class final: This prevents other classes from extending it, which could potentially introduce mutability.
+Make all fields private and final: Private fields ensure encapsulation, and final fields ensure that their values cannot be modified once initialized.
+Do not provide setter methods: Since the fields are final, there's no need for setter methods. Initialization should occur only in the constructor.
+Avoid returning references to mutable objects: If your immutable object contains references to other mutable objects, ensure that those objects are not modified after being referenced by the immutable object.
+If the object contains mutable fields, ensure they are defensively copied: If your immutable object contains references to mutable objects and those objects can be modified externally, make defensive copies of those objects before storing them in the immutable object.
+
+8. Why StringBuilder is given when we have StringBuffer?
+Ans. -> StringBuilder : Not thread-safe. If multiple threads access a StringBuilder concurrently, it may lead to data corruption or inconsistency unless external synchronization is applied.
+		StringBuffer : Thread-safe. Methods of StringBuffer are synchronized, making it safe for use in multi-threaded environments without external synchronization.
+		StringBuilder: Generally faster than StringBuffer because it is not synchronized. It does not incur the overhead of synchronization, which can lead to better performance in single-threaded scenarios.
+		StringBuffer: Slightly slower than StringBuilder due to synchronization. The synchronized methods ensure thread safety but come with a performance cost.
+		StringBuilder: Preferred when thread safety is not a concern, such as in single-threaded environments or when external synchronization is used. It is commonly used for building strings in performance-critical operations.
+		StringBuffer: Used in multi-threaded environments where thread safety is required, or when synchronization is necessary to prevent data corruption in concurrent access scenarios.
+
+9. What is the meaning of thread-safe and non-thread safe objects? 
+Ans. -> Thread-Safe Objects: Objects that can be safely accessed and modified by multiple threads concurrently without causing data corruption or inconsistency.
+		Non-Thread-Safe Objects: Objects that are not designed to handle concurrent access by multiple threads without external synchronization. Accessing or modifying these objects 
+
+10. Can we create thread-safe and non-thread safe objects?
+Ans. -> Yes, we can create both thread-safe and non-thread-safe objects in Java. Whether an object is thread-safe or not depends on how it is designed and implemented.
+
+11. Can we assign string literal directly to StringBuffer or type variables?
+Ans. -> No, we can not assign string literal directly to StringBuffer or type variables. String literals are immutable, which means that they cannot be changed once they are created. StringBuffer and StringBuilder are mutable, which means that they can be changed.
+
+12. What is the definition of String, StringBuffer, and StringBuilder?
+Ans. -> String : String is a class in Java that represents a sequence of characters. It is widely used for storing and manipulating text in 
+		Java programs. Strings in Java are immutable, meaning once created, their values cannot be changed. The String class provides a rich set of methods for performing various operations on strings, such as concatenation, substring extraction, searching, replacing, converting case, trimming whitespace, and many more.
+		
+		StringBuffer : StringBuffer is a class in Java that represents a mutable sequence of characters. It is similar to String, but unlike strings, StringBuffer objects can be modified after they are created. StringBuffer is thread-safe, meaning it can be safely accessed and modified by multiple threads concurrently without causing data corruption or inconsistency. StringBuffer provides methods for appending, inserting, deleting, replacing, and other string manipulation operations.
+		
+		StringBuilder : StringBuilder is similar to StringBuffer in that it represents a mutable sequence of characters. However, StringBuilder is not thread-safe. StringBuilder provides better performance compared to StringBuffer because it is not synchronized. This makes StringBuilder suitable for use in single-threaded environments or scenarios where thread safety is not a concern. StringBuilder provides methods for appending, inserting, deleting, replacing, and other string manipulation operations, similar to StringBuffer.
+
+13. What is the relation between Sting, StringBuffer and StringBuilder classes?
+Ans. -> Both string classes are siblings 
+
+14. Why String, StringBuffer classes are created as siblings, why not with IS-A relation?
+
+15. Why StringBuffer, StringBuilder classes not created with IS-A relation?
+
+---------------------------------------------
+String & Object creation Interview Questions 
+---------------------------------------------
+
+18. What is the main difference between String and StringBuffer?
+Ans. -> String : String objects are immutable, meaning their values cannot be changed after they are created. Any operation that seems to 
+		modify a string actually creates a new string object with the modified value. Once created, a String object's value remains constant throughout its lifetime
+
+		StringBuffer : StringBuffer objects, on the other hand, are mutable, meaning their contents can be modified after creation. StringBuffer provides methods for appending, inserting, deleting, replacing, and other string manipulation operations without creating new objects each time.
+
+19. What are the differences in creating String object using the String literal and using the constructor?
+Ans. -> String Literal : When you create a String object using a string literal (e.g., "Hello"), the Java compiler checks the string pool 
+		first to see if an equivalent string already exists.
+		If a matching string is found in the string pool, a reference to that string object is returned, and no new object is created.
+		If no matching string is found in the string pool, a new String object is created in the heap memory, and the string literal is added to the string pool for future reuse
+		
+		String Constructor : When you create a String object using the String constructor (e.g., new String("Hello")), a new String object is always created in the heap memory, regardless of whether an equivalent string already exists in the string pool.
+		This means that even if an identical string already exists in the string pool, using the String constructor will still create a new object.
+		
+20. How many objects are created in "literal" assignment & in constructor assignment?
+
+21. When should we use constructor for creating String object? 
+
+22. On what basis can we count how many string objects are created in JVM?
+
+---------------------------------------------
+String pooling interview questions
+---------------------------------------------
+
+23. What is String Pooling; and Why String pooling?
+Ans. -> String pool is a storage space in the Java heap memory where string literals are stored. 
+
+24. Where String literal objects are stored and where String constructor objects are stored?
+Ans. -> String literals are stored in a special area of memory called the "string pool" or "string constant pool."
+		Strings created using the String constructor are stored in the regular heap memory, like any other object created with the new keyword.
+
+25. Draw JVM Architecture to show complete memory structure of String objects creation in both approaches? 
+
+26. Why String object is created as immutable?
+
+27. Why String poling is implemented for String objects only? 
+Ans. -> String pooling is a mechanism in Java where string literals are stored in a special area of memory called the "string pool" or "string constant pool." The purpose of string pooling is to conserve memory by ensuring that each unique string literal is stored only once in memory, regardless of how many times it appears in the program. This allows strings to be reused rather than creating new objects, leading to improved memory efficiency and performance.
+
+28. Is String referenced variable immutable?
+Ans. -> n Java, the reference variable itself, which points to a String object, is not immutable. It's important to distinguish between the reference variable and the String object it points to:
+
+29. How can we make string reference variables as immutable?
+Ans. -> Since strings are immutable, we can make string reference variables immutable by using the final keyword. For example, in Java, we can declare a string reference variable as immutable
+
+---------------------------------------------
+String Constant Pool Area (SCPA) interview questions 
+---------------------------------------------
+
+30. What is a String Constant Pool Area?
+Ans. -> A string constant pool is a separate place in the heap memory where the values of all the strings which are defined in the program are stored. When we declare a string, an object of type String is created in the stack, while an instance with the value of the string is created in the heap.
+
+31. Who creates SCPA object & When?
+Ans. -> The String Constant Pool (SCP) is created and managed by the Java Virtual Machine (JVM) during the execution of a Java program. The SCP is a part of the JVM's heap memory where string literals are stored.
+The creation of SCP objects happens automatically as the JVM encounters string literals during the execution of the program. Here's how it typically works:
+
+32. Is SCPA created separately for every class in the project or is it created one per JVM? Prove your answer with a program?
+Ans. -> he String Constant Pool (SCP) is created per JVM instance, meaning it is shared among all classes and instances within the same JVM. This means that regardless of how many classes or instances are present in the project, there is only one SCP for the entire JVM.
+
+33. Is SCPA eligible for of garbage collection, if not why? 
+Ans. -> No, the String Constant Pool (SCP) is not eligible for garbage collection because it is a part of the JVM's runtime data area and is intended to be a long-lived memory area that persists for the duration of the JVM instance.
+
+34. Is String literal object eligible for gc, if not why?
+Ans. -> No, string literal objects are not eligible for garbage collection in Java. This is because string literals are interned in the String Constant Pool (SCP), a special area of memory in the Java Virtual Machine (JVM) where unique string literals are stored for reuse.
+
+35. Is String constructor object eligible for gc, if yes why?
+Ans. -> es, String objects created using the String constructor are eligible for garbage collection in Java, just like any other object. When you create a String object using the String constructor, it is allocated on the heap memory, and its lifecycle is managed by the Java garbage collector.
+
+36. Prove that string literal object is not eligible for gc even if it is unreferenced explicitly?
+
+---------------------------------------------
+String class constructors interview questions
+---------------------------------------------
+
+37. How many important constructors do we have in String class?
+Ans. -> The String class in Java provides several constructors for creating string objects. Some of the important constructors available in the String class include:
+		1. String(): Creates an empty string with a capacity of 16 characters.
+		2. String(byte[] bytes): Constructs a new String by decoding the specified byte array using the platform's default charset.
+		3. String(byte[] bytes, Charset charset): Constructs a new String by decoding the specified byte array using the specified charset.
+		4. String(byte[] bytes, int offset, int length): Constructs a new String by decoding the specified subarray of bytes using the platform's default charset.
+		5. String(byte[] bytes, int offset, int length, Charset charset): Constructs a new String by decoding the specified subarray of bytes using the specified charset.
+		6. String(char[] value): Allocates a new String so that it represents the sequence of characters currently contained in the character array argument.
+		7. String(char[] value, int offset, int count): Allocates a new String that contains characters from a subarray of the character array argument.
+		8. String(String original): Initializes a newly created String object so that it represents the same sequence of characters as the argument; in other words, the newly created string is a copy of the argument string.
+		9. String(StringBuffer buffer): Constructs a new String with the same contents as the specified StringBuffer.
+		10. String(StringBuilder builder): Constructs a new String with the same contents as the specified StringBuilder.
+			
+38. What happen if we pass null as argument to String class ?
+Ans. -> If null is passed as an argument to the constructor of the String class in Java, it will result in a NullPointerException being thrown at runtime. This is because the String class constructor expects a valid argument, typically either a character array, byte array, or another String object, and it cannot handle null values.
+
+39. Can we create null string object? 
+Ans. -> No, it's not possible to create a "null string object" in Java. In Java, a null reference means that the reference variable does not point to any object in memory. It doesn't represent an actual object itself.
+
+40. Can we create null string referenced variable?
+Ans. -> Yes, in Java, you can create a null string reference variable. A null string reference variable is simply a variable of type String that is assigned the special value null, indicating that it currently does not reference any string object.
+
+41. Can we create empty string object?
+Ans. -> In Java, there is no concept of creating an "empty string object" explicitly. However, you can create a string object that represents an empty string by using an empty string literal "". An empty string literal is a sequence of characters with zero length, indicating an empty string.
+
+42. Are both empty string & null String Object Same
+Ans. -> No, an empty string and a null string object are not the same in Java. They represent different concepts:
+
+---------------------------------------------
+Custom Immutable and mutable objects creation interview questions
+---------------------------------------------
+
+43. What is immutable and mutable object? 
+Ans. ->  The mutable objects can be changed to any value or state without adding a new object. Whereas, the immutable objects can not be changed to its value or state once it is created.
+
+44. Given some of the inbuilt immutable & mutable objects?
+Ans. -> The mutable class examples are StringBuffer, Java. util. Date, StringBuilder, etc. Whereas the immutable objects are legacy classes, wrapper classes, String class, etc.
+
+45. What is SCP?
+Ans. -> A specially designed memory area for the String literals/objects .
+
+46. Can we develop immutable variable, if yes how?
+Ans. -> In Java, you cannot directly create immutable variables, as the concept of immutability applies to objects rather than variables. 
+
+47. Assume we called a mutator method on an immutable object. Then it definitely returns a new object with result. Then what is the output we get in the below cases: 	
+	Case #1: Returned object is not assigned to any variable
+	Case #2: Returned object is assigned to new referenced variable 
+	Case #3: Returned object is assigned to the same current object's variable
+
+---------------------------------------------
+String operation methods interview questions
+---------------------------------------------
+
+48. How can we find is string empty or not?
+Ans. -> using isEmpty() method we find string is empty ot not.
+
+49. How can we find length of the String?
+Ans. -> using length() method we find string is empty ot not.
+
+50. What is the difference between length & length()?
+Ans. -> length: length is a property of arrays in Java. It represents the number of elements in an array. It is accessed directly from the array variable without 
+		parentheses.
+		
+		length(): length() is a method of the String class and is used to determine the number of characters in a string. It returns an integer representing the number of characters in the string. It is invoked as a method on a string object, using parentheses.
+	
+51. What is printed when we print String object, is it String@hashCode or its data?
+Ans. -> When you print a String object in Java using System.out.println() or similar methods, the actual content of the string is printed, not the memory address (hash code) of the object.
+
+52. In how many ways we can compare string objects? 
+Ans. -> Using equals(): Compares the content of two strings. Example: str1.equals(str2)
+		Using equalsIgnoreCase(): Compares content ignoring case. Example: str1.equalsIgnoreCase(str2)
+		Using compareTo(): Compares lexicographically. Example: str1.compareTo(str2)
+		Using compareToIgnoreCase(): Compares lexicographically ignoring case. Example: str1.compareToIgnoreCase(str2)
+		Using ==: Checks if two string references point to the same object. Example: str1 == str2
+
+53. How String Objects must be compared for equality?
+Ans. -> String objects should be compared for equality using the equals() method. This method checks whether two string objects have the same content. It's important to use equals() for string comparison because it compares the actual content of the strings, rather than their memory addresses or references.
+
+54. What is meant by comparing string objects lexicographically, how it can be done?
+Ans. -> Lexicographic comparison of strings means comparing them based on their dictionary order or alphabetical order. To perform lexicographic comparison in Java, you can use the compareTo() method provided by the String class.
+
+55. When should we compare string objects for equality and lexicographically?
+Ans. -> ou should compare string objects for equality when you want to check if two strings have the same content. This is typically useful when you need to verify if two pieces of text are identical.
+On the other hand, you should compare string objects lexicographically when you want to determine their relative order in dictionary or alphabetical order. This is useful when you need to sort strings or when you want to determine which string comes before or after another string in alphabetical order.
+
+56. How can we read characters from the String? 
+Ans. -> using charArray() method we can red char from string;
+
+57. How can we find the character case in the String object?
+Ans. -> Using Character.isUpperCase() and Character.isLowerCase() methods: These static methods in the Character class allow you to determine whether a given character is upper case or lower case.
+
+58. How can we find the position of a character or sub String?
+Ans. -> using indexOf() method we can rfind position of a char or sub storing;
+
+59. If the given character is not available what value is returned from indexOf() method?
+Ans. -> if given char is not available in string then indexOf() method return -1.
+
+60. How can we find a character or a substring in the given string?
+Ans. -> contains() method.
+
+61. How can we find the string is startsWith or endsWith the given substring?
+Ans. -> startsWith() method ans endsWith() methods.
+
+62. What is the difference between equals, contains, startsWith and endsWith methods? 
+Ans. -> equals(): Checks if two strings have the same content.
+		contains(): Checks if a string contains a specified substring.
+		startsWith(): Checks if a string starts with a specified prefix.
+		endsWith(): Checks if a string ends with a specified suffix.
+
+63. How can we retrieve substring from the String?
+
+64. If the start index and end index is same then what is returned from substring() method?
+Ans. -> If the start index and end index provided to the substring() method are the same, an empty string will be returned.
+
+65. What will be returned from substring method if startIndex > endIndex? 
+Ans. -> If the startIndex argument provided to the substring() method is greater than the endIndex argument, the substring() method will throw a StringIndexOutOfBoundsException. This exception occurs because the startIndex must be less than or equal to the endIndex in order to define a valid substring range.
+
+66. How can we convert primitive values and objects to String object?
+Ans. -> Using String.valueOf():
+		Using toString() method:
+		Using concatenation:
+		Using StringBuilder or StringBuffer:
+
+67. What is the limitation of String class object?
+Ans. -> The main limitation of String objects in Java is their immutability. Once a String object is created, its value cannot be changed. Any operation that appears to modify a String actually creates a new String object with the modified value. This immutability can lead to inefficiency and increased memory usage, especially in scenarios where a large number of string manipulations are performed.
+
+68. What is meant by concatenation, how Strings can be concatenated?
+Ans. -> Using the + operator:
+		Using the concat() method:
+
+69. How can we convert string case to lower and upper case in the String?
+Ans. -> toLowerCase() method:
+		toUpperCase() method:
+
+70. How can we replace a character or substring in this String? 
+Ans. -> To replace a character or substring in a string in Java, you can use the replace() method provided by the String class. This method replaces all occurrences of a specified character or substring with another character or substring.
+
+71. How can we remove string leading and trailing spaces? 
+Ans. -> To remove leading and trailing spaces from a string in Java, you can use the trim() method provided by the String class. This method returns a new string with leading and trailing whitespace removed.
+
+72. When we call concat()/toLowerCase()/toUpperCase()/replace() & trim() methods, if current string object data is modified, will the result is stored in this current string object (or) will it return in the new object?
+Ans. -> In Java, strings are immutable, meaning that their values cannot be changed after they are created. When you call methods like concat(), toLowerCase(), toUpperCase(), replace(), and trim() on a string object, they do not modify the original string object. Instead, they return a new string object with the modified value.
+
+73. How can we split string into tokens?
+Ans. -> To split a string into tokens (or substrings) based on a delimiter in Java, you can use the split() method provided by the String class. This method divides a string into an array of substrings based on a specified delimiter.
+
+74. How can we spit given string into words?
+Ans. -> String str = "The quick brown fox";
+String[] words = str.split("\\s+");
+
+75. How can we find number of words in a string? 
+Ans. -> String str = "The quick brown fox";
+String[] words = str.split("\\s+"); // Split the string into words based on whitespace characters
+int numberOfWords = words.length; // Get the length of the array, which represents the number of words
+System.out.println("Number of words: " + numberOfWords);
+
+76. Write a program to print number of characters & words present in a given string?
+Ans. -> public class WordCount {
+    public static void main(String[] args) {
+        String str = "The quick brown fox jumps over the lazy dog";
+
+        // Calculate number of characters
+        int charCount = str.length();
+
+        // Split the string into words based on whitespace characters
+        String[] words = str.split("\\s+");
+
+        // Calculate number of words
+        int wordCount = words.length;
+
+        // Print the number of characters and words
+        System.out.println("Number of characters: " + charCount);
+        System.out.println("Number of words: " + wordCount);
+    }
+}
+
+
+77. What is returned in String[], if we pass empty string as argument to split method?
+Ans. -> If you pass an empty string as an argument to the split() method in Java, the result will be an array containing a single element, which is the original string itself. This is because the empty string matches nothing, so there are no substrings to split the original string into.
+
+78. When is empty string is included as token in string[]?
+Ans. -> An empty string is included as a token in the resulting String[] array when it occurs as a substring between consecutive delimiters in the input string. This typically happens when there are consecutive occurrences of the delimiter characters in the input string.
+
+79. What is returned in String[], if the argument string is not present in current string?
+Ans. -> If the delimiter string specified as the argument to the split() method is not present in the current string, the result will be an array containing a single element, which is the original string itself.
+
+80. What is returned in String[], if the we pass same current string as argument?
+Ans. -> if you pass the same string as the delimiter argument to the split() method, the result will be an array containing two elements:
+		An empty string at the beginning of the array.
+		The original string itself as the second element.
+
+81. Write a program to reverse words in the given string?
+
+82. What are the operations we cannot perform on string using String object?
+
+
+=======================================================
+StringBuffer, StringBuilder classes interview questions
+=======================================================
+
+83. What is definition of StringBuffer, and StringBuilder? 
+Ans. -> StringBuffer : StringBuffer is a thread-safe, mutable sequence of characters. It is synchronized, meaning that multiple threads can safely access and modify 
+		a StringBuffer object concurrently without causing data corruption or inconsistencies. However, this synchronization can lead to some performance overhead.
+		StringBuffer is typically used in multi-threaded environments or when thread safety is required.
+		
+		StringBuilder: StringBuilder is similar to StringBuffer, but it is not thread-safe. Unlike StringBuffer, StringBuilder is not synchronized, which means that it is faster and more efficient in single-threaded environments. However, it is not safe for use in multi-threaded environments unless external synchronization is provided by the programmer. StringBuilder is commonly used in scenarios where thread safety is not a concern and performance is important.
+
+
+84. What is need of StringBuffer, and StringBuilder?
+
+85.What is the right design to store and manipulate string data?
+
+86. When should we choose StringBuffer class & StringBuilder class?
+Ans. -> Use StringBuffer when : Thread safety is required: If your application is multi-threaded and multiple threads need to access or modify the same string 
+		concurrently, you should use StringBuffer. StringBuffer is synchronized, meaning it provides built-in thread safety to ensure data integrity in multi-threaded environments.
+		Data integrity is critical: If maintaining data integrity is crucial, especially in critical sections of code where multiple threads might access or modify the string simultaneously, StringBuffer ensures that only one thread can access the string at a time, preventing data corruption.
+
+		Use StringBuilder when : Thread safety is not a concern: If your application is single-threaded or if you can ensure thread safety through external synchronization mechanisms, such as using locks or synchronized blocks, StringBuilder is a better choice. StringBuilder is not synchronized, making it faster and more efficient than StringBuffer in single-threaded environments or scenarios where external synchronization is provided.
+		Performance is important: If performance is a critical factor and thread safety is not required, StringBuilder is preferred due to its better performance compared to StringBuffer. StringBuilder does not incur the synchronization overhead of StringBuffer, making it faster and more efficient for string manipulation operations.
+
+
+87. What are the special operations can be performed on StringBuffer; those cannot be applled on String?
+
+88. In how many ways we can create StringBuffer object? 
+Ans. -> Using the Default Constructor: StringBuffer sb1 = new StringBuffer();
+		Using the Parameterized Constructor with an Initial String: StringBuffer sb2 = new StringBuffer("Hello");
+
+89. In SB object creation what will happen if we pass -ve number or null as arguments?
+Ans. -> Negative Number: If you pass a negative number as an argument to the parameterized constructor that expects an initial capacity, such as StringBuffer(int 
+		capacity), the constructor will throw an IllegalArgumentException. This is because the capacity of a StringBuffer cannot be negative.
+
+		Null Argument : If you pass null as an argument to the parameterized constructor that expects an initial string, such as StringBuffer(String str), the constructor will create a StringBuffer object with an empty content (i.e., an initial capacity of 16 characters). It will not throw an exception.
+		
+90. What is the default capacity of String, StringBuffer and StringBuilder?
+Ans. -> In contrast, for String objects, the capacity is not a concern, and you simply initialize them with the desired string content:
+		In Java, the default capacity for StringBuffer and StringBuilder objects is 16 characters. This means that when you create a new StringBuffer or StringBuilder object without specifying an initial capacity, they are initially capable of holding 16 characters.
+
+91. What is the meaning of default capacity?
+Ans. -> The "default capacity" refers to the initial size or capacity allocated for an object, typically a data structure, when it is created without specifying an explicit capacity. This initial capacity determines the amount of memory allocated to the object to accommodate its data.
+
+92. What is the default capacity of StringBuffer, If its object is created 
+	1) using StringBuffer() constructor?
+	Ans. -> When you create a StringBuffer object using the default constructor StringBuffer(), the default capacity is 16 characters.
+	
+	2) Using StringBuffer(String) constructor?
+	Ans. -> When you create a StringBuffer object using the constructor StringBuffer(String str), the default capacity is the length of the provided string plus 16 characters.
+
+93. What is the difference between capacity and length?
+Ans. -> Capacity: The total space available for storing data.
+		Length: The actual amount of data stored in the data structure.
+
+94. How can we find StringBuffer capacity and length?
+Ans. -> You can find the current capacity of a StringBuffer object using the capacity() method
+
+95. How can we append, insert, delete, reverse, & override characters in the StringBuffer?
+Ans. -> To append characters, strings, or other data types to the end of the StringBuffer, use the append() method.
+		To insert characters, strings, or other data types at a specified position in the StringBuffer, use the insert() method.
+		To delete characters from a StringBuffer, use the delete() method to remove a range of characters or deleteCharAt() method to remove a single character at a specified position.
+		To reverse the contents of a StringBuffer, use the reverse() method.
+
+96. What happened when we append/insert characters more than its capacity? 
+Ans. -> When you append or insert characters beyond the current capacity of a StringBuffer, it automatically increases its capacity to accommodate the additional characters. This ensures that the operation can be completed without errors or loss of data.
+
+97. How much the capacity is increased when size is greater than current capacity?
+Ans. -> incrementing formula ((CurrentCapacity *2)+2)
+
+98. In the SB capacity incrementing formula ((CurrentCapacity *2)+2) Why the SB incremented capacity result is added by 2?
+
+99. How can we control StringBuffer capacity?
+
+100 What is the use of ensure Capacity() method?
+Ans. -> The Java ArrayList ensureCapacity(int minCapacity) method increases the capacity of this ArrayList instance, if necessary, to ensure that it can hold at least the number of elements specified by the minimum capacity argument.
+
+102. What is the use of crimToSize() method?
+
+102. What is the use of setLength() method? 
+
+103. What are the 7 differences between String and StringBuffer?
+
+=======================================================================================
+=======================================================================================
+=======================================================================================
+
+1. What is the advantage of SCP?
+Ans. -> Instead of creating a separate object for every requirement we can create only one object and we can reuse same object for every requirement. This approach improves performance and memory utilization.
+
+2. What is the disadvantage of SCP?
+Ans. -> In SCP as several references pointing to the same object by using one reference if we are performing any changes the remaining references will be inflected. To prevent this compulsory String objects should be immutable. That is immutability is the disadvantage of SCP.
+	
+3. Why SCP like concept available only for the String but not for the StringBuffer?
+Ans. -> specially designed memory area like SCP to improve memory utilization and performance. But StringBuffer object is not commonly used object hence specially designed	memory area is not at all required.
+	
+4. Why String objects are immutable where as StringBuffer objects are mutable?
+Ans. -> In the case of String as several references pointing to the same object, by using one reference if we are allowed perform the change the remaining references will be impacted. To prevent this once we created a String object we can't perform any change in the existing object that is immutability is only due to SCP. But in the case of StringBuffer for every requirement we are creating a separate object will be created by using one reference if we are performing any change in the object the remaining references won't be impacted hence immutability concept is not require for the StringBuffer.
+	
+5. Similar to String objects any other objects are immutable in java?
+Ans. -> In addition to String objects , all wrapper objects are immutable in java.
+
+6. Is it possible to create our own mutable class?
+Ans. -> Yes.
+
+7. What is the difference between final and immutability?
+Ans. -> 
+
+
+8. What is the difference between StringBuffer and String class ?
+Ans. -> A string buffer implements a mutable sequence of characters. A string buffer is like a String, but can be modiffed. At any point in time it contains
+	some particular sequence of characters, but the length and content of the sequence can be changed through certain method calls.
+	The String class represents character strings. All string literals in Java programs, such as “abc” are constant and implemented as instances of this class;
+	their values cannot be changed after they are created.
+
+9. Is String a data type in java?
+Ans. -> String is not a primitive data type in java. When a string is created in java, it’s actually an object of Java.Lang.String class that gets created. After creation of this string object, all built-in methods of String class can be used on the string object. 
+
+10. In the below example, how many String Objects are created?
+String s1=”I am Java Expert”;
+String s2=”I am C Expert”;
+String s3=”I am Java Expert”;
+Ans. -> In the above example, two objects of java.lang.String class are created. s1 and s3 are references to same object.
+
+11. Why Strings in Java are called as Immutable?
+Ans. -> In java, string objects are called immutable as once value has been assigned to a string, it can’t be changed and if changed, a new object is
+created. In below example, reference str refers to a string object having value “Value one”.
+String str=”Value One”;
+When a new value is assigned to it, a new String object gets created and the reference is moved to the new object.
+str=”New Value”;
+
+12. When a lot of changes are required in data, which one should be a preference to be used? String or StringBuffer?
+Ans. -> Since StringBuffers are dynamic in nature and we can change the values of StringBuffer objects unlike String which is immutable, it’s always a
+good choice to use StringBuffer when data is being changed too much. If we use String in such a case, for every data change a new String object will
+be created which will be an extra overhead.
+
+13. String and StringBuffer both represent String objects. Can we compare String and StringBuffer in Java?
+Ans. -> Although String and StringBuffer both represent String objects, we can’t compare them with each other and if we try to compare them, we get an error.

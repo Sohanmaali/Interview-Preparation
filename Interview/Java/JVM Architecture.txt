@@ -1,0 +1,79 @@
+--------------------------------------------
+JVM Architecture interview questions
+--------------------------------------------
+
+1. What is JVM?
+
+2. How many types of JVMs do we have?
+Ans. -> There are primarily two types of Java Virtual Machines (JVMs):
+		HotSpot JVM: This is the most commonly used JVM, developed and maintained by Oracle Corporation. It includes various components like the Java interpreter, Just-In-Time (JIT) compiler, garbage collector, and other runtime support libraries. HotSpot JVM is optimized for performance and is the default JVM for most Java applications.
+		
+		OpenJ9 JVM (formerly IBM J9): This JVM is developed and maintained by the Eclipse Foundation. It aims to provide high throughput, low latency, and efficient memory usage for Java applications. OpenJ9 is often used in cloud environments and has been optimized for running Java applications in resource-constrained environments.
+
+3. Which JVM is used for running java program by default?
+Ans. -> For many years, the HotSpot JVM has been the default JVM provided by Oracle in their JDK distributions. It's widely used and highly optimized for performance.
+
+4. How can we use server JVM?
+
+5. What will happen when we run Java corgmand?
+
+6. What are the five phases we have in developing, compiling & executing a class?
+
+7. What are different componentexxisted in JVM for executing a class?
+
+8. How many types of members we can create in a class?
+
+9. Why Java has static & non-static members?
+
+10. When static members are executed? 
+
+11. When non-static members are executed?
+
+12. What are the members are automatically executed by JVM?
+
+13. Explain five runtime areas of JVM?
+
+14. What is the use of Class & ClassLoader?
+
+15. Where & How class byte code is stored in JVM? 
+
+16. Where objects are created in JVM?
+
+17. Where static and non-static variables are provided memory?
+
+18. Where local variables are provided memory?
+
+19. Where methods logic is executed in JVM?
+
+20. Where non-static method is stored & where is it executed?
+
+21. How classes are found by compiler and JVM?
+
+22. Explain ClassLoader sub system architecture?
+
+23. Explain about application classpath, extension classpath, bootstrap class path?
+
+24. Explain Thread architecture?
+
+25. What is a stack frame?
+
+26. When a stack frame is created and destroyed?
+
+27. Explain Stack Frame architecture?
+
+28. In an expression, why byte, short, char data types are promoted to int
+
+type? 29. When a stack frame, thread, & JVM is destroyed?
+
+30. How can decompile & see java bytecode format?
+
+31. Why Java compiled code is named bytecode?
+
+32. Draw JVM architecture with all 4 types of variables & objects memory diagram?
+
+33. Draw JVM architecture for a method execution? 
+
+34. Whose stack frame is crated first is it for Static Block or for main method?
+
+35. Where static block & constructor logic is stored & executed?
+=============================================================================================================================

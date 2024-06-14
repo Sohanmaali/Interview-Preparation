@@ -1,0 +1,1747 @@
+2. Explain Differences between executeQuery(), executeUpdate() and execute() methods?
+Ans. -> There are 4 execute Methods in JDBC.
+		1. executeQuery(): can be used for Select Queries
+		2. executeUpdate(): Can be used for Non-Select Queries (Insert|Delete|Update)
+		3. execute() Can be used for both Select and Non-Select Queries It can also be used to call Stored Procedures.
+		4. executeBatch() Can be used to execute Batch Updates
+		
+		executeQuery() vs executeUpdate() vs execute():
+		1. If we know the Type of Query at the beginning and it is always Select Query then we should use executeQuery() Method.
+		2. If we know the Type of Query at the beginning and it is always Non-Select Query then we should use executeUpdate() Method.
+		3. If we don't know the Type of SQL Query at the beginning and it is available dynamically at Runtime (may be from Properties File OR from Command Prompt etc) then we should go for execute() Method.
+
+3. What is Statement and How many Types of Statements are available?
+Ans. ->  There are 3 Types of Statements
+		1. Statement: If we want to execute multiple Queries then we can use Statement Object.
+			Every time Query will be compiled and executed. Hence relatively performance is low.
+		2. PreparedStatement: If we want to execute same Query multiple times then we should go for PreparedStatement.
+			Here Query will be compiled only once even though we executed multiple times. Hence relatively performance is high.
+			PreparedStatement is always associated with precompiled SQL Queries.
+		3. CallableStatement: We can use CallableStatement to call Stored Procedures and Functions from the Database.
+
+6. Explain about BLOB and CLOB?
+Ans. -> Sometimes as the Part of programming Requirement, we have to Insert and Retrieve Large Files like Images, Video Files, Audio Files, Resume etc 
+		wrt Database.
+		Eg:
+		Upload Image in Matrimonial Web Sites
+		Upload Resume in Job related Web Sites
+		
+		To Store and Retrieve Large Information we should go for Large Objects (LOBs).
+		There are 2 Types of Large Objects.
+			1. Binary Large Object (BLOB)
+			2. Character Large Object (CLOB)
+		
+		1. Binary Large Object (BLOB): A BLOB is a Collection of Binary Data stored as a Single Entity in the Database.
+			BLOB Type Objects can be Images, Video Files, Audio Files etc..
+			BLOB Data Type can store Maximum of "4GB" Binary Data.
+		
+		2. Character Large Objects (CLOB): A CLOB is a Collection of Character Data stored as a Single Entity in the Database.
+			CLOB can be used to Store Large Text Documents (May Plain Text OR XML Documents)
+			CLOB Type can store Maximum of 4 GB Data.
+			Eg: hydhistory.txt
+
+
+7. Explain about Batch Updates?
+Ans. -> When we Submit Multiple SQL Queries to the Database one by one then lot of time will be wasted in Request and Response.
+		For Example our Requirement is to execute 1000 Queries. If we are trying to submit 1000 Queries to the Database one by one then we need to communicate with the Database 1000 times. It increases Network Traffic between Java Application and Database and even creates Performance Problems also.
+		To overcome these Problems, we should go for Batch Updates. We can Group all related SQL Queries into a Single Batch and we can send that Batch at a time to the Database.
+		Sample Code:
+		st.addBatch(sqlQuery-1);
+		st.addBatch(sqlQuery-2);
+		st.addBatch(sqlQuery-3);
+		st.addBatch(sqlQuery-4);
+		st.addBatch(sqlQuery-5);
+		st.addBatch(sqlQuery-6);
+			...
+		st.addBatch(sqlQuery-1000);
+		st.executeBatch();
+
+
+====================================== DURGA SIR ======================================
+1) What is JDBC ?
+Ans. -> JDBC stands for Java Database Connectivity. It is a Java API that allows Java programs to interact with databases, 
+
+2) What is Latest version of JDBC available?
+Ans. -> The latest version, JDBC 4.3
+
+3) Explain about JDBC Architecture?
+Ans. -> 
+
+4) Explain about common JDBC Components?
+Ans. -> Ans. -> The Main Important Components of JDBC are:
+		1. Driver
+		2. DriverManager
+		3. Connection
+		4. Statement
+		5. ResultSet
+		
+		1.Driver(Translator) : To convert Java Specific calls into Database specific calls and Database specific calls into Java calls.
+		2. DriverManager: DriverManager is a Java class present in java.sql Package.
+			It is responsible to manage all Database Drivers available in our System.
+			DriverManager is responsible to register and unregister Database Drivers.
+			DriverManager.registerDriver(driver);
+			DriverManager.unregisterDriver(driver);
+			DriverManager is responsible to establish Connection to the Database with the help of Driver Software.
+			Connection con=DriverManager.getConnection(jdbcurl,username,pwd);
+		3. Connection (Road) : By using Connection, Java Application can communicate with Database.
+		4. Statement (Vehicle) : By using Statement Object we can send our SQL Query to the Database and we can get Results from Database. 
+			To send SQL Query to the Database and to bring Results from Database some Vehicle must be required. This Vehicle is nothing but Statement Object.
+			Hence, by using Statement Object we can send our SQL Query to the Database and we can get Results from Database.
+			There are 3 types of Statements
+				1.Statement
+				2.PreparedStatement
+				3.CallableStatement
+		5. ResultSet : henever we are executing Select Query, Database engine will provide Result in the form of ResultSet. Hence ResultSet holds 
+			Results of SQL Query. By using ResultSet we can access the Results.
+
+5) Explain about DriverManager?
+Ans. -> DriverManager: DriverManager is a Java class present in java.sql Package.
+			DriverManager is responsible to register and unregister Database Drivers.
+			DriverManager.registerDriver(driver);
+			DriverManager.unregisterDriver(driver);
+			DriverManager is responsible to establish Connection to the Database with the help of Driver Software.
+			Connection con=DriverManager.getConnection(jdbcurl,username,pwd);
+
+8) Who has provided JDBC API?
+Ans. -> Sun Microsystems has provided the Java Database Connectivity (JDBC) API.
+
+9) What are the classes and interfaces available in JDBC API?
+Ans. -> Interfaces of JDBC API								Classes of JDBC API
+		Driver
+		Connection 											DriverManager class
+		Statement 											Blob class
+		PreparedStatement 									Types class
+		CallableStatement 									Clob class
+		ResultSet 
+		ResultSetMetaData 
+		DatabaseMetaData 
+		RowSet 
+
+10) Who has provided implementation of JDBC API?
+
+11) What are the steps to write JDBC Program?
+Ans. -> 1. Load and Register Driver
+		2. Establish Connection b/w Java Application and Database
+		3. Create Statement Object
+		4. Send and Execute SQL Query
+		5. Process Results from ResultSet
+		6. Close Connection
+
+12) What is JDBC Driver?
+Ans. -> Driver(Translator): driver is a software component that convert Java Specific calls into Database specific calls and Database specific calls into Java calls.
+
+13) How many types of JDBS Drivers available?
+Ans. -> The Main Purpose of JDBC Driver is to convert Java (JDBC) calls into Database specific calls and Database specific calls into Java calls.
+		There are 4 Types of JDBC Drivers are available
+		1. Type-1 Driver (JDBC-ODBC Bridge Driver OR Bridge Driver)
+		2. Type-2 Driver (Native API-Partly Java Driver OR Native Driver)
+		3. Type-3 Driver (All Java Net Protocol Driver OR Network Protocol Driver OR Middleware Driver)
+		4. Type-4 Driver (All Java Native Protocol Driver OR Pure Java Driver OR Thin Driver)
+
+14) Explain TYPE I Driver?
+Ans. -> Type 1 driver – JDBC-ODBC bridge. The JDBC type 1 driver, also known as the JDBC-ODBC bridge, is a dbase driver implementation that employs the ODBC driver to connect to the database. The driver converts JDBC method calls into ODBC function calls.
+
+15) Which version of Java has excluded TYPE I Driver?
+Ans. -> The JDBC-ODBC bridge driver, also known as the JDBC Type 1 driver, was removed in Java 9. 
+
+16) I have loaded both Oracle and MySQL drivers, Which database connection will be established when we call getConnection(...)method?
+Ans. -> Based on jdbc url the Connection object will be created to the database.
+
+17) I have loaded Oracle driver and trying to get the connection with MySQL URL What will happen?
+	Class.for Name("oracle.jdbc.OracleDriver");
+	con=DriverManager.getConnection("jdbc:mysql://localhost:3306/durgadb","root","root");
+Ans. ->  We will get ClassNotFoundException
+
+18) What the DriverManager.getConnection() method doing?
+Ans. -> In JDBC API or in java.sql package, SUN has given more interfaces like Connection, Statement, ResultSet, Etc., How Instances will be created?
+
+19) Can I register the Driver Explicitly?
+
+20) Can I unregister the Driver?
+Ans. -> Yes, you can unregister a JDBC driver explicitly in your Java application using the DriverManager.deregisterDriver() method. This can be useful in certain scenarios, such as when you want to unload a driver and free up resources, especially in long-running applications or dynamically managed environments like application servers.
+
+21) How can i find list of drivers registered?
+Ans. -> Following JDBC program registers a bunch of JDBC drivers using the registerDriver() method and, displays the list of them using the getDrivers() method
+
+22) Which is best driver?
+Ans. -> Type-4 is the best driver.
+
+23) Explain the cases when each driver should be used?
+Ans. -> 1. If we are using only one Type of Database in our Application then it is recommended to use Type-4 Driver. Eg: Stand Alone Applications, Small Scale Web Applications
+		2. If we are using multiple Databases in our Application then Type-3 Driver is recommended to use. Eg: Large Scale Web Applications and Enterprise Applications
+		3. If Type-3 and Type-4 Drivers are not available then only we should go for Type-2 Driver.
+		4. If no other Driver is available then only we should go for Type-1 Driver.
+
+24) Which Type of JDBC Driver is the Fastest One?
+Ans. -> The JDBC Net pure Java driver (Type 4 driver) is generally considered the fastest JDBC driver. 
+
+25) Explain two important approaches to Register a Driver?
+Ans. -> The most common approach to register a driver is to use Java's Class. forName() method, to dynamically load the driver's class file into memory, which automatically registers it
+
+26) Whenever we are using Class.forName() method to load Driver class automatically Driver will be Registered with DriverManager. Then what is the need of DriverManager class registerDriver() method.
+Ans. -> This method is useful whenever we are using Non-JDK Complaint Driver.
+
+27) Can I establish two database connections at a time?
+Ans. -> Yes, you can establish multiple database connections at a time.
+
+28) What are the difference among 3 getConnections() method?
+	2) public static Connection getConnection(String url,String uname, String pword)
+	1) public static Connection getConnection(String url)
+	3) public static Connection getConnection(String url,Properties info)
+Ans. -> 1. Connection con=DM.getConnection(url,user,pwd);
+		2. Connection con=DM.getConnection(url,Properties);
+		3. Connection con=DM.getConnection(url);
+			Eg: Connection con=DM.getConnection("jdbc:mysql://localhost:3306/durgadb?user=root&password=root");
+			Eg: Connection con=DriverManager.getConnection("jdbc:oracle:thin:scott/tiger@localhost:1521:XE");
+
+29) Can we specify the column name in the select statement or not?
+Ans. -> Yes, you can write a column name along with a multi-row function in a SELECT clause
+
+30) What is the use of execute() if we have the executeUpdate() or executeQuery()?
+Ans. -> If we don't know the Type of SQL Query at the beginning and it is available dynamically at Runtime (May be from Properties File OR From Command Prompt Etc) then we should go for execute() Method.
+
+31) What is Statement?
+Ans. -> a Statement is an interface used to execute SQL queries against a database. It allows you to send SQL commands and receive data from the database. A 
+
+32) How many types of JDBC Statements are available?
+Ans. -> 1. Statement : The Statement interface is used for executing simple SQL queries without parameters. It is typically used for executing static SQL statements, such as SELECT, INSERT, UPDATE, or DELETE.
+		2. PreparedStatement : The PreparedStatement interface extends the Statement interface and is used for executing precompiled SQL statements. It allows you to set parameters dynamically at runtime, making it more efficient and secure (especially against SQL injection attacks).
+		3. CallableStatement : The CallableStatement interface extends the PreparedStatement interface and is used for executing stored procedures in the database. It allows for the use of both input and output parameters.
+
+33) In which package the statement is defined?
+Ans. -> java.sql
+
+34) Is there any super type defined for statement?
+Ans. -> No
+
+35) Who is responsible to define implementation class for statement?
+
+36) How to get /create the object of statement type?
+Ans. -> Use the createStatement() method to ask the Connection to create the Statement object. Statement stmt = con. createStatement();
+
+37) While creating the statement do we need to provide any SQL statement?
+Ans. -> When creating a Statement object in JDBC, you do not need to provide any SQL statement at the time of creation. The SQL statement is provided later when you use the Statement object to execute a query. Here’s how it works:
+
+38) What are the methods can be used from statement to submit the SQL Query to database?
+Ans. -> 1. executeQuery()
+		2. executeUpdate()
+		3. execute()
+
+39) What is the difference among executeQuery(), executeUpdate() and execute() methods?
+Ans. -> Ans. -> 1. If we know the Type of Query at the beginning and it is always Select Query then we should use "executeQuery() Method".
+		2. If we know the Type of Query at the beginning and it is always Non-Select Query then we should use executeUpdate() Method.
+		3. If we don't know the Type of SQL Query at the beginning and it is available dynamically at Runtime (May be from Properties File OR From Command Prompt Etc) then we should go for execute() Method.
+
+40) How many Queries we can submit by using one statement object?
+Ans. -> we can submit multiple queries using statement object.
+
+41) How many types of queries I can submit using one statement object?
+Ans. -> A single Statement object can submit various types of SQL queries including:
+DDL statements
+DML statements
+DCL statements
+TCL statements
+Any other SQL commands, using the execute method
+This versatility makes the Statement object a powerful tool for interacting with a database in a JDBC application.
+
+42) When exactly SQL statement will be submitted to the database?
+
+43) When you submit the SQL statement to database using statement then how many times the SQL statement will be compiled/verified?
+Ans. -> Whenever we are using execute Method, every time Query will be compiled and executed.
+
+44) How to use dynamic value to the SQL statement in the case of statement object?
+
+45) What is the PreparedStatement?
+Ans. -> If we want to execute same Query multiple times then we should go for PreparedStatement. Here Query will be compiled only once even though we executed multiple times. Hence relatively performance is high.
+
+46) In which package the PreparedStatement is defined?
+Ans. -> PreparedStatement is a class in the java.sql package. It's an API defined by JRE.
+
+47) Is there any super type defined for PreparedStatement?
+Ans. -> Yes, in JDBC, the PreparedStatement interface extends the Statement interface, so Statement is the super type of PreparedStatement. This means that all methods defined in Statement are available in PreparedStatement, in addition to the methods specific to PreparedStatement.
+
+48) Who is responsible to define implementation class for PreparedStatement?
+
+49) How to get/create the object of PreparedStatement type?
+Ans. -> To create a PreparedStatement object, you can use the Connection.prepareStatement() method
+
+50) While creating the prepared Statement do we need to provide any SQL Statement?
+Ans. -> Yes, you need to provide an SQL query when creating a PreparedStatement object. 
+
+51) What are the methods can be used from Prepared Statement to submit the SQL Query to database?
+Ans. -> executeQuery()
+		executeUpdate()
+		execute()
+
+52) How many Queries we can submit using one Prepared Statement object?
+Ans. -> With a single PreparedStatement object in JDBC, you can submit multiple queries by reusing the same prepared statement with different parameter values. Each time you set new parameter values and execute the statement, it effectively submits a new query to the database.
+
+53) How many types of queries We can submit using one PreparedStatement object?
+Ans. -> if we want to work with only one Query but required to execute multiple times.
+
+54) When we submit the SQL statement to database using Prepared Statement then how many times the SQL Statement will be compiled/vefified?
+Ans. -> Whenever we are using execute Method, Query won't be compiled just will be executed
+
+55) How to use dynamic value to the SQL statement in the case of PreparedStatement object?
+Ans. -> 
+public class PreparedStatementExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+        int userId = 1; // Example dynamic value
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            // Step 1: Create a PreparedStatement with a parameterized SQL query
+            String sql = "SELECT * FROM users WHERE id = ?";
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+
+            // Step 2: Set parameter values using setter methods
+            pstmt.setInt(1, userId); // Set the value for the first parameter (index starts from 1)
+
+            // Step 3: Execute the prepared statement
+            ResultSet rs = pstmt.executeQuery();
+
+            // Step 4: Process the result set
+            while (rs.next()) {
+                System.out.println("Name: " + rs.getString("name"));
+            }
+
+            // Close resources
+            rs.close();
+            pstmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+56) What is the difference between Statement and PreparedStatement ?
+Ans. -> Statement PreparedStatement
+		1) At the time of creating Statement Object, we are not required to provide any Query. Statement st = con.createStatement(); Hence Statement Object is not associated withany Query and we can use for multiple Queries.
+		1) At the time of creating PreparedStatement, we have to provide SQL Query compulsory and will send to the Database and will be compiled. PS pst = con.prepareStatement(query); Hence PS is associated with only one Query.
+
+		2) Whenever we are using execute Method, every time Query will be compiled and executed.
+		2) Whenever we are using execute Method, Query won't be compiled just will be executed.
+		
+		3) Statement Object can work only for Static Queries.
+		3) PS Object can work for both Static and Dynamic Queries.
+		
+		4) Relatively Performance is Low. 
+		4) Relatively Performance is High.
+		
+		5) Best choice if we want to work with multiple Queries.
+		5) Best choice if we want to work with only one Query but required to execute multiple times.
+
+		6) There may be a chance of SQL Injection Attack.
+		6) There is no chance of SQL Injection Attack.
+
+		7) Inserting Date and Large Objects (CLOB and BLOB) is difficult.
+		7) Inserting Date and Large Objects (CLOB and BLOB) is easy.
+	
+57) What is the benefit of PreparedStatement over Statement?
+Ans. -> Precompilation: PreparedStatement queries are precompiled by the database server, enhancing performance by avoiding repeated compilation.
+		Parameterized Queries: PreparedStatement supports parameterized queries, safeguarding against SQL injection attacks and promoting code readability.
+		Query Optimization: Precompiled PreparedStatement queries allow for optimized query execution plans, leading to better performance.
+		Automatic Data Conversion: PreparedStatement handles data conversion automatically, reducing the risk of data type errors.
+		Reduced Database Load: With precompiled queries and parameterized values, PreparedStatement reduces the load on the database server.
+		Caching Execution Plans: Some databases cache execution plans of prepared statements, further improving performance by avoiding query compilation overhead.
+
+58) What is CallableStatement?
+Ans. -> A CallableStatement in JDBC is an interface that extends PreparedStatement and is used specifically for calling stored procedures or functions in a database. It provides methods to set input parameters, register output parameters, and execute stored procedures, making it easier to work with database procedures in Java applications.
+
+59) In Which package the CallableStatement is defined?
+Ans. -> java.sql
+
+60) Is there any super type defined for CallableStatement?
+Ans. -> PreparedStatement
+
+61) Who is responsible to defined implementation class for CallableStatement?
+
+62) How to get/create the object of CallableStatement type?
+Ans. -> CallableStatement cst=con.prepareCall("{ call getAllEmpInfo(?)}");
+
+63) While creating the Callable Statement do we need to provide any SQL Statement?
+Ans. -> Yes
+
+64) What is the purpose/benefit of CallableStatement?
+Ans. -> In our programming if any code repeatedly required, then we can define that code inside a method and we can call that method multiple times based on our requirement.
+
+65) What are the methods can be used from CallableStatement to call the procedure from database?
+Ans. -> registerOutParameter(int parameterIndex, int sqlType)
+setXxx(int parameterIndex, Xxx value)
+execute()
+executeQuery()
+executeUpdate()
+getInt(int parameterIndex)
+getString(int parameterIndex)
+getObject(int parameterIndex)
+wasNull()
+
+66) When we call the procedure from database using CallableStatement then how many times the SQL Statement will be compiled/verified?
+Ans. -> When you call a stored procedure from the database using a CallableStatement, the SQL statement within the stored procedure is typically compiled and verified only once, during the preparation of the CallableStatement.
+
+67) How to use dynamic value to the procedure in the case of CallableStatement object?
+Ans. -> 
+public class CallableStatementExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            // Prepare the CallableStatement with placeholders for dynamic values
+            String callProcedure = "{CALL my_stored_procedure(?, ?)}";
+            CallableStatement callableStatement = connection.prepareCall(callProcedure);
+
+            // Set input parameters
+            int inputParam1 = 123;
+            String inputParam2 = "example";
+            callableStatement.setInt(1, inputParam1);
+            callableStatement.setString(2, inputParam2);
+
+            // Register output parameters (if any)
+            callableStatement.registerOutParameter(2, Types.INTEGER); // Example output parameter
+
+            // Execute the CallableStatement
+            callableStatement.execute();
+
+            // Retrieve output parameters (if any)
+            int outputParam2 = callableStatement.getInt(2); // Example output parameter
+            System.out.println("Output Parameter 2: " + outputParam2);
+
+            // Close the CallableStatement
+            callableStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+68) How can we call the procedure from Java application using input parameter?
+Ans. -> To call a stored procedure from a Java application using input parameters, you can follow these steps:
+Establish a Database Connection: Connect to your database using JDBC by providing the JDBC URL, username, and password.
+Prepare the CallableStatement: Prepare a CallableStatement object by specifying the call to the stored procedure and placeholders (?) for input parameters.
+Set Input Parameters: Use setter methods (setXxx()) to assign values to the input parameters of the stored procedure.
+Execute the CallableStatement: Execute the CallableStatement object to invoke the stored procedure.
+Process the Results (if any): If the stored procedure returns a result set or output parameters, retrieve and process them accordingly.
+Close Resources: Close the CallableStatement and the database connection to release resources.
+
+public class CallStoredProcedureWithInputParameters {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            // Prepare the CallableStatement with placeholders for input parameters
+            String callProcedure = "{CALL my_stored_procedure(?, ?)}";
+            CallableStatement callableStatement = connection.prepareCall(callProcedure);
+
+            // Set input parameters
+            int inputParam1 = 123;
+            String inputParam2 = "example";
+            callableStatement.setInt(1, inputParam1);
+            callableStatement.setString(2, inputParam2);
+
+            // Execute the CallableStatement
+            callableStatement.execute();
+
+            // Process the results (if any)
+
+            // Close the CallableStatement
+            callableStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+69) How can you call the procedure from Java Application using output parameter of the procedure?
+Ans. -> To call a stored procedure from a Java application using output parameters, you can follow these steps:
+Establish a Database Connection: Connect to your database using JDBC by providing the JDBC URL, username, and password.
+Prepare the CallableStatement: Prepare a CallableStatement object by specifying the call to the stored procedure and placeholders (?) for both input and output parameters.
+Set Input Parameters (if any): Use setter methods (setXxx()) to assign values to the input parameters of the stored procedure.
+Register Output Parameters: Register the output parameters using the registerOutParameter() method, specifying the index of the parameter and its SQL type.
+Execute the CallableStatement: Execute the CallableStatement object to invoke the stored procedure.
+Retrieve Output Parameters: After executing the stored procedure, retrieve the values of the output parameters using getter methods (getXxx()).
+Process the Results (if any): If the stored procedure returns a result set, retrieve and process it accordingly.
+Close Resources: Close the CallableStatement and the database connection to release resources.
+Here's a basic example demonstrating how to call a stored procedure with output parameters from a Java application:
+
+public class CallStoredProcedureWithOutputParameters {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            // Prepare the CallableStatement with placeholders for input and output parameters
+            String callProcedure = "{CALL my_stored_procedure(?, ?)}";
+            CallableStatement callableStatement = connection.prepareCall(callProcedure);
+
+            // Set input parameters (if any)
+            // No input parameters in this example
+
+            // Register output parameters
+            callableStatement.registerOutParameter(1, Types.INTEGER);
+            callableStatement.registerOutParameter(2, Types.VARCHAR);
+
+            // Execute the CallableStatement
+            callableStatement.execute();
+
+            // Retrieve output parameters
+            int outputParam1 = callableStatement.getInt(1);
+            String outputParam2 = callableStatement.getString(2);
+
+            // Process the results (if any)
+            System.out.println("Output Parameter 1: " + outputParam1);
+            System.out.println("Output Parameter 2: " + outputParam2);
+
+            // Close the CallableStatement
+            callableStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+70) How to get the value of output parameter of the procedure?
+Ans. -> 
+public class RetrieveOutputParameter {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            // Prepare the CallableStatement with placeholders for input and output parameters
+            String callProcedure = "{CALL get_employee_details(?, ?)}"; // Example stored procedure
+            CallableStatement callableStatement = connection.prepareCall(callProcedure);
+
+            // Register output parameters
+            callableStatement.registerOutParameter(1, Types.INTEGER); // Employee ID
+            callableStatement.registerOutParameter(2, Types.VARCHAR); // Employee Name
+
+            // Execute the CallableStatement
+            callableStatement.execute();
+
+            // Retrieve output parameter values
+            int employeeId = callableStatement.getInt(1);
+            String employeeName = callableStatement.getString(2);
+
+            // Process the output parameter values
+            System.out.println("Employee ID: " + employeeId);
+            System.out.println("Employee Name: " + employeeName);
+
+            // Close the CallableStatement
+            callableStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+71) Can we write different types of SQL statement in procedure?
+Ans. -> Yes, we can use different types of SQL statements in a procedure:
+
+what is batch update
+Ans. -> A batch update in JDBC is a way to execute multiple SQL statements together as a single batch, 
+
+72) Can we submit select statement using batch update?
+Ans. -> No, you cannot submit a SELECT statement using batch update in JDBC. Batch updates are designed for executing DML (Data Manipulation Language) statements such as INSERT, UPDATE, DELETE, and DDL (Data Definition Language) statements like CREATE, ALTER, and DROP.
+
+73) How to get the result from the callable statement if you invoke any stored function?
+Ans. ->
+public class CallStoredFunctionExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            // Prepare the CallableStatement for calling the stored function
+            String callFunction = "{? = CALL my_stored_function(?)}"; // Example stored function
+            CallableStatement callableStatement = connection.prepareCall(callFunction);
+
+            // Register output parameter for the result of the function
+            callableStatement.registerOutParameter(1, Types.INTEGER);
+
+            // Set input parameter(s) for the function if needed
+            callableStatement.setInt(2, 123);
+
+            // Execute the CallableStatement
+            callableStatement.execute();
+
+            // Retrieve the result returned by the function
+            int result = callableStatement.getInt(1);
+
+            // Process the result
+            System.out.println("Result from stored function: " + result);
+
+            // Close the CallableStatement
+            callableStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+74) How can you access column information from ResultSet?
+Ans. -> To access column information from a ResultSet in JDBC, you can use methods provided by the ResultSetMetaData interface. This interface allows you to obtain metadata about the columns returned in the result set, such as column names, types, sizes, and more.
+Here's a basic example demonstrating how to access column information from a ResultSet using ResultSetMetaData:
+
+public class ResultSetMetadataExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM my_table");
+
+            ResultSetMetaData metaData = resultSet.getMetaData();
+            int columnCount = metaData.getColumnCount();
+
+            // Print column information
+            for (int i = 1; i <= columnCount; i++) {
+                System.out.println("Column Name: " + metaData.getColumnName(i));
+                System.out.println("Column Type: " + metaData.getColumnTypeName(i));
+                System.out.println("Column Size: " + metaData.getColumnDisplaySize(i));
+                System.out.println("Is Nullable: " + metaData.isNullable(i));
+                System.out.println();
+            }
+
+            // Process the ResultSet
+            while (resultSet.next()) {
+                // Access column values using ResultSet getters
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                // Process other columns as needed
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+75) Can I access Statement and ResultSet after closing the connection?
+Ans. -> No, you can't use any resources, including statements, prepared statements, and result sets, once a connection is closed
+
+76) What is the Batch Update? OR What is the advantage of Batch Update?
+Ans. -> Batch update in JDBC allows you to execute multiple SQL statements as a single batch operation, improving performance by reducing network overhead and database load. It ensures atomicity, supports parameterized queries, and provides error handling mechanisms.
+
+77) How to use Batch Update with Statement?
+Ans. -> Using batch update with a Statement in JDBC involves several steps:
+Create a Statement: First, create a Statement object.
+Add SQL Statements to the Batch: Use the addBatch() method of the Statement object to add SQL statements to the batch.
+Execute the Batch: Use the executeBatch() method of the Statement object to execute the batch of SQL statements.
+Process the Update Counts: Optionally, process the array of update counts returned by the executeBatch() method to determine the success or failure of each individual SQL statement in the batch.
+
+import java.sql.*;
+
+public class BatchUpdateWithStatementExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            Statement statement = connection.createStatement();
+
+            // Add SQL statements to the batch
+            statement.addBatch("INSERT INTO my_table(col1, col2) VALUES('value1', 'value2')");
+            statement.addBatch("UPDATE my_table SET col1 = 'new_value' WHERE id = 1");
+            statement.addBatch("DELETE FROM my_table WHERE id = 2");
+
+            // Execute the batch of SQL statements
+            int[] updateCounts = statement.executeBatch();
+
+            // Process the update counts array
+            for (int updateCount : updateCounts) {
+                // Handle success or failure of each individual statement in the batch
+                System.out.println("Update count: " + updateCount);
+            }
+
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+78) How to use Batch Update with Preparedstatement?
+Ans. -> Using batch update with a PreparedStatement in JDBC follows a similar process to using it with a Statement, but with the added step of setting parameter values for each SQL statement in the batch. Here's how you can do it:
+Create a PreparedStatement: First, create a PreparedStatement object with the SQL statement that you want to execute in the batch. Ensure that the SQL statement includes placeholders (?) for parameters.
+Add Parameter Values and Add to Batch: For each SQL statement in the batch, set the parameter values using setter methods (setXxx()) of the PreparedStatement object, and then add the statement to the batch using the addBatch() method.
+Execute the Batch: Use the executeBatch() method of the PreparedStatement object to execute the batch of SQL statements.
+Process the Update Counts: Optionally, process the array of update counts returned by the executeBatch() method to determine the success or failure of each individual SQL statement in the batch.
+import java.sql.*;
+
+public class BatchUpdateWithPreparedStatementExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            // Create a PreparedStatement with parameterized SQL statement
+            String sql = "INSERT INTO my_table(col1, col2) VALUES(?, ?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            // Add multiple SQL statements with parameter values to the batch
+            preparedStatement.setString(1, "value1");
+            preparedStatement.setString(2, "value2");
+            preparedStatement.addBatch();
+
+            preparedStatement.setString(1, "value3");
+            preparedStatement.setString(2, "value4");
+            preparedStatement.addBatch();
+
+            // Execute the batch of SQL statements
+            int[] updateCounts = preparedStatement.executeBatch();
+
+            // Process the update counts array
+            for (int updateCount : updateCounts) {
+                // Handle success or failure of each individual statement in the batch
+                System.out.println("Update count: " + updateCount);
+            }
+
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+79) Can I submit insert Statement using Batch Update?
+Ans. -> Yes, you can submit insert statements using batch update in JDBC. Batch update functionality allows you to execute multiple SQL statements of the same type (such as INSERT, UPDATE, DELETE) as a single batch operation. This can be particularly useful when you need to insert multiple rows into a database table.
+
+using PreparedStatement -->
+import java.sql.*;
+
+public class BatchInsertExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            // Create a PreparedStatement with parameterized insert statement
+            String sql = "INSERT INTO my_table(col1, col2) VALUES(?, ?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            // Add multiple insert statements with parameter values to the batch
+            preparedStatement.setString(1, "value1");
+            preparedStatement.setString(2, "value2");
+            preparedStatement.addBatch();
+
+            preparedStatement.setString(1, "value3");
+            preparedStatement.setString(2, "value4");
+            preparedStatement.addBatch();
+
+            // Execute the batch of insert statements
+            int[] updateCounts = preparedStatement.executeBatch();
+
+            // Process the update counts array
+            for (int updateCount : updateCounts) {
+                // Handle success or failure of each individual statement in the batch
+                System.out.println("Update count: " + updateCount);
+            }
+
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+using statment -->
+import java.sql.*;
+
+public class BatchInsertWithStatementExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            Statement statement = connection.createStatement();
+
+            // Add multiple insert statements to the batch
+            statement.addBatch("INSERT INTO my_table(col1, col2) VALUES('value1', 'value2')");
+            statement.addBatch("INSERT INTO my_table(col1, col2) VALUES('value3', 'value4')");
+
+            // Execute the batch of insert statements
+            int[] updateCounts = statement.executeBatch();
+
+            // Process the update counts array
+            for (int updateCount : updateCounts) {
+                // Handle success or failure of each individual statement in the batch
+                System.out.println("Update count: " + updateCount);
+            }
+
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+80) Can I submit update Statement using Batch Update?
+Ans. -> Yes, you can submit update statements using batch update in JDBC. Batch update functionality allows you to execute multiple SQL statements of the same type (such as INSERT, UPDATE, DELETE) as a single batch operation.
+import java.sql.*;
+
+public class BatchUpdateExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            Statement statement = connection.createStatement();
+
+            // Add multiple update statements to the batch
+            statement.addBatch("UPDATE my_table SET col1 = 'new_value1' WHERE id = 1");
+            statement.addBatch("UPDATE my_table SET col1 = 'new_value2' WHERE id = 2");
+
+            // Execute the batch of update statements
+            int[] updateCounts = statement.executeBatch();
+
+            // Process the update counts array
+            for (int updateCount : updateCounts) {
+                // Handle success or failure of each individual statement in the batch
+                System.out.println("Update count: " + updateCount);
+            }
+
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+81) Can I submit delete Statement using Batch Update?
+Ans. -> Yes, you can submit delete statements using batch update in JDBC. Batch update functionality allows you to execute multiple SQL statements of the same type (such as INSERT, UPDATE, DELETE) as a single batch operation.
+import java.sql.*;
+
+public class BatchDeleteExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            Statement statement = connection.createStatement();
+
+            // Add multiple delete statements to the batch
+            statement.addBatch("DELETE FROM my_table WHERE id = 1");
+            statement.addBatch("DELETE FROM my_table WHERE id = 2");
+
+            // Execute the batch of delete statements
+            int[] updateCounts = statement.executeBatch();
+
+            // Process the update counts array
+            for (int updateCount : updateCounts) {
+                // Handle success or failure of each individual statement in the batch
+                System.out.println("Update count: " + updateCount);
+            }
+
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+82) Can I submit select Statement using Batch Update?
+Ans. -> No, batch updates do not support SQL statements such as SELECT and CREATE DATABASE. 
+
+83) Can I submit different types of SQL statement with Batch Update using Statement?
+Ans. -> No, you cannot submit different types of SQL statements (SELECT, INSERT, UPDATE, DELETE) with Batch Update using a single Statement object in JDBC.
+
+84) Can I submit different types of SQL statement with Batch Update using Prepared Statement?
+Ans. -> No, you also cannot submit different types of SQL statements (SELECT, INSERT, UPDATE, DELETE) with Batch Update using a single PreparedStatement object in JDBC.
+
+85) What is Metadata?
+Ans. -> Metadata means data about data. I.e. Metadata provides extra information about our original data.
+
+86) What is DatabaseMetadata?
+Ans. -> We can use DatabaseMetaData to get information about our database like database product
+name, driver name, version, number of tables etc..
+We can also use DatabaseMetaData to check whether a particular feature is supported by DB or
+not like stored procedures, full joins etc..
+
+87) In Which package the DatabaseMetaData is available?
+Ans. -> is an interface present in java.sql package
+
+88) Who has defined the implementation class for DatabaseMetaData?
+Ans. -> The DatabaseMetaData interface is implemented by driver vendors to provide information about a database management system (DBMS). 
+
+89) How can we get the object of DatabaseMetaData type?
+Ans. -> In Java JDBC, you can obtain an object of type DatabaseMetaData by calling the getMetaData() method on a Connection object. Here's how you can do it:
+
+import java.sql.*;
+
+public class DatabaseMetaDataExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            DatabaseMetaData metaData = connection.getMetaData();
+
+            // Now you can use the metaData object to obtain information about the database
+            // For example:
+            System.out.println("Database name: " + metaData.getDatabaseProductName());
+            System.out.println("Database version: " + metaData.getDatabaseProductVersion());
+            System.out.println("Driver name: " + metaData.getDriverName());
+            System.out.println("Driver version: " + metaData.getDriverVersion());
+            // Other methods can be called on metaData to obtain different metadata information
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+90) What is the use of DatabaseMetaData?
+Ans. -> We can use DatabaseMetaData to get information about our database like database product name, driver name, version, number of tables etc..
+
+91) How can I access the Database Product Name?
+Ans. -> You can access the database product name using the getDatabaseProductName() method of the DatabaseMetaData interface. Here's how you can do it:
+import java.sql.*;
+
+public class DatabaseProductNameExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            DatabaseMetaData metaData = connection.getMetaData();
+
+            // Retrieve the database product name
+            String databaseProductName = metaData.getDatabaseProductName();
+
+            // Print the database product name
+            System.out.println("Database Product Name: " + databaseProductName);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+92) How can I access the Database Product version?
+Ans. -> You can access the database product version using the getDatabaseProductVersion() method of the DatabaseMetaData interface. Here's how you can do it:
+import java.sql.*;
+
+public class DatabaseProductVersionExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            DatabaseMetaData metaData = connection.getMetaData();
+
+            // Retrieve the database product version
+            String databaseProductVersion = metaData.getDatabaseProductVersion();
+
+            // Print the database product version
+            System.out.println("Database Product Version: " + databaseProductVersion);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+93) How can I access the Driver Name?
+Ans. -> You can access the driver name using the getDriverName() method of the DatabaseMetaData interface. Here's how you can do it:
+
+import java.sql.*;
+
+public class DriverNameExample {
+    public static void main(String[] args) {
+        try {
+            // Load the JDBC driver (optional for Java versions 6 and above)
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establish a database connection
+            String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+            String username = "myusername";
+            String password = "mypassword";
+            try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+                DatabaseMetaData metaData = connection.getMetaData();
+
+                // Retrieve the driver name
+                String driverName = metaData.getDriverName();
+
+                // Print the driver name
+                System.out.println("Driver Name: " + driverName);
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+94) How can I access the Driver version?
+Ans. -> You can access the driver version using the getDriverVersion() method of the DatabaseMetaData interface. Here's how you can do it:
+
+import java.sql.*;
+
+public class DriverVersionExample {
+    public static void main(String[] args) {
+        try {
+            // Load the JDBC driver (optional for Java versions 6 and above)
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establish a database connection
+            String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+            String username = "myusername";
+            String password = "mypassword";
+            try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+                DatabaseMetaData metaData = connection.getMetaData();
+
+                // Retrieve the driver version
+                String driverVersion = metaData.getDriverVersion();
+
+                // Print the driver version
+                System.out.println("Driver Version: " + driverVersion);
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+95) How can I check whether Database supports batch update or not?
+Ans. -> You can check whether the database supports batch updates by using the supportsBatchUpdates() method of the DatabaseMetaData interface. This method returns a boolean value indicating whether the database supports batch updates.
+import java.sql.*;
+
+public class BatchUpdateSupportExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            DatabaseMetaData metaData = connection.getMetaData();
+
+            // Check if the database supports batch updates
+            boolean supportsBatchUpdates = metaData.supportsBatchUpdates();
+
+            // Print the result
+            if (supportsBatchUpdates) {
+                System.out.println("Database supports batch updates.");
+            } else {
+                System.out.println("Database does not support batch updates.");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+96) How can I check whether Database supports Full Outer Join or not?
+Ans. -> To check whether a database supports a full outer join, you can use the getCrossJoinSupport() method of the DatabaseMetaData interface. The DatabaseMetaData.CrossJoinSupport enum defines the level of support for cross joins, which includes full outer joins.
+import java.sql.*;
+
+public class FullOuterJoinSupportExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            DatabaseMetaData metaData = connection.getMetaData();
+
+            // Get the level of support for cross joins (including full outer joins)
+            DatabaseMetaData.CrossJoinSupport crossJoinSupport = metaData.getCrossJoinSupport();
+
+            // Print the result
+            switch (crossJoinSupport) {
+                case FULL:
+                    System.out.println("Database supports full outer joins.");
+                    break;
+                case NONE:
+                    System.out.println("Database does not support full outer joins.");
+                    break;
+                default:
+                    System.out.println("Support for full outer joins is unknown.");
+                    break;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+97) What is ResultSetMetadata?
+Ans. -> It is an interface present in java.sql package. Driver software vendor is responsible to provide implementation. It provides information about database table represented by ResultSet object.
+
+98) In Which package the ResultSetMetadata is available.?
+Ans. -> It is an interface present in java.sql package.
+
+99) Who has defined the implementation class for ResultSetMetadata?
+Ans. -> Driver software vendor is responsible to provide implementation.
+		It provides information about database table represented by ResultSet object.
+
+100) How to get/create the object of ResultSetMetadata type?
+Ans. -> You can obtain an object of type ResultSetMetaData by calling the getMetaData() method on a ResultSet object. This method returns a ResultSetMetaData object that provides metadata about the columns of the result set.
+import java.sql.*;
+
+public class ResultSetMetadataExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM my_table")) {
+
+            // Get the ResultSetMetaData object
+            ResultSetMetaData metaData = resultSet.getMetaData();
+
+            // Now you can use the metaData object to obtain metadata about the columns
+            // For example, you can retrieve column names, types, etc.
+
+            // Get the number of columns
+            int columnCount = metaData.getColumnCount();
+            System.out.println("Number of columns: " + columnCount);
+
+            // Print column names and types
+            for (int i = 1; i <= columnCount; i++) {
+                System.out.println("Column " + i + ": " + metaData.getColumnName(i) +
+                                   ", Type: " + metaData.getColumnTypeName(i));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+101) What is the use of ResultSetMetadata type?
+Ans. -> It is an interface present in java.sql package. Driver software vendor is responsible to provide implementation. It provides information about database table represented by ResultSet object. Useful to get number of columns, column types etc.. We can get ResultSetMetaData object by using getMetaData() method of ResultSet interface.
+
+ResultSetMetaData is a Java JDBC interface that provides metadata about the columns of a ResultSet object. It allows developers to programmatically retrieve information about the structure of query results, such as column names, types, sizes, and other properties, without hardcoding them. This metadata can be used for dynamic result set processing, data presentation, validation, database schema discovery, and query result manipulation.
+
+
+102) How can I get the number of columns available in Resultset?
+Ans. -> You can get the column count in a table using the getColumnCount() method of the ResultSetMetaData interface. 
+import java.sql.*;
+
+public class ColumnCountExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM my_table")) {
+
+            ResultSetMetaData metaData = resultSet.getMetaData();
+
+            // Get the number of columns
+            int columnCount = metaData.getColumnCount();
+            System.out.println("Number of columns: " + columnCount);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+103) How can I access the name & order of the columns available in Resultset?
+Ans. -> import java.sql.*;
+
+public class ColumnNameAndOrderExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM my_table")) {
+
+            ResultSetMetaData metaData = resultSet.getMetaData();
+
+            // Get the number of columns
+            int columnCount = metaData.getColumnCount();
+            System.out.println("Number of columns: " + columnCount);
+
+            // Print column names and order
+            for (int i = 1; i <= columnCount; i++) {
+                String columnName = metaData.getColumnName(i);
+                String columnLabel = metaData.getColumnLabel(i);
+                System.out.println("Column " + i + " - Name: " + columnName + ", Label: " + columnLabel);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+104) How can I access the type of the columns available in Resultset?
+Ans. -> import java.sql.*;
+
+public class ColumnTypeExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM my_table")) {
+
+            ResultSetMetaData metaData = resultSet.getMetaData();
+
+            // Get the number of columns
+            int columnCount = metaData.getColumnCount();
+            System.out.println("Number of columns: " + columnCount);
+
+            // Print column names and types
+            for (int i = 1; i <= columnCount; i++) {
+                String columnName = metaData.getColumnName(i);
+                int columnType = metaData.getColumnType(i);
+                String columnTypeName = metaData.getColumnTypeName(i);
+                System.out.println("Column " + i + " - Name: " + columnName +
+                                   ", Type: " + columnType + " (" + columnTypeName + ")");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+105) What is transaction?
+Ans. -> Process of combining all related operations into a single unit and executing on the rule "either all or none", is called transaction management.
+
+106) What is transaction management?
+Ans. -> Process of combining all related operations into a single unit and executing on the rule "either all or none", is called transaction management.
+
+107) What is ACID properties?
+Ans. -> Every Transaction should follow the following four ACID properties.
+1. A ➔ Atomiticity : Either all operations should be done or None.
+2. C ➔ Consistency(Reliabile Data) : It ensures bringing database from one consistent state to another consistent state.
+3. I ➔ isolation (Sepatation) : Ensures that transaction is isolated from other transactions
+4. D ➔ Durability : It means once transaction committed, then the results are permanent even in the case of system restarts, errors etc..
+
+108) What will happen when auto commit is true?
+Ans. -> Auto-commit mode means that when a statement is completed, the method commit is called on that statement automatically.
+
+109) By using which methods we can implement Transactions in JDBC?
+Ans. -> In JDBC (Java Database Connectivity), you can implement transactions using the following methods provided by the Connection interface:
+beginTransaction(): This method starts a new transaction. It sets the auto-commit mode of the connection to false, indicating that subsequent database operations should be grouped into the current transaction rather than being committed immediately.
+commit(): This method commits the current transaction. All changes made within the transaction are made permanent and visible to other transactions. After committing, the auto-commit mode is set back to true.
+rollback(): This method rolls back (undoes) the current transaction. It discards any changes made within the transaction, restoring the database to its state before the transaction began. After rolling back, the auto-commit mode is set back to true.
+import java.sql.*;
+
+public class TransactionExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {
+            // Disable auto-commit to start a transaction
+            connection.setAutoCommit(false);
+
+            // Perform database operations within the transaction
+            try (Statement statement = connection.createStatement()) {
+                // Execute multiple SQL statements
+                statement.executeUpdate("INSERT INTO my_table (column1, column2) VALUES ('value1', 'value2')");
+                statement.executeUpdate("UPDATE my_table SET column3 = 'value3' WHERE column1 = 'value1'");
+
+                // Commit the transaction
+                connection.commit();
+                System.out.println("Transaction committed successfully.");
+            } catch (SQLException e) {
+                // Rollback the transaction if an error occurs
+                connection.rollback();
+                System.out.println("Transaction rolled back due to an error.");
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+110) What are the Transactional concurrency problems?
+Ans. -> Whenever multiple transactions are executing concurrently then there may be a chance of transaction concurrency problems.
+The following are the most commonly occurred concurrency problems.
+1. Dirty Read Problem
+2. Non Repeatable Read Problem
+3. Phantom Read Problem
+
+111) Explain about Dirty Read Problem?
+Ans. -> Dirty Reads: A dirty read occurs when one transaction reads data that has been modified by another transaction but has not yet been committed. If the modifying transaction is later rolled back, the changes are lost, and the data read by the first transaction becomes invalid or inconsistent.
+
+112) Explain about Repeatable Read Problem?
+Ans. -> Non-Repeatable Reads: A non-repeatable read occurs when a transaction retrieves the same data multiple times within its scope, but the data changes between subsequent reads due to updates made by other transactions. This inconsistency can lead to unexpected behavior or incorrect results.
+
+113) Explain about Phantom Read Problem?
+Ans. -> Phantom Reads: A phantom read occurs when a transaction retrieves a set of records based on a certain condition, but new records meeting the same condition are inserted or existing records are deleted by another transaction before the first transaction completes. As a result, the set of records retrieved by the first transaction "changes" or "phantoms" during its execution.
+
+114) What are the Transactional isolation levels?
+
+115) Which isolation levels prevent Dirty Read Problem?
+
+116) Which isolation levels prevent Repeatable Read Problem?
+
+117) Which isolation levels prevent Phantom Read Problem?
+
+118) What will happen when Iam not specifying the isolation Level with JDBC?
+
+119) How can I get Database Vendor Specific Default Transactional Isolation Level?
+
+120) What is the Default Transactional Isolation Level My SQL?
+
+121) What is the Default Transactional Isolation Level Oracle?
+
+122) What are the ways to manage the Connections in JDBC?
+
+123) What are the advantages of DataSource Connections over Driver Manager connections ?
+
+124) What is ResultSet?
+Ans. -> A ResultSet in Java represents the result set of a database query. It is an interface provided by the Java Database Connectivity (JDBC) API for accessing the data returned by a SELECT query executed against a database. The ResultSet interface provides methods for iterating over the rows of the result set and retrieving column values from each row.
+import java.sql.*;
+
+public class ResultSetExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM my_table")) {
+
+            // Iterate over the result set and retrieve data
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                double price = resultSet.getDouble("price");
+                System.out.println("ID: " + id + ", Name: " + name + ", Price: " + price);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+125) In Which package , ResultSet is available.?
+Ans. -> import java.sql.ResultSet;
+
+126) Who has defined the implementation class of ResultSet?
+
+127) How can we get the Object of ResultSet Type?
+
+128) What does the ResultSet represent?
+Ans. -> To get an object of ResultSet type, you need to execute a query using a Statement, PreparedStatement, or CallableStatement object in JDBC. The ResultSet object is returned as a result of executing a SQL query. Here’s a step-by-step guide on how to do this:
+
+Example Using Statement
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ResultSetExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM my_table")) {
+
+            // Iterate over the result set and retrieve data
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                double price = resultSet.getDouble("price");
+                System.out.println("ID: " + id + ", Name: " + name + ", Price: " + price);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+Example Using PreparedStatement
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class PreparedStatementExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM my_table WHERE id = ?")) {
+
+            preparedStatement.setInt(1, 1);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                // Iterate over the result set and retrieve data
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    double price = resultSet.getDouble("price");
+                    System.out.println("ID: " + id + ", Name: " + name + ", Price: " + price);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Example Using CallableStatement
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.CallableStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class CallableStatementExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+             CallableStatement callableStatement = connection.prepareCall("{CALL my_stored_procedure(?)}")) {
+
+            callableStatement.setInt(1, 1);
+            try (ResultSet resultSet = callableStatement.executeQuery()) {
+                // Iterate over the result set and retrieve data
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("id");
+                    String name = resultSet.getString("name");
+                    double price = resultSet.getDouble("price");
+                    System.out.println("ID: " + id + ", Name: " + name + ", Price: " + price);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+129) What are the types of ResultSet available as per Cursor movement?
+
+130) What is forward only ResultSet?
+Ans. -> It allows the programmers to iterate records only in forward direction ie from top to bottom sequentially.
+
+131) How can you get the Forward Only ResultSet?
+Ans. -> import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ForwardOnlyResultSetExample {
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mydatabase";
+        String username = "myusername";
+        String password = "mypassword";
+
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+             Statement statement = connection.createStatement(
+                     ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+             ResultSet resultSet = statement.executeQuery("SELECT * FROM my_table")) {
+
+            // Iterate over the result set and retrieve data
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                double price = resultSet.getDouble("price");
+                System.out.println("ID: " + id + ", Name: " + name + ", Price: " + price);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+132) Can I call the following method with Forward Only ResultSet?
+	a. previous() b. first() c. last() d. absolute() e. relative()
+
+133) What is Scrollable ResultSet?
+Ans. -> 
+
+134) How can I get the Scrollable ResultSet?
+
+135) Can I call the following method with Scrollable ResultSet?
+ previous()
+ first()
+ last()
+ absolute()
+ relative()
+
+136) What are the types of Resultset available as per Operation?
+
+137) What are the Read Only ResultSet?
+
+138) How can you get the Read Only Resultset?
+
+139) Can I call the following method with Read Only Resultset?
+ moveTolnsertRow()
+ updateRow()
+ deleteRow()
+ insertRow()
+ updateX(int col_lndex, X value)
+
+140) What is updatable Resultset?
+
+141) How can you get the updatable Resultset?
+79. Can I call the following method with Updatable Resultset?
+ moveTolnsertRow()
+ updateRow()
+ deleteRow()
+ insertRow()
+ updateX(int col_lndex, X value)
+
+142) What is the default type of Resultset?
+
+143) What are the constants defined to specify the Resultset type?
+
+144) What is the default concurrency of Resultset?
+
+145) What are the constants defined to specify the Resultset concurrency?
+
+146) What is difference between Scroll SENSITIVE and INSENSITIVE?
+
+147) What are various Types of ResultSet based on cursor movement?
+Ans. -> Based on Cursor movement, ResultSets will be divided into the following 2 types.
+1. Forward only (Non-Scrollable) ResultSet
+2. Scrollable ResultSets
+
+148) What are various Types of ResultSet based on operations?
+
+149) What are various Types of ResultSet based on holdability?
+
+150) What is Rowset?
+Ans. -> It is alternative to ResultSet.
+		We can use RowSet to handle a group of records in more effective way than ResultSet.
+		RowSet interface present in javax.sql package
+		RowSet is child interface of ResultSet.
+		RowSet implementations will be provided by Java vendor and database vendor.
+
+151) What is the super type for RowSet?
+
+152) How to get the object of RowSet?
+Ans. -> We can create different types of RowSet objects as follows
+		RowSetFactory rsf = RowSetProvider.newFactory();
+		JdbcRowSet jrs = rsf.createJdbcRowSet();
+		CachedRowSet crs = rsf.createCachedRowSet();
+		WebRowSet wrs = rsf.createWebRowSet();
+		JoinRowSet jnrs = rsf.createJoinRowSet();
+		FilteredRowSet frs = rsf.createFilteredRowSet();
+
+153) How many types of RowSet available as per connection?
+Ans. -> There are two types of RowSets
+	1. Connected RowSets
+	2. Disconnected RowSets
+
+154) How many sub types of RowSet interface available?
+
+155) What is the default type of RowSet?
+
+156) What is the default concurrency RowSet?
+
+157) Can I serialize the Cached RowSet?
+Ans. -> Yes, a CachedRowSet object can be serialized. 
+
+158) Can I serialize the JDBC RowSet?
+Ans. -> Yes, a JDBC RowSet object can be serialized. 
+
+159) What is the difference between ResultSet and RowSet?
+Ans. -> 1) ResultSet present in java.sql Package. 
+		1) RowSet present in javax.sql Package.
+
+		2) By Default ResultSet is Non Scrollable and Non Updatable (Forward only and Read only).
+		2) By Default RowSet is Scrollable and Updatable.
+		
+		3) ResultSet Objects are Non Serializable and we can't send over Network.
+		3) RowSet Objects are Serializable and hence we can send over Network.
+
+		4) ResultSet Objects are Connection oriented i.e. we can access ResultSet Data as long as Connection is available once Connection closed we can't access ResultSet Data.
+		4) RowSet Objects are Connection Less Objects i.e. we can access RowSet Data without having Connection to DB (except JdbcRowSet).
+
+		5) ResultSet Object is used to store Records returned by Select Query.
+		5) RowSet Object is also used to store Records returned by Select Query.
+	
+		6) We can createResultSet Object as follows 
+			Connection con = DriverManager.getConnection (url, uname, pwd);
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(SQLQuery);
+		6) RowSetFactory rsf = RowSetProvider.newFactory();
+			JdbcRowSet rs = rsf.createJdbcRowSet();
+			rs.setUserName(user);
+			rs.setUrl(jdbcurl);
+			rs.setPassword(pwd);
+			rs.setCommand(query);
+			rs.execute();
+
+		7) ResultSet Object is not having Event Notification Model.
+		7) RowSet Object is having Event Notification Model.
+
+160) What is the use of RowSet Factory and RowSet Provider?
+
+161) What are the new features of JDBC 4.0?
+
+162) What are the new features of JDBC 4.1?
+
+163) What is ResultSet holdability?
+======================================
+
+JDBC
+
+3 What is the purpose Class.forName method ?
+Ans. -> The Class.forName() method is a static method of the java.lang.Class class that loads a class by name. It takes a string representing the fully qualified name of the class 
+
+4. Connection Pooling
+Ans. -> If we required to communicate with database multiple times then it is not recommended to create separate Connection object every time, b'z creating and destroying Connection object every time creates performance problems.
+		To overcome this problem, we should go for Connection Pool.
+		Connection Pool is a pool of already created Connection objects which are ready to use.
+		If we want to communicate with database then we request Connection pool to provide Connection. Once we got the Connection, by using that we can communicates with database. After completing our work, we can return Connection to the pool instead of destroying.
+
+5 What is the use of CallableStatement ? Name the method, which is used to prepare a CallableStatement
+Ans. -> A CallableStatement is used to call stored procedures in Java, The prepareCall method is used to create new CallableStatement objects. 
+
+7.What is stored procedure? What are the parameter types in stored procedure?
+Ans. -> Sprogramming,if any group of sql statements is repeatedly required then we can define those sql statements in a single group and we can call that group repeatedly based on our requirement.
+
+8. Differences between Thin and Thick Driver:
+Ans. -> If Driver won't require any extra Component to communicate with Database, such type of Driver is called Thin Driver.
+		Eg: Type-4 Driver
+		If Driver require some extra Component (like ODBC Driver OR Vendor specific Native Libraries OR Middleware Server), such Type of Driver is called Thick Driver.
+		Eg: Type-1, Type-2 and Type-3 Drivers
+		
+12. SQL Injection Attack
+Ans. -> Every time the query will be compiled and executed. Some times end user may provide special characters as the part user input,which may change behaviour of sql query.This is nothing but SQL Injection Attack,which causes security problems.
+
+16. Differences between java.util.Date and java.sql.Date
+Ans. -> java.util.Date java.sql.Date
+		1) It is general Utility Class to handle Dates in our Java Program.
+		1) It is specially designed Class to handle Dates w.r.t DB Operations.
+		
+		2) It represents both Data and Tieme. 
+		2) It represents only Date but not Time.
+
+In Java how many Date classes are available?
+Ans. -> 
+
+What is the difference Between getting Connection object by using DriverManager and DataSource object?
+Ans. -> In the case of DriverManager.getConnection(), always a new Connection object will be created
+and returned.
+But in the case of DataSourceObject.getConnection(), a new Connection object won't be created
+and existing Connection object will be returned from Connection Pool.
+
+
+Disable auto commit mode of JDBC
+Ans. -> By default auto commit mode is enabled. i.e after executing every sql query, the changes will be  committed automatically in the database.
+We can disable auto commit mode as follows
+con.setAutoCommit(false);
+
+JDBC provides support for 3 Types of Metadata
+1. DatabaseMetaData
+2. ResultSetMetaData
+3. ParameterMetaData
+1. DatabaseMetaData
+It is an interface present in java.sql package.
+Driver Software vendor is responsible to provide implementation.
+We can use DatabaseMetaData to get information about our database like database product
+name, driver name, version, number of tables etc..
+We can also use DatabaseMetaData to check whether a particular feature is supported by DB or
+not like stored procedures, full joins etc..
+
+ResultSetMetaData:
+It is an interface present in java.sql package.
+Driver software vendor is responsible to provide implementation.
+It provides information about database table represented by ResultSet object.
+Useful to get number of columns, column types etc..
+We can get ResultSetMetaData object by using getMetaData() method of ResultSet interface.
+
+ParameterMetaData (I):
+It is an interface and present in java.sql package.
+Driver Software vendor is responsible to provide implementation.
+In General we can use positional parameters(?) while creating PreparedStatement object.
+PreparedStatement pst=con.prepareStatement("insert into employees values(?,?,?,?)");
+We can use ParameterMetaData to get information about positional parameters like parameter
+count,parameter mode, and parameter type etc...
+
+
+Important Methods of ParameterMetaData:
+1. int getParameterCount()
+Retrieves the number of parameters in the PreparedStatement object for which this
+ParameterMetaData object contains information.
+2.int getParameterMode(int param)
+Retrieves the designated parameter's mode.
+3. int getParameterType(int param)
+Retrieves the designated parameter's SQL type.
+4. String getParameterTypeName(int param)
+Retrieves the designated parameter's database-specific type name.
+5. int getPrecision(int param)
+Retrieves the designated parameter's specified column size.
+6. int getScale(int param)
+Retrieves the designated parameter's number of digits to right of the decimal point.
+
+➔

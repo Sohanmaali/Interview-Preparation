@@ -1,0 +1,87 @@
+------------------------------------------------
+Type conversion & casting Interview Questions
+------------------------------------------------
+
+1. What is the meaning of type conversion & casting?
+Ans.When we assign a value of one data type to the di􀃡erent data type then these two data types may not be compatible and needs a conversion. If
+the data types are compatible (for example assigning int value to long) then java does automatic conversion and does not require casting. However if
+the data types are not compatible then they need to be casted for conversion.
+For example:
+//here in the brackets we have mentioned long keyword, this is casting
+double num = 10001.99;
+long num2 = (long)num;
+
+2. What are the rules we must follow in type conversion? 
+
+3. What is the meaning of compatible types?
+
+4. Which data type is incompatible type among all primitive types?
+
+5. Draw primitive type auto conversion chart? 
+
+6. Is "type casting" meant for converting incompatible type or height range data type?
+
+7. What will happen if result value is greater than casting data type range?
+
+8. What is the short-cut formule for type casting in reducing high range value?
+
+9. Can you explain when will you get below compile time errors?
+	1. CE: Incompatible types 
+	2. CE: possible loss of precisio/ext
+	3. CE: inconvertible types
+
+10. Can we assign (long to float) & (float to long)? 
+
+11. Can we assign (char literal to int variable) & (int literal to char variable)?
+
+12. When "?" is stored in char varlable?
+
+13. Can we assign 10.5 to float variable?
+
+14. Can we assign 1234567891234567 number to long type variable? 
+
+15. What types of literals are only allowed to assign to lesser range data type variable?
+
+16. Identify will below statements compiled?
+	a. byte b1 = 50;	3) char ch1 = 97;	5) boolean
+	bo = 1;
+	b. byte b2 = 'a';	4) float f1 = 10.5; 6) byte b3 = 128; 
+	
+17. What is the diff between primitive type conversion & referenced type conversion?
+
+18. When will two classes are said to be compatible? 
+
+19. What is the meaning of upcasting & downcasting?
+
+20. When will we get ClassCastException?
+
+21. What is the use of instanceof operator?
+
+22. What is the difference between cast operator & instanceof operator?
+
+------------------------------------------
+Type Promotion Interview Questions
+------------------------------------------
+
+1. What is the meaning of type promotion?
+
+2. What is an operator, operand, & expression?
+
+3. What is the rule in preparing an expression? 
+
+4. What is the result type will be return from an expression?
+
+5. If an expression contains only literals how compiler calculates?
+
+6. If an expression contains at least one variable how compiler calculates?
+
+7. Why byte, short, byte data types are promoted to int type?
+
+8. What is the algorithm compiler & JVM follows in evaluating an expression?
+
+9. Will Java follows BODMAS rufe in evaluating an expression?
+
+10. What are the operators executed from RIGHT to LEFT?
+
+===============================================================================================================================
+

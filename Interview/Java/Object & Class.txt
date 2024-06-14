@@ -1,0 +1,199 @@
+Q15. What is the base class of all classes?
+Ans.java.lang.Object is the base class (super class) of all classes in java.
+
+Q16. What is a path and classPath in Java?
+Ans.Path speci􀃕es the location of .exe 􀃕les. Classpath speci􀃕es the location of bytecode (.class 􀃕les).
+Q2. What are the various access speci􀃕ers for Java classes?
+Ans: In Java, access speci􀃕ers are the keywords used before a class name which de􀃕nes the access scope. The types of access speci􀃕ers for classes
+are:
+1. Public : Class,Method,Field is accessible from anywhere.
+2. Protected:Method,Field can be accessed from the same class to which they belong or from the sub-classes,and from the class of same
+package,but not from outside.
+3. Default: Method,Field,class can be accessed only from the same package and not from outside of it’s native package.
+4. Private: Method,Field can be accessed from the same class to which they belong.
+
+Q5. What is a singleton class? Give a practical example of its usage.
+A singleton class in java can have only one instance and hence all its methods and variables belong to just one instance. Singleton class concept is
+useful for the situations when there is a need to limit the number of objects for a class.
+The best example of singleton usage
+
+
+Q14. What’s the base class in Java from which all classes are derived?
+Ans: java.lang.object
+
+
+Q27. When the constructor of a class is invoked?
+Ans: The constructor of a class is invoked every time an object is created with new keyword.
+For example, in the following class two objects are created using new keyword and hence, constructor is invoked two times.
+public class const_example {
+const_example() {
+system.out.println(“Inside constructor”);
+}
+public static void main(String args[]) {
+const_example c1 = new const_example();
+const_example c2 = new const_example();
+}
+}
+Q28. Can a class have multiple constructors?
+Ans: Yes, a class can have multiple constructors with di􀃡erent parameters. Which constructor gets used for object creation depends on the
+arguments passed while creating the objects.
+
+Q43. How objects of a class are created if no constructor is de􀃕ned in the class?
+Ans: Even if no explicit constructor is de􀃕ned in a java class, objects get created successfully as a default constructor is implicitly used for object
+creation. This constructor has no parameters.
+
+Q48. How can we make copy of a java object?
+Ans: We can use the concept of cloning to create copy of an object. Using clone, we create copies with the actual state of an object.
+Clone() is a method of Cloneable interface and hence, Cloneable interface needs to be implemented for making object copies.
+
+Q50. What’s the default access speci􀃕er for variables and methods of a class?
+Ans: Default access speci􀃕er for variables and method is package protected i.e variables and class is available to any other class but in the same
+package,not outside the package.
+
+Q59. Can we use a default constructor of a class even if an explicit constructor is de􀃕ned?
+Ans: Java provides a default no argument constructor if no explicit constructor is de􀃕ned in a Java class. But if an explicit constructor has been
+de􀃕ned, default constructor can’t be invoked and developer can use only those constructors which are de􀃕ned in the class.
+
+Q63. What are the two environment variables that must be set in order to run any Java programs?
+Ans: Java programs can be executed in a machine only once following two environment variables have been properly set:
+1. PATH variable
+2. CLASSPATH variable
+
+Q64. Can variables be used in Java without initialization?
+Ans: In Java, if a variable is used in a code without prior initialization by a valid value, program doesn’t compile and gives an error as no default value is
+assigned to variables in Java.
+
+Q65. Can a class in Java be inherited from more than one class?
+Ans: In Java, a class can be derived from only one class and not from multiple classes. Multiple inheritances is not supported by Java.
+
+Q73. Is it possible to de􀃕ne a method in Java class but provide it’s implementation in the code of another
+language like C?
+Ans: Yes, we can do this by use of native methods. In case of native method based development, we de􀃕ne public static methods in our Java class
+without its implementation and then implementation is done in another language like C separately
+
+Q75. Can a variable be local and static at the same time?
+Ans: No a variable can’t be static as well as local at the same time. De􀃕ning a local variable as static gives compilation error.
+
+Q85. How objects are stored in Java?
+Ans: In java, each object when created gets a memory space from a heap. When an object is destroyed by a garbage collector, the space allocated to it
+from the heap is re-allocated to the heap and becomes available for any new objects.
+Q86. How can we 􀃕nd the actual size of an object on the heap?
+Ans: In java, there is no way to 􀃕nd out the exact size of an object on the heap.
+Q87. Which of the following classes will have more memory allocated?
+Class A: Three methods, four variables, no object
+Class B: Five methods, three variables, no object
+Ans: Memory isn’t allocated before creation of objects. Since for both classes, there are no objects created so no memory is allocated on heap for any
+class.
+
+12) Difference between this() and super() in java ?
+this() is used to access one constructor from another with in the same class while super() is used to
+access superclass constructor. Either this() or super() exists it must be the first statement in the
+constructor.
+13) What is a class ?
+Classes are fundamental or basic unit in Object Oriented Programming .A class is kind of blueprint or
+template for objects. Class defines variables, methods. A class tells what type of objects we are creating.
+For example take Department class tells us we can create department type objects. We can create any
+number of department objects.
+All programming constructs in java reside in class. When JVM starts running it first looks for the class
+when we compile. Every Java application must have atleast one class and one main method.
+Class starts with class keyword. A class definition must be saved in class file that has same as class name.
+File name must end with .java extension.
+If we see the above class when we compile JVM loads the FirstClass and generates a .class
+file(FirstClass.class). When we run the program we are running the class and then executes the main
+method.
+14) What is an object ?
+An Object is instance of class. A class defines type of object. Each object belongs to some class.Every
+object contains state and behavior. State is determined by value of attributes and behavior is called
+method. Objects are alos called as an instance.
+To instantiate the class we declare with the class type.
+To instantiate the FirstClass we use this statement
+FirstClass f=new FirstClass();
+f is used to refer FirstClass object.
+
+
+
+37) Can we have multiple classes in single file ?
+Yes we can have multiple classes in single file but it people rarely do that and not recommended. We can
+have multiple classes in File but only one class can be made public. If we try to make two classes in File
+public we get following compilation error.
+
+38) What all access modifiers are allowed for top class ?
+For top level class only two access modifiers are allowed. public and default. If a class is declared as
+public it is visible everywhere.
+If a class is declared default it is visible only in same package.
+If we try to give private and protected as access modifier to class we get the below compilation error.
+
+
+Class and Objects in java:
+1.What are Objects?
+2.What is a class?
+3.What is the default value of an object reference declared as an instance variable?
+->(null unless we define it explicitly.)
+4.Can a top-level class be private or protected?
+5.Differentiate between a Class and an Object?
+6.Explain the concept of access modifiers in Java classes and their significance.
+7.What is a bean? Where can it be used?
+8.What is the difference between instance, object, reference and a class?
+9.Define an abstract class.Why are abstract classes?
+10.What is the difference between an Abstract class and Interface?Give example.
+11.What is Singleton class and give use case for it?
+12. Why do we make the constructor private in a Singleton class?
+13.What is Inner class?Give an example of it.
+13.What is the difference between a static and a non-static inner class?
+14. What are the properties of Object and also explain them with examples.
+15.What is the purpose of the static keyword in Java, and how is it used with class members?
+16.Explain the concept of anonymous classes in Java.
+17.Give a practical example of anonymous class.
+18.Explain the concept of reflection in Java.
+19.Give an example of method invocation using Reflection.
+20.What is the purpose of the System class?
+21.What is the Object class in Java, and how does it relate to other classes?
+22.What is the role of the hashCode() and equals() methods of Object base class?
+23.How can you achieve immutability in a class in Java?
+24.What are the benefits of immutability?
+25.What is the role of the ClassLoader in Java, and how does it work with classes during runtime?
+26.What are the different ways of creating an object in java?
+27.What are the different ways to initialize objects in java ?
+28.How is memory allocated for objects in Java?
+29.What happens when the class is loaded by the classloader?
+30.Does class take any memory?
+31.What is the purpose of the equals() method in Java objects? How is it different from the ==
+operator?
+32.Explain the concept of object serialization in Java.
+33.Explain the concept of object cloning in Java.
+34.Give an example of object cloning.
+35.What is the difference between shallow copy and deep copy when working with objects?
+36.How does garbage collection work in Java, and how does it relate to objects?
+37.What is the purpose of hashCode()?
+38.What is the significance of the finalize() method in Java objects?
+39.How can you prevent an object from being serialized in Java?
+40.What is the difference bean and POJO class?
+41.Give an example explaining the difference between bean and POJO mentioning its use cases.
+42.What is Object Oriented Programming?
+43.Advantages of OOPS.
+44.Explain the concept of a factory method in the context of object creation. How does it provide
+flexibility in creating objects?
+45.Explain the concept of the instanceof operator in Java. How is it used, and what are some
+potential use cases?
+
+====================================
+Printing Object Interview questions
+====================================
+
+1. What is printed when object is printed?
+
+2. How printin() method can retrieve the given object's classname@hashcode?
+
+3. In which class toString() method is defined?
+
+4. How can we print an object's data, when an object is printed?
+
+5. When we print String class object, why its content is displayed?
+
+6. When we print our class object, why its classname@hashcode is
+
+displayed? 7. What is printed when we print object referenced variable?
+
+8. What is printed when we print null referenced variable?
+
+9. What is printed when we print empty referenced variable?

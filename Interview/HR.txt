@@ -1,0 +1,226 @@
+HR
+Tell me about yourself.
+Ans. -> 	Good morning, sir or mam.
+		My name is Sohan Maali, and my native city is Khategaon. I am currently living in Indore.
+		Recently, I completed my graduation from Adrsh College, Harda, affiliated with Barkatullah University, Bhopal, in 2023.
+		Currently, I am pursuing my MCA. Patel College of Science and Technology is affiliated with RGPV University in Bhopal.
+		Coming to my technical ability, I have good knowledge of Java, HTML, CSS, Tailwind, BootStrap, JavaScript, React, and MySQL databases.
+		I recently worked on a project about a bank management system using Java J2SE, html,CSS, BootStrap, JavaScript, and I am currently working on a project called Scrape Second Life using Java full-stack development.
+		My strength is that I am a self-motivated and disciplined person.
+ 
+		This is all about me.
+ 
+		Thank you.
+
+Why should I hire you?
+Ans. -> You should hire me because I'm motivated, eager to learn, and ready to contribute effectively in your company.
+
+What are your strengths and weaknesses?
+Ans. -> strengths -> I am a self-motivated and eager to learn new technology.
+		Weaknesses -> trust easily anyone 
+
+Why do you want to work at our company?
+Ans. -> I have found that your company is one of the best and fastest growing company that's why, I want to join your company.
+
+Describe yourself in 3 words?
+Adaptable, self-motivated, and collaborative.
+
+What is the difference between confidence and over confidence?
+Ans. -> Confidence means a positive self-believe I can do it well.
+Overconfidence means I can only do this no one can do this except me.
+
+What is the difference between hard work and smart work?
+Ans. -> Hard work gives you experience,
+Smart work comes with experience,
+
+How do you feel about working nights and weekends?
+Ans. -> I don't have any problem in doing night shifts and weekends because I want to gain knowledge and more work experience.
+
+Can you work under pressure?
+Ans. -> Yes, definitely. I will work under pressure because it gives me experience and knowledge.
+
+Are you willing to relocate or travel?
+Ans. -> Yes, I am ready to relocate because the new environment will makes learn a lot of things and I Love travelling to new places 
+
+What are your goals?
+Ans. -> My short term goals is placed in a reputed company.
+And my long-term goal is to be placed in a good position.
+
+What motivates you to do good job?
+Ans. -> My dreams motivate me to do a good job
+
+What makes you angry?
+Ans. -> I will angry when anyone lies in front of me.
+
+Give me an example of your creativity.
+Ans. ->
+
+How long would you expect to work for us if hired?
+Ans. ->
+
+Are not you overqualified for this position?
+Ans. -> I'm not Overqualified for this job because I am fresher. & I'm just a fresher and have lots to learn because learning never ends.
+
+Describe your ideal company, location and job.
+Ans. -> My Ideal company provides me with a healthy environment & collaborative employees to do work with.
+
+What are your career options right now?
+Ans. -> As a fresh candidate, my career option is to get a job in a reputed company and to gain skills, knowledge and experience & I want to become a successful independent man.
+
+Explain how would be an asset to this organization?
+What are your outside interests?
+Ans. -> My outside interests are traveling with friends to some natural places.
+
+Would you lie for the company?
+
+Who has inspired you in your life and why?
+Ans. -> My father is my inspiration because he is working hard to see me in a good position now it's my turn to work hard and make my father's dream come true.
+
+What was the toughest decision you ever had to make?
+Ans. -> I choose a career in CS, even though it was challenging for me as I came from a Hindi medium background and it was mostly in English.
+
+Have you considered starting your own business?
+How do you define success and how do you measure up to your own definition?
+Tell me something about our company.
+
+How much salary do you expect?
+Ans. -> salary is important for me but i am a fresher.  so my priority is to enhance my skills and gain knowledge & experience. Salary is not my priority. So I'm expecting a salary according to the company .
+
+On a scale of one to ten, rate me as an interviewer.
+==========================================================================================================================
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+How do you remain updated with the latest industry trends?
+I stay updated by reading industry news, attending relevant events, and networking with professionals.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Why did you decide to make a career in the IT field?
+I chose the IT field because of its dynamic nature and endless opportunities for innovation and problem-solving.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Who is your mentor?
+My mentor is [Name], who has guided me with valuable advice and insights.-
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What if we don't hire you?
+If I am not selected today's interview, I will work on my weaknesses which I have known today for the future interviews and wait for the upcoming interviews with new enthusiasm.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+How will you travel to your work?
+I'll travel to work by [mode of transportation] to ensure punctuality and reliability.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What do you know about our company?
+Your company is known for its [mention a unique aspect], and I admire its commitment to [mention a relevant value or goal].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What is your greatest strength & weakness and how do you deal with your weakness?
+My greatest strength is [mention a strength], and my weakness is [mention a weakness], which I manage by [mentioning how you dealt with it].
+	
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Where would you like to see yourself in the next 5 years?
+In the next 5 years, I see myself advancing in my career and taking on more leadership responsibilities.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Through being a fresher, why do you think that you are suitable for this job role?
+Despite being a fresher, I possess [mention relevant skills or knowledge] that make me suitable for this role.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What is the definition of success in your terms?
+Success, to me, means achieving goals while maintaining integrity and making a positive impact.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+How do you prioritize tasks when faced with multiple deadlines?
+I prioritize tasks based on deadlines and importance, ensuring that critical tasks are completed first.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What can you bring to our company royally?
+I can bring loyalty, dedication, and a strong work ethic to your company.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What is your greatest professional achievement?
+My greatest professional achievement is [mention an achievement relevant to the job or industry].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Tell me about the challenges you have faced at your workplace during training and how you dealt with it?
+During my training, I faced challenges such as [mention a challenge], which I overcame by [mentioning how you dealt with it].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Can you explain change?
+Change is adapting to new situations or incident.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Can you change your career field?
+Yes, I'm open to changing my career field if it aligns with my interests and skills.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What motivates you to work?
+I'm motivated to work by [mention a motivating factor, such as personal growth or making a difference].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What is your work style and management style?
+My work style is organized and methodical, and my management style is collaborative and supportive.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+When did you realize that you need to be serious about your career?
+I realized the importance of being serious about my career [mention a specific moment or experience].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+How do you deal with pressure or stressful situations?
+
+When I'm under pressure, I handle it by focusing on the most important tasks first, asking for help when necessary, and using methods to manage stress
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What do you like to do outside of work?
+Outside of work, I enjoy [mentioning hobbies or interests].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+How do you stay organized and prioritize your work?
+I stay organized by using tools like to-do lists and calendars and prioritizing tasks based on deadlines and importance.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are you passionate about?
+I'm passionate about [mentioning a passion or interest relevant to the job or industry].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+What motivates you to achieve your goals?
+I'm motivated to achieve my goals by [mentioning a motivating factor, such as personal fulfillment or career advancement].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+What other companies are you interviewing with?
+I'm also interviewing with [mention other companies].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Tell me something about yourself apart from your resume?
+Apart from my resume, I enjoy [mentioning something interesting or unique about yourself].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Is there anything else you would like us to know?
+I want to mention that [mention any additional information or achievements].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+If there's anything that you want to know about us?
+I'd like to know more about [mention something specific about the company or role].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Do you have any questions?
+Yes, I have a question about [mention a relevant topic].
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+With great disappointment, I inform you that you haven't been selected for the role in our organization?
+Thank you for considering me. I appreciate the opportunity and will continue to seek roles where I can contribute effectively.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+What conditions can make you leave the company?
+I would consider leaving the company if [mention a condition, such as lack of growth opportunities or cultural misalignment].
+	
+======================================================================================================================== 
+how do you do priorities task? 
+what do you like to do after work? 
+how do you stay organized? 
+what motivated you to achieve your goals

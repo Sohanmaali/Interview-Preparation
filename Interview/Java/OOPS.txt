@@ -1,0 +1,434 @@
+OOP Interview questions
+
+1. What is OOP Is It a language or technology or technique?
+Ans. -> its is technique;
+
+2. Why OOP concepts?
+Ans. -> OOPs stands for Object-Oriented Programming System. It's a programming paradigm that use to giving style of programing
+
+3. What is the meaning of representing an object?
+Ans. -> 
+
+4. What are the problems with structure programming language?
+
+5. What is the difference between Object-based & Object-oriented programming?
+Ans. -> Object-based -Object based languages supports the usage of object and encapsulation. They does not support inheritance or, polymorphism or, both. Object based languages does not supports built-in objects. Javascript, VB are the examples of object bases languages. 
+Object Oriented - Object Oriented Languages supports all the features of Oops including inheritance and polymorphism. They support built-in objects. C#, Java, VB. Net are the examples of object oriented languages.
+
+6. What are the building blocks of object?
+
+7. What is an object, what is a class, what is an instance?
+
+8. Is instance and object both are same? 
+
+9. Why class is called blue print of an object?
+
+10. Why object is called instance of a class?
+Ans -> An object is called an instance of a class because it represents a specific state of the class
+
+11. What are the object characteristics?
+Ans. -> In programming, objects have three basic characteristics: identity, state, and behavior:
+Identity: Each object has a unique identifier that distinguishes it from other objects.
+State: An object's properties, such as the values of its variables, which can be changed, added, or deleted.
+Behavior: The actions an object can perform. 
+
+12. How can we create object properties in a class?
+
+13. How can we implement object behaviours in a class? 
+
+14. What is a hash code, how can we generate it?
+
+15. What are the 5 steps we must follow in designing an object? 
+
+16. Draw object design block diagram?
+
+17. What is the difference between business objects & container object?
+
+18. What is the meaning of object class, user class, & executable class?
+
+19. Will we create main method in every class, if not, why? 
+
+20. Create a class to store an Employee object data in Java program?
+
+21. Create a class Company for creating different employees of this company?
+
+22. Create a project to store & display Student object data in JVM?
+
+-------------------------------------------
+Object design models Interview questions
+-------------------------------------------
+
+1. How will you write a class for representing multiple objects of same type has same properties & same behavior implementation?
+
+2. How will you write a class for representing multiple objects same type has different properties & different behavior implementation?
+
+-------------------------------------------
+Object relations interview questions
+-------------------------------------------
+
+1. How many relations we can develop between objects? 
+Ans. -> Association, Aggregation, Composition, Composition, Is-A, Has-A
+
+2. When should we create IS-A. Has-A, USES-A relation between objects?
+
+3. How should we develop code for creating IS-A, HAS-A, USES-A relation? 
+
+4. What are the keywords we use for developing IS-A relation?
+
+5. What is Inheritance, composition, association, aggregation?
+
+-------------------------------------------
+OOP Principles interview questions
+-------------------------------------------
+
+1. What are the OOP principles?
+
+2. Will OOP principles provide any predefined code?
+
+3. Is abstraction an OOP principle? 
+Ans. -> 
+
+4. What are the benefits we will get with OOP principles?
+
+5. What is encapsulation? 
+
+6. What is inheritance?
+ans -> use the exciting thing to develop something new and there are no changes in existing thing is called inheritance;
+
+7. What is polymorphism? 
+Ans -> polymorphism is concept to use perform a single action in different ways it is called polymorphism
+
+8 	. What is abstraction?
+Ans -> Abstraction is a process of hiding the implementation details and showing only functionality to the user it called avstraction. 
+
+1. What is a method overloading? 
+
+9. Explain all 4 principles with real-world examples?
+
+------------------------------------
+Encapsulation interview questions
+------------------------------------
+
+1. What is encapsulation?
+
+2. How can we develop encapsulation in Java? 
+
+3. What are the benefits of encapsulation?
+
+4. What is the meaning of data hiding?
+
+5. What is the meaning of implementation hiding?
+
+6. What is problem if we do not implement encapsulation in projects?
+
+7. What is meaning of tight encapsulation?
+
+8. What is the difference between encapsulation & abstraction?
+
+-----------------------------
+inheritance interview questions
+-----------------------------
+
+1. What is inheritance?
+
+2. What are the advantages of Inheritance?
+
+3. What is the meaning of reusability?
+
+4. How can we develop inheritance in Java? 
+
+5. What are the differences between extends & implements keywords?
+
+6. Why we cannot derive an interface from a cláss?
+
+7. What is the meaning of "superclass members are inherited to subclass"?
+
+8. What are the members not inherited from superclass?
+
+9. How can we reuse super class static & non-static members in subclass?
+
+10. How many subclasses we can create from a superclass?
+
+11. If we change a variable value or method logic in superclass will it affected to all its subclasses?
+
+12. What type of logic we must place in super class & subclass? 
+
+13. What is the meaning of generalized logic & specialized logic?
+
+14. How many types of inheritance Java supports?
+
+15. Why Java does not support multiple inheritance with classes?
+
+16. Why Java do not have problem in developing multiple inheritance with interface?
+
+---------------------------------------------------------
+Static & non-static members' execution flow in Inheritance
+---------------------------------------------------------
+
+1. What is the order of compiling, loading and instantlating classes in inheritance?
+
+2. When we load subclass will all its super classes also loaded into JVM? 
+
+3. When we load superclass will all its sub classes also loaded into JVM?
+
+4. How can JVM load super class when sub class is loaded? 
+
+5. Why JVM will not load sub classes when super class is loaded?
+
+6. Can we call super class variable & methods in sub class directly by their name?
+
+7. Can we call sub class variable & methods in super class directly by their name?
+
+8. Explain static members' execution flow from super class to subclass?
+	1. Will static variable & static blocks are executed from both super & sub classes? 
+	2. Will main method executed from both superclass & subclass?
+	3. If we access subclass static variable in superclass static block what is the value return? Is it assigned value or default value?
+	4. Is it possible to access subclass variable from superclass directly by Its name?ext
+
+9. Explain non-static members' execution flow from super class to subclass?
+	1. Will non-variable & blocks are executed from both super & sub classes?
+	2. Will constructor executed from both super class & sub class?
+
+-----------------------------------------------------
+Sub class object & constructor execution in Inheritance Interview questions
+-----------------------------------------------------
+
+1. What a subclass object contains?
+
+2. Will super class object also created, when subclass object is created? 
+
+3. Prove that super class object is not created when subclass object is created?
+
+4. When super class object is not created, why constructor is executed from superclass?
+
+5. How superclass constructor is called from subclass constructor in its object creation?
+
+6. What is the use of super()? 
+
+7. Who will place super() in every subclass constructor?
+
+8. What is the constructor by default executed from superclass, why?
+
+9. How can we execute superclass parameterized constructor from subclass?
+
+10. Which constructor is executed from super class for super() and super(5) call? 
+
+11. What is the first check point we must verify in solving inheritance
+
+bits? 12. If super class have only parameterized constructor & subclass is
+
+empty class, then will that subclass compiled successfully?
+
+13. If super class has only private constructor, will inheritance possible?
+
+-----------------------------------
+super keyword interview questions
+-----------------------------------
+
+1. What is the use of super keyword?
+
+2. Is super keyword an operator or a variable?
+
+3. What is the type of super keyword? 
+
+4. What are the 2 usages of super keyword?
+
+5. What is the difference between "super." & "super()"? 
+
+6. Why "super()" must be the first statement in a constructor?
+
+7. Can we place "super()" in a method? 
+
+8. Can we place "super()" at any line in a Constructor? 
+
+9. Can we place "super." in a constructor? 
+
+10. Can we place "super." at any line in a method or constructor?
+
+11. What are the differences between this & super keywords? 
+
+12. What is the data type of this & super keywords?
+
+13. To whom this keyword & super keyword is referring in subclass object?
+
+14. What are the rules in using super keyword?
+
+15. Can we use super keyword in static method? 
+
+16. In a non-static method, can we call static method using super keyword?
+
+17. Can we print super keyword?
+
+18. Can we return super keyword from a method? 
+
+19. Can we pass super keyword as a method argument?
+
+20. Internally, in a non-static method how many referenced variables are created?
+
+21. Draw subclass object memory diagram with super class, sub class non- static variables & with their referenced variables this & super keywords?
+
+22. What is stored in super keyword, is it subclass object reference or superclass object reference?
+
+23. Prove that super keyword contains sub class object reference?
+
+------------------------------------
+Variable hiding interview questions
+------------------------------------
+
+1. What is the meaning of variable hiding? 
+
+2. Can we create a variable in the sub class with a super class variable name?
+
+3. Give me object memory diagram of a sub class object with hiding?
+
+4. What is the difference in storing 
+	a. sub class object reference in sub class type referenced variable & 
+	b. sub class object reference in super class variable 
+
+5. What are the 2 ways we have for differentiating type referenced superclass & subclass? a variable from 
+
+6. When we access a variable, Its value is read whether from super class or from subclass. Is it resolved based on referenced variable type or based on object type?
+
+7. Assume the variable "x" is defined in both super class "Example" & in its subclass "Sample", from which class that variable "x" is accessed in the below cases
+		Sample s = new Sample();
+		Example e = new Sample();
+		x variable is accessed from
+		1. S.x
+		2. e.x
+		3. this.x	
+		4. super.x
+
+8. Can we access static variable using super keyword? 
+
+9. How can we access super class static variable from subclass static methods? 
+
+10. Can we create a variable in subclass with super class name but with different data type and modifiers?
+
+11. How super class static variable is shared to all its subclasses? 
+
+12. How super class non-static variable is shared to all its subclasses?
+
+13. At execution time, if we modify super class static variable value in one subclass, is it affected to all other subclasses?
+
+14. At execution time, if we modify super class non-static variable value in one subclass, is it affected to all other subclasses?
+
+------------------------------------------------
+Method hiding & overriding interview questions
+------------------------------------------------
+
+1. What is the meaning of method hiding?
+
+2. What is the meaning of method overriding? 
+
+3. When should we override supere class method in sub class
+
+4. In subclass when a method is considered as overriding method?
+
+5. What are the 4 rules we must fere in method overriding? 
+	1. Can we change return type of overriding method?
+	2. What is co-variant return method?
+	3. Can we add or remove static keyword of overriding method?
+	4. Can we decrease accessibility modifier of overriding method? 
+	5. Can we override private method, if we override will it leads to CE?
+	6. If super class method is not throwing a checked exception, can we throw checked exception in overriding method? 
+	7. If super class method is throwing a checked exception, is it mandatory we should throw this checked exception in overriding method also?
+
+6. Why overriding rules are created, what will be the problem if we do not follow overriding rules?
+
+7. Can we override private method Non-private method & Non-private method as private
+
+8. Can we override public method Non-public method & Non-public method as Public
+
+9. Can we override Static method Non-static method & Non-static method as Static
+
+10. Can we override final method Non-final method & Non-final  as Final
+
+11. Can we override Abstract method Non-abstract method & Non-abstract method as abstract ?
+
+12. Can we override native method Non-native method & Non-native method As native Method ?
+
+13. Can we override synchronized method as non-synchronized & Non-synchronized method as synchronized ?
+
+14. Can we override strictfp method as non strictfp & non strictfp as  strictfp 
+
+15. When we call static and non-static methods, their execution is as resolved whether based on referenced variable type or based on the object stored in the referenced variable?
+
+16. From subclass, how can we execute an overridden method from superclass?
+
+17. From a user class, how can we execute an overridden method from superclass?
+
+18. Assume the method "m1()" is defined in both super class "Example" & in its subclass "Sample", then from which class this method "m1()" is executed in the below cases
+	Accessed from
+	if m1() is static if m1() is non-static
+	1. s.m1() 
+	2. e.m1()
+	3. this.m1()
+	4. super.m1()
+
+19. Why static method is executed from superclass & why non-static method is executed from subclass, when we call them using super class referenced variable by storing subclass object reference? 
+
+20. How can we execute a non-static overridden method from superclass?
+
+21. How can we execute a static hidden method from superclass?
+
+22. How can you write a program to develop below scenarios When we call an overridden method using subclass object 
+	1. It should also execute from superclass
+	2. First it should be executed from superclass
+	3. First it should be executed from subclass
+	4. Execute superclass method logic in middle of overriding method
+	5. Add some more logic to super class method implementat \
+
+23. Assume we have main method only in superclass, in this case what will happen if we run subclass, is it leads to Error: main method not found?
+
+24. Assume we have main method in both superclass & subclass, in this case how can we execute main method from both classes?
+
+=============================================================================
+13. What are the main principles of Object Oriented Programming?
+
+14. What is the difference between Object Oriented Programming language and Object Based Programming language?
+
+15. In Java what is the default value of an object reference defined as an instance variable in an Object?
+
+16. Why do we need constructor in Java?
+
+17. Why do we need default constructor in Java classes?
+
+18. What is the value returned by Constructor in Java?
+
+19. Can we inherit a Constructor?
+
+20. Why constructors cannot be final, static, or abstract in Java?
+
+Can we instantiate an abstract class in Java?
+
+What is the difference between abstract class and interface in Java?
+
+Q3. What is the di􀃡erence between Encapsulation and Abstraction?
+Ans. 1.Abstraction solves the problem at design level while encapsulation solves the problem at implementation level
+2.Abstraction is used for hiding the unwanted data and giving relevant data. while Encapsulation means hiding the code and data into a single unit to
+protect the data from outside world.
+3. Abstraction lets you focus on what the object does instead of how it does it while Encapsulation means hiding the internal details or mechanics of
+how an object does something.
+4.For example: Outer Look of a Television, like it has a display screen and channel buttons to change channel it explains Abstraction but Inner
+Implementation detail of a Television how CRT and Display Screen are connect with each other using di􀃡erent circuits , it explains Encapsulation.
+
+Q19. Four main principles of OOPS Concepts?
+Ans.
+Inheritance
+Polymorphism
+Data Encapsulation
+Abstraction
+
+Q24. Explain super keyword in Java?
+Ans.super keyword references to the parent class. There are several uses of super keyword:
+It can be used to call the superclass(Parent class) constructor.
+It can be used to access a method of the superclass that has been hidden by subclass (Calling parent class version, In case of method
+overriding).
+To call the constructor of parent class.
+
+1 Object Oriented Programming (OOP) 1
+1.1 Encapsulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2 Polymorphism . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.3 Inheritance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.4 Abstraction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.5 Differences between Abstraction and Encapsulation

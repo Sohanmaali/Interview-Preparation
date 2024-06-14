@@ -1,0 +1,18 @@
+What is the fs module?
+What are the different methods available in the fs module?
+How can you use the fs module to read a file?
+How can you use the fs module to write to a file?
+How can you use the fs module to create a new file?
+How can you use the fs module to delete a file?
+How can you use the fs module to rename a file?
+How can you use the fs module to get the size of a file?
+How can you use the fs module to check if a file exists?
+How can you use the fs module to get the current working directory?
+How can you use the fs module to change the current working directory?
+How can you use the fs module to create a new directory?
+How can you use the fs module to delete a directory?
+How can you use the fs module to get the contents of a directory?
+How can you use the fs module to watch for changes to a file or directory?
+
+What is module wrapper function 
+Ans -> When Node.js loads a module, it wraps the module code in a function before executing it. This function is called the "module wrapper function" and is used to encapsulate the module code.

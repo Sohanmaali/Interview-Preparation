@@ -1,0 +1,156 @@
+-------------------
+WRAPPER CLASSES
+-------------------
+1. What is the meaning of wrapping? 
+Ans. -> if we want to convert primitive to object(ref) when be will use wrapper class.
+
+2. What is the use of wrapper class?
+
+3. How many wrapper classes do we have?
+
+4. What is a Number class, why is it an abstract class?
+
+5. What is the super class for Character & Boolean classes?
+
+6. What are the 6 conversions we can do using wrapper classes?
+Ans. -> primitive to object.
+		object to primitive.
+		primitive to string.
+		string to primitive.
+		object to string.
+		string to object
+
+7. What are the constructors and methods do we have in all wrapper classes for performing all 6 conversions? 
+Ans. -> valueOf().
+		typeValue();
+		parsetype();
+		toString();
+
+8. What are the constructors commonly available in all wrapper classes?
+
+9. Why Character class does not have String parameter constructor?
+
+10. When will you get java.lang.NumberFormatException? 
+
+11. Will we get NumberFormatException in Boolean class?
+
+12. Can perform casting between wrapper classes?
+
+13. How wrapper classes objects are compared using equals() method & == operator?
+
+14. What is the hashCode returned from hashCode() method for wrapper classes object?
+
+15. When we print wrapper class object, why its data is printed?
+
+16. Explain Character class special methods to perform operations on characters?
+
+--------------------------------------------
+Auto Boxing And Unboxing Interview Questions
+--------------------------------------------
+
+1. What is the meaning of auto boxing and unboxing?
+Ans. -> auttomatic conversion of primitive to wrapper object by compiler is called auto boxing.
+		auttomatic conversion of wrapper object to primitive by compiler is called auto unboxing.
+
+2. In which version this feature is added?
+Ans. -> 1.5v
+
+3. For what programming this feature is added?
+
+4. Will JVM know about auto boxing & unboxing?
+
+5. On what basis compiler changes primitive type to wrapper class object?
+
+6. On what basis compiler changes wrapper class object to primitive type?
+
+7. What is the method used in auto boxing?
+Ans. -> valueOf();
+
+8. What is the method used in auto unboxing?
+Ans. -> typeValue();
+
+9. What are the different cases in overloading a method with widening. AB & var-arg?
+
+10. When we call a method by passing primitive value as argument, which method has highest priority is it widening parameter type or widening type or var-arg type?
+
+
+11. Identify which parameter method is executed for the method m1(5) call?
+	1) method is overloaded with (int) & (Integer) parameters
+	Ans. -> int
+	
+	2) method is overloaded with (long) & (Integer) parameters
+	Ans. -> long
+
+	3) method is overloaded with (long) & (int...) parameters 
+	Ans. -> int...
+	
+	4) method is overloaded with (Integer) & (int...) pararneters
+	Ans. -> int...
+	
+	5) method is overloaded with (Integer...) & (int...) parameters 
+	Ans. -> int...
+
+	6) method is overloaded with (Object) & (int...) parameters
+	Ans. -> int...
+
+12. Can we pass wrapper class object as argument to switch?
+Ans. -> yes
+
+13. Can we pass String class object as argument to switch?
+ans. -> yas 1.7
+
+14. Can we do arithmetic operations using wrapper classes?
+
+15. Write a program to add two integer numbers without using primitive variables?
+
+16. In place of primitive types, Is it recommended to use wrapper classes in arithmetic operations?
+
+----------------------------------------------------------------
+1. What is Casting? 
+Ans. -> to converting one data type to another data type is called casting.
+
+2. What are the advantages of Auto Boxing?
+
+3. What is Implicit Casting?
+
+4.What is Explicit Casting?
+
+5. How can you convert a String to a wrapper class?
+Ans. -> using valueOf() merhod.
+
+6. How can you convert a String to a primitive type?
+Ans. -> using parsetype().
+
+7. When would you need to convert a String to a character array?
+
+8. What is the best way to convert a String to a primitive type value?
+
+9. What do you understand by boxing and unboxing?
+
+10. Is it possible to convert a Double to a Boolean? If yes, then how?
+
+11. Is it possible to convert a string to a boolean? If yes, then how?
+
+12. What’s the difference between parseInt() and valueOf() methods? Which one would you prefer using?
+
+13. Are all wrapper classes immutable?
+
+14.What does the compareTo method do?
+
+15. What happens if there is no matching wrapper class when converting from a primitive to a wrapper class?
+
+Q56. How can we use primitive data types as objects?
+Ans: Primitive data types like int can be handled as objects by the use of their respective wrapper classes. For example, Integer is a wrapper class for
+primitive data type int. We can apply di􀃡erent methods to a wrapper class, just like any other object.
+
+What Are Wrapper Classes?
+Why Wrapper Classes Were Introduced?
+What Is Autoboxing And Unboxing?
+When Do Autoboxing And Unboxing Occur ?
+Why == Operator Works For Integer Value Until 127 Number?
+Why Integer Wrapper Class Caches This Range ?
+Can We Increase The IntegerCache Array Range?
+What Is The MaxSize Of -XX:AutoBoxCacheMax?
+Do All The Wrapper Classes Support Caching?
+Why Are Java Wrapper Classes Immutable?
+

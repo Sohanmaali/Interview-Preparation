@@ -1,0 +1,348 @@
+
+===========================================================================================================================================
+
+1) What is Java?
+Java is a simple, high-level,  platform-independent, multithreaded, and object oriented programming language. It was developed by James Gosling in June 1991. It can also be known as the platform as it provides its own runtime environment as JRE and API.
+
+2) What is the difference between JDK, JRE, and JVM?
+Ans. -> JDK :- Stands for Java Development Kit, which is a collection of software development tools and libraries used to create Java applications. JDKs include a compiler that can turn Java programs into bytecode.
+
+JRE :-  Stands for Java Runtime Environment, which is part of the JDK and provides programming tools and deployment technologies for executing Java applications. JREs include a Java virtual machine (JVM) and Java class libraries.
+
+JVM :- Stands for Java Virtual Machine, which is a program that executes Java bytecode and makes Java applications platform-independent. The JVM creates a virtual layer on top of the machine's hardware and operating system, so it can run on any machine. The JVM translates bytecode into machine-specific code, which is then run by the computer. 
+
+Q8. What is garbage collection ?
+Ans. -> Garbage Collection is a key feature of the Java programming language that automatically manages memory allocation and deallocation for objects that are created in an eden space.
+
+Q13. What is the purpose of garbage collection?
+Ans.The garbage collection process is to identify the objects which are no longer referenced or needed by a program so that their resources can be reclaimed and reused. These identi􀃕ed objects will be discarded.
+
+Q40. How garbage collection is done in Java?
+Ans: In java, when an object is not referenced any more, garbage collection takes place and the object is destroyed automatically. For automatic garbage collection java calls either System.gc() method or Runtime.gc() method.
+
+Q71. Is JDK required on each machine to run a Java program?
+Ans: JDK is development Kit of Java and is required for development only and to run a Java program on a machine, JDK isn’t required. Only JRE is required.
+
+7) Why java is platform independent?
+Ans. -> Java is called platform independent because the code written in Java can be executed on any platform without needing to make any changes. This is achieved through the Java Virtual Machine (JVM), which converts Java bytecode into machine code at runtime, enabling the same code to run on any platform that has a JVM.
+
+9) What is difference between c++ and Java ?
+					Java 																				C++
+1) 			Java is platform independent 														C++ is platform dependent.
+2) 			There are no pointers in java 														There are pointers in C++.
+3) 			There is no operator overloading in java											C ++ has operator overloading.
+4)			There is garbage collection in java 												There is no garbage collection
+5) 			Supports multithreading 															Does’nt support multithreading
+6)			There are no templates in java 													There are templates in java
+7) 			There are no global variables in java 												There are global variables in c++
+
+10) What is JIT compiler ?
+Ans. -> JIT compiler stands for Just in time compiler. JIT compiler compiles byte code in to executable code . JIT a part of JVM .JIT cannot convert complete java program in to executable code it converts as and when it is needed during execution.
+
+11) What is bytecode in java ?
+Ans. -> When a javac compiler compile a class it generates .class file. This .class file contains set of instructions called byte code. Byte code is a machine independent language and contains set of instructions which are to be executed only by JVM. JVM can understand this byte codes
+
+21) What is ASCII Code?
+Ans. -> ASCII stands for American Standard code for Information Interchange. ASCII character range is 0 to 255. We can’t add more characters to the ASCII Character set. ASCII character set supports only English. That is the reason, if we see C language we can write c language only in English we can’t write in other
+languages because it uses ASCII code.
+
+22) What is Unicode ?
+Ans. -> Unicode is a character set developed by Unicode Consortium. To support all languages in the world Java supports Unicode values. Unicode characters were represented by 16 bits and its character range is 0- 65,535. Java uses ASCII code for all input elements except for Strings,identifiers, and comments. If we
+
+23) Difference between Character Constant and String Constant in java ?
+Character constant is enclosed in single quotes. String constants are enclosed in double quotes. Character constants are single digit or character. String Constants are collection of characters.
+Ex :’2’, ‘A’
+Ex : “Hello World”
+
+24) What are constants and how to create constants in java?
+Constants are fixed values whose values cannot be changed during the execution of program. We create constants in java using final keyword.
+Ex : final int number =10;
+final String str=”java-interview –questions”
+
+>> is a right shift operator shifts all of the bits in a value to the right to a specified number of times.
+int a =15;
+a= a >> 3;
+The above line of code moves 15 three characters right.
+>>> is an unsigned shift operator used to shift right. The places which were vacated by shift are filled
+with zeroes
+
+Core java Interview questions on Coding Standards
+
+36) What does null mean in java?
+Ans. -> In Java, null is a special keyword that represents the absence value of any ref . It is the default value for reference types, including uninitialized reference variables, instance variables, and static variables.
+
+Core Java Interview Questions
+
+
+3) What is a user defined exception?
+A user-defined exception is a custom exception created by a programmer to handle specific error conditions in an application
+
+public class MyException extends Exception {
+	public  MyException() {
+		super();
+	}
+	public MyException( String errorMessage ) {
+		super( errorMessage );
+	}
+}
+
+
+6) What is JAR file?
+
+7)What is JNI?
+
+9) Why there are some null interface in java ? What does it mean ? Give me some null interfaces in JAVA? 
+
+10) Is synchronised a modifier?indentifier?what is it??
+It's a modifier. Synchronized methods are methods that are used to control access to an object. A thread only executes a synchronized method after it has acquired the lock for the method's object or class. Synchronized statements are similar to synchronized methods. A synchronized statement can only be executed after a thread has acquired the lock for the object or class referenced in the synchronized statement.
+
+11) What is singleton class?where is it used?
+Singleton is a design pattern meant to provide one and only one instance of an object.
+Other objects can get a reference to this instance through a static method (class constructor is kept private). 
+
+Why do we need one? 
+
+12) What is a compilation unit?
+
+13) Is string a wrapper class?
+String is a class, but not a wrapper class. Wrapper classes like (Integer) exist for each primitive type. They can be used to convert a primitive data value into an object, and viceversa.
+
+14) Why java does not have multiple inheritance?
+
+15) Why java is not a 100% oops?
+Many people say this because Java uses primitive types such as int, char, double. But then all the rest are objects. Confusing question..
+
+16) What is a resource bundle?
+In its simplest form, a resource bundle is represented by a text file containing keys and a text value for each key.
+
+17) What is transient variable?
+Transient variable can't be serialize. For example if a variable is declared as transient in a Serializable class and the class is written to an ObjectStream, the value of the variable can't be written to the stream instead when the class is retrieved from the ObjectStream the value of the variable becomes null.
+
+21) What is a transient variable?
+A transient variable is a variable that may not be serialized.
+
+23) Why do threads block on I/O?
+
+24) How are Observer and Observable used?
+
+25) What is synchronization and why is it important?
+With respect to multithreading, synchronization is the capability to control the access of multiple threads to shared resources. Without synchronization, it is possible for one thread to modify a shared object while another thread is in the process of using or updating that object's value. This often leads to significant errors.
+
+26) Can a lock be acquired on a class?
+Yes, a lock can be acquired on a class. This lock is acquired on the class's Class object.
+
+27) What's new with the stop(), suspend() and resume() methods in JDK 1.2?
+The stop(), suspend() and resume() methods have been deprecated in JDK 1.2.
+
+32) What state does a thread enter when it terminates its processing?
+When a thread terminates its processing, it enters the dead state.
+
+36) How does Java handle integer overflows and underflows?
+It uses those low order bytes of the result that can fit into the size of the type allowed by the operation.
+
+40) What is the difference between the >> and >>> operators?
+The >> operator carries the sign bit when shifting right. The >>> zero-fills bits that have been shifted out.
+
+42) How many bits are used to represent Unicode, ASCII, UTF-16, and UTF-8 characters?
+Ans. -> Unicode requires 16 bits and ASCII require 7 bits. Although the ASCII character set uses only 7 bits, it is usually represented as 8 bits. UTF-8 represents characters using 8, 16, and 18 bit patterns. UTF-16 uses 16-bit and larger bit patterns.
+
+43) What is the difference between yielding and sleeping?
+
+45) Is sizeof a keyword?
+The sizeof operator is not a keyword.
+
+47) Does garbage collection guarantee that a program will not run out of memory?
+Garbage collection does not guarantee that a program will not run out of memory. It is possible for programs to use up memory resources faster than they are garbage collected. It is also possible for programs to create objects that are not subject to garbage collection
+
+48) What restrictions are placed on the location of a package statement within a source code file?
+A package statement must appear as the first line in a source code file (excluding blank lines and comments).
+
+49) Can an object's finalize() method be invoked while it is reachable?
+An object's finalize() method cannot be invoked by the garbage collector while the object is
+still reachable. However, an object's finalize() method may be invoked by other objects.
+
+56) What is a native method?
+A native method is a method that is implemented in a language other than Java.
+
+57) Can a for statement loop indefinitely?
+Yes, a for statement can loop indefinitely. For example, consider the following:
+for(;;) ;
+
+67) What is the range of the short type?
+The range of the short type is -(2^15) to 2^15 - 1.
+
+68) What is the range of the char type?
+The range of the char type is 0 to 2^16 - 1.
+
+84) Can a double value be cast to a byte?
+Yes, a double value can be cast to a byte.
+
+85) What is the difference between a break statement and a continue statement?
+A break statement results in the termination of the statement to which it applies (switch,for, do, or while). A continue statement is used to end the current loop iteration and return control to the loop statement.
+
+86) What must a class do to implement an interface?
+
+92) What is the purpose of the wait(), notify(), andnotifyAll() methods?
+The wait(),notify(), and notifyAll() methods are used to provide an efficient way for threads
+to wait for a shared resource. When a thread executes an object's wait() method, it enters
+the waiting state. It only enters the ready state after another thread invokes the object's
+notify() or notifyAll() methods..
+
+93) What is an abstract method?
+An abstract method is a method whose implementation is deferred to a subclass.
+
+94) How are Java source code files named?
+
+95) What is the relationship between the Canvas class and the Graphics class?
+
+96) What are the high-level thread states?
+The high-level thread states are ready, running, waiting, and dead.
+
+97) What value does read() return when it has reached the end of a file?
+
+98) Can a Byte object be cast to a double value?
+No, an object cannot be cast to a primitive value.
+
+99) What is the difference between a static and a nonstatic inner class?
+A non-static inner class may have object instances that are associated with instances of the
+class's outer class. A static inner class does not have any object instances.
+
+100) What is the difference between the String and StringBuffer classes?
+
+String objects are constants. StringBuffer objects are not.
+
+101) If a variable is declared as private, where may the variable be accessed?
+A private variable may only be accessed within the class in which it is declared.
+
+102) What is an object's lock and which object's have locks?
+
+103) What is the Dictionary class?
+The Dictionary class provides the capability to store key-value pairs. 
+
+104) How are the elements of a BorderLayout organized?
+The elements of a BorderLayout are organized at the borders (North, South, East, and West) and the center of a container.
+
+106) When can an object reference be cast to an interface reference?
+An object reference be cast to an interface reference when the object implements the referenced interface.
+
+
+108) Which class is extended by all other classes?
+The Object class is extended by all other classes.
+
+113) What happens when a thread cannot acquire a lock on an object?
+If a thread attempts to execute a synchronized method or synchronized statement and is unable to acquire an object's lock, it enters the waiting state until the lock becomes available.
+
+116) If a class is declared without any access modifiers, where may the class be accessed?
+
+A class that is declared without any access modifiers is said to have package access. This means that the class can only be accessed by other classes and interfaces that are defined within the same package.
+
+131) What modifiers may be used with an interface declaration?
+An interface may be declared as public or abstract.
+
+140) What modifiers can be used with a local inner class?
+A local inner class may be final or abstract.
+
+141) What is the difference between static and non-static variables?
+A static variable is associated with the class as a whole rather than with specific instances of a class. Non-static variables take on unique values with each object instance.
+
+147) When does the compiler supply a default constructor
+for a class?
+The compiler supplies a default constructor for a class if no other constructors are provided.
+
+Q1. Can we define static variables inside the static method or not? 
+Q2. In project when we will instance & static varaibles give the scenario? 
+Q3. When we will use for vs. for-each? 
+Q5. How many parts of java?
+Q6. What is the purpose of methods? 
+Q7. Define class vs.Object?
+Q8. Define and(&),or(|)?
+Q11.  Define the package in java? 
+Q12. What is the difference between bitwise & logical operator? 
+Q13. What are the entry controlled loop & exit controll loop? 
+Q14. When we will get StackOverflowError?
+Q15. Explain instance & static blocks? What is the purpose of blocks? 
+Q16.  What are the different ways to load the .class file into memory?
+Q17. How to call the constructor in java?Is it one constructor can call multiple constructors? 
+Q18. What is method recursion?
+Q19. What are the Different ways to call the static members in java?
+Q20. When we will use switch & else-if statements in Application?
+Q21. When we will use for vs. while loops in Application?
+Q22. Can we access the other packages classes without import statements?
+Q23. What is the difference between the normal import & static import?
+Q24. What are the modifiers applicable to constructors?
+Q25. Explain System.out.println()?
+Q26. Can we access sub-packages data when we import main package with*?
+Q27. What are the Permission/Scoping modifiers in java?
+Q28. Define inheritance? how many types inheritance in java?
+Q29. Explain about Object class in java? 
+Q30. Define the Polymorphism? How many types of Polymorphisms in java?
+Q31. What are the Different types of overloading in java? What is the advantage? 
+Q32. What is method Overriding? what is the advantage?
+Q33. What are the rules to fallow while overriding the method?
+Q34. What is Co-variant return type in java?
+Q35. What is Method overriding & method hiding in java?
+Q36. What is the advantage of parent class reference hilding the Child class object? or What is runtime polymorphism? 
+Q37. Explain about final modifier/prevention modifier in java?
+Q38. Define abstract methods & normal methods in java?
+Q39. Explain normal classes & abstract classes in java? 
+Q40. what is the abstraction concept in java? What is the advantage of abstraction?
+Q41. Explain about interfaces in java? 
+Q42. What is the difference between interfaces & abstract classes & normal classes & client code?
+Q43. How to clone the objects in java? What is the advantage?
+Q44. What the new features about interfaces in java?
+Q45. Explain about functional interfaces in java? 
+Q46. What is the meaning of Automatic garbage collection?
+Q47. What are the Different ways to call the Garbage Collector?
+Q48. What are the Different ways to make the object un-referenced?
+Q49. Explain Encapsulation mechanism in java?
+Q50. What are the different ways to initialize the data in java explain?
+Q51. Define type conversion? what are the different types of type conversions in java?  
+Q52. Why method signature of main() method is always public static void main(String[] args) ?
+Q53. Though interface is a pure abstract class then why interfaces are needed    
+Q54. Define the exception? What is the main objective of exception handling?
+Q55. what are the types of exceptions in java?
+Q56. What are the differnet ways to handle the exceptions in java? 
+Q57. What are the possible ways to handle the multiple exceptions in java?
+Q58. What is the purpose of try-with resources concept?
+Q59. What is the purpose of finally block?
+Q60. What is the purpose of throw keyword? How to handle the userdefined exceptions in java? 
+Q61.What are the difference ways to create String object?
+Q62. what is the difference == operator & equals() method?
+Q63. What is the difference between String vs. StringBuffer?
+Q64. What is the difference between equals() vs. compareTo()?
+Q65. What is the difference between StringBuffer & StringBuilder?
+Q66. What are the advanatges of Wrapper classes?
+Q67. Define Autoboxing & Auto-unboxing?
+Q68. What is the purpose of enum?
+Q69. What is the purpose of Annotation?
+Q70. How to perform read & write operations on text files & images?
+Q71. What are the difference between normal Streams & buffered streams?
+Q72. How to create & remove the files & directories in java?
+Q73. what are the advantages of nested classes in java?
+Q74. Define lambda expression in java?
+Q75. What is method reference concept in java? 
+Q76. What is Reflection mechanism in java?
+Q77. What are the main components of JVM?
+Q78. Define the Thread? What are the advantages of multithreading?
+Q79. What are the different ways to create a thread? Explain start() run() methods? 
+Q80. What’s the difference between class lock and object lock?
+Q81. Explain Daemon & non-Daemon threads in java?
+Q82. Explain thread names & priority in java?
+Q83. Explain sleep() vs. join() vs. wait()? 
+Q84. What is the purpose of Assertions in java?
+Q85. Define the array? what are the advantages of arrays?
+Q86. What is the main objective of Collection framework? What are the parts in Collections f/w?
+Q87. What are the difference between Collections & Arrays?
+Q88. What are the difference between List & Set?
+Q89. How to add one collection data into another?
+Q90. What are the Differences between ArrayList & LinkedList?
+Q91. What are the Differeent ways to read the data from collection classes?
+Q92. What is the purpose of cursor? Explain the cursors in java?
+Q93. What are the conditions we need to fallow while sorting Collection data?
+Q94. what is the purpose of serialization & Desrialization process? How to prevent serialization?
+Q95. What is Type Earser in java?
+Q96. What is the Difference between Comparable vs. Comparator?
+Q97. In application when we will use Map classes?
+Q98. What is the purpose of streams API in java?
+Q99. How to convert Arrays to Collections & Collections to Arrays?
+Q100. What is the purpose of WildCard symbol(?) in Generics?.

@@ -1,0 +1,1451 @@
+------------
+Exception Handling
+------------
+1) Explain the concept of chained exceptions in Java.
+Ans. -> one exception class/object will provide more information about exception class/object is called exception chaining
+
+2) What is the purpose of the NullPointerException in Java, and how can you prevent it?
+Ans. -> Null Pointer Exception is a kind of run time exception that is thrown when the java program attempts to use the object reference that that contains the null value.
+
+3) Explain the difference between Error and Exception in Java.
+Ans -> 	* Recovering from Error is not possible.	
+		  We can recover from exceptions by either using try-catch block or throwing exceptions back to the caller.
+		* All errors in java are unchecked type.	
+		  Exceptions include both checked as well as unchecked type.
+		* Errors are mostly caused by the environment in which program is running.	
+		  Program itself is responsible for causing exceptions.
+		* Errors can occur at compile time.
+		* Unchecked exceptions occurs at runtime whereas   
+		  checked exceptions occurs at comile time
+		* They are defined in java.lang.Error package.	 
+		  They are defined in java.lang.Exception package
+		* Examples : java.lang.StackOverflowError, java.lang.OutOfMemoryError	
+		  Examples : Checked Exceptions : SQLException, IOException Unchecked Exceptions : ArrayIndexOutOfBoundException, NullPointerException, ArithmeticException.
+		  
+4) How does the throws clause impact method overriding in Java?
+
+5) Is it possible to throw checked exceptions from a static block?
+Ans. -> In Java, it is not possible to throw checked exceptions directly from a static block. The reason is that a static block is a part of a class's initialization process, and throwing checked exceptions from there could lead to unhandled exceptions at the class level
+
+6) What is the difference between ClassNotFoundException and NoClassDefFoundError?
+Ans. -> ClassNotFoundException occurs when you try to load a class at runtime using Class.forName() or loadClass() methods and requested classes are not found in classpath. Most of the time this exception will occur when you try to run an application without updating the classpath with JAR files.
+NoClassDefFoundError Now dwelling on the next exception that is NoClassDefFoundError occurs when the class was present during compile time and the program was compiled and linked successfully but the class was not present during runtime. It is an error that is derived from LinkageError. Linkage error occurs when a class has some dependencies on another class and the latter class changes after compilation of the former class.
+
+7) Under what circumstances should we subclass an Exception?
+
+8) Write the difference between throw, throws, and throwable in Java.
+Ans. -> Throw: The throw keyword in Java is used to explicitly throw an exception from a method or any block of code. We can throw either checked or unchecked exception. The throw keyword is mainly used to throw custom exceptions.
+        
+		Tgrows: In Java, when a method might encounter specific issues (exceptions) during its execution, it uses the throws keyword in its declaration to inform the calling code about these possibilities. The calling code must then handle these potential exceptions using try-catch blocks or acknowledge them with the throws keyword in its own declaration. This helps in building a structured approach to handle exceptional situations in a program.
+		
+		Throwable: is a super class for all types of errors and exceptions in java. This class is a member of java.lang package. Only instances of this class or it’s sub classes are thrown by the java virtual machine or by the throw statement. The only argument of catch block must be of this type or it’s sub classes. If you want to create your own customized exceptions, then your class must extend this class.
+
+9) What are built-in Exceptions?
+Ans. -> Built-in exceptions are exceptions that are pre-defined in Java Libraries. They are the most frequently occurring Exceptions. An example of a built-in exception can be ArithmeticException, it is a pre-defined exception in the Exception class of java.lang package. These can be further divided into 2 types: Checked Exception and Unchecked Exception.
+
+10) Is it possible to throw an Exception inside a Lambda Expression’s body?
+Ans. -> Yes, it is possible to throw an exception inside a lambda expression's body. However, there are some considerations and limitations. In a lambda expression, you can throw a checked exception if the functional interface associated with the lambda declares that it throws that exception.
+
+11) Explain stack trace in Java. Why is it important in exception handling?
+Ans. -> A stack trace, also called a stack backtrace or even just a backtrace, is a list of stack frames. These frames represent a moment during an application’s execution. A stack frame is information about a method or function that your code called. So the Java stack trace is a list of frames that starts at the current method and extends to when the program started.
+
+12) Can we throw multiple exceptions in one throw statement?
+Ans. -> No, in Java, you cannot throw multiple exceptions in a single throw statement. The throw statement is used to throw a single exception at a time. If you need to throw multiple exceptions, you should use multiple throw statements or handle the exceptions individually.
+
+
+15) What are the benefits of try-with-resources?
+
+16) Can we create Exception object? 
+Ans.-> In Java, you can create an object of any class that extends Throwable, which includes both exceptions and errors. The common base class for exceptions is Exception, and you can create instances of subclasses of Exception to represent specific types of exceptions.
+
+17)In Java, what are the differences between a Checked and Unchecked Exception?
+
+18) What is the base class for Error and Exception classes in Java?
+
+19) What is a finally block in Java?
+
+20) What is the use of finally block in Java?
+
+20) What is the difference between checked exceptions and runtime exceptions?
+
+21) What is the purpose of the "try-with-resources" statement in Java?
+
+22) What is the purpose of the "FileNotFoundException" in Java
+
+23) What is the purpose of the "ArithmeticException" in Java
+
+24) What is the purpose of the "throw" keyword in Java
+
+25) What is the purpose of the "throws" keyword in Java?0
+
+26) What is the purpose of the "try-catch-finally" block in Java?
+
+27) What is an error in Java?
+
+28) What are advantages of Exception handling in java? 
+
+29) In how many ways we can do exception handling in java?
+
+30) List out five keywords related to Exception handling ?
+
+31) Explain try and catch keywords in java? 
+
+32) Can we have try block without catch block? 
+
+33) Can we have multiple catch block for a try block? 
+
+34) Explain importance of finally block in java? 
+
+35) Can we have any code between try and catch blocks? 
+
+36) Can we have any code between try and finally blocks? 
+
+37) Can we catch more than one exception in single catch block? 
+
+38) What are checked Exceptions? 
+
+39) What are unchecked exceptions in java?
+
+40) Explain differences between checked and Unchecked exceptions in java? 
+
+41) What is default Exception handling in java? 
+
+42) Explain throw keyword in java? 
+
+43) Can we write any code after throw statement? 
+
+44) Explain importance of throws keyword in java? 
+
+45) Explain the importance of finally over return statement? 
+
+46) Explain a situation where finally block will not be executed? 
+
+47) Can we use catch statement for checked exceptions? 
+
+48) What are user defined exceptions? 
+
+49) Can we rethrow the same exception from catch handler? 
+
+50) Can we nested try statements in java? 
+
+51) Explain the importance of throwable class and its methods?
+
+52) Explain when ClassNotFoundException will be raised ? 
+
+53) Explain when NoClassDefFoundError will be raised ?
+
+54) If there are no pointers in Java, then why do we get NullPointerException?
+
+55) Arrange the three classes String, StringBuffer and StringBuilder in the order of efficiency for String processing operations?
+Exception Handling
+
+56) Why do we sometime get ConcurrentModificationException during iteration?
+
+57) How will you handle InterruptedException in Java?
+
+58) Let say there is a method that throws NullPointerException in the superclass. Can we override it with a method that throws
+RuntimeException?
+
+59) Can you catch an exception thrown by another thread in Java?
+
+60) What happens to the Exception object after the exception handling is done?
+
+61) How will you handle runtime exceptions in JSP?
+
+62) How will you handle exceptions in Spring MVC Framework?
+
+63) What is the base class for Error and Exception classes in Java?
+
+64) Can we create a finally block without creating a catch block?
+
+65) can we throw Error object?
+
+66) What are unchecked exceptions in java?
+
+67) Explain differences between checked and Unchecked exceptions in java?
+
+68) What is default Exception handling in java?
+
+69) Explain throw keyword in java?
+
+70) Can we write any code after throw statement?
+
+71) Can we use catch statement for checked exceptions?
+
+72) What are user defined exceptions?
+
+73) Can we rethrow the same exception from catch handler?
+
+74) What will happen to the Exception object after exception handling ?
+
+75) How does finally block differ from finalize() method ?
+
+76) What is a throw in an Exception block?
+
+77) Do we have to always put a catch block after a try block?
+
+78) In what scenarios, a finally block will not be executed?
+
+79) Can we re-throw an Exception in Java?
+
+80) What is the concept of Exception Propagation?
+
+81) When we override a method in a Child class, can we throw an additional Exception that is not thrown by the Parent class 
+method?
+
+82) When is UnsupportedOperationException thrown in Java? 
+
+83) Do we have to always put a catch block after a try block? 
+
+84) In what scenarios, a finally block will not be executed?
+
+=====================================================
+1. what is an exception & exception handler
+
+2. What is represented by an exception in Java? 
+
+3. What is the super class of all exception classes?
+
+4. What is the difference between Error and Exception
+
+5. What is the difference between RuntimeException and Exception
+
+6. What is the exception message format printed by JVM?
+Ans. -> When an exception occurs in Java, the Java Virtual Machine (JVM) typically prints a message to the console or log, providing information about the exception. The format of the exception message includes several pieces of information, such as the exception class name, a description of the exception, and sometimes additional details like the file and line number where the exception occurred.
+
+7. What is the reason for raising an exception?
+And. -> Raising an exception is a technique for interrupting the normal flow of execution in a program, signaling that some exceptional circumstance has arisen, and returning directly to an enclosing part of the program that was designated to react to that circumstance.
+
+8. Why program is terminated when an exception is raised? 
+Ans. -> A program terminates when an exception is raised because the program is looking for an exception handler that can handle the specific type of exception. If no handler is found, the program will terminate and an error message will be displayed
+
+9. How can we print user understandable message to take correct value from user?
+
+10. How can we stop abnormal termination? 
+
+11. How many keywords are given to work with exception?
+
+12. What is the meaning of handling an exception?
+
+13. What are the keywords used for handling an exception? 
+
+14 Explain when will we use try/catch/finally & throw/throws keywords?
+15 Can finally catch an exception?
+16. When should we use try/catch, try/finally & try/catch/finally?
+17. Which of the combinations are correct?
+	1) Is it possible to place trv/catch, try/finally, try/catch/finally,try/finally/catch?
+	2) Is it possible to place try with multiple catches? 
+	3) Is it possible to place try with multiple finally blocks?
+	4) Is it possible to place only try, only catch, only finally?
+	5) Is it possible to place a statement between try/catch/finally?
+	6) Is it possible to place try/catch/finally at class level?
+	7) Is it possible to place catch block with String or some other class as parameter?
+	8) is it possible to place multiple "try/catch/finally" blocks in the same method?
+	9) Is it possible to place only try with resource? 10) Is it possible to place catch with multiple parameters?
+	11) Is it possible to place finally with parameter?
+
+18. What are the rules in placing multiple catch blocks?
+	1) Why do we need to create a multiple catch blocks?
+	2) What is the parameter we must use to catch all exceptions using single catch?
+	3) Can we place multiple catches in any order?
+	4) Can we place multiple catches with same parameter block?
+	5) Can we place catch block with parent class before the catch block with child class exception?
+
+19. What are various methods given in Throwable class to print exception message? 
+	1) What is the difference between printStackTrace(), toString() & getMessage()? 
+	
+	2) What is the difference in printing exception by JVM and printStackTrace()?
+
+	3) Based on the printed message, how can you identify is the program terminated normally or abnormally?
+	
+20. Explain about default exception handler (EDH)?
+
+21. What is the use of finally block? 
+22. What type of code we will write in finally block?
+
+23 When finally block is not executed?
+
+Explain various casus exist in try/catch/finally execution control?
+
+25. Identify in the below cases will finally is executed or not? 
+	1) exception is not raised in try block?
+	2) exception is raised in try block, catch block is matched? 
+	3) exception is raised in try block, catch block is not matched?
+	4) exception is raised in try block, catch block is matched, also exception is raised in catch block? 
+	5) If try block has return statement will finally execute?
+	6) if catch block has return statement will finally execute?
+	7) try/finally without exception 
+	8) try/finally with exception
+	9) In try block we have System.exit(0) will finally executed?
+
+26. What is the effect if finally block has return statement?
+	1) Can we place statements after finally block? 
+	2) If finally has return statement, how can we place statements after finally? 
+	3) How can we suppress exception raised in try block without using catch block? 
+	4) Exception is raised in try block, also exception is raised in finally block which exception is sent to calling method? 
+	5) Exception is raised in try block, finally has return statement will exception is sent to calling method? 
+	6) From try block value 30 is returned, also value 50 is returned from finally block, then which value is returned to calling method?
+
+27. What is the Inner try/catch block?
+	1) How can we catch an exception within the try or catch or finally block?
+	2) The exception that is raised in the catch block, will it be caught by the same catch block?
+
+28. Explain various cases exist in inner try try catch execution control flow?
+29. Identify which catch block will catch exception in the below cases? 
+	1) Exception is raised in outer try, inner catch & outer catch are matched
+	2) Exception is raised in Inner try, inner catch & outer catch are matched 
+	3) Exception is raised in Inner try, inner catch is not matched but outer catch is matched 
+	4) Exception is raised in Inner try, inner catch and also outer catch are not matched
+
+30. Explain various cases existed in Inner and outer finally block execution?
+	1) No Exception is raised in outer try or in inner try blocks
+	2) exception is raised in Inner try, either inner catch or outer catch is not matched
+	3) exception is raised in inner try, inner catch and outer catch are matched
+	4) exception is raised in inner try, inner catch is not matched bu outer catch is matched
+	5) exception is raised in inner try, inner catch is not matched, but outer catch is matched, but inner finally has return statement
+	6) return statement is placed in inner finally 
+	7) return statement is placed in inner finally and also outer finally 
+31. By writing try block what are we informing to compiler?
+
+32. By writing catch block what are we informing to compiler? 
+
+33. By writing finally block what are we informing to compiler?
+
+34. What are the various cases compiler considers in compiling a try/catch/finally blocks? 
+
+35. What is the output we get in below cases?
+	1) A variable is created in try block & accessing it outside try block?
+
+	2) A variable is declared outside try, initialized in try block, accessed it after try 
+	3) A variable is declared outside try, initialized in both try & in a catch blocks, accessed it after try/catch 
+	4) A variable is declared outside try, initialized in both try & in a catch blocks, accessed finally
+	5) A variable is declared outside try by assigning value, reassigned only in try accessed it after try/catch 
+	6) A varlable is declared outside try by assigning value, reassigned only in try accessed in finally
+	7) return statement is placed only in try
+	8) return statement is placed try & in all catch blocks 9) return statement is placed in try, In all catch blocks also in finally
+
+36. What is exception propagation? 
+
+37. How long exception is propagated?
+
+38. What is the use of throw keyword?
+
+39. What is the use of throws keyword?
+
+40. In a method where should we use throw and throws keywords?
+
+41. What are the differences between throw and throws?
+
+42. How many kinds of exceptions do we have in java?43. What is checked and unchecked exception?
+
+44. What are the exceptions comes under checked and unchecked exceptions?
+
+45. What is the difference between checked and unchecked exceptions? 
+
+46. What is the difference between pure and partial checked exceptions?
+
+47. What is the rule on pure checked exception and partially checked exceptions?
+
+48. What are various rules on checked exception? 
+	1) We throw a checked exception and if we do not report or catch it then what will happen, will leads to CE or RE?
+	2) Without throwing a checked exception from a try block, can we place a catch block with checked as parameter? 
+
+49. What are the various rules in overriding a method if it is throwing a checked exception
+	1) Can we ignore throwing this exception?
+	2) Can we throw the same checked exception?
+	3) Can we throw its subclass exception?
+	4) Can we throw its super class exception?
+	5) Can we throw its sibling checked exception?
+	6) Can we add more checked exception?
+	7) Can we throw unchecked exception?
+	8) How should we override the method if overriding method required throwing some other checked exception?
+	9) What is the meaning of exception chaining? 
+	10) What is the meaning throwing an exception?
+
+50. What are the various rules we must follow in deriving a subclass if super class constructor throwing a checked exception 
+	1) If super class constructor throwing a checked exception, should subclass also throw same exception?
+	2) Instead of throwing this exception, can we catch this exception in subclass constructor?
+	3) Can we place super() in a try block?
+	4) If a constructor throws exception, using this constructor can we create object at class level?
+
+51. What is custom exception?
+	1) What is the procedure for creating custom exception? 2) Why custom exception should not be subclass of Throwable or Error? 
+	3) Why should we create custom exception as subclass of Exception or RuntimeException?
+	4) How can we create custom exception as checked or unchecked exception?
+	5) When we throw custom exception, is it mandatory to catch or report it?
+
+52. Develop a Bank project with the custom exceptions InvalidAmountException & Insufficient Funds Exception to handle wrong operations done by customer in deposit and withdraw operations
+
+53. What are the enhancements added in Java 7 for try & catch blocks?
+	1) Explain The try-with-resources Statement 
+	2) Explain Multiple Exception Handling Syntax
+54. What is the difference between exception & System.exit(); 
+
+55. What is the difference between try-catch & if-else?
+
+=================================================================================================================================
+=================================================================================================================================
+=================================================================================================================================
+------------
+STRING
+------------
+1. What is the meaning of Immutable in the context of String class in Java?
+  
+2. Why a String object is considered immutable in Java?
+  
+3. How many objects does the following code create?
+ 
+4. How many ways are there in Java to create a String object?
+   
+5. How many objects does the following code create?
+  
+6. What is String interning?
+ 
+7. Why Java uses the String literal concept?
+   
+8. What is the basic difference between a String and StringBuffer object?
+
+9. How will you create an immutable class in Java?
+  
+10. What is the use of toString() method in Java?
+   
+11. Arrange the three classes String, StringBuffer, and StringBuilder in the order of efficiency for String processing operations?
+   
+12. What is a StringJoiner in Java 8?
+    
+13. How can you convert an array of bytes to String?
+    
+14. What is the difference between StringBuffer and StringBuilder?
+    
+15. Which Can we use String in the switch case statement in Java?
+   
+16. You have a character array and a String. Which one is more secure to store sensitive data (like password, date of birth, etc.)?
+    
+17. To store sensitive data (like password, date of birth, etc.), how can you check if a String is a number by using regular expression?
+    
+18. What is the difference between the expressions String s = "Temporary" and String s = new String("Temporary ")? Which one is better and more efficient?
+   
+19. Why is the String class Immutable or Final in Java?
+    
+20. Difference between Character Constant and String Constant in java?
+    
+21. What is the purpose of the "StringBuilder" class in Java?
+    
+22. What is the purpose of the "StringBuffer" class in Java?
+    
+23. What is String in Java?
+
+24. Is String a class or data type in Java?
+
+25. How many ways can we create string object in Java?
+
+26. What is String Constant Pool in Java?
+
+27. Why string object is immutable in java?
+
+28. What is the superclass of the string class in Java?
+
+29. What is String literal in java? How is string literal stored in memory?
+
+30. Why Java uses the concept of string literal?
+
+31. How are String literals cleared from String constant pool?
+
+32. What are the drawbacks of creating a large number of string literals in the memory pool?
+
+33. How many objects will create for the identical string?
+
+34. Can we use reflection to clear a string object?
+
+35. Why is the String class declared as final in Java?
+
+36. How many interfaces are implemented by String class?
+
+37. Is String thread-safe in Java?
+
+38. What is the disadvantage of the String class in Java?
+
+39. Is String a wrapper class?
+
+40. How to compare two Strings in Java?   
+
+41. What is the difference between `==` (double equal operator) and the `equals` method in Java?
+
+42. What are the best ways to concatenate strings in Java?
+
+43. How to check if a string is empty or not?     
+
+44. How to get a character or multiple characters from a string in Java?
+
+45. What are the most widely used methods of the Java String class?
+
+46. Why StringBuffer objects in Java are mutable?
+
+47. What is the difference between length and capacity in Java StringBuffer?
+
+48. When will you use StringBuffer if String class is already available?
+  
+49. What are the most widely used methods of StringBuffer class in Java?
+    
+50. Why do we need StringBuilder in Java?
+    
+51. Which class is more preferable: StringBuffer or StringBuilder? Why?
+    
+52. When should you use StringBuilder?
+
+53. What is an immutable class in Java?
+
+54. What is a mutable class and mutable object in Java?
+
+55. How to create/make an Immutable Class in Java?
+
+56. What is the use of toString() method in Java?
+
+57. What is the purpose of intern() method in Java?
+
+58. What is the purpose of format() method in Java String?
+
+59. Is it possible to convert String to Int and vice versa in Java?
+
+60. What is the split() method? Can we split a string in Java?
+
+61. How can you remove all the white spaces in a string?
+    
+62. Explain String pool in Java?
+
+63. Can we use Switch statement with Strings?
+
+64. 
+
+====================================================
+1. What is a string?
+
+2. What is string handling?
+
+3. In how many ways we can store string data? 4. Why String class is given when char array is already available?
+
+5. Why StringBuffer class is given when we have String class to store string data?
+
+6. What is meaning the immutable & mutable objects?
+
+7. Can we create custom (user defined) immutable object?
+
+8. Why StringBuilder is given when we have StringBuffer?
+
+9. What is the meaning of thread-safe and non-thread safe objects? 10. Can we create thread-safe and non-thread safe objects?
+
+11. Is String object thread safe?
+
+12. What is the definition of String, StringBuffer, and StringBuilder?
+
+13. What is the relation between Sting, StringBuffer and StringBuilder classes?
+
+14. Why String, StringBuffer classes are created as siblings, why not with IS-A relation?
+
+15. Why StringBuffer, StringBuilder classes not created with IS-A relation?
+
+15. Can we assign string literal directly to StringBuffer or type variables?
+
+StringBuilder
+
+17. How can we store sting literal in StringBuffer and StringBuilder objects?
+
+String & Object Sipation Interview Questions 
+
+18. What are the different ways to construct String Object? 
+
+19. What are the differences in creating String object using the String literal and using the constructor?
+
+20. How many objects are created in "literal" assignment & in constructor assignment?
+
+21. When should we use constructor for creating String object? 22. On what basis can we count how many string objects are created in JVM?
+
+String pooling interview questions
+
+23. What is String Pooling; and Why String pooling?
+
+24. Where String literal objects are stored and where String constructor objects are stored?
+
+25. Draw JVM Architecture to show complete memory structure of String objects creation in both approaches? 
+
+26. Why String object is created as immutable?
+
+27. Why String poling is implemented for String objects only? 28. Is String referenced variable immutable?
+
+29. How can we make string reference variables as immutable?
+
+String Constant Pool Area (SCPA) interview questions 
+
+30. What is a String Constant Pool Area?
+
+31. Who creates SCPA object & When?
+
+32. Is SCPA created separately for every cl ass in the project or is it created one per JVM? Prove your answer with a program?
+
+33. Is SCPA eligible for of garbage collection, if not why? 
+
+34. Is String literal object eligible for gc, if not why?
+
+35. Is String constructor object eligible for gc, if yes why?
+
+36. Prove that string literal object is not eligible for gc even if it is unreferenced explicitly?
+
+String class constructors interview questions
+
+37. How many important constructors do we have in String class?
+ 
+38. What happen if we pass null as argument to String class 
+
+39. Can we create null string object? 
+
+40. Can we create null string referenced variable?
+
+41. Can we create empty string object?
+
+42. Are both empty string & null String Object Same
+
+Custom Immutable and mutable objects creation interview questions
+
+43. What is immutable and mutable object? 
+
+44. Given some of the inbuilt immutable & mutable objects?
+
+45. Can we develop custom immutable object, if yes what is the procedure?
+
+46. Can we develop immutable variable, if yes how?
+
+47. Assume we called a mutator method on an immutable object. Then it definitely returns a new object with result. Then what is the output we get in the below cases: 	
+	Case #1: Returned object is not assigned to any variable
+	Case #2: Returned object is assigned to new referenced variable 
+	Case #3: Returned object is assigned to the same current object's variable
+
+String operation methods interview questions
+
+48. How can we find is string empty or not?
+
+49. How can we find length of the String?
+
+50. What is the difference between length & length()?
+
+51. What is printed when we print String object, is it String@hashCode or its data?
+
+52. In how many ways we can compare string objects? 53. How String Objects must be compared for equality?
+
+54. What is meant by comparing string objects lexicographically, how it can be done?
+
+55. When should we compare string objects for equality and lexicographically?
+
+56. How can we read characters from the String? 
+
+57. How can we find the character case in the String object?
+
+58. How can we find the position of a character or sub String?
+
+59. If the given character is not available what value is returned from indexOf() method?
+
+60. How can we find a character or a substring in the given string?
+
+61. How can we find the string is startsWith or endsWith the given substring?
+
+62. What is the difference between equals, contains, startsWith and
+
+endsWith methods? 63. How can we retrieve substring from the String?
+
+64. If the start index and end index is same then what is returned from substring() method?
+
+65. What will be returned from substring method if startIndex > endIndex? 
+
+66. How can we convert primitive values and objects to String object?
+
+67. What is the limitation of String class object?
+
+68. What is meant by concatenation, how Strings can be concatenated?
+
+69. How can we convert string case to lower and upper case in the String?
+
+70. How can we replace a character or substring in this String? 
+
+71. How can we remove string leading and trailing spaces? 
+
+72. When we call concat()/toLowerCase()/toUpperCase()/replace() & trim() methods, if current string object data is modified, will the result is stored in this current string object (or) will it return in the new object?
+
+73. How can we split string into tokens?
+
+74. How can we spit given string into words?
+
+75. How can we find number of words in a string? 
+
+76. Write a program to print number of characters & words present in a given string?
+
+77. What is returned in String[], if we pass empty string as argument to split method?
+
+78. When is empty string is included as token in string[]?
+
+79. What is returned in String[], if the argument string is not present in current string
+
+80. What is returned in String[], if the we pass same current string as argument?
+
+81. Write a program to reverse words in the given string?
+
+82. What are the operations we cannot perform on string using String object?
+
+StringBuffer, StringBuilder classes interview questions
+
+83. What is definition of StringBuffer, and StringBuilder? 
+
+84. What is need of StringBuffer, and StringBuilder?
+
+85. What is the difference between StringBuffer & StringBuilder class?
+
+86. When should we choose StringBuffer class & StringBuilder class?
+
+87. What are the special operations can be performed on StringBuffer; those cannot be applled on String?
+
+88. In how many ways we can create StringBuffer object? 89. In SB object creation what will happen if we pass -ve number or null as arguments?
+
+90. What is the default capacity of String, StringBuffer and StringBuilder? 91. What is the meaning of default capacity?
+
+92. What is the default capacity of StringBuffer, If its object is created 
+	1) using StringBuffer() constructor?
+	2) Using StringBuffer(String) constructor?
+
+93. What is the difference between capacity and length?
+
+94. How can we find StringBuffer capacity and length?
+
+95. How can we append, insert, delete, reverse, & override characters in the StringBuffer?
+
+96. What happened when we append/insert characters more than its capacity? 
+
+97. How much the capacity is increased when size is greater than current capacity?
+
+98. In the SB capacity incrementing formula ((CurrentCapacity *2)+2) Why the SB incremented capacity result is added by 2?
+
+99. How can we control StringBuffer capacity?
+
+100 What is the use of ensure Capacity() method?
+
+102. What is the use of crimToSize() method?
+
+102. What is the use of setLength() method? 
+
+103. What are the 7 differences between String and StringBuffer?
+
+104. What is the right design to store and manipulate string data?
+
+
+
+
+
+
+
+2. What is the main difference between String and StringBuffer ?
+
+3. Other than immutability and mutability is there any other difference between String and StringBuffer ?
+	In String .equals( ) method meant for content comparison where as in
+StringBuffer meant for reference comparision .
+
+4. What is the meaning of immutability and mutability?
+
+5. Explain immutability and mutability with an example?
+
+6. What is SCP?
+	A specially designed memory area for the String literals/objects .
+
+7. What is the advantage of SCP?
+	Instead of creating a separate object for every requirement we can create only one object and we can reuse same object for every requirement. This approach improves performance and memory utilization.
+
+8. What is the disadvantage of SCP?
+	In SCP as several references pointing to the same object by using one reference if we are performing any changes the remaining references will be inflected. To prevent this compulsory String objects should be immutable. That is immutability is the disadvantage of SCP.
+	
+9. Why SCP like concept available only for the String but not for the StringBuffer?
+	specially designed memory area like SCP to improve memory utilization and performance. But StringBuffer object is not commonly used object hence specially designed	memory area is not at all required.
+	
+10. Why String objects are immutable where as StringBuffer objects are mutable?
+	In the case of String as several references pointing to the same object, by using one reference if we are allowed perform the change the remaining references will be impacted. To prevent this once we created a String object we can't perform any change in the existing object that is immutability is only due to SCP. But in the case of StringBuffer for every requirement we are creating a separate object will be created by using one reference if we are performing any change in the object the remaining references won't be impacted hence immutability concept is not require for the StringBuffer.
+	
+11. Similar to String objects any other objects are immutable in java?
+	In addition to String objects , all wrapper objects are immutable in java.
+
+12. Is it possible to create our own mutable class?
+	Yes.
+
+13. Explain the process of creating our own immutable class with an example?
+
+14. What is the difference between final and immutability?
+
+15. What is interning of String objects
+
+=================================================================================================================================
+=================================================================================================================================
+=================================================================================================================================
+-------------------
+MULTITHREADING
+-------------------
+1) What Is Multi Tasking?
+
+2) What Is Multi ThreadingAnd Explain Its Application Areas?
+
+3) What Is Advantage Of Multi Threading?
+
+4) When Compared With C++ What Is The Advantage In Java With Respect To Multi Threading?
+
+5) In How Many Ways We Can Define A Thread?
+
+6) Among Extending Thread And Implementing Runnable Which Approach Is Recommended?
+
+7) Difference Between t.start() And t.run()?
+
+8) Explain About Thread Scheduler?
+
+9) If We Are Not Overriding run() What Will Happen?
+
+10) Is It Possible Overloading Of run()?
+
+11) Is It Possible To Override a start() And What Will Happen?
+
+12) Explain Life Cycle Of A Thread?
+
+13) What Is The Importance Of Thread Class start()?
+
+14) After Starting A Thread If We Try To Restart The Same Thread Once Again What Will Happen?
+
+15) Explain Thread Class Constructors?
+
+16) How To Get And Set Name Of A Thread?
+
+17) Who Uses Thread Priorities?
+
+18) Default Priority For Main Thread?
+
+19) Once We Create A New Thread What Is Its Priority?
+
+20) How To Get Priority From Thread And Set Priority To A Thread?
+
+21) If We Are Trying To Set Priority Of Thread As 100, What Will Happen?
+
+22) If 2 Threads Having Different Priority Then Which Thread Will Get Chance First For Execution?
+
+23) If 2 Threads Having Same Priority Then Which Thread Will Get Chance First For Execution?
+
+24) How We Can Prevent Thread From Execution?
+
+25) What Is yield() And Explain Its Purpose?
+
+26) Is Join Is Overloaded?
+
+27) Purpose Of sleep()?
+
+28) What Is synchronized Key Word? Explain Its Advantages And Disadvantages?
+
+29) What Is Object Lock And When It Is Required?
+
+30) What Is A Class Level Lock When It Is Required?
+
+31) While A Thread Executing Any Synchronized Method On The Given Object Is It Possible To Execute Remaining Synchronized 
+Methods On The Same Object Simultaneously By Other Thread?
+
+32) Difference Between Synchronized Method And Static Synchronized Method?
+
+33) Advantages Of Synchronized Block Over Synchronized Method?
+
+34) What Is Synchronized Statement?
+
+35) How 2 Threads Will Communicate With Each Other?
+
+36) wait(), notify(), notifyAll() Are Available In Which Class?
+
+37) Why wait(), notify(), notifyAll() Methods Are Defined In Object Instead Of Thread Class?
+
+38) Without Having The Lock Is It Possible To Call wait()?
+
+39) If A Waiting Thread Gets Notification Then It Will Enter Into Which State?
+
+40) In Which Methods Thread Can Release Lock?
+
+41) Explain wait(), notify() and notifyAll()?
+
+42) Difference Between notify() and notifyAll()?
+
+43) Once A Thread Gives Notification Then Which Waiting Thread Will Get A Chance?
+
+44) How A Thread Can Interrupt Another Thread?
+
+45) What Is Deadlock? Is It Possible To Resolve Deadlock Situation?
+
+46) Which Keyword Causes Deadlock Situation?
+
+47) How We Can Stop A Thread Explicitly?
+
+48) Explain About suspend() And resume()?
+
+49) What Is Starvation And Explain Difference Between Deadlock and Starvation?
+
+50) What Is Race Condition?
+
+51) What Is Daemon Thread? Give An Example Purpose Of Daemon Thread?
+
+52) How We Can Check Daemon Nature Of A Thread? Is It Possible To Change Daemon Nature Of A Thread? Is Main Thread Daemon OR 
+Non-Daemon?
+
+53) Explain About ThreadGroup?
+
+54) What Is ThreadLocal?
+-----------------------------------------
+-----------------------------------------
+1. What is a thread?
+
+2. What is multithreading; explain when should we develop multithreading?
+
+3. What are the advantages of multithreading? 4. Give different real world applications of multithreading?
+
+5. What is the difference between sequential, parallel and concurrent flow of execution?
+
+6. What is the difference between multitasking and multithreading? 
+
+7. How many threads are created by default in JVM?
+
+8. Is Java by default multithreaded programming language?
+
+9. How can we execute multiple tasks concurrently- 
+
+10. What are the different ways we have to create custom thread?
+
+11. What are the steps we must follow in creating custom thread extending from Thread class and implementing from Runnable interface?
+
+12. Why custom thread implementing from Runnable interface approach is recommended?
+
+13. What is the use of start() method & run() method?
+
+14. When we call start method, will thread execution started immediately?
+
+15. How can we execute logic in custom thread & main thread? 
+
+16. What will happen if we do not override run() method? 
+
+17. What is the mandatory way to override run() method in the below cases ?
+	1) When extends from Thread class? 
+	2) When implementing from Runnable interface?
+	3) extends from Thread class & also implementing Runnable interface 
+
+18. Can we overload run() method, then will it be executed? 
+
+19. If we only overload run() method, in which case we get CE?
+	1) Subclass is derived from Thread class? 
+	2) Subclass is derived from Runnable interface?
+	3) Subclass is derived from Thread class & also from Runnable interface?
+
+20. Can we override start() method in Thread subclass? 
+	1) If we override start() method, will custom thread created?
+	2) What is the right design to override start() method? 
+	3) What is situation force us to override start() method?
+
+21. What is the meaning of single thread model and multithread model application? 
+
+22. Can we call run method directly, if so what will happen?
+
+23. What is the difference between th.start() & th.run()?
+
+24. Can we call run and start method both at a time, if so what will happened?
+
+25. Is it possible to start a thread more than once? 
+
+26. How can we create multiple custom threads? 
+
+27. Explain lifecycle phases of a thread?
+
+28. What is the meaning of active thread & live thread?
+
+29. How can we find how many active threads exist in JVM? 
+
+30. How can we find a given thread is live thread or not? 
+
+31. we call yield() method in which state thread will enter?
+
+32. What are the algorithms used in Threads execution process?
+	1) Will a newly born thread enter into running state directly? 
+	2) From block state will thread directly enter into running state?
+
+33. What is thread priority?
+	1) What is the default priority of every new thread?
+	2) What is the priority of main thread?
+	3) Why every thread default priority is 5?
+	4) What is the range of thread priority?
+	5) How can we get & set thread's priority?
+	6) What will happen when we set thread priority to 15?
+	7) If two threads have different priority which thread will	execute first?
+	8) If two threads have same priority which thread will execute first? 
+	9) When a new thread is born, how can we start its execution immediately?
+
+34. Explain thread class constructors Thread() & Thread(String)? 
+
+35. What is the default name of the thread?
+	1) How can we get thread name? 
+	2) What are the different ways we can change the default name of the thread?
+
+36. Can we change name & priority of thread after it is started? 
+
+37. What is the meaning of currently running thread & current thread object?
+	1) How can we get currently running thread reference? 2) In the below cases which thread object reference is return
+		i. Thread.currentThread() is placed in main method
+		ii. Thread.currentThread() is placed in run() method 
+		iii. Thread.currentThread() is placed in m1() method
+	3) If we place th.run() method call in main method, what is the currently running thread object & current thread object of run() method?
+	4) What is the output printed for the below statements in run() method when we call run() method from main method 
+		i. Thread.currentThread().getName() 
+		ii. this.getName();
+	5) Can we change main thread name & priority, write code for it? Text 
+	6) Write a program to prove static block is executed in main thread?
+
+38. What is the meaning of thread group?
+	1) What is the default group?
+	2) How can we get thread group name?
+	3) How can we create our own group for custom threads?
+
+39. What is printed when a thread class object is printed? 
+
+40. How many types of threads we can create in JVM?
+	1) What is a Non-daemon daemon thread? 
+	2) What is a Daemon thread?
+	3) JVM wait for which thread to complete? 
+	4) Why main thread is a non-daemon thread?
+	5) Why gc is a daemon thread? 
+	6) Why every custom thread is created as non-daemon thread?
+	7) How can we create a custom thread as daemon thread?
+	8) What is the rule in calling setDaemon() method?
+	9) Is it possible to change the demon property after starting thread?
+	10) If we create custom thread as daemon can we guarantee its full execution?
+	11) How can we find the given thread is a daemon or not?
+
+41. What are the different ways to pause thread execution? 		
+	1) How can we pause thread execution to allow other thread to execute?
+	2) What is the difference between yield() & sleep() methods?
+	3) How can we pause a thread execution until some other thread execution is completed? 
+	4) What is the difference between join() & join(5) & sleep(5)?
+	5) Why suspend() & resume() methods are deprecated?
+
+42. Explain the use of below Thread class methods?
+	1) start()  			2) run()
+	3) isAlive() 			4) activeCount()
+	5) setName(String)      6) getName()
+	7) setPriority(int)		8) getPriority()
+	9) currentThread()		10) toString()
+	11) set Daemon(true) 	12) IsDaemon()
+	13) yield()				14) sleep(int)
+	15) join()				16) join (int)
+	17) Interrupt()			18) interrupted()
+	19) isInterrupted()
+
+43. What is synchronization?
+	1) When should we develop synchronization? 
+	2) Explain different applications area of synchronization?
+	3) How can we develop synchronization in Java?
+	4) Synchronized keyword either applied to method or object? 
+	5) What JVM will do when we call synchronized method?
+	6) What is meaning of object lock & class lock?
+	7) When a thread is called as monitor? 
+	8) When will the object is unlocked?
+	9) How JVM will mark an object is locked & unlocked?
+	10) When an object is locked by a thread,
+		i. Can we use it to call synchronized method from other thread? 
+		ii. Can we use it to call non-synchronized method from other thread?
+	11) How can we lock argument object of method? 
+	12) What are the differences between synchronized method &	synchronized block?
+	13) What are the advantages of synchronized block over synchronized method?
+	14) What is the difference in declaring static & non-static method as synchronized?
+	15) Can we define multiple synchronized blocks in a method
+	16) When should we develop multiple synchronized blocks Instead of declaring contestete method as synchronized?
+	17) If threads use different objects, will synchronization applled?	
+	18) What is meaning of thread-safe & non-thread safe objects? 
+	19) How can we develop thread-safe objects?
+	20) Create BankAccount object to solve data corruption problem? 
+	21) Create Train object in multithreading environment to issue thickets?
+	22) What is the difference between volatile & synchronized keywords?
+
+44. What is a deadlock?
+	1) When will we get deadlock situation? 
+	2) What is the keyword causes deadlock?
+	3) What is the difference between deadlock & starvation? 
+	4) Given me different code snippets to get deadlock?
+	5) How can we overcome from deadlock situation?
+
+45. What is Inter thread communication?
+	1) How two thread can communicate? 
+	2) In addition to synchronized method what else we should use?
+	3) What is the use of wait(), notify() & notifyAll() methods? 
+	4) What is the code template to develop inter thread communication? 
+	5) When should we develop two threads with communication?
+	6) Develop code for Producer-Consumer application? 
+	
+46. Why wait, notify & notifyAll are defined in Object class, but not in Thread class?
+
+47. What are the various rules we must follow in calling wait(), notify() & notifyAll()?
+	1) What is the exception we must handle in calling wait() method?
+	2) Can we call these three methods in a non-synchronized method?
+	3) If we call these three methods in a non-synchronized method, Why it leads to exception ation Illegal Monitor StateException 
+	4) Even if notify()/notifyAll() methods are not called how can we bring out the thread from waiting state?
+	5) If we call wait(100), will thread starts its execution immediately after 100 milliseconds?
+	6) What is the difference between wait() & wait(100)? 
+	7) What is the difference between sleep(100), join(100) & wait(100)?
+
+48. What is inline thread?
+
+49. What is the use of ThreadGroup class? 
+
+50. How can we add our threads to our custom thread group?
+
+51. What is the use of ThreadLocal class?
+
+================================================================================================================================
+================================================================================================================================
+================================================================================================================================
+-------------------
+LANG PACKAGE
+-------------------
+1. Why java.lang package is called default package?
+
+2. Why we no need to import java.lang package when access its classes?
+
+3. If we use the class String in our class, how compiler will link it from java.lang package?
+
+4. Given me some of the important classes from java.lang package?
+
+5. What is the use of 5-stem class?
+
+6. What is the use of Runtime class?
+
+7. What is the use of Class-class?
+
+8. What is the use of ClassLoader class?
+
+9. What is the use of Process class?
+
+10. What is the use of Math & StrictMath classes?
+
+11. What is the use of Comparable interface?
+
+12. What is the use of Cloneable interface?
+
+13. Using Runtime class method, Write a program
+	1) to start "notepad" from java program?
+	2) to find JVM memory status using Runtime class method?
+	
+14. Using Math class method, write a program
+	1) to find square root of a given number?
+	2) to find cube root of a given number
+	3) to find a power of a number with the given number?
+	4) to find max of given two numbers
+	5) to find min of given two numbers
+	
+---------------------------------------------
+java.lang.Object class interview questions
+---------------------------------------------
+
+1. Why Object class is the super class for all java classes?
+
+2. Why its name is chosen as Object?
+
+3. How many methods Object class contains?
+
+4. Explain the purpose of all 11 methods of Object class?
+
+5. How many methods we can override in subclass from Object?
+
+---------------------------------------------
+1. hashCode() method interview questions
+---------------------------------------------
+
+1. What is hashCode?
+
+2. Is hashCode & reference both are same?
+
+3. How can we retrieve hashCode of an object?
+
+4. How many ways we can generate hashCode of an object?
+
+5. What is returned from hashCode() method from Object class?
+
+6. How can we generate hashCode() of an object using its data?
+
+7. What is hashing algorithm?
+
+8. If we override hashCode() method, will object also contains referenced based hashcode? How can we get JVM generated hashcode?
+
+9. What is the difference between hashCode() &
+
+System.identityHashCode() methods?
+
+10. Can two objects have same hashCode?
+
+11. If we change object data will object hash code also be changed?
+
+12. In what programming hashCode() method is called internally?
+
+---------------------------------------------
+2. equals() method interview questions
+---------------------------------------------
+
+1. What is the use of equals() method?
+
+2. What are the different ways we can compare two objects of a class?
+
+3. How can we compare two objects using their references?
+
+4. How can we compare two objects using their data?
+
+5. How equals() method will compare objects in Object class? 
+
+6. How can we compare objects using their data using equals() method?
+
+7. What are the different rules we must follow in overriding equals method?
+	1) What value should return for incompatible objects comparison?
+	2) What value should return when null is passed as argument?
+
+8. What is the contract between hashCode() & equals() method overriding?
+
+9. Why equals() method is defined when we have == operator?
+
+10. What will happen when we compare incompatible objects using "==" operator and equals method?
+
+11. What is the output we get when we compare using == operator using equals method
+	1) two nulls
+	2) null and object
+
+12. Can we use equals() method for comparing primitive values?
+
+13. List out all differences between "==" operator & equals() method?
+
+14. In what programming equals() method is called internally?
+
+
+---------------------------------------------
+3. getClass() method interview questions
+---------------------------------------------
+
+1. What is the use of getClass() method?
+
+2. What is the need of java.lang.Class?
+
+3. What is meaning of runtime class and runtime class object?
+
+4. How can we get object's runtime class object reference?
+
+5. Write a program to get any given object's class name?
+
+---------------------------------------------
+4. toString() method interview questions
+---------------------------------------------
+
+1. What is the use of toString() method?
+
+2. What is printed when we print object?
+
+3. How printin method retrieves current printing object information?
+
+4. What is the default implementation of toString() in java.lang.Object class?
+
+5. When should we override toString() method in subclass?
+
+6. How can we return all values of an object from toString() for displaying on console?
+
+7. When we print String class object its data is printed, when we print our class object why classname@hashcode is printed?
+
+8. When we must override hashCode(), equals(), toString() methods in subclass?
+
+
+---------------------------------------------
+5. clone() method interview questions
+---------------------------------------------
+
+1. What is the use of clone() method?
+
+2. What is the meaning of cloning?
+
+3. What is the rule in cloning an object?
+
+4. What is the use of Cloneable interface, why is it empty interface?
+
+5. Is clone() method defined in Cloneable interfare?
+
+6 . Will clone() method return new object or same object, will new reference & hashCode? 7. Why clone() method is declared as protected?
+
+8. What are the programming rules we must follow in calling a clone() method?
+	1) Can we call clone() method on an object in its own class?
+	2) Can we call clone() method on an object in another class?
+	3) Why should we handle CloneNotSupportedException in calling clone() method?
+	4) If the object is not Cloneable type, what will happen when we all clone() method using this object?
+	5) Why should we cast clone() method returned object to current object's class?
+
+9. What is the procedure to override clone() method?
+
+10. What is the difference in cloning an object
+	1) by containing primitive variables &
+	2) by containing referenced variables
+
+11. When we clone an object with HAS-A relation, will its internal object also cloned?
+
+12. When we clone a subclass object, is its super class also should be Cloneable type?
+
+13. When we clone a subclass object, will internal objects of superclass also cloned?
+
+14. What are the 2 types of cloning mechanisms?
+
+15. What is a shallow cloning?
+
+16. What is a deep cloning, how can we implement it?
+
+17. What type of cloning is implemented in Object class's clone() method?
+
+18. What are the two situations force you to override clone() method in project?
+
+7. finalize() method interview questions
+
+---------------------------------------------
+1. What is the use of finalize() method?
+---------------------------------------------
+
+2. What is the meaning of clean-up code or resource releasing logic code?
+
+3. Give me some project scenarios to explain about clean-up code?
+
+4. What is the default implementation given for finalize() method in Object class?
+
+5. When should we override finalize() method in subclass?
+
+6. Why finalize() method is declared as protected?
+
+7. Who will call finalize method, and when?
+
+8. Can programmer call finalize() method explicitly?
+
+9. If we call finalize() method, will object is destroyed?
+
+10. How many times finalize() method is called for an object?
+
+11. How can we enable or disable calling a finalize() method? 12. Why finalize() method has "throws Throwable"?
+
+13. Can an unreachable Java object become reachable again?
+
+14. If an object is become referenced after finalize() method execution, will gc destroy it?
+
+8, 9, 10, 11 check Multithreading interview questions
+
+Why wait(), notify(), and notifyAll() methods are given in Object class why not in Thread class?
+
+================================================================================================================================
+================================================================================================================================
+================================================================================================================================
+-------------------
+WRAPPER CLASSES
+-------------------
+1. What is the meaning of wrapping? 
+
+2. What is the use of wrapper class?
+
+3. How many wrapper classes do we have?
+
+4. What is a Number class, why is it an abstract class?
+
+5. What is the super class for Character & Boolean classes?
+
+6. What are the 6 conversions we can do using wrapper classes?
+
+7. What are the constructors and methods do we have in all wrapper
+
+classes for performing all 6 conversions? 8. What are the constructors commonly available in all wrapper classes?
+
+9. Why Character class does not have String parameter constructor?
+
+10. When will you get java.lang.NumberFormatException? 11. Will we get NumberFormatException in Boolean class?
+
+12. Can perform casting between wrapper classes?
+
+13. How wrapper classes objects are compared using equals() method & == operator?
+
+14. What is the hashCode returned from hashCode() method for wrapper classes object?
+
+15. When we print wrapper class object, why its data is printed?
+
+16. Explain Character class special methods to perform operations on characters?
+
+--------------------------------------------
+Auto Boxing And Unboxing Interview Questions
+--------------------------------------------
+
+1. What is the meaning of auto boxing and unboxing?
+
+2. In which version this feature is added?
+
+3. For what programming this feature is added?
+
+4. Will JVM know about auto boxing & unboxing?
+
+5. On what basis compiler changes primitive type to wrapper class object?
+
+6. On what basis compiler changes wrapper class object to primitive type?
+
+7. What is the method used in auto boxing?
+
+8. What is the method used in auto unboxing?
+
+9. What are the different cases in overloading a method with widening. AB & var-arg?
+
+10. When we call a method by passing primitive value as argument, which method has highest priority is it widening parameter type or widening type or var-arg type?
+
+
+11. Identify which parameter method is executed for the method m1(5) call?
+	1) method is overloaded with (int) & (Integer) parameters
+	2) method is overloaded with (long) & (Integer) parameters
+	3) method is overloaded with (long) & (int...) parameters 
+	4) method is overloaded with (Integer) & (int...) pararneters
+	5) method is overloaded with (Integer...) & (int...) parameters 
+	6) method is overloaded with (Object) & (int...) parameters
+
+12. Can we pass wrapper class object as argument to switch?
+
+13. Can we pass String class object as argument to switch?
+
+14. Can we do arithmetic operations using wrapper classes?
+
+15. Write a program to add two integer numbers without using primitive variables?
+
+16. In place of primitive types, Is it recommended to use wrapper classes in arithmetic operations?
+
+----------------------------------------------------------------
+1. What is Casting? 
+
+2. What are the advantages of Auto Boxing?
+
+3. What is Implicit Casting?
+
+4.What is Explicit Casting?
+
+5. How can you convert a String to a wrapper class?
+
+6. How can you convert a String to a primitive type?
+
+7. When would you need to convert a String to a character array?
+
+8. What is the best way to convert a String to a primitive type value?
+
+9. What do you understand by boxing and unboxing?
+
+10. Is it possible to convert a Double to a Boolean? If yes, then how?
+
+11. Is it possible to convert a string to a boolean? If yes, then how?
+
+12. What’s the difference between parseInt() and valueOf() methods? Which one would you prefer using?
+
+13. Are all wrapper classes immutable?
+
+14.What does the compareTo method do?
+
+15. What happens if there is no matching wrapper class when converting from a primitive to a wrapper class?
+
+
+================================================================================================================================
+================================================================================================================================
+================================================================================================================================
+-------------------
+
+-------------------

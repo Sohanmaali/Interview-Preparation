@@ -1,0 +1,226 @@
+-----------------------------------------------------
+Static variable Modifications Interview Questions
+-----------------------------------------------------
+
+1. What is the use of static variable?
+
+2. How many copies of memories are provided to a static variable? 
+
+3. How can we access a static variable with in the class & in other classes?
+
+4. If we modify a static variable in one method is that modification
+
+remain in static variable after this method execution? 
+
+5. If we modify a static variable in one method will that modified value is accessible to all other methods of its class?
+
+6. If we modify a static variable in some other class method, will that modified value is accessible to all other classes loaded in this JVM?
+
+---------------------------------------------------------------
+Non-static variable modifications Interview Questions
+---------------------------------------------------------------
+
+1. When a variable can be called as Non-Static variable? 
+
+2. What is the use of non-static variable?
+
+3. Will JVM execute non-static variables automatically?
+
+4. When and by whom memory location is provided and where and how?
+
+5. How many copies of memories are provided to a non-static variable?
+
+6. Draw JVM Architectureto show object structure?
+
+7. How can we access a non-static variable with in the class & in other classes?. 
+
+8. How many objects can be crectxed from a class?
+
+9. From where values are stored in second object, are they from class or from previous object? 
+
+10. Where compiler and JVM search the non-static variable in the statement "e.x"? 
+
+11. What is the difference between "e1.x" & "e2.x"?
+
+12. If we modify non-static variable using one object is that modification affected to another object? 
+
+13. If we modify non-static variable in one method will that modified value is accessible to all other methods of its class? 
+
+14. If we modify a non-static variable in some other class method, will that modified value is accessible to all other classes loaded in this JVM? 
+
+15. How many referenced variables can point to a single object?
+
+16. If we modifying object using one referenced, will that modification affected to another referenced variables those are pointing to the same object?
+
+-----------------------------------------------------------------------
+Accessing static variable using referenced variable interview questions
+-----------------------------------------------------------------------
+
+1. Can we access a static variable using referenced variable?
+
+2. Can we access a static variable using null referenced variable, will it
+
+leads to NullPointerException, if no why?
+
+3. Can we access a static variable using empty referenced variable? 
+
+4. In how many ways we can access a static variable within the class members? 
+
+5. In how many ways we can access a non-static variable within the class members?
+
+6. Where compiler and JVM search the static variable in the statement "e.d"?
+
+7. What is the difference between "e1.a" & "e2.a"? 
+
+8. Where compiler and JVM search the non-static variable in the statement "e1.x"?
+
+9. What is the difference between "e1.x" & "e2.x"? 
+
+10. Draw JVM architecture with static & non-static variables memory with multiple objects & null referenced variable? 
+
+11. If we modify static variable using one object will that modification effected to another object?
+
+12. If we modify non-static variabte using one object will that modification effected to another object?
+
+----------------------------------
+Variable Interview Questions
+----------------------------------
+
+1. What is a variable?
+
+2. When should we create a variable?
+
+3. What is the difference between primitive & referenced variables? 
+
+4. What are the different places we can create a variable in a java file?
+
+5. What is the difference between variable declaration, Initialization & assignment?
+
+6. What is the difference between variable initialization & variable assignment?
+
+7. What is the difference in modifying primitive & referenced variables?
+
+8. What is the life time & scope of all 4 types of variables?
+
+9. How many types of variables java supports? 
+	a. What is the difference between private and non-private variables ?
+	b. What is the difference between static and non-static variables? 
+	c. What is the difference between final and non-final variables?
+	d. What is the difference between volatile and non-static variables?
+	e. What is the difference between transient and non-transient variables? f. What is the difference between Parameter & local variables?
+
+10. What are the modifiers allowed to variables?
+
+11. What is the only modifier allowed to parameter & local variables?
+
+12. What variables will have default value?
+
+13. What are the rules on local variables?
+	a. If we create a local variable without assigning a value, what is the value stored?
+	b. Can we access local variable from other methods?
+	c. Can we access local variable before its declaration statement? 
+	d. How can we use the value or object stored in one method in another method?
+
+14. How can we access static, non-static variables within the class & in other classes?
+
+15. Why static variable is called class variable?
+
+16. Why non-static variable is called instance variable?
+
+17. Why local variable is called auto variable?
+
+
+------------------------------------------------------
+Static & non-static members execution flow Interview
+------------------------------------------------------
+
+1. Including main method, what are the 12 members we can create in a class?
+
+2. Like main method, will JVM executes other members declared in a' class?
+
+3. What is the basic rule of JVM to execute a class member?
+
+4. Why these 12 members are called static & non-static members?
+
+5. Why do we have static & non-static members in Java, what is the use of them?
+
+6. When should we use static members & when should we use non-static members?
+
+7. Who will provide memory to static & non-static members? 
+
+8. What is the meaning of class context?
+
+9. What is the meaning of instance context?
+
+10. Why static members are also called as class members? 
+
+11. Why non-static members are also called as instance members?
+
+12. Explain the execution flow of all 4 static members?
+
+13. Explain the execution flow of all 4 non-static members? 
+
+14. Which one is executed first-static variable or static block?
+
+15. Which one is executed first-static block or main method? 
+
+16. Which one is executed first-non-static variable or non-static block?
+
+17. Which one is executed first-non-static block or constructor?
+
+18. Do you know when will you get CE: illegal forward reference?
+
+19. How many times a class is loaded into JVM?
+
+20. How many objects can be created from a class? 
+
+21. How many times static members are executed?
+
+22. How many times non-static members are executed?
+
+23. When should we use static variable & instance variable?
+
+24. When should we use static method & instance method?
+
+25. When should we use static lock & instance block?
+
+26. When should we use constructor & main method?
+
+27. Can we execute a class without main method?
+
+28. Can we execute a class with only non-static members?
+
+29. In how many ways we can load a class into JVM, explain all 5 ways of loading to class?
+
+30. In how many ways we can create object of a class, explain all 5 ways of object creation? 
+
+31. In all five ways of loading a class in which way only main method is executed?
+
+32. What are the members executed when class is loaded into JVM?
+
+33. What are the members executed when an object is created?
+
+34. How a class can create its object by its own when it is loaded into JVM?
+=================================================================
+
+================================
+Empty referenced variable Interview questions
+================================
+
+1. What is an empty referenced variable?
+
+2. Where can we create empty referenced variable?
+
+3. Can we create empty referenced variable at class level?
+
+4. Can we use empty referenced to call variable or method?
+
+5. Is it leads CE or RE, if CE, what is the CE, why?
+
+6. What is the difference between
+
+1. empty referenced variable,
+
+2. null referenced variable &
+
+3. object referenced variable

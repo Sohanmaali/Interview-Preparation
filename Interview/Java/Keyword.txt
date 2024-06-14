@@ -1,0 +1,181 @@
+--------------------------------------
+Static Keyword Interview Questions
+--------------------------------------
+
+1. What is the use of static keyword?
+
+2. What is the meaning of class context? 
+
+3. When a member is called as static member?
+
+4. To what are the 5 different members' static keyword is allowed? 
+
+5. Why static members are called as class members?
+
+6. Can we apply static keyword to outer class & inner class?
+
+7. Can we apply static keyword to a local variable/parameter? 
+
+8. What is the difference in apply static keyword to a variable & a method?
+
+9. Why static keyword is not allowed to constructor?
+
+--------------------------------
+New Keyword Interview Questions
+--------------------------------
+
+1. What is the use of new keyword?
+
+2. What is the meaning of instance context?
+
+3. When a member is called as non-static member?
+
+4. What are 5 different non-static members?
+
+5. Why non-static members are called as instance members?
+
+6. Will new keyword provide memory to static variables?
+
+7. What is an object & instance, is instance and object both are same?
+
+8. What is the object creation Antax? 
+
+9. In the statement "String str;" is str" an object?
+
+10. Why object is called instance of a class? 
+
+11. Explain all 4 activities involved in object creation process?
+
+12. What is the Job of "new" keyword & what is the Job of constructor?
+
+13. Who creates object of a class, it new keyword or constructor?
+
+14. Who will return object reference, is it new keyword or constructor? 
+
+15. Why new keyword will use constructor?
+
+
+-----------------------------------
+This Keyword Interview Questions
+-----------------------------------
+
+1. What is the definition and need of this keyword?
+
+2. Is this keyword an operator or a variable?
+
+3. What is the meaning of current object?
+
+4. What will be the problem if this keyword is not existed in Java?
+
+5. List out all 6 usages of this keyword? 
+
+6. What is the difference between "this." & "this()"?
+
+7. Like non-static variables, will constructor & non-static method get separate copy of memory in every object?
+
+8. How non-static variable is differentiated from multiple objects in a constructor and non-static method? 
+
+9. How can we develop code common to all objects of a class for executing it separately for each object for either setting/getting/printing values?
+
+10. Why we allow to access non-static variable directly from a constructor or non-static method, why we are not allowed to access from static method?
+
+11. What are the rules in using this keyword? 
+
+12. Prove that "this" variable stores current object reference?
+
+13. Prove that "this" is a non-static variable?
+
+14. Prove that "this" is a final variable?
+
+15. What is the data type of "this" variable?
+
+16. Prove that "this" variable data type is current enclosing class type?
+
+17. Why we cannot access this keyword in a static method?
+
+18. Can we access static variable or method using this keyword?
+
+19. How can you pass current class object to another class method or constructor as an argument?
+
+--------------------------------
+Keywords Interview Questions
+--------------------------------
+
+1. What is a keyword?
+
+2. For what purpose we use keyword?
+
+3. Using keyword what are the different operations we will do in a Java file?
+
+4. How many keywords Java supports 50 or 53? 5. Can you tell all 50 keywords?
+
+6. Why goto, const keywords are given without implementation?
+
+7. Is null a keyword?
+
+8. Is true a keyword? 9. Is false a keyword?
+
+10 is annotation a keyword?
+
+11. Can we use null as usor defined identifier, mears can we create a class with name null?
+
+12. Identify valld key words in the below list?
+	a. static		b. default 
+	c. Public		d. Imported
+	e. synchronize	f. Class
+	9. sizeof		10. Instanceof
+	8. marker		11. null
+	12. finalize
+
+=================================================================
+
+====================================================
+-----------------------------------
+super keyword interview questions
+-----------------------------------
+
+1. What is the use of super keyword?
+
+2. Is super keyword an operator or a variable?
+
+3. What is the type of super keyword? 
+
+4. What are the 2 usages of super keyword?
+
+5. What is the difference between "super." & "super()"? 
+
+6. Why "super()" must be the first statement in a constructor?
+
+7. Can we place "super()" in a method? 
+
+8. Can we place "super()" at any line in a Constructor? 
+
+9. Can we place "super." in a constructor? 
+
+10. Can we place "super." at any line in a method or constructor?
+
+11. What are the differences between this & super keywords? 
+
+12. What is the data type of this & super keywords?
+
+13. To whom this keyword & super keyword is referring in subclass object?
+
+14. What are the rules in using super keyword?
+
+15. Can we use super keyword in static method? 
+
+16. In a non-static method, can we call static method using super keyword?
+
+17. Can we print super keyword?
+
+18. Can we return super keyword from a method? 
+
+19. Can we pass super keyword as a method argument?
+
+20. Internally, in a non-static method how many referenced variables are created?
+
+21. Draw subclass object memory diagram with super class, sub class non- static variables & with their referenced variables this & super keywords?
+
+22. What is stored in super keyword, is it subclass object reference or superclass object reference?
+
+23. Prove that super keyword contains sub class object reference?

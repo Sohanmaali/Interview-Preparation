@@ -1,0 +1,875 @@
+Collections Framework interview questions
+
+1. What is a collection ?
+Ans -> Collection : Java Collection is a framework. Whenever we want to represent group of individual object as a single intity then we will use collection.
+
+2. In what situation we will use collection object? 
+Ans -> if we want to perform several operation like storing data, searching, sorting, insertion, deletion, and updating of data. then we use collection.
+
+4. What are the THREE problems of array object for creating collection API? 
+Ans -> 	1. Arrays are fixed in size.
+		2. Arrays can only store homogeneous elements.
+		3. Arrays do not have built-in methods.
+
+5. What is the inbuilt object used in all collections to store heterogeneous objects?
+Ans -> The inbuilt object used in all collections to store heterogeneous objects in Java is an ArrayList
+
+6. When we should use array object and collection object, which will give us high performance in storing objects?
+Ans -> Collections can hold heterogeneous object, whereas Arrays can only store homogenous type objects. Arrays are unable to provide ready-made solutions for user needs such as sorting, searching, and so on, but Collections do. Arrays are not preferred over Collections when it comes to memory.
+
+7. In which package collection API is given?
+Ans -> java.util package contains all the classes and interfaces required by the collection framework. 
+
+8. Why java.util package classes are called Collection API classes?
+Ans ->  The classes in the java.util package are called "Collection API classes" because they provide a standard way to work with collections of objects in Java through a set of interfaces and classes.
+
+9. What is a container object why collection objects are called container objects?
+Ans. -> The container is an object that contains other objects. The container can contain all other sheet objects. The objects are grouped together and have common settings for font, layout and caption.
+	1
+11. From which version onwards collection API has been called as Collection Framework?
+Ans -> In Java, a separate framework named the “Collection Framework” has been defined in JDK 1.2 which holds all the Java Collection Classes and Interface in it. In Java, the Collection interface (java. util. Collection) and Map interface 
+
+12. What is the meaning of legacy?
+Ans -> Legacy classes are those classes or interfaces which already existed before the collection in Java and have been modified and added to the JAVA collection framework 
+
+13. What are the legacy collection classes & interfaces available?
+Ans -> The legacy classes and interfaces available in Java's collections framework are:
+	Dictionary
+	Hashtable
+	Properties
+	Stack
+	Vector
+	Enumeration interface
+
+15. What are the primary advantages of Collection API? 
+Ans. -> 	•	Collections are Growable in Nature. That is based on Our Requirement we can Increase OR Decrease the Size.
+		•	Collections can Hold Both Homogeneous and Heterogeneous Elements.
+		•	Every Collection Class is implemented based on Some Standard Data Structure. Hence for Every Requirement Readymade Method Support is Available. 
+
+19. What are the 4 problems of Vector, & its 4 alternative classes given Java 1.2?
+Ans ->  1. Synchronization Overhead : Vector is synchronized, meaning that every method call is thread-safe. However, this synchronization adds overhead, which can impact performance, especially in single-threaded applications where thread safety is not a concern.
+		2. Performance: Due to its synchronization and dynamic resizing mechanism, Vector may not offer the best performance in all scenarios, especially when compared to non-synchronized alternatives.
+		3. Capacity Increment: Vector automatically increases its capacity when needed by a certain amount, which may not always be optimal. This can lead to wasted memory if the capacity is increased by too much, or frequent resizing if it's increased by too little.
+		4. Enumeration: The enumeration provided by Vector is not fail-fast. If the underlying Vector is modified during iteration, it may lead to unpredictable behavior or concurrent modification exceptions.
+		
+		To address these issues, Java 1.2 introduced four alternative classes:
+		
+		1. ArrayList: ArrayList is similar to Vector but is not synchronized. It provides dynamic arrays that can resize themselves automatically when needed. This lack of synchronization makes it more efficient in single-threaded scenarios.
+		
+		2. LinkedList: LinkedList is a doubly-linked list implementation that provides constant-time insertion and removal of elements from both ends of the list. While it doesn't offer random access like ArrayList, it can be more efficient for certain operations, such as frequent insertions or removals in the middle of the list.
+		
+		3. HashSet: HashSet is an implementation of the Set interface that uses a hash table for storage. It does not allow duplicate elements and provides constant-time performance for basic operations like add, remove, and contains.
+		
+		4. HashMap: HashMap is an implementation of the Map interface that uses a hash table for storage. It provides key-value mappings and allows for constant-time performance for basic operations like put, get, and remove.
+
+21. What are the two root interfaces of in Collection Framework? 
+Ans -> The two main root interfaces of Java collection classes are the Collection interface and the Map interface. 
+
+22. What is the difference between Collection and Map?
+Ans -> Collection :- Whenever we want to represent group of individual object as a single intity then we will use collection.
+		
+		Map:- Whenever we want to represent a group of object as a Key-value pair then we will use collection.
+
+23. Why Map is not created as sub interface of Collection?
+Ans -> Because they are of an incompatible type.
+		• List, Set and Queue are a collection of similar type of objects but just values where a Map is a collection of key and value pairs.
+		
+		• List Set and Queue have add as a Method which takes a value as param to add an element whereas Map has put as a method which takes a key and a value as params to add a key-value pair.
+		
+		• List, Set and Queue provide iterate functionality over the value whereas Maps has keys to iterate over which is ultimately a Set and Values as Collection.
+
+25. What are the important subclasses of Collection & Map interfaces?
+Ans -> Collection Interface :
+		List: Ordered collection allowing duplicates (ArrayList, LinkedList, Vector).
+		Set: Unordered collection with no duplicates (HashSet, LinkedHashSet, TreeSet).
+		Queue: Collection designed for FIFO (First-In-First-Out) ordering (LinkedList, PriorityQueue).
+		Deque: Double-ended queue allowing insertion/removal at both ends (ArrayDeque, LinkedList).
+	
+		Map Interface :
+		HashMap: Key-value pairs stored in a hash table with no ordering guarantees.
+		LinkedHashMap: Maintains insertion order or access order.
+		TreeMap: Sorted key-value pairs based on the natural order or a custom comparator.
+		Hashtable: Synchronized version of HashMap (legacy class).
+		ConcurrentHashMap: Thread-safe map supporting high concurrency without blocking.
+
+26. What are the new collection classes added in java 1.2, 1.4, 1.5, 1.6, 1.7, & 1.8?
+Ans ->	Java 1.2:	LinkedList: A doubly linked list implementation of the List interface.
+		
+		Java 1.4: LinkedHashSet: A hash table and linked list implementation of the Set interface, with predictable iteration order. 	IdentityHashMap: A hash table-based implementation of the Map interface, where comparisons for equality are based on reference equality instead of object equality.
+		
+		Java 1.5 (Java SE 5.0): EnumSet: A specialized implementation of the Set interface for use with enum types.
+		EnumMap: A specialized implementation of the Map interface for use with enum keys.
+		ConcurrentLinkedQueue: A non-blocking, concurrent implementation of the Queue interface based on linked nodes.
+		CopyOnWriteArrayList: A thread-safe variant of ArrayList where all mutative operations (add, set, remove, etc.) are implemented by making a fresh copy of the underlying array.
+		
+		Java 1.7 (Java SE 7):
+		LinkedBlockingDeque: An optionally bounded deque implementation backed by a linked node structure.
+		LinkedTransferQueue: A unbounded queue implementation that additionally supports operations that wait for elements to become available.
+		ArrayDeque: A resizable array implementation of the Deque interface.
+		ConcurrentSkipListSet: A concurrent, navigable set implementation based on a skip list data structure.
+		ConcurrentSkipListMap: A concurrent, navigable map implementation based on a skip list data structure.
+		
+		Java 1.8 (Java SE 8):
+		StampedLock: While not a collection class itself, it is a new lock implementation introduced in Java 8 that provides three modes for controlling read/write access to a resource.
+		CompletableFuture: Again, not a collection class, but a new feature in Java 8 providing a way to perform asynchronous computations and handle their results using functional programming techniques.
+
+28. What is the data structure used in List type collections implementation?
+Ans. -> ArrayList : Underlying Data Structure: Dynamic Array
+		LinkedList : Underlying Data Structure: Doubly Linked List
+		Vector : Underlying Data Structure: Dynamic Array
+		Stack : Underlying Data Structure: Inherits from Vector
+		
+29. What is the data structure used in Set and Map collections implementation?
+Ans. -> HashSet : Underlying Data Structure: Hash Table
+		LinkedHashSet : Underlying Data Structure: Hash Table + Linked List
+		TreeSet :  Underlying Data Structure: Red-Black Tree (a type of self-balancing binary search tree)
+
+
+30. What is the difference between the three words collection, Collection & Collections?
+Ans -> 	collection :- A generic term referring to any group of items or objects
+		Collection :-  Collection is an interface if we want to represent group of individual object as a single intity then we should go for collection.
+		Collections :- Collections is an utility classes present in java.util package to difine sevrel utility methods for collection object like shorting searching exe.
+
+31. Among Set, List, Map type collections 
+	1) Which collection is unordered collection?
+	Ans -> In Java, the primary unordered collections are HashSet for sets and HashMap for maps. These collections do not maintain any specific order of their elements or keys.
+	
+	2) Which collection is indexed ordered collection?
+	Ans -> In Java, the primary collection that is both indexed and ordered is the List interface and its main implementations, such as ArrayList and LinkedList.
+	
+	3) Which collection is sorted collection?
+	Ans -> TreeSet TreeMap is a sorted collection. This means that the elements in a TreeSet and TreeMap are stored in ascending order.
+	
+	4) Which collection is unique collection?
+	Ans -> Set is a unique collection. This means that a set cannot contain duplicate elements.
+	
+	5) Which collection is duplicate collection?
+	Ans -> List is a duplicate collection. This means that a list can contain duplicate elements.
+	
+	6) Which collection is homogeneous collection?
+	Ans -> An TreeSet and TreeMap is a homogeneous collection. This means that all of the elements in an TreeSetand TreeMap must be of the same type.
+	
+	7) Which collection is heterogeneous collection?
+	Ans -> A HashSet is a heterogeneous collection. This means that the elements in a HashSet can be of different types.
+
+32. What are the 9 core interface of collection framework?
+	1. What is the use of Collection interface, does It have any direct 1 Implementations?
+	Ans. -> The Collection interface is a root interface of the Java collections framework. It defines a common set of Method that all collections share.
+	
+	2. What is the use of Set interface, what are the Implementations of Set interface?
+	Ans -> A Set is a Collection that cannot contain duplicate elements. It models the mathematical set abstraction. The Set interface contains only methods inherited from Collection and adds the restriction that duplicate elements are prohibited.	
+	
+	3) What is the use of List interface, what are the implementations of List interface?
+	Ans -> List is an Interface that allow to store duplicate value where insertion order is preserve. implementations of list ArrayList, linkedlist vector.
+	
+	4) What is the use of Queue interface, what are the implementation of Queue?
+	Ans. ->  It is the Child Interface of Collection. If we want to Represent a Group of Individual Objects Prior to Processing then we should go for Queue.	
+	
+	5) What is the use of Map interface, what are the implementations of Map interface?
+	Ans. -> The Map interface in Java is used to store key-value pairs, where each key is associated with a value. It allows efficient retrieval and manipulation of data based on keys. Implementations of the Map interface include HashMap, TreeMap, LinkedHashMap, HashTable, and ConcurrentHashMap.
+	
+	6) What is the use of SortedSet interface, what are the implementations of SortedSet?
+	Ans -> it is child interface of set. if we want to represent a group of individual object without duplicate according some sorting order then we should go for sortedset implementations TreeSet
+	
+	7) What is the use of NavigableMap interface, what is its implementation subclass? 
+	 
+33. What are the important implemented classes of Collection & Map interfaces?
+	1) When should we use ArrayList, LinkedList, Vector, and Stack?
+	Ans. -> ArrayList :- ArrayList is best suitable if our frequent operation is retrieval operation.
+
+			LinkedList :- Use LinkedList when you need frequent insertions or deletions in the middle of the list.
+  
+			Vector :- Vector is best suitable if our frequent operation is retrieval operation.
+
+			Stack :- Use Stack when you need a Last-In-First-Out (LIFO) data structure.
+ 	
+	2) When should we use PriorityQueue?
+	Ans. ->
+		•	This is a Data Structure which can be used to Represent a Group of Individual Objects Prior to processing according to Some Priority.
+		•	The Priority Order can be Either Default Natural Sorting Order OR Customized Sorting Order specified by Comparator Object.
+		•	If we are Depending on Natural Sorting Order then the Objects should be Homogeneous and Comparable otherwise we will get ClassCastException
+		•	If we are defining Our Own Sorting by Comparator then the Objects Need Not 	beHomogeneous and Comparable.
+		•	Duplicate objects are Not Allowed.
+		•	Insertion Order is Not Preserved and it is Based on Some Priority.
+		•	null Insertion is Not Possible Even as 1st Element Also.	
+		
+	3) When should we use HashSet
+	Ans. -> HashSet :- 
+			• You need to keep a collection of unique items.
+			• You don't care about the order of the items.
+			• You want fast operations for adding, removing, and checking if an item is in the set.
+
+35. What is the difference between Set, List, Queue and Map?
+Ans -> 	Set: It is the Child Interface of the Collection.If we want to Represent a Group of Individual Objects as a Single Entity where Duplicates are Not allowed and Insertion Order won't be Preserved. Then we should go for Set Interface.
+		
+		List:- It is the Child Interface of Collection. If we want to Represent a Group of Individual Objects as a Single Entity where Duplicates are allowed and Insertion Order Preserved. Then we should go for List. 
+		
+		Queue: It is the Child Interface of Collection. If we want to Represent a Group of Individual Objects Prior to Processing then we should go for Queue.
+
+36. What is the difference between Set & Sortedset?
+Ans. ->  Set
+		set not preserve any order
+		set Allbase store unique elemet
+		Extends the Collection interface.
+		Common Implementations: HashSet, LinkedHashSet, TreeSet (without sorting).
+		
+		SortedSet
+		SortedSet preserve sorted order.
+		Sortedset Allbase store unique elemet
+		Extends the Set interface with additional sorting-related methods.
+		Common Implementations: TreeSet (with sorting).
+
+37. What is the difference between Map & SortedMap? 
+Ans. -> Map
+		Map dose not preserve any order of keys.
+		Stores key-value pairs where keys are unique.
+		 Part of the java.util package.
+		Common Implementations: HashMap, LinkedHashMap, Hashtable, WeakHashMap.
+
+	SortedMap
+		Maintains keys in a sorted order.
+		Stores key-value pairs where keys are unique.
+		Extends the Map interface with additional methods related to sorting and navigation.
+		Common Implementations: TreeMap.
+
+What is the difference between HashSet and HashMap?
+Ans. -> HashSet :-
+		HashSet class implements the Set interface
+		In HashSet, we store objects(elements or values) e.g. If we have a HashSet of string elements then it could depict a set of HashSet elements: {“Hello”, “Hi”, “Bye”, “Run”}
+		HashSet does not allow duplicate elements that mean you can not store duplicate values in HashSet.
+		HashSet permits to have a single null value.
+		HashSet is not synchronized which means they are not suitable for thread-safe operations until unless synchronized explicitly.
+	
+	HashMap :-
+		HashMap class implements the Map interface
+		HashMap is used for storing key & value pairs. 
+		HashMap does not allow duplicate keys however it allows having duplicate values.
+		HashMap permits single null key and any number of null values.
+		HashMap is not synchronized which means they are not suitable for thread-safe operations until unless synchronized explicitly.
+
+38. What is the difference between SortedSet & NavigableSet ?
+Ans ->SortedSet
+		Ordered Collection: Maintains elements in a sorted order based on their natural ordering or a specified comparator.
+		Interface: Extends the Set interface.
+		Methods: Provides methods for basic operations and additional methods for range view and endpoints.
+		Methods: first(), last(), subSet(), headSet(), tailSet()
+		Common Implementation: TreeSet.
+
+	NavigableSet
+		Ordered Collection: Maintains elements in a sorted order, same as SortedSet.
+		Interface: Extends the SortedSet interface.
+		Additional Navigation Methods: Provides navigation methods to find the closest matches for given search targets.
+		Methods: Inherits all SortedSet methods and adds methods like lower(), floor(), ceiling(), higher(), pollFirst(), pollLast(), and descendingSet().
+		Common Implementation: TreeSet.
+
+39. What is the difference between SortedMap & NavigableMap?
+Ans. -> SortedMap
+		Ordered Collection: Maintains keys in a sorted order based on their natural ordering or a specified comparator.
+		Interface: Extends the Map interface.
+		Methods: Provides methods for basic operations and additional methods for range views and endpoints.
+		Methods: firstKey(), lastKey(), subMap(), headMap(), tailMap()
+		Common Implementation: TreeMap.
+	
+	NavigableMap
+		Ordered Collection: Maintains keys in a sorted order, same as SortedMap.
+		Interface: Extends the SortedMap interface.
+		Additional Navigation Methods: Provides navigation methods to find the closest matches for given search targets.
+		Methods: Inherits all SortedMap methods and adds methods like lowerEntry(), floorEntry(), ceilingEntry(), higherEntry(), pollFirstEntry(), pollLastEntry(), descendingMap().
+		Common Implementation: TreeMap.
+
+40. What is the difference between Array & ArrayList?
+Ans. -> 	1. Size: Array in Java is fixed in size. We can not change the size of array after creating it. ArrayList is dynamic in size. When we add elements to an ArrayList, its capacity increases automatically.
+	
+		2. Performance: In Java Array and ArrayList give different performance for different operations. add() or get(): Adding an element to or retrieving an element from an array or ArrayList object has similar performance. These are constant time operations. resize(): Automatic resize of ArrayList slows down the performance. ArrayList is internally backed by an Array. In resize() a temporary array is used to copy elements from old array to new array.
+
+		3. Primitives: Array can contain both primitive data types as well as objects. But ArrayList can not contain primitive data types. It contains only objects.
+	
+		4. Iterator: In an ArrayList we use an Iterator object to traverse the elements. We use for loop for iterating elements in an array.
+
+		5. Type Safety: Java helps in ensuring Type Safety of elements in an ArrayList by using Generics. An Array can contain objects of same type of classe. If we try to store a different data type object in an Array then it throws ArrayStoreException.
+
+		6. Length: Size of ArrayList can be obtained by using size() method. Every array object has length variable that is same as the length/size of the array.
+	
+		7. Adding elements: In an ArrayList we can use add() method to add objects. In an Array assignment operator is used for adding elements.
+
+		8. Multi-dimension: An Array can be multi-dimensional. An ArrayList is always of single dimension
+
+41. What is the difference between ArrayList & Vector?
+Ans. -> 	Every Method Present Inside ArrayListis Non – Synchronized.
+		Every Method Present in Vector is Synchronized.
+		
+		At a Time Multiple Threads are allow to Operate on ArrayList Simultaneously and Hence ArrayList Object is Not Thread Safe.
+		At a Time Only One Thread is allow to Operate on Vector Object and Hence Vector Object is Always Thread Safe. 
+		
+		Relatively Performance is High because	Threads are Not required to Wait.
+		Relatively Performance is Low because Threads are required to Wait.
+		
+		Introduced in 1.2 Version and it is Non – Legacy.
+		Introduced in 1.0 Version and it is Legacy.
+
+42. What is the difference between ArrayList & LinkedList? 
+Ans. -> 	1) ArrayList internally uses a dynamic array to store the elements.	
+			LinkedList internally uses a doubly linked list to store the elements.
+
+		2) Manipulation with ArrayList is slow because it internally uses an array. If any element is removed from the array, all the other elements are shifted in memory.	
+		Manipulation with LinkedList is faster than ArrayList because it uses a doubly linked list, so no bit shifting is required in memory.
+
+		3) An ArrayList class can act as a list only because it implements List only.	
+		LinkedList class can act as a list and queue both because it implements List and Deque interfaces.
+
+		4) ArrayList is better for storing and accessing data.	
+		LinkedList is better for manipulating data.
+	
+		5) The memory location for the elements of an ArrayList is contiguous.	
+		The location for the elements of a linked list is not contagious.
+
+		6) Generally, when an ArrayList is initialized, a default capacity of 10 is assigned to the ArrayList.	
+		There is no case of default capacity in a LinkedList. In LinkedList, an empty list is created when a LinkedList is initialized.
+
+		7) To be precise, an ArrayList is a resizable array.	
+		LinkedList implements the doubly linked list of the list interface.
+		
+		8) Memory is allocated at the compile time at the stack memory location.
+		Memory is allocated during the run time at the heap memory section.
+
+43. What is the difference between HashSet & LinkedHashSet?
+Ans. -> It uses a Hashtable to store the elements.
+		It uses a HashTable and doubly linked list to store and maintain the insertion order of the elements.
+		
+		insertion order is not preserve
+		insertion order is preserve
+
+		It requires less memory.	
+		It requires more memory than HashSet.
+	
+		introduced in 1.2 v
+		introduced in 1.4 v
+		
+		Initial Capacity 16 both
+		
+44. What is the difference between HashMap & LinkedHashMap?
+Ans. ->	HashMap	LinkedHashMap
+		The Underlying DataStructure is Hashtable.
+		The Underlying Data Structure is Combination of Hashtable and LinkedList
+		
+		Insertion is Not Preserved	 
+		Insertion order is Preserved	 
+
+		Introduced in 1.2 Version. 
+		Introduced in 1.4 Version.
+
+45. What is the difference between HashSet & TreeSet?
+Ans. -> 	The Hash set is executed with the help of a HashTable.	
+		The tree set is executed with the help of a tree structure.
+
+		It authorises a heterogeneous object.
+		It does not authorise a heterogeneous object.	
+		
+		It permits a null object.	
+		It does not permit the null object. from(1.7)
+		
+		To compare two objects, we use the equals method.	
+		To compare two objects, we use the compare method.
+
+		It does not support any order	
+		  TreeSet supports an object in sorted order.
+
+What differences exist between HashMap and Hashtable ?
+Ans. -> No Method Present in HashMap is Synchronized.
+		Every Method Present in Hashtable is Synchronized.
+		
+	At a Time Multiple Threads are allowed to Operate on HashMap Object simultaneously and Hence it is Not Thread Safe.
+	At a Time Only One Thread is allowed to Operate on the Hashtable Object and Hence it is Thread Safe.
+	
+	Relatively Performance is High. 
+	Relatively Performance is Low.
+	
+	null is allowed for Both Keys and Values. 
+	null is Not allowed for Both Keys and Values. Otherwise we will get NPE.
+	
+	Introduced in 1.2 Version and it is Non – Legacy.
+	Introduced in 1.0 Version and it is Legacy.
+	
+	HashMap is traversed by Iterator.
+	Hashtable is traversed by Enumerator and Iterator.
+
+47. What is the difference between IdentityHashMap & HashMap ?
+Ans. -> IdentityHashMap uses the equality operator == for comparing keys and values
+		HashMap uses to equal method for comparing keys and values
+		
+		instead it uses the System.IdentityHashCode() method to find the bucket location.
+		HashMap uses the hashCode() method of HashMap class to find the bucket location.
+		
+		IdentityHashMap performs better than HashMap.
+		HashMap performs slightly less than the IdentityHashMap.
+
+46. What is the difference between TreeSet & TreeMap? 
+
+18. What is the difference between Vector & Hashtable?
+	
+48. What is the difference between HashMap & WeakHashMap?
+Ans. -> In Case of HashMap, HashMap Dominates Garbage Collector. That is if Object doesn’t have any Reference Still it is Not Eligible for Garbage Collector if it is associated with
+HashMap.
+ But In Case of WeakHashMap if an Object doesn't contain any References then it is Always Eligible for GC Even though it is associated with WeakHashMap. That is Garbage Collector
+Dominates WeakHashMap.
+
+49. What is the collection object that stores only unique objects in no order?
+Ans. -> A set is a collection object that stores unique objects in an unordered collection. A set is an interface that extends the Collection interface in Java. 
+
+50. What is the collection object that stores only unique objects in insertion order? 
+Ans. -> The collection object that stores only unique objects in insertion order is the LinkedHashSet in Java.
+
+51. What is the collection object that stores only unique objects in sorting order?
+Ans. -> The collection object that stores only unique objects in sorting order is the TreeSet class in Java.
+
+52. Which collection we must use to store duplicate objects? 
+Ans. -> There are a few different collections in Java that can be used to store duplicate objects. The most common one is the ArrayList. ArrayLists are dynamic arrays that can grow and shrink in size as needed. They allow you to store any number of elements, including duplicates.
+
+53. Which collection we must use to store duplicate objects in multithreading environment?
+Ans. -> The collection object that stores duplicate objects in multithreading environment is the ArrayList class in Java.
+
+54. How can we remove duplicate objects from ArrayList?
+Ans. -> Create A Program
+
+55. How can we find which object is repeated & how many times?
+
+56. How can we store only unique objects in indexed order?
+
+57. How can we get synchronous version of ArrayList object?
+Ans -> Using the Collections.synchronizedList() method
+
+58. What are the activities done when we insert or remove an element in ArrayList?
+
+59. What is the collection object we must use if more operations are inserting or removing objects at middle of the collection? 
+Ans. -> According to CodeGym, if you frequently insert or remove elements in the middle of a collection, you should use a LinkedList.
+
+60. Why insertion and deletion operations are fast in LinkedList compared to ArrayList?
+Ans. -> A LinkedList consumes a bit more memory than an ArrayList since every node stores two references to the previous and next element. The insertion, addition, and removal operations are faster in a LinkedList because there is no resizing of an array done in the background.
+
+61. is a cursor obJect? 
+	1) What is the difference between cursor object & container object?
+	Ans -> A cursor object is a database object that allows you to iterate through the results of a query. A container object is a data structure that can store multiple values.
+	
+	2) What are the three types of cursor objects exists in collection API?
+	Ans -> We have the following three types of cursors in Collection Framework:
+		Iterator.
+		ListIterator.
+		Enumeration.
+	
+	3) What is the difference between Enumeration & Iterator?
+	Ans -> Enumeration	Iterator
+			Enumeration is not a universal cursor as it applies only to legacy classes.
+			Iterator is a universal cursor as it is applicable for all the collection classes.
+			
+			Enumeration does not have the remove() method.
+			Iterator has the remove() method
+			
+			Enumeration interface acts as a read only interface, one can not do any modifications to Collection while traversing the elements of the Collection.
+			Iterator can do modifications (e.g using remove() method it removes the element from the Collection during traversal
+			
+			Enumeration is a legacy interface which is used for traversing Vector, Hashtable.
+			Iterator is not a legacy interface. Iterator can be used for the traversal of HashMap, LinkedList, ArrayList, HashSet, TreeMap, TreeSet .
+
+	4) What is the difference between Iterator & Listiterator? 
+	Ans -> Iterator	Listiterator
+			Can traverse elements present in Collection only in the forward direction
+			Can traverse elements present in Collection both in forward and backward directions.
+			
+			Helps to traverse Map, List and Set	Can only traverse List and not the other two.
+			Indexes cannot be obtained by using Iterator.	
+			
+			It has methods like nextIndex() and previousIndex() to obtain indexes of elements at any time while traversing List.
+			Cannot modify or replace elements present in Collection	We can modify or replace elements with the help of set(E e)
+
+			Cannot add elements and it throws ConcurrentModificationException.	Can easily add elements to a collection at any time.
+			Certain methods of Iterator are next(), remove() and hasNext().	Certain methods of ListIterator are next(), previous(), hasNext(), hasPrevious(), add(E e).
+
+	5) Why Listiterator can be a bidirectional cursor?
+	Ans -> ListIterator is a bi-directional cursor in Java because it supports both forward and backward direction iteration. ListIterator is an interface that allows you to traverse a list in both directions and modify the list while iterating over it. 
+	
+	6) Why Iterator does not have add() method?
+	Ans. -> An iterator's main purpose is to enumerate through a collection. All collections have an add() method. However, it doesn't make sense to add to an iterator because the collection may or may not be ordered. For example, a HashSet is an ordered collection.	
+	
+	7) What are the various rules we must follow in using Iterator?
+	Ans -> Create an instance of the Iterator interface from the collection of objects you wish to travel across
+		Obtain an iterator to the start of the collection by calling the collection's iterator() method
+		Set up a loop that makes a call to hasNext()
+		Have the loop iterate as long as hasNext() returns true
+		Within the loop, obtain each element by calling next()
+		Use the remove() method to remove the last element returned by the next()
+		Use the forEachRemaining() method to perform the specified action for each remaining element of the collection 
+	
+	8) Why we cannot call itr.remove() method before itr.next() method call?
+	Ans -> The reason why we cannot call itr.remove() method before itr.next() method call is because the iterator needs to know which element to remove. The next() method returns the current element in the collection, and the remove() method removes the current element. If we call remove() before next(), the iterator will not know which element to remove, and it will throw an exception.
+	
+	9) When will you get NoSuchElementException IllegalStateException & Concurrent Modification Exception?
+	Ans. -> NoSuchElementException :- This exception typically occurs when attempting to access an element from an empty collection or when trying to retrieve the next element from an iterator beyond the end of the collection. For example, calling methods like next() on an empty iterator or attempting to access elements from an empty list using methods like get() can result in this exception.
+
+	IllegalStateException :- This exception is thrown to indicate that a method has been invoked at an illegal or inappropriate time or in an inappropriate context. For example, calling methods like remove() on an iterator before calling next() or attempting to modify a collection while it's being iterated can result in this exception.
+
+	ConcurrentModificationException :- This exception occurs when a collection is modified (e.g., adding or removing elements) while it is being iterated over. It indicates that the structure of the collection has been modified unexpectedly during iteration, violating the fail-fast behavior of certain collection implementations like ArrayList or HashMap. For example, adding or removing elements from a list while iterating over it using an iterator can result in this exception.	
+	
+	11) How can we get Enumeration object on collection framework classes?
+	Ans -> the enumeration() method of the java.util.Collections class returns an enumeration over a specified collection. This method provides interoperability with legacy APIs that require an enumeration as input. 
+
+	12) How can make sure when we return collection from a method it is allowed only from reading operations?
+	
+	13) How can retrieve elements from Map using Iterator?
+	Ans -> use a while loop with the hasNext() and next() methods to iterate through the set and retrieve each key-value pair. 
+	
+	14) What is the difference between litr.add() & list.add(index, obj) & list.add(obj)?
+	Ans. -> The list.add() method adds an element to the end of a list. The list.add(index, object) method adds an element at the specified index in a list. The list.add(obj) method adds the specified object to the end of the list.
+	
+	15) What is Map.Entry?
+	
+	16) What is the difference between sequential access & random access?
+	Ans. -> Sequential access is when data is accessed in a sequencee. Random access is when data can be accessed from any location.	
+	
+	17) Is it possible to retrieve objects from collection randomly using cursor objects?
+	Ans -> It's not possible to use a cursor in a non-sequential way
+	
+	18) What is the difference between list.get(index) & itr.next()?
+	Ans. -> The main difference between list.get(index) and itr.next() in Java is that list.get(index) returns the element at the specified index in the list, while itr.next() returns the next element in the list based on the current position of the iterator.
+	
+62 What are the different ways to retrieve objects from Set/List/Queue/Map collections?
+
+63. What are the benefits added to collection programming with
+	1) auto boxing and unboxing?
+	2) Enhanced for-loop
+	3) Generics
+
+64. What is the difference between list.remove(5) & set.remove(5)? 
+Ans. -> The main difference between List.remove(5) and Set.remove(5) in Java is that List.remove(5) removes the element at index 5 from the list, while Set.remove(5) removes the element that is equal to the value 5 from the set.
+
+65. What are the operations performed by addAll(), putAll(), containsAll(), removeAll(), retainAll() methods?
+	1) What is the difference between add() & addAll()?
+	Ans. -> In Java, the add() method adds a single item to a list, while the addAll() method adds a collection of items to a list. 
+	
+	2) What is the difference between put & putAll()?
+	Ans. -> put(Object key, Object value) allows you to add a single entry into the while Map. putAll(Map t) adds all entries contained in the Map t to the specified Map. putAll() is useful while combining two Maps.
+	
+	3) What is the difference between contains() & contains All()?
+	Ans. -> In Java, contains() checks if a single object exists in a list, while containsAll() checks if a list contains all the elements in a given collection.
+	
+	4) What is the difference between remove() & removeAll()?
+	Ans. -> In Java, the remove() method removes the first occurrence of a specified element, while the removeAll() method removes all occurrences of a specified collection of elements.
+	
+	5) What is the difference between removeAll() & retainAll()?
+	6) What is the difference between removeAll() & clear()?
+
+66. Which method we must use to create collection of collections?
+
+67. Which method we must use to create collection of maps?
+
+68. What is the difference between capacity & size?
+Ans. -> Capacity :- Capacity refers to the maximum number of elements that a collection can hold before it needs to resize its internal data structure.
+		It is specific to certain types of collections, such as ArrayList or HashMap, where the underlying data structure (e.g., an array or a hash table) has a fixed initial size that may need to be expanded as elements are added.
+		When the number of elements in the collection exceeds its capacity, the collection may need to reallocate memory or resize its internal data structure to accommodate more elements.
+		Size :- Size refers to the current number of elements that are actually present in the collection.
+		It represents the count of elements that have been added to the collection and have not been removed.
+		Size is dynamic and changes as elements are added to or removed from the collection.
+		Methods like size() are used to retrieve the current size of the collection.
+
+69. What is the default capacity of ArrayList, Vector, HashSet, HashMap, Hashtable?
+Ans. -> 10
+
+70. When collection is filled, what will happen if we add new object?
+
+71. How must vector capacity is incremented?
+Ans. -> new capacity = current capacity * 2.
+
+72. How much ArrayList capacity is incremented?
+Ans. -> new capacity = (current capacity * 3/2) + 1.
+
+73. What is the meaning of load factor?
+Ams. -> After filling how much ratio new object will be created the ratio is called fill ratio or load factor.
+
+74. What is the load factor of set & map objects? 
+Ans -> 0.75%
+
+75. Which collection object does not allow null?
+Ans -> HashTable doesn't allow any null keys or values, but HashMap lets you have one null key and several null values.
+
+76. Which collection object allows only one null?
+Ans -> HashSet allows only one null key, but HashMap can allow one null key + multiple null values.
+
+77. Which collection allows multiple nulls?
+Ans -> In Java, the ArrayList collection allows multiple null elements. This means you can add multiple null values to an ArrayList without any issues.
+
+78. How many nulls we can store key & as valon HashMap TreeMap?
+Ans -> In Java, a HashMap can store one null key and multiple null values. A TreeMap can't store a null key, but it can contain multiple null values. 
+
+79. Is it possible to store null in Hashtable either as key or value? 
+Ans -> No, a Hashtable does not allow null values for either keys or values.
+
+80. Is it possible to store heterogeneous objects in HashSet & HashMap?
+Ans -> Yes, it is possible to store heterogeneous objects in both HashSet and HashMap. HashSet is a collection that stores unique elements, and HashMap is a map that stores key-value pairs. Both HashSet and HashMap can store objects of any type, including primitive types, wrapper classes, and user-defined classes.
+
+81. Is it possible to store heterogeneous objects in TreeSet & TreeMap?
+Ans -> No, it is not possible to store heterogeneous objects in TreeSet and TreeMap. Both TreeSet and TreeMap are sorted collections, and in order to sort objects, they need to be able to compare them. This means that all objects in a TreeSet or TreeMap must be of the same type and must implement the Comparable interface.
+
+82. Is it possible to store duplicate objects in HashSet & HashMap? 
+Ans -> No, it is not possible to store duplicate objects in HashSet and HashMap. Both HashSet and HashMap are based on the concept of hash tables, which means that they use a hash function to map objects to their corresponding locations in memory. If you try to add a duplicate object to a HashSet or HashMap, the hash function will return the same location for both objects, and the newer object will overwrite the older object.
+
+83. Explain how Set & Map collections will stop storing duplicate objects?
+	1) What will be used in storing objects in Set & Map collections? 
+	2) Why Set & Map collection Internally uses hashCode() & equals() methods?
+	3) Will all subclasses of Set & Map use hashCode() & equals() methods?
+	Ans. -> Yes, all subclasses of Set and Map will use the hashCode() and equals() methods. The hashCode() method is used to determine the hash code of an object, which is a unique identifier for that object. The equals() method is used to compare two objects for equality.
+
+	4) For finding duplicate object "==" operator & equals() methods are sufficient, then for what purpose hashCode() method is used?
+	5) What is a bucket, what is the use of it, when a new bucket is created?
+	6) How one group of objects are differentiated from another group of objects?
+	7) Why we must override hashCode() & equals() methods in our class for storing its objects in Hash based collection classes such as HashSet, LinkedHashSet, HashMap, LinkedHashMap, Hashtable?
+	8) What will be the problem if we do not override hashCode() & equals() methods in subclass? 
+	9) Why immutable object recommended to use as key in Map?
+
+84. Explain how TreeSet can store objects in sorting order? 
+	1) What is the default sorting order of TreeSet?
+	Ans -> The default sorting order of TreeSet in Java is ascending. 
+	
+	2) How can we passing sorting order of our objects to TreeSet class?
+	3) What am the difference between Comrorable & Comprar interfaces?
+	Ans. -> Comparable	Comparator
+			Comparable provides a single sorting sequence. In other words, we can sort the collection on the basis of a single element such as id, name, and price.	
+			The Comparator provides multiple sorting sequences. In other words, we can sort the collection on the basis of multiple elements such as id, name, and price etc.
+			
+			Comparable affects the original class, i.e., the actual class is modified.	
+			Comparator doesn't affect the original class, i.e., the actual class is not modified.
+			
+			Comparable provides compareTo() method to sort elements.	
+			Comparator provides compare() method to sort elements.
+			
+			Comparable is present in java.lang package.	
+			A Comparator is present in the java.util package.
+			
+			We can sort the list elements of Comparable type by Collections.sort(List) method.	
+			We can sort the list elements of Comparator type by Collections.sort(List, Comparator) method.
+
+	4) What is the meaning of natural sorting order & custom sorting order?
+	5) What is the meaning of custom comparator?
+	6) What do you mean by non-comparable objects? 
+	7) When will TreeSet use Comparable interface for sorting elements?
+	8) When will Tree Set use Comparator interface for sorting elements?
+	9) What are the steps we must follow to develop a class to add its objects to TreeSet or to TreeMap as key? 
+	10) What types of objects are only allowed to store in TreeSet & TreeMap?
+	11) How can we store non-Comparable objects in TreeSet? 
+	12) How can store a class objects in different sorting orders in TreeSet objects? 
+	13) Why compareTo() method has one parameter & compare() method has two parameters?
+14) compareTo() & equals() methods are meant from comparing objects of a class, then why compareTo() method return type is int & equals() method return type is boolean?
+
+85. What are the three methods we must override in subclass to store its objects in all types of collection objects?
+
+86. What is the use of Collections class?
+	1) How can we find number of occurrences of a given object?
+	2) How can we sort elements in ArrayList? 
+	3) How can we get synchronous version of ArrayList?
+	4) How can we get immutable collection object?
+5) While passing a Collection as argument to a function, how can we make sure the function will not be able to modify it?
+
+87.what is the use of Array class?
+	1) How can sort objects in array?
+	2) How can we search an object in array?
+	3) How can you print all elements of array without using for loop Text explicitly?
+
+88. What is the use of stack?
+	1) Are both LIFO & FILO same?
+	2) How should we add objects to Stack?
+	3) What is the difference between pop() and peek() methods? 
+	4) What is the difference between Insertion index and searching index in stack?
+	5) Stack is a subclass of which collection?
+	6) Can we use List interface methods on Stack object for adding, retrieving & removing its objects?
+
+89. What is the use of Properties class? 
+
+90. What is the difference between Properties class & ResourceBundle class?
+
+91. What is the use of StringTokenizer class?
+
+92. What is the use of RandomAccess interface, is it a marker interface?
+
+93. Explain in a project, when will we create collection of objects, collection of Collections & collection of Maps created?
+
+94. Explain the meaning of collection can be used as Data transferable object & as mini DB?
+
+============================================================================================================
+What is difference between HashSet and LinkedHashSet ? 
+Difference Between Comparator and Comparable 
+11)	What is the difference between Encapsulation and Abstraction ?
+
+
+Q46. What is the difference between List and Set?
+Ans -> The List and Set both extend the collection interface. However, there are some differences between the both which are listed below.
+		The List can contain duplicate elements whereas Set includes unique items.
+		The List is an ordered collection which maintains the insertion order whereas Set is an unordered collection which does not preserve the insertion order.
+		The List interface contains a single legacy class which is Vector class whereas Set interface does not have any legacy class.
+		The List interface can allow n number of null values whereas Set interface only allows a single null value.
+
+Q47. What is the difference between Set and Map?
+Ans -> The differences between the Set and Map are given below.
+		Set contains values only whereas Map contains key and values both.
+		Set contains unique values whereas Map can contain unique Keys with duplicate values.
+		Set holds a single number of null value whereas Map can include a single null key with n number of null values.
+		Update Your Skills form Our Experts: Core Java Online Training
+
+Q48. What is the difference between Collection and Collections?
+Ans -> The differences between the Collection and Collections are given below.
+		The Collection is an interface whereas Collections is a class.
+		The Collection interface provides the standard functionality of data structure to List, Set, and Queue. However, Collections class is to sort and
+		synchronize the collection elements.
+		The Collection interface provides the methods that can be used for data structure whereas Collections class provides the static methods which
+		can be used for various operation on a collection.
+
+Q49. What is the advantage of the generic collection?
+Ans. -> There are three main advantages of using the generic collection.
+		If we use the generic class, we don’t need typecasting.
+		It is type-safe and checked at compile time.
+		Generic con􀃕rms the stability of the code by making it bug detectable at compile time.
+
+Q34. What’s the difference between an array and Vector?
+Ans -> An array groups data of same primitive type and is static in nature while vectors are dynamic in nature and can hold data of different data types.
+
+Q54. What’s difference between Stack and Queue?
+Ans -> Stack and Queue both are used as placeholder for a collection of data. The primary difference between a stack and a queue is that stack is based
+on Last in First out (LIFO) principle while a queue is based on FIFO (First In First Out) principle.
+
+Q96. Which API is provided by Java for operations on set of objects?
+Ans -> Java provides a Collection API which provides many useful methods which can be applied on a set of objects. Some of the important classes
+provided by Collection API include ArrayList, HashMap, TreeSet and TreeMap.
+
+4 What differences exist between Iterator and ListIterator ?
+Ans. -> 	Can traverse Lists, Sets, and Maps
+		Can only traverse Lists
+	
+		Can only traverse the collection in the forward direction
+		Can traverse the collection in both forward and backward directions
+
+		There is no method to obtain an index of the element
+		It is possible to obtain the index of the element
+		
+		Cannot add elements to the collection
+		Can add elements to the collection using add(E e)
+
+		hasNext(), next(), remove() are some common methods
+		hasNext(), next(), hasPrevious(), previous(), remove, add(E e), previousIndex(), set(Ee) some common methods
+
+5 What is difference between fail-fast and fail-safe ?
+Ans. -> this iterator directly works o the collection object itself
+		this iterator works o the clone or copy of the collection object
+
+		it doesn’t allow tp modify the collection while oterating will throw concurrentModificationException
+		it will allow to modify the collection while iterating it doesn’t throw any exception
+	
+		this iteratore doesn’t require any extra memory
+		this one requires extra memory consumes heap
+
+		example of this iterator are ArrayList, HashMap, Vector Hashset and these classe are java util package
+	example of this iterator are ConcurrentHashMap, CopyOnWriteArrayList, and class are in java,util.concureent package
+		
+
+6 How HashMap works in Java ?
+
+7 What is the importance of hashCode() and equals() methods ?
+
+What is difference between Enumeration and Iterator interface?
+Ans. -> 01.	Using Enumeration, you can only traverse the collection. You can’t do any modifications to collection while traversing it.	
+			Using Iterator, you can remove an element of the collection while traversing it.
+
+		02.	Enumeration is introduced in JDK 1.0	
+		Iterator is introduced from JDK 1.2
+	
+		03.	Enumeration is used to traverse the legacy classes like Vector, Stack and HashTable.	
+		Iterator is used to iterate most of the classes in the collection framework like ArrayList, HashSet, HashMap, LinkedList etc.
+
+		04.	Methods : hasMoreElements() and nextElement()	
+		Methods : hasNext(), next() and remove()
+
+		05.	Enumeration is fail-safe in nature.	
+		Iterator is fail-fast in nature.
+		
+		06.	Enumeration is not safe and secured due to it’s fail-safe nature.	
+		Iterator is safer and secured than Enumeration.
+What is a default capacity of ArrayList, Vector, HashMap, Hashtable and Hashset?
+Ans. ->  Collections	Capacity
+		ArrayList		10
+		Vector			10
+		HashSet		16
+		HashMap		16
+		HashTable		11
+
+11 What is Comparable and Comparator interface ? List their differences ?
+Ans. -> Present in java.lang Package 
+		Present in java.util Package
+		
+		It is Meant for Default Natural Sorting Order.
+		It is Meant for Customized Sorting Order.
+
+		Defines Only One Method compareTo(). 
+		Defines 2 Methods compare() and equals().
+
+		All Wrapper Classes and String Class implements Comparable Interface.
+		The Only implemented Classes of Comparator are Collator and RuleBaseCollator.
+
+12 What is Java Priority Queue ?
+
+13 What do you know about the big-O notation and can you give some examples with respect to different data structures ? 
+
+14 What is the tradeoff between using an unordered array versus an ordered array ?
+
+15 What are some of the best practices relating to the Java Collection framework ?
+
+16 What’s the difference between Enumeration and Iterator interfaces ?
+
+17 What is the difference between HashSet and TreeSet ?
+
+201) Explain about Collection interface in java ?
+
+202) List the interfaces which extends collection interface ? 
+
+203) Explain List interface ? 
+
+204) Explain methods specific to List interface ? 
+
+206) Explain about ArrayList ? 
+
+208) What is vector? 
+
+209) Difference between arraylist and vector ? 
+
+210) Define Linked List and its features with signature ? 
+
+211) Define Iterator and methods in Iterator? 
+
+212) In which order the Iterator iterates over collection? 
+
+212) Explain ListIterator and methods in ListIterator? 
+
+213) Explain about Sets ? 
+
+214) Implementations of Set interface ? 
+
+215) Explain HashSet and its features ? 
+
+216) Explain Tree Set and its features? 
+
+217) When do we use HashSet over TreeSet? 
+
+218) What is Linked HashSet and its features?	 
+
+219) Explain about Map interface in java? 
+
+220) What is linked hashmap and its features? 
+
+221) What is SortedMap interface? 
+
+222) What is Hashtable and explain features of Hashtable? 
+
+224) Difference between arraylist and linkedlist? 
+
+226) What is concurrent hashmap and its features ?
+
+228) Explain copyOnWriteArrayList and when do we use copyOnWriteArrayList? 
+
+229) Explain about fail fast iterators in java? 
+
+230) Explain about fail safe iterators in java?

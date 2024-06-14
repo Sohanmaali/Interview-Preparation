@@ -1,0 +1,75 @@
+----------------------------------
+Array Interview Questions
+----------------------------------
+
+1. What is an array, what is the use of an array?
+
+2. What are the limitations of an array? 
+
+3. What are the 3 syntaxes to create an array?
+
+4. In Java, is array a primitive type (or) referenced type? 
+
+5. In Java, how can we create a heterogeneous array object?
+
+6. In Java, where should we specify array size?
+
+7. What is the meaning of dimension? 
+
+8. How can we find the length of an array?
+
+9 What is the dances betwem length & lengo()?
+
+10. Explain difference in storing primitive values and objects in arrays?
+
+11. Can we cast array objects? 
+
+12. Explain various situations we get below errors?
+	1) missing dimension 
+	2) possible loss of precisext
+	3) incompatible types
+	4) NegativeArraySizeException 
+	5) ArrayIndexOutOfBoundsException
+	6) ArrayStoreException
+
+13. How can we pass multiple values as argument & return type from a method?
+
+14. What is meaning of an anonymous array, how can we create it?
+
+15. Where anonymous array is useful? 
+
+16. If we unreference an array how many object are eligible for garbage collection?
+
+17. If we declare array referenced variable as final, will array object also final?
+
+18. Can we declare array object as final? 
+
+19. Explain all four types of array referenced variables?
+
+20. How many types of arrays java supports?
+
+21. What is the meaning of array of arrays? 
+
+22 . What is the difference in the below two lines?
+	1) int[] ia = new int[3][2];
+	2) int[] ia = new int[3][];
+	3) int[] ia = new int[][];
+
+23. What is a Jogged Array?
+
+24. What is a Var-arg method, what are the various rules applicable on Var-arg parameter?
+
+25. Is Var-arg is the replacement of single dimensional array in method parameter?
+
+26. In Var-arg why only three dots(...) are allowed? 
+
+27. What is the diff in between array parameter method & Var-arg	parameter method?
+
+===================================================================================
+Q18. What is an Array?
+Ans.An array is a collection (group) of 􀃕xed number of items. Array is a homogeneous data structure which means we can store multiple values of
+same type in an array but it can’t contain multiple values of di􀃡erent types. For example an array of int type can only hold integer values.
+
+Q91. Is there a way to increase the size of an array after its declaration?
+Ans: Arrays are static and once we have speci􀃕ed its size, we can’t change it. If we want to use such collections where we may require a change of size
+( no of items), we should prefer vector over array.

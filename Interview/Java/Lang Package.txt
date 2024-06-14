@@ -1,0 +1,249 @@
+-------------------
+LANG PACKAGE
+-------------------
+1. Why java.lang package is called default package?
+
+2. Why we no need to import java.lang package when access its classes?
+
+3. If we use the class String in our class, how compiler will link it from java.lang package?
+
+4. Given me some of the important classes from java.lang package?
+
+5. What is the use of 5-stem class?
+
+6. What is the use of Runtime class?
+
+7. What is the use of Class-class?
+
+8. What is the use of ClassLoader class?
+
+9. What is the use of Process class?
+
+10. What is the use of Math & StrictMath classes?
+
+11. What is the use of Comparable interface?
+
+12. What is the use of Cloneable interface?
+
+13. Using Runtime class method, Write a program
+	1) to start "notepad" from java program?
+	2) to find JVM memory status using Runtime class method?
+	
+14. Using Math class method, write a program
+	1) to find square root of a given number?
+	2) to find cube root of a given number
+	3) to find a power of a number with the given number?
+	4) to find max of given two numbers
+	5) to find min of given two numbers
+	
+---------------------------------------------
+java.lang.Object class interview questions
+---------------------------------------------
+
+1. Why Object class is the super class for all java classes?
+
+2. Why its name is chosen as Object?
+
+3. How many methods Object class contains?
+
+4. Explain the purpose of all 11 methods of Object class?
+
+5. How many methods we can override in subclass from Object?
+
+---------------------------------------------
+1. hashCode() method interview questions
+---------------------------------------------
+
+1. What is hashCode?
+
+2. Is hashCode & reference both are same?
+
+3. How can we retrieve hashCode of an object?
+
+4. How many ways we can generate hashCode of an object?
+
+5. What is returned from hashCode() method from Object class?
+
+6. How can we generate hashCode() of an object using its data?
+
+7. What is hashing algorithm?
+
+8. If we override hashCode() method, will object also contains referenced based hashcode? How can we get JVM generated hashcode?
+
+9. What is the difference between hashCode() &
+
+System.identityHashCode() methods?
+
+10. Can two objects have same hashCode?
+
+11. If we change object data will object hash code also be changed?
+
+12. In what programming hashCode() method is called internally?
+
+---------------------------------------------
+2. equals() method interview questions
+---------------------------------------------
+
+1. What is the use of equals() method?
+
+2. What are the different ways we can compare two objects of a class?
+
+3. How can we compare two objects using their references?
+
+4. How can we compare two objects using their data?
+
+5. How equals() method will compare objects in Object class? 
+
+6. How can we compare objects using their data using equals() method?
+
+7. What are the different rules we must follow in overriding equals method?
+	1) What value should return for incompatible objects comparison?
+	2) What value should return when null is passed as argument?
+
+8. What is the contract between hashCode() & equals() method overriding?
+
+9. Why equals() method is defined when we have == operator?
+
+10. What will happen when we compare incompatible objects using "==" operator and equals method?
+
+11. What is the output we get when we compare using == operator using equals method
+	1) two nulls
+	2) null and object
+
+12. Can we use equals() method for comparing primitive values?
+
+13. List out all differences between "==" operator & equals() method?
+
+14. In what programming equals() method is called internally?
+
+
+---------------------------------------------
+3. getClass() method interview questions
+---------------------------------------------
+
+1. What is the use of getClass() method?
+
+2. What is the need of java.lang.Class?
+
+3. What is meaning of runtime class and runtime class object?
+
+4. How can we get object's runtime class object reference?
+
+5. Write a program to get any given object's class name?
+
+---------------------------------------------
+4. toString() method interview questions
+---------------------------------------------
+
+1. What is the use of toString() method?
+
+2. What is printed when we print object?
+
+3. How printin method retrieves current printing object information?
+
+4. What is the default implementation of toString() in java.lang.Object class?
+
+5. When should we override toString() method in subclass?
+
+6. How can we return all values of an object from toString() for displaying on console?
+
+7. When we print String class object its data is printed, when we print our class object why classname@hashcode is printed?
+
+8. When we must override hashCode(), equals(), toString() methods in subclass?
+
+
+---------------------------------------------
+5. clone() method interview questions
+---------------------------------------------
+
+1. What is the use of clone() method?
+
+2. What is the meaning of cloning?
+
+3. What is the rule in cloning an object?
+
+4. What is the use of Cloneable interface, why is it empty interface?
+
+5. Is clone() method defined in Cloneable interfare?
+
+6 . Will clone() method return new object or same object, will new reference & hashCode? 7. Why clone() method is declared as protected?
+
+8. What are the programming rules we must follow in calling a clone() method?
+	1) Can we call clone() method on an object in its own class?
+	2) Can we call clone() method on an object in another class?
+	3) Why should we handle CloneNotSupportedException in calling clone() method?
+	4) If the object is not Cloneable type, what will happen when we all clone() method using this object?
+	5) Why should we cast clone() method returned object to current object's class?
+
+9. What is the procedure to override clone() method?
+
+10. What is the difference in cloning an object
+	1) by containing primitive variables &
+	2) by containing referenced variables
+
+11. When we clone an object with HAS-A relation, will its internal object also cloned?
+
+12. When we clone a subclass object, is its super class also should be Cloneable type?
+
+13. When we clone a subclass object, will internal objects of superclass also cloned?
+
+14. What are the 2 types of cloning mechanisms?
+
+15. What is a shallow cloning?
+
+16. What is a deep cloning, how can we implement it?
+
+17. What type of cloning is implemented in Object class's clone() method?
+
+18. What are the two situations force you to override clone() method in project?
+
+---------------------------------------------
+7. finalize() method interview questions
+---------------------------------------------
+1. What is the use of finalize() method?
+
+2. What is the meaning of clean-up code or resource releasing logic code?
+
+3. Give me some project scenarios to explain about clean-up code?
+
+4. What is the default implementation given for finalize() method in Object class?
+
+5. When should we override finalize() method in subclass?
+
+6. Why finalize() method is declared as protected?
+
+7. Who will call finalize method, and when?
+
+8. Can programmer call finalize() method explicitly?
+
+9. If we call finalize() method, will object is destroyed?
+
+10. How many times finalize() method is called for an object?
+
+11. How can we enable or disable calling a finalize() method? 12. Why finalize() method has "throws Throwable"?
+
+13. Can an unreachable Java object become reachable again?
+
+14. If an object is become referenced after finalize() method execution, will gc destroy it?
+
+8, 9, 10, 11 check Multithreading interview questions
+
+Why wait(), notify(), and notifyAll() methods are given in Object class why not in Thread class?
+==================================================================
+Q72. What’s the di􀃡erence between comparison done by equals method and == operator?
+Ans: In Java, equals() method is used to compare the contents of two string objects and returns true if the two have same value while == operator
+compares the references of two string objects.
+In the following example, equals() returns true as the two string objects have same values. However == operator returns false as both string objects
+are referencing to di􀃡erent objects:
+
+2 General Questions about Java 3
+2.1 What is JVM ? Why is Java called the Platform Independent Programming Language? . . . . . . . . . . . . . . 3
+2.2 What is the Difference between JDK and JRE ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.3 What does the “static” keyword mean ? Can you override private or static method in Java ? . . . . . . . . . . . . 3
+2.4 Can you access non static variable in static context ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.5 What are the Data Types supported by Java ? What is Autoboxing and Unboxing ? . . . . . . . . . . . . . . . . 4
+2.6 What is Function Overriding and Overloading in Java ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.7 What is a Constructor, Constructor Overloading in Java and Copy-Constructor . . . . . . . . . . . . . . . . . . . 4
+2.8 Does Java support multiple inheritance ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.9 What is the difference between an Interface and an Abstract class ? . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.10 What are pass by reference and pass by value ?

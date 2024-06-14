@@ -1,0 +1,62 @@
+-------------------------------
+Datatype interview Questions
+-------------------------------
+
+1. What is a data type & what is the use of data type? 
+
+2. How many types of data types Java supports?
+
+3. What is the difference between primitive type & referenced type? 
+
+4. Why do we have 8 primitive data types & 4 referenced data types?
+
+5. What is size, range & default value of primitive types? 
+
+6. What is the difference between "int" data type in Java & C language?
+
+7. Why char data type size is 2 bytes in Java, whereas its size is 1 byte in Clanguage?
+
+8. Will referenced data type have size & range? 
+
+9. Why referenced data types are called derived data types?
+
+10. How much memory is occupied by a String?
+
+11. What is a variable, how can we create a variable?
+
+12. What is the variable creation syntax?
+
+13. What is the difference between primitive variable & referenced variable?
+
+14 What is the IIHDRon of variable ?
+
+15. What is the syntax for creating an array?
+
+16. What is the difference in creating an array in C language & in Java?
+
+17. What is the limitation of Array?
+
+18. Do we have any inbulit data type to store different type of values?
+
+19. What is a user defined data type, what is the use of it?
+
+20. How can we create user defined data type & why class is called user
+
+defined data type? 21. Create a class to store different type of values In JVM?
+
+22. What is the keyword we must use to create an object from a class?
+
+23. What is a class & object as per data type?
+
+24. Draw class object memory diagram that is created internally in JVM? 
+
+25. What are the two memories created using a class as data type? 
+
+26. What is the default size of a referenced variable & an empty class object?
+
+27. What are the different ways to store data in Java application? 
+
+28. When should we use a variable, array object & class object? 
+
+29. Will JVM store given data in decimal format?
+============================================================================================================

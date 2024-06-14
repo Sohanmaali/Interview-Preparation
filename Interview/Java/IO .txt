@@ -1,0 +1,143 @@
+--------------------------
+File Handling
+--------------------------
+1. What are different places we have to store data permanently?
+
+2. How can we store data permanently in a file?
+
+3. What is the use of java.io package?
+
+4. To access this package class should we place import statement?
+
+ 5. What is a Stream, How many types of Streams java supports?
+
+6. What is the difference between binary stream & character streams?
+
+7. In which version character streams are introduced, & why?
+
+8. What is the difference between inputstream & outputstream? 
+
+9. What are the super classes to all types of inputstream & outputstream classes?
+
+10. What are the super classes to all types of reader & writer classes? 
+
+11. List out the important subclasses & methods of InputStream class?
+
+12. List out the important subclasses & methods of OutputStream class?
+
+13. List out the important subclasses & methods of Reader class?
+
+14. List out the important subclasses & methods of Writer class?
+
+15. What is the difference between in.read() & in.read(byte[]) methods?
+
+16. What is the difference between out.write() & out.write(byte[]) methods?
+
+17. How many bytes of data we can write & read at a time from a file? 
+
+18. What is the use of FileInputStream & FileOutputStream classes?
+
+19. What is the use of FileReader & FileWriter classes?
+
+20. When will get FileNotFoundException? 
+
+21. When will get IOException?
+
+22. What is the value fis.read() method returns when control reached end of file?
+
+23. Write a program to copy one le data to another file?
+
+24. Writer a program to copy Multiple Files data to a single file?
+
+25. What is the use of SequencelnputStream class? 
+
+26. What is the use of BufferedReader class? 
+
+27. What is the difference between FileReader & BufferedReader classes?
+
+28. How can we read one line at a time from a file?
+
+29. What is the value br.readLine() method returns when control reached end of the file?
+
+30. What is the difference between PrintStream class from other stream class?
+
+31. How can we write the given data as it is in a file? 32. Is PrintStream an InputStream.class or OutputStream class?
+
+33. Why PrintStream class name is not PrintOutputStream? 34. Explain System.out.println() statement?
+
+35. Is printin() method a overloaded method? 36. What is the difference between print(), printin(), printf() methods?
+
+37. When we call printin(char[]) parameter method by passing null, why will we get NullPointerException?
+
+38. How many streams are by default opened in JVM, what are they?"
+
+39. How can we access these three internal streams?
+
+40. What is the difference between System.in, System.out, System.err? 41. What should we use System.out & System.err?
+
+42. What is the internal method used in printStackTrace Method() to display exception?
+
+43. How can we redirect STDOUT data to a file? 
+
+44. What is the use of System.setin(), System.setOut(), System.setErr() methods?
+
+ 45. What is the problem in using System.in.read() statement to read data from keyboard?
+
+46. What is the right procedure to read data from keyboard? 
+
+47. What is the use of InputStreamReader class?
+
+48. Can you explain below statement BufferedReader br = new BufferedReader(new InputStreamRader(System.in));
+
+49. What are the different ways we have to read data from keyboard?
+
+50. When will we use wrapper classes in reading data from keyboard? 
+
+51. What is the use of Console class, can we create its object use its constructor?
+
+52. How can we read password from console by hiding its characters?
+
+53. Why console.readPassword() method returns password as char[], but not as String?
+
+54. What is the meaning of filtering? 
+
+55. What is the use of DataInputStream & DataOutputStream classes?
+
+56. fis write() can only write one byte data only in int range, then how can we writ other primitive values?
+
+57. What is the difference between fos. write() & dos.writelnt() methods?
+
+58. What is the difference between fis.read() & dis.readInt() methods?
+
+59. What is rule in calling writeXXX() & readXXX() methods?
+
+60. When will get EOFException?
+
+-----------------------------------
+File Class Interview Questions
+-----------------------------------
+
+1. What is the use of File class?
+
+2. What are the various methods available in file class?
+
+3. How can we create new files and directories from Java program? 
+
+4. What is the difference between file.mkdir() & file.mkdirs() methods?
+
+5. What is the use of file.exists() method?
+
+6. How can we find the given file is a normal file or directory? 
+
+7. How can we find absolute path of a given file?
+
+8. How can we list all files and subdirectories of a given folder?
+
+9. While listing the files how can we filter them?
+
+10. How can we delete files and directories?
+
+11. What is the rule in deleting a directory?
+
+12. How can we retrieve OS dependent directory separator?
+======================================================================================

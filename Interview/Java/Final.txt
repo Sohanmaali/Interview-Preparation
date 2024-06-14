@@ -1,0 +1,110 @@
+----------------------------------------
+Final keyword Interview questions
+----------------------------------------
+
+1. What is a final keyword? 2. What is the use of final keyword?
+
+3. To what programming elements final is allowed & not allowed?
+
+4. Why final keyword is not allowed to constructor, block, Abstract Class, interface, enum & annotation? 
+
+5. What is the rule on final variable, final method, final class?
+
+6. What is the difference between final, finally & finalize?
+
+--------------------------------------
+Final variable interview questions
+--------------------------------------
+
+1. What is a final variable? Is it possible to modify final variable value?
+
+2. What is the diff in declaring primitive variable as final & referenced
+
+variable as final?
+
+3. How many types of final variables do we have in Java? 
+
+4. When should we declare static variable as final & non-static variable a final?
+
+5. When should we declare local variable or parameter as final? 
+
+6. Where can we initialize static final variable & non-static final variable?
+
+7. What is right procedure in initializing non-static final variable? 
+
+8. Can we initialize static final variable in all static blocks? 
+
+9. Why we must initialize non-static final variable in all constructors?
+
+10. Where can we initialize final local variable & final parameter? 
+
+11. Why we must initialize static & non-static final variables before program execution is started, where as we can leave local final variable as uninitialized? 
+
+12. Why Compiler removes final variable declaration statement?
+
+13. Why class will not be load into JVM, when we access static final variable?
+
+14. Why class will be loaded into JVM, when we access static final variable that is initialized in static block? 
+
+15. Prove it Static final or non-static final variable will also contain default value?
+
+16. If we declare a referenced variable as final will its object also final?
+	1)If we declare array variable as final, can we modify values in array locations?
+	2) If we declare class variable as final, can we modify its object values?
+
+17. How can we create immutable variable & immutable object?
+
+
+
+------------------------------------------
+Final method interview questions
+------------------------------------------
+
+1. What is final method, what is the rule on final method?
+
+2. What is the use of final method? 
+
+3. When should we declare a method as final?
+
+4. Will final method inherited to subclass? 
+
+5. Can we call and execute final method in subclass?
+
+6. Can we override a final method in subclass?
+
+7. Can we overload a firial method in subclass?? 
+
+8. Can we override a non-final method as final method in subclass?
+
+9. What is the difference between private method and final method? 
+
+10. Can we declare main method as final?
+
+11. If we declare main method as final, can we define main method in its subclass?
+
+12. How can we execute static & non-static members of this subclass from this subclass?
+
+---------------------------------
+Final class interview questions
+---------------------------------
+
+1. What is a final class, what is the rule on final class? 
+
+2. What is HDRe of final class
+
+3. When should we declare a class as final?
+
+4. Can we create object from a final class?
+
+5. If a class is declared as final, are all its members final?
+
+6. Can we modify final class variables? lext
+
+7. Can we override final class methods?
+
+8. How can we stop create a subclass from a class without declaring it as final?
+
+9. In how many ways we can stop creating a subclass from a class? 
+
+10. What is the difference between declaring a class as final and declaring all its constructors as private?
+========================================================================================================================================

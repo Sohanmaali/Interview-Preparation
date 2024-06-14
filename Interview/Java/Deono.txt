@@ -1,0 +1,84 @@
+Q25. Use of 􀃕nal keyword in Java?
+Ans.
+Final methods – These methods cannot be overridden by any other method.
+Final variable – Constants, the value of these variable can’t be changed, its 􀃕xed.
+Final class – Such classes cannot be inherited by other classes. These type of classes will be used when application required security
+
+Q26. What are Packages in Java?
+Ans. A Package can be de􀃕ned as a grouping of related types (classes, interfaces, enumerations and annotations).
+
+Q41. What is the di􀃡erence between Iterator and Enumeration?
+Ans.
+1) Iterator allows to remove elements from the underlying collection during the iteration using its remove() method. We cannot add/remove elements
+from a collection when using enumerator.
+2) Iterator has improved method names.
+Enumeration.hasMoreElement() -> Iterator.hasNext()
+Enumeration.nextElement() -> Iterator.next().
+Update
+
+Q42. What are the restrictions that are applied to the Java static methods?
+Ans. Two main restrictions are applied to the static methods.
+The static method can not use non-static data member or call the non-static method directly.
+this and super cannot be used in static context as they are non-static.
+Q43. What are the advantages of passing this into a method instead of the current class object itself?
+Ans. As we know, that this refers to the current class object, therefore, it must be similar to the current class object. However, there can be two main
+advantages of passing this into a method instead of the current class object.
+“this” is a 􀃕nal variable. Therefore, this cannot be assigned to any new value whereas the current class object might not be 􀃕nal and can be
+changed.
+“this” can be used in the synchronized block.
+
+Q9. What is the di􀃡erence between double and 􀃖oat variables in Java?
+Ans: In java, 􀃖oat takes 4 bytes in memory while Double takes 8 bytes in memory. Float is single precision 􀃖oating point decimal number while Double
+is double precision decimal number.
+Q10. What is Final Keyword in Java? Give an example.
+Ans: In java, a constant is declared using the keyword Final. Value can be assigned only once and after assignment, value of a constant can’t be
+changed.
+In below example, a constant with the name const_val is declared and assigned avalue:
+Private Final int const_val=100
+When a method is declared as 􀃕nal,it can NOT be overridden by the subclasses.This method are faster than any other method,because they are
+resolved at complied time.
+When a class is declares as 􀃕nal,it cannot be subclassed. Example String,Integer and other wrapper classes.
+
+Q11. What is ternary operator? Give an example.
+Ans: Ternary operator , also called conditional operator is used to decide which value to assign to a variable based on a Boolean value evaluation. It’s
+denoted as ?
+In the below example, if rank is 1, status is assigned a value of “Done” else “Pending”.
+public class conditionTest { public static void main(String args[]) { String status; int rank = 3; status = (rank == 1) ? “Done” : “Pending”;
+System.out.println(status); }}
+Q12: How can you generate random numbers in Java?
+Ans:
+Using Math.random() you can generate random numbers in the range greater than or equal to 0.1 and less than 1.0
+Using Random class in package java.util
+
+Q45. Can we call the constructor of a class more than once for an object?
+Ans: Constructor is called automatically when we create an object using new keyword. It’s called only once for an object at the time of object creation
+and hence, we can’t invoke the constructor again for an object after its creation.
+
+Q51. Give an example of use of Pointers in Java class.
+Ans: There are no pointers in Java. So we can’t use concept of pointers in Java.
+
+
+Q74. How are destructors de􀃕ned in Java?
+Ans: In Java, there are no destructors de􀃕ned in the class as there is no need to do so. Java has its own garbage collection mechanism which does the
+job automatically by destroying the objects when no longer referenced.
+
+Q78. Is it correct to say that due to garbage collection feature in Java, a java program never goes out of
+memory?
+Ans: Even though automatic garbage collection is provided by Java, it doesn’t ensure that a Java program will not go out of memory as there is a
+possibility that creation of Java objects is being done at a faster pace compared to garbage collection resulting in 􀃕lling of all the available memory
+resources. So, garbage collection helps in reducing the chances of a program going out of memory but it doesn’t ensure that.
+
+Q80. I want to re-reach and use an object once it has been garbage collected. How it’s possible?
+Ans: Once an object has been destroyed by garbage collector, it no longer exists on the heap and it can’t be accessed again. There is no way to
+reference it again.
+
+Q89. I have multiple constructors de􀃕ned in a class. Is it possible to call a constructor from another
+constructor’s body?
+Ans: If a class has multiple constructors, it’s possible to call one constructor from the body of another one using this().
+
+Q97. Can we cast any other type to Boolean Type with type casting?
+Ans: No, we can neither cast any other primitive type to Boolean data type nor can cast Boolean data type to any other primitive data type.
+
+Q100. What’s the order of call of constructors in inheritiance?
+Ans: In case of inheritance, when a new object of a derived class is created, 􀃕rst the constructor of the super class is invoked and then the constructor
+of the derived class is invoked.

@@ -1,0 +1,22 @@
+Q1. What is the difference between an Inner Class and a Sub-Class?
+Ans: An Inner class is a class which is nested within another class. An Inner class has access rights for the class which is nesting it and it can access all variables and methods de􀃕ned in the outer class.
+A sub-class is a class which inherits from another class called super class. Sub-class can access all public and protected methods and 􀃕elds of its super class.
+
+Q90. What’s meant by anonymous class?
+Ans: An anonymous class is a class deffned without any name in a single line of code using new keyword.
+For example, in below code we have de􀃕ned an anonymous class in one line of code:
+
+Q94. What is a Local class in Java?
+Ans: In Java, if we de􀃕ne a new class inside a particular block, it’s called a local class. Such a class has local scope and isn’t usable outside the block
+where its de􀃕ned.
+
+142) Explain about static nested classes in java? .................................................................. 30
+143) How to instantiate static nested classes in java? .......................................................... 30
+144) Explain about method local inner classes or local inner classes in java? ............ 30
+145) Explain about features of local inner class? ..................................................................... 30
+146) Explain about anonymous inner classes in java? ........................................................... 30
+147) Explain restrictions for using anonymous inner classes? ............................................ 30
+148) Is this valid in java ? can we instantiate interface in java? ...................................... 30
+6
+149) Explain about member inner classes? ................................................................................ 30
+150) How to instantiate member inner class?

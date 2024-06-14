@@ -1,0 +1,2297 @@
+
+1.Can a lock be acquired on a class?
+Ans. -> Yes, a lock can be acquired on a class. This lock is acquired on the class's Class object. Thesynchronized keyword tells the JVM that the method requires a lock in order to run. The JVM thencreates the lock and manages the allocation of the lock to threads during execution. To execute staticsynchronized area compulsory the thread has to get the class level lock.
+
+2.Can main method be declared final?
+Ans. ->  Yes, the main method can be declared final, in addition to being public static Inaddintion to final wecan declared main method with synchronized modifier also The following is valid main methoddeclaration
+
+3. Can a public class MyClass be defined in a source file named YourClass.java?
+Ans. -> If java source file contains a public class then the name of the source file and name of the public classmust be matched . otherwise compilation fails.
+
+4.What is the default value of the local variables?
+Ans. -> The local variables are not initialized to any default value, neither primitives nor object references. Ifyou try to use these variables without initializing them explicitly, the java compiler will not compilethe code. It will complain about the local variable not being initialized. Hence,
+Before using local variable it must be initialized
+ 
+5. Is Empty.java file a valid source file?
+Ans. -> Yes, an empty .java file is a perfectly valid source file.
+
+6. What are the different scopes for Java variables?
+Ans. ->  The scope of a Java variable is determined by the context in which the variable is declared. Thus a javavariable can have one of the three scopes at any given point in time.
+	1. Instance : - These are typical object level variables, they are initialized to default values at the timeof creation of object, and remain accessible as long as the object accessible.
+	2. Local : - These are the variables that are defined within a method. They remain accessbile onlyduring the course of method excecution. When the method finishes execution, these variables fall outof scope.
+	3. Static : - These are the class level variables. They are initialized when the class is loaded in JVM forthe first time and remain there as long as the class remains loaded. They are not tied to any particularobject instance.
+	
+7. What happens if you dont initialize an instance variable of any of the primitive types in Java?
+Ans. ->  Java by default initializes it to the default value for that primitive type. For the integral types thedefault value is 0, for floating point data types default value is 0.0 and for the booelan types it is false.
+
+8.What will be the initial value of an object reference, which is defined as an instance variable?
+Ans. ->  The object references are all initialized to null in Java. However in order to do anything useful withthese references, you must set them to a valid object, else you will get NullPointerExceptionseverywhere you try to use such default initialized references.
+
+9.Are main, next, delete and exit keywords in Java?
+ Ans. -> No, they are not keywords in Java. delete is not a keyword in Java. Java does not make use of explicitdestructors the way C++ does. To exit a program explicitly you use exit method in System object
+ 
+10. Is String a primitive data type in Java?
+ Ans. -> No String is not a primitive data type in Java, even though it is one of the most extensively usedobject. Strings in Java are instances of String class defined in java.lang package.
+ 
+11.What does it mean that a method or field is “static”?
+Ans. -> static variables are class level variables. Only one copy will be created per class and shared by all theobjects. We can access static variables either by class name or by object reference but recommendedway is using class name. If you change the value of a static variable by using any object reference , itwill automatically reflect for all the object references. That’s how library methods likeSystem.out.println() work out is a static field in the java.lang.System class Static methods are classlevel methods. Mostly these are utility methods we can access without creating objects.Static methodscan be referenced with the name of the class rather than the name of a particular object of the class(though that works too).
+
+12.Give a few reasons for using Java?
+Ans. ->  Built-in support for multi-threading, socket communication, and memory management (automaticgarbage collection).Object Oriented (OO). Better portability than other languages across operatingsystems. Supports Web based applications (Applet, Servlet, and JSP), distributed applications (sockets,RMI, EJB etc) and network protocols (HTTP, JRMP etc) with the help of extensive standardized APIs(Application Programming Interfaces).
+
+13.What are “static initializers” or “static blocks with no function names”?
+Ans. -> When a class is loaded, all blocks that are declared static and don’t have function name (i.e. staticinitializers) are executed even before the constructors are executed. As the name suggests they aretypically used to initialize static fields.
+
+14. How do you express an ‘is a’ relationship and a ‘has a’ relationship or explain inheritanceand composition? What is the difference between composition and aggregation?
+Ans. ->  The ‘is a’ relationship is expressed with inheritance and ‘has a’ relationship is expressed withcomposition. Both inheritance and composition allow you to place sub-objects inside your newclass. Two of the main techniques for code reuse are class inheritance and object composition.Inheritance is uni-directional. For example House is a Building. But Building is not a House.Inheritance uses extends key word. Composition: is used when House has a Bathroom. It is incorrect tosay House is a Bathroom. Composition simply means using instance variables that refer to otherobjects. The class House will have an instance variable, which refers to a Bathroom object
+
+15. What is the main difference between a String and a StringBuffer class?
+Ans. -> String  is immutable: you can’t modify a string object but can replace it by creating a newinstance. Creating a new instance is rather expensive.
+StringBuffer
+ is mutable: use StringBuffer or StringBuilder when you want to modify the contents.StringBuilder was added in Java 5 and it is identical in all respects to StringBuffer except that it is notsynchronized, which makes it slightly faster at the cost of not being thread-safe.
+
+16. What is the difference between processes and threads?
+Ans. -> A process is an execution of a program but a thread is a single execution sequence within the process.A process can contain multiple threads. A thread is sometimes called a lightweight process.
+
+17. Explain different ways of creating a thread?
+Ans. -> Threads can be used by either :Extending the Thread classImplementing the Runnable interface.
+
+18.What are transient variables in java?
+Ans. ->  Transient variables are variable that cannot be serialized.
+
+19.What is synchronization?
+Ans. -> Synchronization is the ability to control the access multiple threads to shared resources.Synchronization stops multithreading. With synchronization , at a time one thread will be able toaccess a shared resource.
+
+20.What is the difference between yield() and sleep()?
+Ans. -> When a object invokes yield() it returns to ready state for giving the chance to remaining threads ofsame priority. But when an object invokes sleep() method enters into sleeping state. After speepingtime expires then only thread entered into ready state
+
+21. What is finalize() method?
+Ans. ->  Garbage Collector calls this method just before destroying any object to perform clean up activities.
+
+22.Can we call finalize() method ?
+Ans. -> Yes. Nobody will stop us to call any method , if it is accessible in our class. But a garbage collectorcannot call an object's finalize method if that object is reachable.
+
+23.Can we declare an anonymous class as both extending a class and implementing an interface?
+Ans. ->   No. An anonymous class can extend a class or implement an interface but not both simultaneously.
+
+24.What is the use of “bin” and “lib” in JDK?
+ “bin” contains all tools such as javac, appletviewer, awt tool, etc. whereas “lib” contains API and all packages
+ 
+25.What are the legal operands of the instanceof operator?
+ The left operand is an object reference or null value and the right operand is a class, interface, or arraytype.
+
+26.How is it possible for two String objects with identical values not to be equal under the ==operator?
+Ans. -> The == operator compares two objects to determine if they are the same object in memory. It is possible for two String objects to have the same value, but located indifferent areas of memory.
+
+27. What is final, finalize() and finally?
+ Ans. -> final :- final keyword can be used for class, method and variables. A final class cannot be subclassedand it prevents other programmers from 	
+		subclassing a secure class to invoke insecure methods. A finalmethod can’t be overridden. A final variable can’t change from its initialized value.
+		finalize() :- finalize() method is used just before an object is destroyed and can be called just prior togarbage collection.
+		finally :- finally, a key word used in exception handling, creates a block of code that will be executedafter a try/catch block has completed and before the code following the try/catch block. The finally block will execute whether or not an exception is thrown. For example, if a method opens a file uponexit, then you will not want the code that closes the file to be bypassed by the exception-handlingmechanism. This finally keyword is designed to address this contingency.
+		
+28.What is the relationship between a method’s throws clause and the exceptions that can bethrown during the method’s execution?
+ Ans. -> A method’s throws clause must declare any checked exceptions that are not caught within the body ofthe method. These exceptions must be handled by the caller.
+ 
+29. How many ways can an argument be passed to a subroutine?
+Ans. -> An argument can be passed in two ways. They are Pass by Value and Passing by Reference.
+		Passing by value :- This method copies the value of an argument into the formal parameter of thesubroutine.
+		Passing by reference :- In this method, a reference to an argument (not the value of the argument) is passed to the parameter. 
+
+30.What is the difference between a static and a non-static inner class?
+Ans. -> A non-static inner class may have object instances that are associated with instances of the class's outerclass. A static inner class does not have any object instances.
+
+31.When can an object reference be cast to an interface reference?
+Ans. -> An object reference be cast to an interface reference when the object implements the referencedinterface.
+
+32.How many methods in the Externalizable interface?
+Ans. -> There are two methods in the Externalizable interface. You have to implement these two methods inorder to make your class externalizable. These two methods arereadExternal() and writeExternal()
+
+33. What are synchronized methods and synchronized statements?
+Ans. ->  Synchronized methods are methods that are used to control access to an object. A thread only executesa synchronized method after it has acquired the lock for the method’s object or class. Synchronizedstatements are similar to synchronized methods. A synchronized statement can only be executed after athread has acquired the lock for the object or class referenced in the synchronized statement.
+
+34. Can an unreachable object become reachable again?
+Ans. -> An unreachable object may become reachable again. This can happen when the object’s finalize()method is invoked and the object performs an operation which causes it to become accessible toreachable objects.
+
+35. How do I serialize an object to a file?
+Ans. ->  The class whose instances are to be serialized should implement an interface Serializable. Then you pass the instance to the ObjectOutputStream which is connected to a Fileoutputstream. This will savethe object to afile. 
+
+36. Which methods of Serializable interface should I implement?
+Ans. -> The serializable interface is an empty interface, it does not contain any methods. So we do notimplement any methods
+
+37. How can I customize the seralization process? i.e. how can one have a control over theserialization process?
+Ans. ->  Yes it is possible to have control over serialization process. The class should implement Externalizableinterface. This interface contains two methods namely read External and writeExternal. You shouldimplement these methods and write the logic for customizing the serialization process.
+
+38. What is the common usage of serialization?
+Ans. ->  Whenever an object is to be sent over the network, objects need to be serialized. Moreover if the stateof an object is to be saved, objects need to be serilazed.
+
+39. When you serialize an object, what happens to the object references included in the object?
+Ans. ->  The serialization mechanism generates an object graph for serialization. Thus it determines whether theincluded object references are serializable or not. This is a recursive process. Thus when an object isserialized, all the included objects are also serialized alongwith the original obect.
+
+40. What one should take care of while serializing the object?
+Ans. -> One should make sure that all the included objects are also serializable. If any of the objects is notserializable then it throws a NotSerializableException.
+
+41. What happens to the static fields of a class during serialization?
+Ans. -> Serialization ignores static fields, because they are not part of any particular state.
+
+42.Does importing a package imports the subpackages as well?
+Ans. -> No you will have to import the subpackages explicitly.For eg: Importing com.MyTest.* will import classes in the package MyTest only. It will not import anyclass in any of it’s subpackage.
+
+43.If I write return at the end of the try block, will the finally block still execute?
+Ans. -> Yes even if you write return as the last statement in the try block and no excepti on occurs, the finally block will execute. The finally block will execute and then the control return.
+
+44.Is it necessary that each try block must be followed by a catch block?
+Ans. ->  It is not necessary that each try block must be followed by a catch block. It should be followed byeither a catch block OR a finally block. And whatever exceptions are likely to be thrown should bedeclared in the throws clause of the method.
+
+45.What are the different ways to handle exceptions?
+Ans. -> There are two ways to handle exceptions,
+	1. By using try-catach : By wrapping the desired code in a try block followed by a catch block tocatch the exceptions. and
+	2. By using throws clause: List the desired exceptions in the throws clause of the method and let thecaller of the method handle those exceptions
+
+46.What are runtime exceptions?
+Ans. ->  Runtime exceptions are those exceptions that are thrown at runtime because of either wrong input dataor because of wrong business logic etc. These are not checked by the compiler at compile time.
+
+47.What are checked exceptions?
+Ans. ->  Checked exception are those which the Java compiler forces you to catch for smooth execution of program at runtime. e.g. IOException are checked Exceptions.
+
+48.Does Java provide any construct to find out the size of an object?
+Ans. ->  No there is not sizeof operator in Java. So there is not direct way to determine the si ze of an objectdirectly in Java.
+
+49.What is Externalizable interface?
+Ans. -> Externalizable is an interface which contains two methods readExternal and writeExternal. Thesemethods give you a control over the serialization mechanism. Thus if your class implements thisinterface, you can customize the serialization process by implementing these methods
+
+50.What is the purpose of garbage collection in Java, and when is it used?
+Ans. -> The purpose of garbage collection is to identify and discard objects that are no longer needed by a program so that their resources can be reclaimed and reused. A Java object is subject to garbagecollection when it becomes unreachable to the program in which it is used.
+
+51.What is the difference between a constructor and a method?
+ Ans. -> A constructor is a member function of a class that is used to create objects of that class. It has the samename as the class itself, has no return type, and is invoked using the new operator.A method is an ordinary member function of a class. It has its own name, a return type (which may bevoid), and is invoked using the dot operator.
+ 
+52.What if the main method is declared as private?
+Ans. -> The program compiles properly but at runtime it will give “Main method not public.” message.
+
+53.What is an Iterator interface?
+Ans. -> The Iterator interface is used to step through the elements of a Collection.
+
+54.Describe the Garbage Collection process in Java ?
+Ans. -> The JVM spec mandates automatic garbage collection outside of the programmers control. TheSystem.gc() or Runtime.getRuntime().gc() is merely a suggestion to the JVM to run the GC process but is NOT guaranteed.
+
+55.What is constructor chaining and how is it achieved in Java ?
+Ans. -> A child object constructor always first needs to construct its parent (which in turn calls its parentconstructor.). In Java it is done via an implicit call to the no-args constructor as the first statement
+
+56.What methods can be overridden in Java?
+Ans. -> All Java methods can be overwritten in subclasses except those that are declared final, static, and private.
+
+57.What is daemon thread and which method is used to create the daemon thread?
+Ans. -> Daemon thread is a low priority thread which runs intermittently in the back ground for providing thesupport to Non-Daemon . setDaemon method is used to create a daemon thread.
+
+58.What are Transient and Volatile Modifiers?
+Ans. -> Transient : The transient modifier applies to variables only and it is not stored as part of its object’sPersistent state. Transient variables are not serialized.
+		Volatile : Volatile modifier applies to variables only and it tells the compiler that the variable modified by volatile can be changed unexpectedly by other parts of the program. JVM maintains a separate copyof the volatile variable for every thread.
+		
+59.What is the difference between instanceof and isInstance?
+Ans. -> instanceof is used to check to see if an object can be cast into a specified type without throwing aclasscastexception. isInstance() determines if the specified Object is assignment-compatible with theobject represented by this Class. This method is the dynamic equivalent of the Java languageinstanceof operator. The method returns true if the specified Object argument is non-null and can becast to the reference type represented by this Class object without raising a ClassCastException. Itreturns false otherwise.
+
+60.What does the “abstract” keyword mean in front of a method? A class?
+Ans. -> Abstract keyword declares either a method or a class. If a method has a abstract keyword in front ofit,it is called abstract method.Abstract method has no body.It has only arguments and returntype.Abstract methods act as placeholder methods that are implemented in the subclasses.Abstract classes can’t be instantiated.If a class is declared as abstract,no objects of that class can becreated.If a class contains any abstract method it must be declared as abstract
+
+
+61.What is JDBC? Describe the steps needed to execute a SQL query using JDBC.
+Ans. -> The JDBC is a pure Java API used to execute SQL statements. It provides a set of classes andinterfaces that can be used by developers to write database applications.The steps needed to execute a SQL query using JDBC:1. Open a connection to the database.2. Execute a SQL statement.3. Process th results.4. Close the connection to the database.
+
+62.What are native methods? How do you use them?
+Ans. -> Native methods are methods whose implementation is provided in another programming language suchas C. The main objective of native methods are to improve the performance of the system.
+
+63.How can you force all derived classes to implement a method present in the base class?
+Ans. -> Creating and implementing an interface would be the best way for this situation. Just create aninterface with empty methods which forces a programmer to implement all the methods present underit. Another way of achieving this task is to declare a class as abstract with all its methods abstract.
+
+64.What’s the difference between == and equals method?
+Ans. -> The equals method can be considered to perform a deep comparison of the value of an object, whereasthe == operator performs a shallow comparison.The equals() method compares the characters inside a string object. == operator compares two objectreferences to check whether they refer to the same instances or not.
+
+65. How can you achieve Multiple Inheritance in Java?
+Ans. -> Java’s interface mechanism can be used to implement multiple inheritance, with one importantdifference from c++ way of doing MI: the inherited interfaces must be abstract. This obviates the needto choose between different implementations, as with interfaces there are no implementations.
+
+66.What are the two basic ways in which classes that can be run as threads may be defined?
+Ans. -> A thread class may be declared as a subclass of Thread, or it may implement the Runnable interface.
+
+67.How are this() and super() used with constructors?
+ this() is used to invoke a constructor of the same class. super() is used to invoke a superclassconstructor.
+ 
+68.What restrictions are placed on the values of each case of a switch statement?
+Ans. -> the switch argument is any type of variable is allowed which can be implicitly promoted to int type.The case labels must be compile time constants.
+
+69.What are order of precedence and associativity, and how are they used?
+Ans. -> Order of precedence determines the order in which operators are evaluated in expressions. Associatitydetermines whether an expression is evaluated left-to-right or right-to-left
+
+70.What is a StringTokenizer ?
+Ans. -> String Tokenizer provide parsing process in which it identifies the delimiters provided by the user , bydefault delimiters are spaces, tab, newline etc. and separates them from the tokens. Tokens are thosewhich are separated bydelimiters. 
+
+71.What are nested classes ?
+Ans. -> There are two types : static and non-static.static class means the members in its enclosing class (class within class) can be accessed by creating anobject and cannot be accessed directly without creating the object.non-static class means inner class and can be accessed directly with the object created for the outerclass no need to create again an object like static class.
+
+72.What is the difference between abstract class and interface?
+ Ans. -> a) All the methods declared inside an interface are abstract whereas abstract class may or may notcontain abstract methods. 
+		b) In abstract class, key word abstract must be used for the methods whereas interface we need not usethat keyword for the methods.
+		c)Abstract class must have subclasses whereas interface can’t have subclasses
+		
+73.Under what conditions is an object’s finalize() method invoked by the garbage collector?
+Ans. -> The garbage collector invokes an object’s finalize() method just before destroying any method.
+
+74.What are the steps involved for making a connection with a database or how do you connectto a database?
+Ans. ->  	a) Loading the driver : To load the driver, Class. forName() method is used. Class. forName(”sun. jdbc. odbc. JdbcOdbcDriver”); When the driver is loaded, it registers itself with the java. sql.DriverManager class as an available database driver.
+		b) Making a connection with database : To open a connection to a given database, DriverManager.getConnection() method is used. Connection con = DriverManager. getConnection(”jdbc:odbc:somedb”, “user”, “password”);
+		c) Executing SQL statements : To execute a SQL query, java. sql. statements class is used.createStatement() method of Connection to obtain a new Statement object. Statement stmt = con.createStatement(); A query that returns data can be executed using the executeQuery() method ofStatement. This method executes the statement and returns a java. sql. ResultSet that encapsulates theretrieved data: ResultSet rs = stmt. executeQuery(”SELECT * FROM some table”);
+		d) Process the results : ResultSet returns one row at a time. Next() method of ResultSet object can becalled to move to the next row. The getString() and getObject() methods are used for retrieving columnvalues: while(rs. next()) { String event = rs. getString(”event”); Object count = (Integer) rs.getObject(”count”).
+		
+75.What is serialization and deserialization?
+Ans. -> Serialization is the process of writing the state of an object to a byte stream. Deserialization is the process of restoring theseobjects. 
+
+76.What is the difference between JDBC and ODBC?
+Ans. -> 	a) OBDC is for Microsoft and JDBC is for Java applications. 
+		b) ODBC can’t be directly used with Java because it uses a C interface.
+		c) ODBC makes use of pointers which have been removed totally from Java.
+		d) ODBC mixes simple and advanced features together and has complex options for simple queries.But JDBC is designed to keep things simple while allowing advanced capabilities when required.
+		e) ODBC requires manual installation of the ODBC driver manager and driver on all client machines.JDBC drivers are written in Java and JDBC code is automatically installable, secure, and por table onall platforms.
+		f) JDBC API is a natural Java interface and is built on ODBC. JDBC retains some of the basic featuresof ODBC.
+		
+77.What is the difference between Reader/Writer and InputStream/Output Stream?
+Ans. -> The Reader/Writer class is character-oriented and the InputStream/OutputStream class is byte-oriented.
+
+78.What is a stream and what are the types of Streams and classes of the Streams?
+Ans. -> A Stream is an abstraction that either produces or consumes information. 
+Ans. -> There are two types ofStreams and they are:
+		Byte Streams : Provide a convenient means for handling input and output of bytes.
+		Character Streams : Provide a convenient means for handling input & output of characters.Byte Streams classes: Are defined by using two abstract classes, namely InputStream and OutputStream
+		.Character Streams classes: Are defined by using two abstract classes, namely Reader  and Writer 
+
+79.What are Vector, Hashtable, LinkedList and Enumeration?
+Ans. ->  Vector : The Vector class provides the capability to implement a growable array of objects.
+		Hashtable : The Hashtable class implements a Hashtable data structure. A Hashtable indexes andstores objects in a dictionary using hash codes as the object’s keys. Hash codes are integer values thatidentify objects.
+		LinkedList: Removing or inserting elements in the middle of an array can be done using LinkedList.A LinkedList stores each object in a separate link whereas an array stores object references inconsecutive locations.
+		Enumeration : An object that implements the Enumeration interface generates a series of elements,one at a time. It has two methods, namely hasMoreElements() and nextElement(). HasMoreElemnts()tests if this enumeration has more elements and nextElement method returns successive elements of theseries
+		
+80.What is source and listener?
+ Ans. ->  Source : A source is an object that generates an event. This occurs when the internal state of that objectchanges in some way.
+		Listener : A listener is an object that is notified when an event occurs. It has two major requirements.First, it must have been registered with one or more sources to receive notifications about specifictypes of events. Second, it must implement methods to receive and process these notifications.
+
+81.What is the lifecycle of an applet?
+ Ans. -> init()method - Can be called when an applet is first loaded
+		start() method - Can be called each time an applet is started.
+		paint() method - Can be called when the applet is minimized or maximized.
+		stop() method - Can be used when the browser moves off the applet’s page.
+	destroy() method - Can be called when the browser is finished with the applet.
+	
+82.Can a for statement loop indefinitely?
+Ans. -> Yes, a for statement can loop indefinitely. For example, consider the following:for(;;) ;
+
+83.What is the immediate superclass of the Applet class?
+Ans. -> Panel
+
+84.Can an object’s finalize() method be invoked while it is reachable?
+Ans. -> An object’s finalize() method cannot be invoked by the garbage collector while the object is stillreachable. However, an object’s finalize() method may be invoked by other objects.
+
+85.What is the difference between the >> and >>> operators?
+Ans. -> The >> operator carries the sign bit when shifting right. The >>> zero-fills bits that have been shiftedout.
+
+86.What modifiers may be used with an inner class that is a member of an outer class?
+Ans. -> A (non-local) inner class may be declared as public, protected, private, static, final, or abstract.
+
+87.Which characters may be used as the second character of an identifier, but not as the firstcharacter of an identifier?
+Ans. -> The digits 0 through 9 may not be used as the first character of an identifier but they may beused afterthe first character of an identifier
+
+88.What is synchronization and why is it important?
+Ans. -> With respect to multithreading, synchronization is the capability to control the access of multiplethreads to shared resources. Without synchronization, it is possible for one thread to modify a sharedobject while another thread is in the process of using or updating that object’s value. This often leads tosignificant errors.
+
+89.What is connection pooling?
+Ans. -> With servlets, opening a database connection is a major bottleneck because we are creating and tearingdown a new connection for every page request and the time taken to create connection will be more.Creating a connection pool is an ideal approach for a complicated servlet. With a connection pool, wecan duplicate only the resources we need to duplicate rather than the entire servlet. A connection poolcan also intelligently manage the size of the pool and make sure each connection remains valid. Anumber of connection pool packages are currently available. Some like DbConnectionBroker are freelyavailable from Java Exchange Works by creating an object that dispenses connections and connectionIds on request. The ConnectionPool class maintains a Hastable, using Connection objects as keys andBoolean values as stored values. The Boolean value indicates whether a connection is in use or not. A program calls getConnection() method of the ConnectionPool for getting Connection object it can use;it calls returnConnection() to give the connection back to the pool.
+
+90.What are the types of statements in JDBC?
+Ans. -> Statement : to be used createStatement() method for executing single SQL statement
+		PreparedStatement - To be used preparedStatement() method for executing same SQL statementover and over.
+	CallableStatement - To be used prepareCall() method for multiple SQL statements over and over.
+
+91.What is daemon thread and which method is used to create the daemon thread?
+Ans. -> Daemon thread is a low priority thread which runs intermittently in the back ground doing the garbagecollection operation for the java runtime system. setDaemon method is used to create a daemon thread.
+
+92. What is the class and interface in java to create thread and which is the most advantageousmethod?
+Ans. -> Thread class and Runnable interface can be used to create threads and using Runnable interface is themost advantageous method to create threads because we need not extend thread class here.
+
+93. What are the methods for inter-thread communication and what is the class in which thesemethods are defined?
+Ans. -> wait (), notify () and notifyAll() methods can be used for inter-thread communication and thesemethods are in Object class.
+		wait(): When a thread executes a call to wait() method, it surrenders the object lock and enters into awaiting state.
+		notify() or notifyAll() : To remove a thread from the waiting state, some other thread must make a callto notify() or notifyAll() method on the same object.
+		
+94.What is multithreading?
+Ans. -> Multithreading is the mechanism in which more than one thread run independent of each other withinthe process.
+
+95. What is the difference between process and thread?
+Ans. -> Process is a program in execution whereas thread is a separate path of execution in a program.What is the difference between Array and vector?Array is a set of related data type and static whereas vector is a growable array of objects and dynamic.
+
+96. What is the difference between String and String Buffer?
+Ans. -> String objects are constants and immutable whereas StringBuffer objects are not. b) String class supports constant strings whereas StringBuffer class supports growable and modifiablestrings.
+
+97. What are inner class and anonymous class?
+Ans. -> Inner class : classes defined in other classes, including those defined in methods are called innerclasses. An inner class can have any accessibility including private. 
+		Anonymous class :Anoymousclass is a class defined inside a method without a name and is instantiated and declared in the same place and cannot have explicit constructors.
+		
+98 . Can you have an inner class inside a method and what variables can you access?
+Ans. -> Yes, we can have an inner class inside a method and final variables can be accessed.
+
+99. What is a cloneable interface and how many methods does it contain?
+Ans. -> It is not having any method because it is a TAGGED or MARKER interface.
+
+100. How many times may an object’s finalize() method be invoked by the garbage collector?
+Ans. ->  An object’s finalize() method may only be invoked once by the garbage collector.
+
+101. What modifiers may be used with top-level class?
+Ans. ->   public, abstract and final,strictfp can be used for top-level class.
+
+102. What is the difference between the Boolean & operator and the && operator?
+Ans. -> If an expression involving the Boolean & operator is evaluated, both operands are evaluated. Then the& operator is applied to the operand. When an expression involving the && operator is evaluated, thefirst operand is evaluated. If the first operand returns a value of true then the second operand isevaluated. The && operator is then applied to the first and second operands. If the first operandevaluates to false, the evaluation of the second operand is skipped.
+
+
+==========================================================================================
+Java Class declaration interview Questions
+1) What is present version of java and initial version of java?
+Ans. -> The current version of Java is Java 20, released in March 2023.
+
+2) How many modifiers in java and how many keywords in java?
+Ans. -> 11 modifiers And 53 keywords.
+
+3) What is initial name of java and present name of java?
+Ans. -> Java was initially called Oak, after the oak tree that stood outside James Gosling's office. The project was later renamed Green and was finally renamed Java, from Java coffee, a type of coffee from Indonesia.
+The name was changed from Oak to Java because the name Oak was already trademarked by another company. The name Java was chosen because it was a type of coffee that the team enjoyed drinking. The name also had a nice ring to it and was easy to remember.
+
+4) Can we have multiple public classes in single source file?
+Ans. -> No, a Java source file can only have one public class.
+
+5) Can we create multiple objects for single class?
+Ans. -> Yes, you can create multiple objects for a single class
+
+6) What do you mean by token and literal?
+Ans. -> In programming, a token is the smallest unit of meaning in a program. Tokens can be keywords, identifiers, operators, literals, and punctuation marks.
+A literal is a fixed value that is represented in the source code of a program. Literals can be numbers, strings, characters, or Boolean values.
+
+7) What do you mean by identifier?
+Ans. -> 
+
+8) Is it possible to declare multiple public classes in single source file?
+Ans. -> No it is not possibe.
+
+9) What is the difference between editor and IDE(integrated development environment)
+Ans. -> An editor is a programming tool that allows users to write and edit code, while an Integrated Development Environment (IDE) is a collection of tools that simplify the coding process. 
+
+10) Write the examples of editor and IDE?
+Ans. -> 
+
+11) Define a class?
+Ans. -> 
+
+
+12) In java program starts from which method and who is calling that method?
+Ans. -> Every Java program starts from the main method. It is the entry point of a Java program. The main method is a static method, which means that it does not need an object to be called. It is also a void method, which means that it does not return any value.
+The main method is called by the Java Virtual Machine (JVM) 
+
+13) What are the commands required for compilation and execution?
+Ans. -> To compile a Java program, use the javac command. For example, to compile a program called MyProgram.java, you would use the command javac MyProgram.java.
+To execute a Java program, use the java command. For example, to execute the program MyProgram, you would use the command java MyProgram.
+
+14) Can we compile multiple source files at a time and is it possible to execute multiple .classes at a time?
+Ans. -> Yes, it is possible to compile multiple source files at a time and execute multiple .classes at once.
+To compile multiple source files, you can use the javac command. For example, to compile the source files Owner.java, Car.java, and History.java, you would run the following command:
+
+15) The compiler understandable file format and JVM understandable file format?
+Ans. -> The compiler understandable file format is the source code file, which is a human-readable file that contains the instructions for the program. The JVM understandable file format is the bytecode file, which is a machine-readable file that contains the instructions for the program in a format that can be understood by the JVM.
+
+16) What is the difference between JRE and JDK?
+Ans. -> 
+
+17) What is the difference between path and class path?
+Ans. -> 
+
+18) What is the purpose of environmental variables setup?
+Ans. -> 
+
+19) What do you mean by open source software?
+Ans. -> Open source software (OSS) is software that's released with a license that allows users to legally access and modify its source code. This means that users can view the code that makes up the software and change it in any way they want. They can also use the source code to create new software
+
+20) What are operations done at compilation time and execution time?
+Ans. -> 
+
+21) What is the purpose of JVM?
+Ans. -> 
+
+22) JVM platform dependent or independent?
+Ans. -> The Java Virtual Machine (JVM) is platform dependent, meaning it requires a hardware or software platform to perform. A separate JVM is available for each operating system (OS) and is capable of reading the .class file or byte code. The JVM acts as an interface or middleware between the OS and the Java language, providing the environment to execute the Java file (.class file)
+
+23) In java program execution starts from?
+Ans. -> The execution of a Java program starts from the main method. The main method is a special method that is required in every Java program. It is the entry point for the Java Virtual Machine (JVM) to start executing the program.
+The main method must be declared as public static void main(String[] args). The public keyword means that the method is accessible from anywhere in the program. The static keyword means that the method belongs to the class itself, not to any particular object of the class. The void keyword means that the method does not return any value. The String[] args parameter is an array of strings that can be passed to the program from the command line.
+When the JVM starts executing a Java program, it looks for the main method in the class that is specified on the command line. If the main method is not found, the JVM will throw an error and the program will not start.
+Once the main method is found, the JVM will start executing the code in the method. The main method can contain code to execute or call other methods. The main method can be placed in any class that is part of a program.
+
+24) How many types of commands in java and what is the purpose of commands?
+Ans. -> javac:
+The javac command is used to compile Java source code into bytecode. Bytecode is a low-level language that can be executed by the Java Virtual Machine (JVM).
+java:
+The java command is used to execute Java bytecode. The java command takes the name of a class file as an argument and executes the main() method in that class.
+javadoc:
+The javadoc command is used to generate documentation for Java classes and interfaces. The javadoc command takes the name of a class or interface file as an argument and generates an HTML file containing documentation for that class or interface.
+jar:
+The jar command is used to create and manage JAR files. JAR files are archives that contain Java classes, resources, and other files.
+jdb:
+The jdb command is a debugger that can be used to step through Java code, set breakpoints, and inspect variables.
+
+25) Is it possible to provide multiple spaces in between two tokens?
+Ans. -> 
+
+26) Class contains how many elements based on Ratan sir class notes?
+Ans. -> 
+
+27) Source file contains how many elements?
+Ans. -> Package statement: This statement declares the package to which the source file belongs.
+Import statements: These statements import the classes and interfaces that are used in the source file.
+Class declaration: This declaration defines a class.
+Method declarations: These declarations define the methods of the class.
+
+28) What are dependent languages and technologies in market on java?
+Ans. -> 
+
+29) Who is generating .class file and .class files generation is based on what?
+Ans. -> 
+
+30) What is .class file contains?
+Ans. -> 
+
+31) What is the purpose of data types and how many data types are present in java?
+Ans. -> 
+
+32) Who is assigning default values to variables?
+Ans. -> The compiler assigns default values to variables that are declared but not initialized. For example, the default value for boolean is false, and for float and double it's 0.0.
+
+33) What is the default value of int, char, boolean, double?
+Ans. -> 
+
+34) Is null is a keyword or not?
+Ans. -> No, null is not a keyword in Java. It is a reserved word and literal that is similar to true and false. Because it is a value, it cannot be used as an identifier in programs.
+
+35) What do you mean by main class?
+Ans. -> In Java, the main class is the class that contains the main() method. The main() method is the entry point for a Java program and is automatically executed when the program is called. The main class can have any name, but it's usually called "Main".
+
+36) Is it possible to declare multiple classes with main method?
+Ans. -> Yes, you can declare multiple classes with main methods in a Java program.
+
+37) Can I have multiple main methods in single class?
+Ans. -> No, Java does not allow more than one main method in a class
+
+38) What is the default package in java?
+Ans. -> 
+
+39) Can I import same class twice yes-what happened no -why in java?
+Ans. -> 
+
+40) Do I need to import java.lang package ?yes --->why no--->why?
+Ans. -> No, you don't need to import the java.lang package. It is imported by default into all Java programs. This means that you can use the classes and interfaces in this package without explicitly importing them.
+
+41) Is empty java source file is valid or not?
+Ans. -> Yes, an empty Java source file is valid. It can be compiled successfully, but it will not produce a Java bytecode (*.class file).
+
+42) Is it java file contains more than one class?
+Ans. -> Yes
+
+43) What is the purpose of variables in java?
+Ans. -> Variables in Java are used to store data values. They are declared with a data type and a name, and can be assigned a value. Variables can be used in methods, classes, and interfaces.
+
+44) How many types of variables in java and what are the variables?
+Ans. -> Local variables
+are declared inside a method, and their scope is limited to the method in which they are declared. Local variables are created when the method is called and destroyed when the method returns.
+Instance variables
+are declared outside of any method, but within a class. They are also known as class fields. Instance variables are created when an object of the class is created and destroyed when the object is destroyed.
+Static variables
+are declared outside of any method, but within a class, with the static keyword. Static variables are also known as class variables. They are shared by all objects of the class. Static variables are created when the class is loaded and destroyed when the class is unloaded.
+
+45) What is the life time of static variables and where these variables are stored?
+Ans. -> 
+
+46) What is the life time of instance variables and where these variables are stored?
+Ans. -> 
+
+47) What is the life time of local variables and where these variables are stored?
+Ans. -> 
+
+48) For the static members when memory is allocated?
+Ans. -> 
+
+49) Where we declare local variables & instance variable & static variables
+Ans. -> Local variables are declared inside a method, constructor, or block and have limited scope. They are created when the method, constructor or block is entered and the variable will be destroyed once it exits the method, constructor, or block.
+Instance variables are declared in a class, but outside a method, constructor or any block. When a space is allocated for an object in the heap, a slot for each instance variable value is created.
+Static variables are declared using the static keyword and belong to the class itself, not to any instance of the class. They are shared among all instances of the class.
+
+50) For the instance members when memory is allocated?
+Ans. -> In Java, memory is allocated for instance variables when an object is created in the heap memory. 
+
+51) For the local variables when memory is allocated?
+Ans. -> When a function is called, memory is allocated on the stack for its local variables.
+
+52) What is the difference between instance variables and static variables?
+Ans. -> Instance variables are variables that are declared within a class but outside any method. They are used to store unique data for each instance of the class. Unlike static variables, which are shared among all instances, instance variables have distinct values specific to each individual object.
+Static variables, also known as class variables, are declared with the static keyword in a class, but outside a method, constructor or a block. There would only be one copy of each class variable per class, regardless of how many objects are created from it.
+
+53) Can we declare instance variables inside the instance methods and static variables inside the static method?
+Ans. -> 
+
+54) If the local variables of methods and class instance variables having same names at that situation how we are represent local variables and how are representing instance variable?
+Ans. -> When a local variable and an instance variable have the same name in a method, the local variable shadows the instance variable and the method's body will refer to the local variable instead of the instance variable. The method's body can use the keyword this to refer to the shadowed instance variable explicitly
+
+55) What do you mean by method signature?
+Ans. -> A method signature is a combination of a method's name and its parameter list. It's part of a method declaration, and is used by the Java compiler to differentiate between methods with the same name but different parameters. For example, in the method public void myMethod(int a, String b), the method signature is myMethod(int, String). 
+
+
+56) What do you mean by method implementation?
+Ans. -> 
+
+57) How many types of methods in java and how many types of areas in java?
+Ans. -> Predefined methods:
+These are methods that are already defined in the Java class libraries. Examples include math functions like sqrt(), log(), min(), max(), avg(), sin(), cos(), tan(), round(), floor(), and abs().
+User-defined methods:
+These are methods that are created by the programmer to perform a specific task or functionality based on their requirements.
+
+58) What is the purpose of template method?
+Ans. -> 
+
+59) Can we have inner methods in java?
+Ans. -> No, we cannot have inner methods in Java. Inner methods are methods that are defined inside another method. Java does not support this feature because it can make the code difficult to read and understand.
+
+60) One method is able to call how many methods at time?
+Ans. -> A method can call any number of methods at a time. The number of methods that a method can call is not limited by the language, but by the design of the program.
+
+61) For java methods return type is mandatory or optional?
+Ans. -> In Java, the return type of a method is mandatory. This means that every method must have a return type, even if it is void. The return type of a method specifies the data type of the value that the method returns. If a method does not return a value, then the return type must be void.
+
+62) Who will create and destroy stack memory in java?
+Ans. -> The Java Virtual Machine (JVM) creates and destroys stack memory. The stack is a region of memory that is used to store local variables and method activation records. It is a last-in-first-out (LIFO) data structure, which means that the last item that is pushed onto the stack is the first item that is popped off.
+
+63) When we will get stackoverFlowError?
+Ans. -> If the JVM runs out of space for the new stack frames that must be created during this operation, a StackOverflowError will be thrown. The two most common causes of stack overflow are deep or infinite recursion and cyclic relationships.
+
+64) Is it possible to declare return statement any statement of the method or any specific rule is there?
+Ans. -> In Java, a return statement is used to return a value from a method's body. A method's return type is declared in its method declaration, and the return statement must match the data type of the value returned. For example, a method declared to return an integer cannot return an object.
+
+65) When we will get “variable might not have been initialized” error message?
+Ans. -> The error "variable might not have been initialized" occurs when a variable is declared without being initialized. This error only occurs for local variables in Java
+
+66) What are the coding conventions of classes and interfaces?
+Ans. -> 
+
+67) What are the coding conventions of methods and variables?
+Ans. -> 
+
+68) What is the default package in java programming?
+Ans. -> The default package in Java programming is a package that does not have a name. It is also known as the unnamed package. Classes in the default package can only be accessed by other classes in the same package.
+
+69) Platform dependent vs platform independent?
+Ans. -> Platform dependent software can only run on one operating system or hardware platform, while platform independent software can run on multiple operating systems or hardware platforms.
+
+70) Is java a object oriented programming language?
+Ans. -> Yes, Java is an object-oriented programming language. It follows all the principles of OOPs such as Encapsulation, Abstraction, Inheritance, and Polymorphism.
+Encapsulation is the mechanism of binding data and code together into a single unit. In Java, we can achieve encapsulation by using classes.
+Abstraction is the process of hiding the implementation details and showing only the functionality to the users. In Java, we can achieve abstraction by using abstract classes and interfaces.
+Inheritance is the mechanism of creating a new class from an existing class. In Java, we can achieve inheritance by using the extends keyword.
+Polymorphism is the ability of an object to take on many forms. In Java, we can achieve polymorphism by using method overloading and method overriding.
+Java is a powerful and versatile programming language that can be used to develop a wide variety of applications. It is a popular choice for both beginners and experienced programmers
+
+71) By using which keyword we are creating object in java?
+Ans. -> We are creating object in java by using new keyword
+
+72) Object creation syntax contains how many parts?
+Ans. -> Declaration: Associates a variable name with an object type
+Instantiation: Creates the object using the new keyword
+Initialization: Initializes the new object by calling a constructor after the new operator 
+
+
+73) How many types of constructors in java?
+Ans. -> Default Constructor: A constructor that has no parameters. Default constructors are invisible.
+Parameterized Constructor: A constructor that has parameters. This constructor is used to initialize fields of the class with your own values.
+Copy Constructor: A constructor that is passed with another object. This object copies the data available from the passed object to the newly created object.
+
+74) How one constructor is calling another constructor? One constructor is able to call how many constructors at time?
+Ans. -> In Java, a constructor can only call one other constructor at a time. It can either call a constructor in the same class using this() or a constructor in the superclass using super(), but not both. 
+
+75) What do you mean by instantiation?
+Ans. -> 
+
+76) What is the difference between object instantiation and object initialization?
+Ans. -> 
+
+77) How many ways to create a object in java?
+Ans. -> Using new keyword.
+Using new instance.
+Using clone() method.
+Using deserialization.
+Using newInstance() method of Constructor class.
+
+78) What is the purpose of this keyword?
+Ans. -> The "this" keyword in Java is used to refer to the current object. It is a reference to the object that is executing the current piece of code. It is used to avoid confusion between class attributes and parameters with the same name. It can also be used to call another constructor in the same class.
+
+79) Is it possible to use this keyword inside static area?
+Ans. -> No, it is not possible to use the this keyword inside a static area. The this keyword refers to the current instance of the class, but static methods are not associated with any particular instance. As a result, the this keyword has no meaning in a static context and will cause a compile-time error.
+
+80) What is the need of converting local variables to instance variables?
+Ans. -> In object-oriented programming, local variables are only accessible within the block of code they are declared in, while instance variables are accessible to all members of a class. Local variables are typically used for temporary storage of data, while instance variables are used to store data that is unique to each instance of a class.
+
+81) Is it possible to convert instance variables to local variables yeshow no-why?
+Ans. -> 
+
+82) When we will get compilation error like “call to this must be first statement in constructor”?
+Ans. -> 
+
+83) When we will get compilation error line “cannot find symbol”?
+Ans. -> 
+
+84) What do u mean by operator overloading, is it java supporting operator overloading concept?
+Ans. -> 
+
+85) What is the purpose of scanner class and it is present in which package and introduced in which
+version?
+Ans. -> 
+
+86) What do you mean by constructor?
+Ans. -> 
+
+87) Who is generating default constructor and at what time?
+Ans. -> 
+
+88) What is the difference between named object and nameless object and write the syntax ?
+Ans. -> 
+
+89) What is object and what is relationship between class and Object?
+Ans. -> 
+
+90) Is it possible to execute default constructor and user defined constructor time?
+Ans. -> 
+
+91) If we are creating object by using new operator at that situation for every object creation how
+many constructors are executed?
+Ans. -> 
+
+92) What do you mean by object delegation?
+Ans. -> 
+
+93) What is the purpose of instance blocks when it will execute?
+Ans. -> 
+
+94) Inside class it is possible to declare how many instance blocks and what is syntax?
+Ans. -> 
+
+95) What is execution flow of method VS constructor Vs instance blocks Vs static blocks?
+Ans. -> 
+
+96) When instance blocks and static blocks are executed?
+Ans. -> 
+
+97) What are the new features of java1.5 version VS java1.6 VS java 1.7 VS java 8?
+Ans. -> 
+
+Flow control statement
+
+1) How many flow control statements in java?
+Ans. -> Decision-making statements:
+These statements allow the program to execute different code paths based on certain conditions. The most common decision-making statements are the if, else if, and switch statements.
+Looping statements:
+These statements allow the program to execute a block of code repeatedly until a certain condition is met. The most common looping statements are the for, while, and do-while statements.
+Jump statements:
+These statements allow the program to transfer control to a different part of the code. The most common jump statements are the break, continue, and return statements.
+
+2) What is the purpose of conditional statements?
+Ans. -> Conditional statements, also known as "if-then statements", help mathematicians and computer programmers make decisions based on the state of a situation. They describe the relationship between two events based on certain conditions, stating a specific situation and explaining what can happen when that condition is fulfilled. 
+
+
+3) What is the purpose of looping statements?
+Ans. -> Looping statements, or loops, are a fundamental part of programming languages that allow a block of code to be executed repeatedly. Loops are useful when you need to use a piece of code multiple times without having to write the same line of code repeatedly. They can also save time and reduce errors
+
+4) What are the allowed argument of switch?
+Ans. -> byte and Byte
+short and Short
+int and Integer
+char and Character
+enum
+String (since Java 7)
+
+5) When we will get compilation error like “possible loss of precision”?
+Ans. -> In Java, a "possible loss of precision" error can occur when you try to assign a value of higher precision to a variable of lower precision without an explicit type cast. 
+
+6) Inside the switch case vs. default vs. Break is optional or mandatory?
+Ans. -> In Java and C++, the break, default, and switch case statements are optional:
+Break: If omitted, execution continues to the next case.
+Default: Can appear anywhere in the switch block, but if it's not at the end, a break statement must follow to prevent the next case statement from executing.
+Switch case: Can have any number of cases, but no duplicate case values are allowed. 
+
+7) Switch is allowed String argument or not?
+Ans. -> Yes, the switch statement allows String arguments in Java SE 7 and later. Before Java SE 7, the switch statement only allowed primitive data types (such as int, char, and byte) and enumerated types as its arguments
+
+8) Inside the switch how many cases are possible and how many default declarations are possible?
+Ans. -> 
+
+9) What is difference between if & if-else & switch?
+Ans. -> 
+
+10) What is the default condition of for loop?
+Ans. -> The default condition of a for loop is true. This means that the loop will continue to execute indefinitely, unless you explicitly break out of it.
+
+11) Inside for initialization & condition & increment/decrement parts optional or mandatory?
+Ans. -> he initialization, condition, and increment/decrement parts of a for loop are all optional. However, if you omit all three parts, the loop will run forever.
+
+12) When we will get compilation error like “incompatible types”?
+Ans. -> In Java, an incompatible types error occurs when the data type of an expression doesn't match the expected data type of a variable or method parameter. 
+
+13) We are able to use break statements how many places and what are the places?
+Ans. -> Inside a loop:
+The break statement is used to terminate the loop prematurely. When a break statement is encountered inside a loop, the control directly comes out of the loop and the loop gets terminated. It is used with if statement, whenever used inside loop.
+Inside a switch case:
+The break statement is used to terminate the switch case prematurely. When a break statement is encountered inside a switch case, the control directly comes out of the switch case and the switch case gets terminated. It is used with if statement, whenever used inside switch case.
+
+14) What is the difference between break & continue?
+Ans. -> 
+
+15) What do you mean by transfer statements and what are transfer statements present in java?
+Ans. -> Transfer statements in Java are statements that change the normal flow of control in a program. They can be used to skip over certain sections of code, to exit loops early, or to transfer control to a different part of the program.
+
+16) for (; ;) representing?
+Ans. -> in java, the code for(;;) represents an infinite loop
+
+17) When we will get compilation error like “unreachable statement “?
+Ans. -> In Java, the compiler produces an unreachable statement error when a statement is unreachable, meaning it can't be executed during the program's execution.
+
+18) Is it possible to declare while without condition yes -what is default condition no what is error?
+Ans. -> 
+
+19) What is the difference between while and do-while?
+Ans. -> 
+
+20) While declaring if , if-else , switch curly braces are optional or mandatory?
+Ans. -> 
+
+Oops
+
+1) What are the main building blocks of oops?
+Ans. -> The four main building blocks of Object-Oriented Programming (OOP) are abstraction, encapsulation, inheritance, and polymorphism: abstraction, encapsulation, inheritance, and polymorphism.
+
+2) What do you mean by inheritance?
+Ans. -> 
+
+3) How to achieve inheritance concept and inheritance is also known as?
+Ans. -> 
+
+4) How many types of inheritance in java and how many types of inheritance not supported by java?
+Ans. -> 
+
+5) How to prevent inheritance concept?
+Ans. -> 
+
+6) What is the purpose of extends keyword?
+Ans. -> The extends keyword in Java is used to implement inheritance. It allows a class (subclass) to inherit the properties and methods of another class (superclass). This is useful for code reusability, as the subclass can reuse the code from the superclass without having to rewrite it.
+
+7) What do you mean by cyclic inheritance java supporting or not?
+Ans. -> Cyclic inheritance is a type of inheritance in which a class inherits from itself, either directly or indirectly. This can be done by having a class inherit from a class that inherits from it, or by having a class inherit from an interface that inherits from the class.
+Java does not support cyclic inheritance. 
+
+8) What is the difference between child class and parent class?
+Ans. -> In object-oriented programming, a parent class, also called a base class or superclass, is a class that has methods and attributes that are inherited by another class, called a child class, derived class, or subclass. The child class has access to the parent class's methods and attributes. 
+
+9) What is the root class for all java classes?
+Ans. -> The root class for all Java classes is the Object class
+
+10) Inside the constructor if we are not providing this() and super() keyword the compiler generated which type of super keyword?
+Ans. -> In Java, if a child class constructor doesn't contain the keyword super(), the compiler automatically inserts a non-parameterized super() keyword at the beginning of the constructor.
+
+11) How to call super class constructors?
+Ans. -> In Java, the super keyword is used to call the constructor of the superclass from the subclass constructor. This is important because it allows the subclass to initialize the inherited members from the superclass.
+The super() keyword must be the first statement in the subclass constructor. If it is not, the compiler will generate an error.
+The super() keyword can be used to call any constructor of the superclass, as long as the parameters match. If the superclass does not have a constructor with the matching parameters, the compiler will generate an error.
+
+12) Is it possible to use both super and this keyword inside the method?
+Ans. -> yas we can use super and this keyword inside the method.
+
+13) Is it possible to use both super and this keyword inside the constructor?
+Ans. -> yas we can use super and this keyword inside the constructor.
+
+14) If the child class and parent class contains same variable name that situation how to call parent class variable in child class?
+Ans. -> In Java, you can use the super keyword to access a parent class variable in a child class that has the same variable name. For example, you can use super.name to access a parent class instance variable. However, using super doesn't allow direct access to private variables in the parent class. 
+
+15) One class able to extends how many classes at a time?
+Ans. -> In Java, a class can only extend one superclass.
+
+16) If we are extending the your class will become parent class if we are not extending what is the parent class?
+Ans. -> In Java, a parent class is also known as a superclass or base class. It is the class that other classes, called subclasses or child classes, inherit properties and behavior from. 
+
+17) What do you mean by aggregation and what is the difference between aggregation and inheritance?
+Ans. -> In object-oriented programming, inheritance and aggregation are two ways to extend, enhance, and reuse code. Inheritance is used when a new class is similar to the original class, while aggregation is used when a new class must have the original class. 
+
+18) What do you mean by aggregation and composition and Association?
+Ans. -> 
+
+19) Aggregation is also known as?
+Ans. -> Aggregation is also known as the "has-a" relationship.
+
+20) How many objects are created ?
+a. MyClassHero c1,c2;
+c1 = New MyClassHero();
+Ans. -> one
+
+21) What is the root class for all java classes?
+Ans. -> Object
+
+22) Which approach is recommended to create object either parent class object or child class object?
+Ans. -> Both approaches have their own advantages and disadvantages. It is recommended to create an object of the child class if you need to use the methods and properties of the child class. On the other hand, it is recommended to create an object of the parent class if you only need to use the methods and properties of the parent class.
+
+23) Except one class all class contains parent class in java what is that except class?
+Ans. -> The Object class is the only class in Java that does not have a parent class. All other classes in Java, either directly or indirectly, inherit from the Object class.
+
+24) What is the purpose of instance of keyword in java?
+Ans. -> The purpose of the instanceof keyword in Java is to check if an object is an instance of a specific class or interface. It is also known as a type comparison operator because it compares the instance with type. The return value is either true or false.
+
+25) What do you mean by polymorphism?
+Ans. -> 
+
+26) What do you mean by method overloading and method overriding?
+Ans. -> 
+
+27) How many types of overloading in java?
+Ans. -> 
+
+28) Is it possible to override variable in java?
+Ans. -> Yes, it is possible to override a variable in Java, but it is not recommended. Overriding a variable is called shadowing, because it makes the base instance variables of the base class inaccessible. (We can still access it explicitly using super.varName).
+
+29) What do you mean by constructor overloading?
+Ans. -> Constructor overloading is a technique in Java that allows a class to have multiple constructors, each with a different set of parameters
+
+30) What are rules must follow while performing method overriding?
+Ans. -> Laws of Method Overriding in JAVA: The method name should be common and the same as it is in the parent class. The method signature (parameter list, return type) in the method must be the same as in the parent class. There must be an inheritance connection between classes.
+
+31) When we will get compilation error like “overridden method is final”?
+Ans. -> In Java, a compilation error like "overridden method is final" occurs when you try to override a final method. 
+
+32) What is the purpose of final modifier java?
+Ans. -> The final keyword in Java is a non-access modifier that restricts the user and defines entities that cannot be changed or modified. It can be used with classes, methods, and variables.
+
+33) Is it possible to override static methods yes-how no-why?
+Ans. -> 
+
+34) Parent class reference variable is able to hold child class object?
+Ans. -> Yes, a parent class reference variable is able to hold a child class object. This is because of a concept in object-oriented programming called upcasting. Upcasting is the process of assigning a child class object to a parent class reference variable.
+
+35) How many types of polymorphism in java?
+Ans. -> 
+
+36) What do you mean by dynamic method dispatch?
+Ans. -> Dynamic method dispatch, also known as runtime polymorphism, is a mechanism in Java that resolves calls to overridden methods at run time instead of compile time.
+
+37) The applicable modifiers for local variables?
+Ans. -> In Java, the only modifier that can be applied to local variables is final. Using any other modifier will result in a compile-time error when the program is run. The final modifier ensures that a local variable does not change within a method.
+
+38) Is it all methods present in final class is always final and is it all variables present final class is always final?
+Ans. -> Yes, all methods in a final class in Java are implicitly final by default. This means that they cannot be overridden by any subclass. However, variables in a final class are not automatically final and can still be changed. 
+
+39) If Parent class is holding child class object then by using that we are able to call only overridden methods of child class but how to call direct methods of child class?
+Ans. -> In Java, you can use the super keyword to call a method defined in a parent class from a subclass. This is useful when the subclass wants to call the parent class's implementation of a method in addition to its own. For example, the super keyword can be used to access the run method in the Animal class. 
+
+40) Object class contains how many methods?
+Ans. -> The Object class in Java contains 11 methods. These methods are:
+equals(): This method compares two objects for equality and returns true if they are equal.
+getClass(): This method returns the Class object that represents the class of the object.
+hashCode(): This method returns a hash code for the object.
+notify(): This method wakes up a single thread that is waiting on the object.
+notifyAll(): This method wakes up all threads that are waiting on the object.
+toString(): This method returns a string representation of the object.
+wait(): This method causes the current thread to wait until another thread wakes it up or until a specified amount of time has elapsed.
+clone(): This method creates a copy of the object.
+finalize(): This method is called by the garbage collector when the object is about to be garbage collected.
+
+41) When we will get compilation error like “con not inherit from final parent”?
+Ans. -> 
+
+42) How many types of type casting in java?
+Ans. -> Widening Type Casting
+Widening type casting is also known as implicit type conversion. It is the process of converting a smaller data type to a larger data type. This is done automatically by the compiler and does not require any explicit code.
+Narrowing Type Casting
+Narrowing type casting is also known as explicit type conversion. It is the process of converting a larger data type to a smaller data type. This is not done automatically by the compiler and requires explicit code.
+
+43) What do you mean by covariant return types?
+Ans. -> In object-oriented programming, a covariant return type is a method return type that can be replaced by a more specific type when overridden in a subclass.
+
+44) What do u mean by method hiding?
+Ans. -> 
+
+45) What do you mean by abstraction?
+Ans. -> 
+
+46) How many types of classes in java?
+Ans. -> Concrete Class:
+A concrete class is a class that can be instantiated to create objects. Concrete classes implement all of their methods and can be used directly. They are used to define specific behavior and attributes of objects.
+Abstract Class:
+An abstract class is a class that cannot be instantiated to create objects. Abstract classes provide a blueprint for other classes to extend. They can contain abstract methods, which are methods that do not have an implementation. Subclasses of abstract classes must implement all of the abstract methods of the parent class.
+In addition to these two main types of classes, there are also a number of other types of classes in Java, including:
+Final Class:
+A final class is a class that cannot be extended by other classes. Final classes are used to define classes that cannot be changed.
+Static Class:
+A static class is a class that can only contain static members. Static members are members that belong to the class itself, rather than to instances of the class.
+Inner Class:
+An inner class is a class that is declared within another class. Inner classes can access the private members of the outer class.
+
+47) Normal class is also known as ?
+Ans. -> In Java, a normal class is also known as a concrete class or non-static class.
+
+48) What is the difference between normal method and abstract method?
+Ans. -> In Java, normal methods, also known as non-static methods, contain a body, while abstract methods do not. Abstract methods are only found in abstract classes and are declared with a semicolon (;) instead of a method body
+
+49) What is the difference between normal class and abstract class?
+Ans. -> In Java, an abstract class has the same features as a normal class, but it can't be instantiated and must be inherited. Abstract classes contain abstract methods, which are declared but not defined, while normal classes don't contain abstract methods.
+
+50) Is it possible to create a object for abstract class?
+Ans. -> No, it is not possible to create an object for an abstract class.
+
+51) What do you mean by abstract variable?
+Ans. -> An abstract variable is a variable that does not have a specific value. It is used to represent a general concept or idea. For example, you might have an abstract variable called "count" that represents the number of items in a list. The value of the count variable would change depending on how many items are in the list.
+
+52) Is it possible to override non-abstract method as a abstract method?
+Ans. -> 
+
+53) Is it possible to declare main method inside the abstract class or not?
+Ans. -> Yes, you can declare a main method inside an abstract class in Java. 
+
+54) What is the purpose of abstract modifier in java?
+Ans. -> The abstract modifier in Java is used to achieve abstraction, which is one of the key concepts in object-oriented programming. Abstraction allows us to focus on the essential features of an object without worrying about its implementation details.
+
+55) How to prevent object creation in java?
+Ans. -> 
+
+56) What is the definition of abstract class?
+Ans. -> 
+
+57) In java is it abstract class reference variable is able to hold child class object?
+Ans. -> 
+
+58) What do you mean by encapsulation?
+Ans. -> 
+
+59) What do you mean by tightly encapsulated class?
+Ans. -> 
+
+60) What do you mean accessor method and mutatormethod ?
+Ans. -> 
+
+61) How many ways area there to set some values to class properties?
+Ans. -> 
+
+62) Can we overload method?
+Ans. -> 
+
+63) Can we inherit main method in child class?
+Ans. -> 
+
+64) In java main method is called by ?
+Ans. -> 
+
+65) The applicable modifiers on main method?
+Ans. -> 
+
+66) While declaring main method public static modifiers order mandatory or optional?
+Ans. -> 
+
+67) What is the argument of main method?
+Ans. -> 
+
+68) What is the return type of main method?
+Ans. -> 
+
+69) What are the mandatory modifiers for main method and optional modifiers of main
+method?
+Ans. -> 
+
+70) Why main method is static?
+Ans. -> 
+
+71) What do you by command line arguments?
+Ans. -> 
+
+72) Is it possible to pass command line arguments with space symbol no good yeshow ?
+Ans. -> 
+
+73) What is the purpose of strictfp classes?
+Ans. -> 
+
+74) What is the purpose of strictfp modifier?
+Ans. -> 
+
+75) What is the purpose of native modifier?
+Ans. -> 
+
+76) What do you mean by native method and it also known as?
+Ans. -> 
+
+77) What do you mean by javaBean class?
+Ans. -> 
+
+78) The javabean class is also known as?
+Ans. -> 
+
+79) Applicable modifiers on local variables?
+Ans. -> 
+
+80) What is the execution process of constructors if two classes are there in inheritance
+relationship?
+Ans. -> 
+
+81) What is the execution process of instance blocks if two classes are there in inheritance
+relationship?
+Ans. -> 
+
+82) What is the execution process of static blocks if two classes are there in inheritance
+relationship?
+Ans. -> 
+
+83) What is the purpose of instanceof operator in java & what is the return-type?
+Ans. -> 
+
+84) If we are using instanceof both reference-variable & class-name must have some relationship otherwise compiler generated error message is what?
+Ans. -> 
+
+
+Packages
+
+1. What do you mean by package and what it contains?
+Ans. -> 
+
+2. What is the difference between user defined package and predefined package?
+Ans. -> 
+
+3. What are coding conventions must fallow while declaring user defined package names?
+Ans. -> 
+
+4. Is it possible to declare motile packages in single source file?
+Ans. -> 
+
+5. What do you mean by import?
+Ans. -> 
+
+6. What is the location of predefined packages in our system?
+Ans. -> 
+
+7. How many types of imports present in java explain it?
+Ans. -> 
+
+8. How to import individual class and all classes of packages and which one is recommended?
+Ans. -> 
+
+9. What do you mean by static import?
+Ans. -> 
+
+10. What is the difference between normal and static import?
+Ans. -> 
+
+11. Is it possible to import multiple packages in single source file?
+Ans. -> 
+
+12. Is it possible to declare multiple packages in single source file?
+Ans. -> 
+
+13. I am importing two packages, both packages contains one class with same name at that situation how
+to create object of two package classes?
+Ans. -> 
+
+14. If we are importing root package at that situation is it possible to use sub package classes in our
+applications?
+Ans. -> 
+
+15. What is difference between main package and sub package?
+Ans. -> 
+
+16. If source file contains package statement then by using which command we are compiling that source
+file?
+Ans. -> 
+
+17. What do you mean by fully qualified name of class?
+Ans. -> 
+
+18. What is the public modifier?
+Ans. -> 
+
+19. What is the default modifier in java?
+Ans. -> 
+
+20. What is the public access and default access?
+Ans. -> 
+
+21. What is private access and protected access?
+Ans. -> 
+
+22. What is the difference between public methods and default method?
+Ans. -> 
+
+23. What is the difference between private method and protected method?
+Ans. -> 
+
+24. What is most restricted modifier in java?
+Ans. -> 
+
+25. What is most accessible modifier in java?
+Ans. -> 
+
+Exception handling
+
+1. What do you mean by Exception?
+Ans. -> 
+
+2. How many types of exceptions in java?
+Ans. -> 
+
+3. What is the difference between Exception and error?
+Ans. -> 
+
+4. What is the difference between checked Exception and un-checked Exception?
+Ans. -> 
+
+5. Checked exceptions are caused by?
+Ans. -> 
+
+6. Unchecked exceptions are caused by?
+Ans. -> 
+
+7. Errors are caused by?
+Ans. -> 
+
+8. Is it possible to handle Errors in java?
+Ans. -> 
+
+9. What the difference is between partially checked and fully checked Exception?
+Ans. -> 
+
+10. What do you mean by exception handling?
+Ans. -> 
+
+11. How many ways are there to handle the exception?
+Ans. -> 
+
+12. What is the root class of Exception handling?
+Ans. -> 
+
+13. Can you please write some of checked and un-checked exceptions in java?
+Ans. -> 
+
+14. What are the keywords present in Exception handling?
+Ans. -> 
+
+15. What is the purpose of try block?
+Ans. -> 
+
+16. In java is it possible to write try with out catch or not?
+Ans. -> 
+
+17. What is the purpose catch block?
+Ans. -> 
+
+18. What is the difference between try-catch?
+Ans. -> 
+
+19. Is it possible to write normal code in between try-catch blocks?
+Ans. -> 
+
+20. What are the methods used to print exception messages?
+Ans. -> 
+
+21. What is the purpose of printStackTrace( ) method?
+Ans. -> 
+
+22. What is the difference between printStackTrace( ) &getMessage()?
+Ans. -> 
+
+23. What is the purpose of finally block?
+Ans. -> 
+
+24. If the exception raised in catch block what happened?
+Ans. -> 
+
+25. Independent try blocks are allowed or not allowed?
+Ans. -> 
+
+26. Once the control is out of try , is it remaining statements of try block is executed?
+Ans. -> 
+
+27. Try-catch , try-catch-catch , catch-catch , catch-try how many combinations are valid?
+Ans. -> 
+
+28. Try-catch-finally , try-finally ,catch-finally , catch-catch-finally how many combinations are
+valid?
+Ans. -> 
+
+29. Is possible to write code in between try-catch-finally blocks?
+Ans. -> 
+
+30. Is it possible to write independent catch blocks?
+Ans. -> 
+
+31. Is it possible to write independent finally block?
+Ans. -> 
+
+32. What is the difference between try-catch –finally?
+Ans. -> 
+
+33. What is the execution flow of try-catch?
+Ans. -> 
+
+34. If the exception raised in finally block what happened?
+Ans. -> 
+
+35. What are the situations finally block is executed?
+Ans. -> 
+
+36. What are the situations finally block is not executed?
+Ans. -> 
+
+37. What is the purpose of throws keyword?
+Ans. -> 
+
+38. What is the difference between try-catch blocks and throws keyword?
+Ans. -> 
+
+39. What do you mean by default exception handler and what is the purpose of default exception handler?
+Ans. ->
+
+40. How to delegate responsibility of exception handling calling method to caller method?
+Ans. -> 
+
+41. What is the purpose of throw keyword?
+Ans. -> 
+
+42. If we are writing the code after throw keyword usage then what happened?
+Ans. -> 
+
+43. What is the difference between throw and throws keyword?
+Ans. -> 
+
+44. How to create user defined checked exceptions?
+Ans. -> 
+
+45. How to create user defined un-checked exceptions?
+Ans. -> 
+
+46. Where we placed clean-up code like resource release, databasecloseting inside the try or catch or finally and why ?
+Ans. -> 
+
+47. Write the code of ArithmeticException?
+Ans. -> 
+
+48. Write the code of NullPointerException?
+Ans. -> 
+
+49. Write the code of ArrayIndexOutOfBoundsException & StringIndexOutOfBoundsException?
+Ans. -> 
+
+50. Write the code of IllegalThreadStateException?
+Ans. -> 
+
+51. When we will get InputMisMatchException?
+Ans. -> 
+
+52. When we will get IllegalArgumantException?
+Ans. -> 
+
+53. When we will get ClassCastException?
+Ans. -> 
+
+54. When we will get OutOfMemoryError?
+Ans. -> 
+
+55. When we will get compilation error like “unreportedException must be catch”?
+Ans. -> 
+
+56. When we will get compilation error like “Exception XXXException has already been caught”?
+Ans. -> 
+
+57. When we will get compilation error like “try without catch or finally”?
+Ans. -> 
+
+58. How many approaches are there to create user defined unchecked exceptions and un-checked exceptions?
+Ans. -> 
+
+59. What do you mean by exception re-throwing?
+Ans. -> 
+
+60. How to create object of user defined exceptions?
+Ans. -> 
+
+61. How to handover user created exception objects to JVM?
+Ans. -> 
+
+62. What is the difference user defined checked and unchecked Exceptions?
+Ans. -> 
+
+63. Is it possible to handle different exceptions by using single catch block yes-->how nowhy?
+Interfaces
+a. What do you mean by interface how to declare interfaces in java?
+b. Interfaces allows normal methods or abstract methods or both?
+c. For the interfaces compiler generates .class files or not?
+d. Interface is also known as?
+e. What is the abstract method?
+f. By default modifiers of interface methods?
+g. What is the purpose of implements keyword?
+h. Is it possible to declare variables in interface ?
+i. Can abstract class have constructor ?can interface have constructor?
+j. What must a class do to implement interface?
+k. What do you by implementation class?
+l. Is it possible to create object of interfaces?
+m. What do you mean by abstract class?
+n. When we will get compilation error like “attempting to assign weaker access privileges”?
+o. What is the difference between abstract class and interface?
+p. What do you mean by helper class?
+q. Which of the fallowing declarations are valid & invalid?
+a. class A implements it1
+b. class A implements it1,it2,it3
+c. interface it1 extends it2
+d. interface it1 extends it2,it3
+e. interface it1 extends A
+f. interface it1 implements A
+r. what is the difference between classes and interfaces?
+s. The interface reference variable is able to hold implementation class objects or not?
+a. Interface-name reference-variable = new implementation class object(); valid or invalid
+t. What is the real-time usage of interfaces?
+u. what is the limitation of interfaces how to overcome that limitation?
+v. What do you mean by adaptor class?
+w. What is the difference between adaptor class interfaces?
+x. Is it possible to create user defined adaptor classes?
+y. Tell me some of the adaptor classes?
+z. What do you mean by marker interface and it is also known as?
+aa. Tell me some of the marker interfaces?
+bb. What are the advantages of marker interfaces?
+cc. Is it possible to create user defined marker interfaces /
+dd. What do you mean nested interface?
+
+Different types of methods in java (must know information about all methods)
+1) Instance method
+Ans. -> 
+
+2) Static method
+Ans. -> 
+
+3) Normal method
+Ans. -> 
+
+4) Abstract method
+Ans. -> 
+
+5) Accessor methods
+Ans. -> 
+
+Ans. -> 
+
+6) Mutator methods
+Ans. -> 
+
+7) Inline methods
+Ans. -> 
+
+8) Call back methods
+Ans. -> 
+
+9) Synchronized methods
+Ans. -> 
+
+10) Non-synchronized methods
+Ans. -> 
+
+11) Overriding method
+Ans. -> 
+
+12) Overridden method
+Ans. -> 
+
+13) Factory method
+Ans. -> 
+
+14) Template method
+Ans. -> 
+
+15) Default method
+Ans. -> 
+
+16) Public method
+Ans. -> 
+
+17) Private method
+Ans. -> 
+
+18) Protected method
+Ans. -> 
+
+19) Final method
+Ans. -> 
+
+20) Strictfp method
+Ans. -> 
+
+21) Native method
+Ans. -> 
+
+Different types of classes in java (must know information about all classes)
+1) Normal class /concrete class /component class
+Ans. -> 
+
+2) Abstract class
+Ans. -> 
+
+3) Tightly encapsulated class
+Ans. -> 
+
+4) Public class
+Ans. -> 
+
+5) Default class
+Ans. -> 
+
+6) Adaptor class
+Ans. -> 
+
+Ans. -> 
+
+7) Final class
+Ans. -> 
+
+9) JavaBean class /DTO(Data Transfer Object) /VO (value Object)/BO(Business Object)
+Ans. -> 
+
+10) Singleton class
+Ans. -> 
+
+11) Child class
+Ans. -> 
+
+12) Parent class
+Ans. -> 
+
+13) Implementation class
+Ans. -> 
+
+Different types of variables in java (must know information about all varaibles)
+1) Local variables
+Ans. -> 
+
+2) Instance variables
+Ans. -> 
+
+3) Static variables
+Ans. -> 
+
+Ans. -> 
+
+4) Final variables
+Ans. -> 
+
+5) Private variables
+Ans. -> 
+
+6) Protected variables
+Ans. -> 
+
+7) Volatile variables
+Ans. -> 
+
+8) Transient variables
+Ans. -> 
+
+9) Public variables
+Ans. -> 
+
+String manipulation
+1) How many ways to create a String object &StringBuffer object?
+Ans. -> 
+
+2) What is the difference between a. String str=”ratan”; b. String str = new String(“ratan”);
+Ans. -> 
+
+
+3) equals() method present in which class?
+Ans. -> 
+
+4) What is purpose of String class equals() method.
+Ans. -> 
+
+5) What is the difference between equals() and == operator?
+Ans. -> 
+
+6) What is the difference between by immutability & immutability?
+Ans. -> 
+
+Ans. -> 
+
+7) Can you please tell me some of the immutable classes and mutable classes?
+Ans. -> 
+
+8) String &StringBuffer&StringBuilder&StringTokenizer presented package names?
+Ans. -> 
+
+9) What is the purpose of String class equals() &StringBuffer class equals()?
+Ans. -> 
+
+10) What is the purpose of StringTokenizernd this class functionality replaced method name?
+Ans. -> 
+
+11) How to reverse String class content?
+Ans. -> 
+
+12) What is the purpose of trim?
+Ans. -> 
+
+13) Is it possible to create StringBuffer object by passing String object as a argument?
+Ans. -> 
+
+14) What is the difference between concat() method & append()?
+Ans. -> 
+
+15) What is the purpose of concat() and toString()?
+Ans. -> 
+
+16) What is the difference between StringBuffer and StringBuilder?
+Ans. -> 
+
+17) What is the difference between String and StringBuffer?
+Ans. -> 
+
+18) What is the difference between compareTo() vseqauls()?
+Ans. -> 
+
+19) What is the purpose of contains() method?
+Ans. -> 
+
+20) What is the difference between length vs length()?
+Ans. -> 
+
+21) What is the default capacity of StringBuffer?
+Ans. -> 
+
+22) What do you mean by factory method?
+Ans. -> 
+
+23) Concat() method is a factory method or not?
+Ans. -> 
+
+24) What is the difference between heap memory and String constant pool memory?
+Ans. -> 
+
+25) String is a final class or not?
+Ans. -> 
+
+26) StringBuilder and StringTokenizer introduced in which versions?
+Ans. -> 
+
+27) What do you mean by legacy class & can you please give me one example of legacy class?
+Ans. -> 
+
+28) How to apply StringBuffer class methods on String class Object content?
+Ans. -> 
+
+29) When we use String &StringBuffer& String
+Ans. -> 
+
+30) What do you mean by cloneaing and use of cloning?
+Ans. -> 
+
+31) Who many types of cloneaing in java?
+Ans. -> 
+
+32) What do you mean by cloneable interface present in which package and what is the purpose?
+Ans. -> 
+
+33) What do you mean by marker interface and Cloneable is a marker interface or not?
+Ans. -> 
+
+34) How to create duplicate object in java(by using which method)?
+Ans. -> 
+
+Wrapper classes
+1. What is the purpose of wrapper classes?
+Ans. -> 
+
+2. How many Wrapper classes present in java what are those?
+Ans. -> 
+
+3. How many ways are there to create wrapper objects?
+Ans. -> 
+
+4. When we will get NumberFormatException?
+Ans. -> 
+
+5. How many constructors are there to create Character Wrapper class Object ?
+Ans. -> 
+
+6. How many constructors are there to create Integer Wrapper class?
+Ans. -> 
+
+7. How many constructors are there to create Float Wrapper class?
+Ans. -> 
+
+8. What do you mean by factory method?
+Ans. -> 
+
+9. What is the purpose of valueOf() method is it factory method or not?
+Ans. -> 
+
+10. How to convert wrapper objects into corresponding primitive values?
+Ans. -> 
+
+11. What is the implementation of toString() in all wrapper classes?
+Ans. -> 
+
+12. How to convert String into corresponding primitive?
+Ans. -> 
+
+13. What do you mean by Autoboxing andAutounboxng& introduced in which version?
+Ans. -> 
+
+14. Purpose of parseXXX() &xxxValue() method?
+Ans. -> 
+
+15. Which Wrapper classes are direct child class of Object class?
+Ans. -> 
+
+16. which Wrapper classes are direct child class of Number class?
+Ans. -> 
+
+17. How to convert primitive to String?
+Ans. -> 
+
+18. When we will get compilation error like “int cannot be dereferenced”?
+Ans. -> 
+
+19. Wrapper classes are immutable classes or mutable classes?
+Ans. -> 
+
+20. Perform fallowing conversions int--->String String--->int Integer--->intint--->Integer ?
+Ans. -> 
+
+Collections
+
+1) What is the main objective of collections?
+Ans. -> 
+
+2) What are the advantages of collections over arrays?
+Ans. -> 
+
+3) Collection frame work classes are present in which package?
+Ans. -> 
+
+4) What is the root interface of collections?
+Ans. -> 
+
+5) List out implementation classes of List interface?
+Ans. -> 
+
+6) List out implementation classes of set interface?
+Ans. -> 
+
+7) List out implementation classes of map interface?
+Ans. -> 
+
+8) What is the difference between heterogeneous and homogeneous data?
+Ans. -> 
+
+9) What do you mean by legacy class can you please tell me some of the legacy classes present in
+collection framework?
+Ans. -> 
+
+10) What are the characteristics of collection classe?
+Ans. -> 
+
+11) What is the purpose of generic version of collection classes?
+Ans. -> 
+
+12) What is the difference between general version of ArrayList and generic version of ArrayList?
+Ans. -> 
+
+13) What is purpose of generic version of ArrayList& arrays?
+Ans. -> 
+
+14) How to get Array by using ArrayList?
+Ans. -> 
+
+15) What is the difference betweenArrayList and LinkedList?
+Ans. -> 
+
+16) How to decide when to use ArrayList and when to use LinkedList?
+Ans. -> 
+
+17) What is the difference between ArrayList& vector?
+Ans. -> 
+
+18) How can ArrayList be synchronized without using vector?
+Ans. -> 
+
+19) Arrays are already used to hold homogeneous data but what is the purpose of generic version of
+Collection classes?
+Ans. -> 
+
+20) What is the purpose of RandomAccess interface and it is marker interface or not?
+Ans. -> 
+
+21) What do you mean by cursor and how many cursors present in java?
+Ans. -> 
+
+22) How many ways are there to retrieve objects from collections classes what are those?
+Ans. -> 
+
+23) What is the purpose of Enumeration cursor and how to get that cursor object?
+Ans. -> 
+
+24) By using how many cursors we are able to retrieve the objects both forward backward direction
+and what are the cursors?
+Ans. -> 
+
+25) What is the purpose of Iterator and how to get Iterator Object?
+Ans. -> 
+
+26) What is the purpose of ListIterator and how to get that object?
+Ans. -> 
+
+27) What is the difference between Enumeration vs Iterator VsListIterator?
+Ans. -> 
+
+28) We are able to retrieve objects from collection classes by using cursors and for-each loop what is
+the difference?
+Ans. -> 
+
+29) All collection classes are commonly implemented some interfaces what are those interfaces?
+Ans. -> 
+
+30) What is the difference between HashSet&linkedHashSet?
+Ans. -> 
+
+31) all most all collection classes are allowed heterogeneous data but some collection classes are not
+allowed can you please list out the classes?
+Ans. -> 
+
+32) What is the purpose of TreeSet class?
+Ans. -> 
+
+33) What is the difference between Set & List interface?
+Ans. -> 
+
+34) What is the purpose of Map interface?
+Ans. -> 
+
+35) What do you mean by entry.
+Ans. -> 
+
+36) What is the difference between HashMap&LinkedHashMap?
+Ans. -> 
+
+37) What is the difference between comparable vs Comparator interface?
+Ans. -> 
+
+38) What is the difference between TreeSetandTtreeMap?
+Ans. -> 
+
+39) What is the difference between HashTable and Properties file key=value pairs?
+Ans. -> 
+
+40) What do you mean by properties file and what are the advantages of properties file?
+Ans. -> 
+
+41) Properties class present in which package?
+Ans. -> 
+
+42) What is the difference between collection & collections?
+Ans. -> 
+
+Garbage Collector
+
+1. What is the functionality of Garbage collector?
+Ans. -> 
+
+2. How many ways are there to make eligible our objects to Garbage collector?
+Ans. -> 
+
+3. How to call Garbage collector explicitly?
+Ans. -> 
+
+4. What is the purpose of gc( ) method?
+Ans. -> 
+
+5. What is the purpose of finalize() method?
+Ans. -> 
+
+6. If the exception raised in finalize block what happenederror or output?
+Ans. -> 
+
+7. What is the purpose of RunTime class?
+Ans. -> 
+
+8. How to create object of RunTime class?
+Ans. -> 
+
+9. What is singleton class?
+Ans. -> 
+
+10. What is the algorithm fallowed by GC?
+Ans. -> 
+
+11. What is the difference between final , finally , finalize()?
+Ans. -> 
+
+12. When GarbageCollector calls finalize()?
+Ans. -> 
+
+13. Finalize method present in which class?
+Ans. -> 
+
+14. Which part of the memory involved in garbage collector Heap or Stack?
+Ans. -> 
+
+15. Who creates stack memory and who destroy that memory?
+Ans. -> 
+
+16. What do you mean by demon thread? Is Garbage collector is DemonThread?
+Ans. -> 
+
+17. How many times Garbage collector does call finalize() method for object?
+Ans. -> 
+
+18. What are the different ways to call Garbage collector ?
+Ans. -> 
+
+19. How to enable/disable call of finalize()?
+Ans. -> 
+
+20. Is it possible to call finalize() method explicitly by the programmer?
+Ans. -> 
+
+Enumeration
+
+1) What is the purpose Enumeration?
+Ans. -> 
+
+2) How to declare enum?
+Ans. -> 
+
+3) enum constants are by default?
+Ans. -> 
+
+4) One enum is able extends other enum or not?
+Ans. -> 
+
+5) For the enum compiler generate .class files or not?
+Ans. -> 
+
+6) What is the difference enum&Enum?
+Ans. -> 
+
+7) Is it possible to declare main method & constructor inside the enum or not?
+Ans. -> 
+
+8) Is it possible to provide parameterized constructor inside the enum?
+Ans. -> 
+
+9) What is the difference between enum and class?
+Ans. -> 
+
+10) What is the purpose of values() methods?
+Ans. -> 
+
+11) What is the purpose of ordinal() method?
+Ans. -> 
+
+12) Is it possible to crate object for enum?
+Ans. -> 
+
+13) For enum inheritance concept is applicable or not?
+Ans. -> 
+
+14) Is it possible to create object ofenum?
+Ans. -> 
+
+15) When enum constants are loaded?
+Ans. -> 
+
+16) Enums are able to implement interfaces or not?
+Ans. -> 
+
+17) Enum introduced in which version?
+Ans. -> 
+
+18) What is the difference between enum&Enumeration &Enum?
+Ans. -> 
+
+19) Is it possible to override toString() method inside enum?
+Ans. -> 
+
+20) Can you use enum constants switch case in java?
+Ans. -> 
+
+Nested classes
+
+1) What are the advantages of inner classes?
+Ans. -> 
+
+2) How many types of nested class?
+Ans. -> 
+
+3) How many types of inner classes?
+Ans. -> 
+
+4) What do you by static inner classes?
+Ans. -> 
+
+5) The inner class is able to access outer class private properties or not?
+Ans. -> 
+
+Ans. -> 
+
+6) The outer class is able to access inner classes properties&methods or not?
+Ans. -> 
+
+7) How to create object inner class and outer class?
+a. Class Outer
+{ class Inner{ }
+}
+Ans. -> 
+
+8) For the inner classes compiler generates .class files or not? If generates write the name of above
+inner class .class file name ?
+Ans. -> 
+
+9) The outer class object is able to call inner class properties & methods or not?
+Ans. -> 
+
+10) The inner class object is able to call outer class properties and methods or not?
+Ans. -> 
+
+Ans. -> 
+
+11) What is the difference between normal inner classes and static inner classes?
+Ans. -> 
+
+12) What do you mean by anonymous inner classes?
+Ans. -> 
+
+13) What do you mean by method local inner classes?
+Ans. -> 
+
+14) Is it possible to create inner class object without outer class object?
+Ans. -> 
+
+15) Java supports inner method concept or not ?
+Ans. -> 
+
+16) Is it possible to declare main method inside inner classes?
+Ans. -> 
+
+17) Is it possible to declare constructors inside inner classes?
+Ans. -> 
+
+18) If outer class variables and inner class variables are having same name then hoe to represent
+outer class variables and how to represent inner class variables?
+Ans. -> 
+
+19) Is it possible to declare same method in both inner class and outer class?
+Ans. -> 
+
+20) Is it possible to declare main method inside outer classes?
+
+File IO
+Ans. -> 
+
+1. What is the purpose of java.io package?
+Ans. -> 
+
+2. What do you mean by stream?
+Ans. -> 
+
+3. What do you mean by channel and how many types of channels present in java?
+Ans. -> 
+
+4. What is the difference between normal stream & buffered Streams?
+Ans. -> 
+
+5. What is the difference between FileInputStream&BufferedReader?
+Ans. -> 
+
+6. What is the difference between FileOutputStream&printwriter?
+Ans. -> 
+
+7. Println() method present in which class?
+Ans. -> 
+
+8. Out is which type of variable(instance /static ) present in which class?
+Ans. -> 
+
+9. To create byte oriented channel we required two class what are those classes?
+Ans. -> 
+
+10. To create character oriented channel we required two class what are those classes?
+Ans. -> 
+
+11. What is the difference between byte oriented channel and character oriented channel?
+Ans. -> 
+
+12. What is the difference between read() &readLine() method?
+Ans. -> 
+
+13. What is the difference between normal Streams &bufferd streams?
+Ans. -> 
+
+14. Wat is the purpose of write() &println() ?
+Ans. -> 
+
+15. Example classes normal Streams &bufferd streams?
+Ans. -> 
+
+16. What do you mean by serialization?
+Ans. -> 
+
+17. What is the purpose of Serializable interface& it is marker interface or not ?
+Ans. -> 
+
+18. How to prevent serialization concept?
+Ans. -> 
+
+19. What do you mean deserialization?
+Ans. -> 
+
+20. To perform deserialization we required two classes what are those classes?
+Ans. -> 
+
+21. To perform serialization we required two classes what are those classes?
+Ans. -> 
+
+22. What is the purpose of transient modifier?
+Ans. -> 
+
+23. What are advantage of serialization?
+Ans. -> 
+
+24. Serializable interface present in which package?
+Ans. -> 
+
+25. When we will get IOException how many ways are there to handle the exceptions?
+Ans. -> 
+
+26.
+Ans. -> 
+
+27. IOException is checked Exception or unchecked Exception?
+Ans. -> 
+
+Multhreading
+
+1. What do you mean by Thread?
+Ans. -> 
+
+2. What do you mean by single threaded model?
+Ans. -> 
+
+3. What is the difference single threaded model and multithreaded model?
+Ans. -> 
+
+4. What do you mean by main thread and what is the importance?
+Ans. -> 
+
+5. What is the difference between process and thread?
+Ans. -> 
+
+6. How many ways are there to create thread which one prefer?
+Ans. -> 
+
+7. Thread class& Runnable interface present in which package?
+Ans. -> 
+
+8. Runnable interface is marker interface or not?
+Ans. -> 
+
+9. What is the difference between t.start() &t.run() methods where t is object of Thread class?
+Ans. -> 
+
+10. How to start the thread?
+Ans. -> 
+
+11. What are the life cycle methods of thread?
+Ans. -> 
+
+12. Run() method present in class/interface ?Is it possible to override run() method or not?
+Ans. -> 
+
+13. Is it possible to override start method or not?
+Ans. -> 
+
+14. What is the purpose of thread scheduler?
+Ans. -> 
+
+15. Thread Scheduler fallows which algorithm?
+Ans. -> 
+
+16. What is purpose of thread priority?
+Ans. -> 
+
+17. What is purpose of sleep() &isAlive() &isDemon() & join() &getId() &activeCount() methods?
+Ans. -> 
+
+18. Jvm creates stack memory one per Thread or all threads only one stack?
+Ans. -> 
+
+19. What is the thread priority range & how to set priority and how to get priority?
+Ans. -> 
+
+20. What is the default name of user defined thread and main thread? And how to set the name
+Ans. -> 
+
+and how to get the name?
+Ans. -> 
+
+21. What is the default priority of main thread?
+Ans. -> 
+
+22. Which approach is best approach to create a thread?
+Ans. -> 
+
+23. What is the difference between synchronized method and non-synchronized method?
+Ans. -> 
+
+24. What is the purpose of synchronized modifier?
+Ans. -> 
+
+25. What is the difference between synchronized method and non synchronized method?
+Ans. -> 
+
+26. What do you mean by demon thread tell me some examples?
+Ans. -> 
+
+27. what is the purpose of volatile modifier?
+Ans. -> 
+
+28. What is the difference between synchronized method and synchronized block?
+Ans. -> 
+
+29. Wait() notify() notifyAll() methods are present in which class?
+Ans. -> 
+
+30. When we will get Exception like “IllegalThreadStateException” ?
+Ans. -> 
+
+31. When we will get Exception like “IlleglArgumentException” ?
+Ans. -> 
+
+32. If two threads are having same priority then who decides thread execution?
+Ans. -> 
+
+33. How two threads are communicate each other?
+Ans. -> 
+
+34. What is race condition?
+Ans. -> 
+
+35. How to check whether the thread is demon or not? Main thread is demon or not?
+Ans. -> 
+
+36. How a thread can interrupt another thread?
+Ans. -> 
+
+37. Explain about wait() motify() notifyAll()?
+Ans. -> 
+
+38. Once we create thread what is the default priority?
+Ans. -> 
+
+39. What is the max priority & min priority & norm priority?
+Ans. -> 
+
+40. What is the difference between preemptive scheduling vs time slicing?
+Ans. -> 
+
+Internationalization
+
+1) What is the main importance of I18n?
+Ans. -> 
+
+2) What is the purpose of locale class?
+Ans. -> 
+
+3) What is the format of the properties file?
+Ans. -> 
+
+4) Local class present in which package?
+Ans. -> 
+
+5) What do you mean by properties file and what it contains?
+Ans. -> 
+
+6) What is the purpose of ResourceBundle class and how to create object?
+Ans. -> 
+
+7) How to convert different languages characters into Unicode characters?
+Ans. -> 
+
+8) What is the command used to convert different language characters into Unicode characters?
+Ans. -> 
+
+9) Who decides properties file executions?
+Ans. -> 
+
+10) What is the method used to get values from properties file?
+Ans. -> 
+
+11) By using which classes we are achieving i18n?
+Ans. -> 
+
+12) What is the default Locale and how to get it?
+Ans. -> 
+
+13) Is it possible to create your own locale?
+Ans. -> 
+
+14) What is purpose of DateFormat class and it is preset in which package?
+Ans. -> 
+
+15) What are the DataFormat Constantans’ to print Date & time?
+Ans. -> 
+
+16) How to print date in different Locales?
+Ans. -> 
+
+17) How to print time in different locales?
+Ans. -> 
+
+18) How to print both date & time by using single method?
+Ans. -> 
+
+19) What do you mean by factory method? getBundle() is factory method or not?
+Ans. -> 
+
+20) How to get particular locale language & country?
+Ans. -> 
+
+==========================================================================================
+Can we define static variable in side the static method or not?
+Ans. -> No 
+
+How many part of java?
+Ans. ->  There are three parts
+		J2SE :- Standalone apps
+		J2EE :- web enterprize apps
+		J2ME :- mobile app
+
+Define break vs conntinue?
+Ans. -> break :- is used to stop the loop execution.
+		we can use break two places 
+			a. inside the switch
+			b. inside the loops
+		continue :- used to skip the particular iteration
+
+Explain instance & static block ? what is the purpose of block?
+Ans. -> 	i. static block are executed only once when class file is loading.
+		ii. instance block are executed during object creation before constructor exception. construct logic are specific object but instance block logics are common to all object.
+		iii. inside the class possibe to declare the more than one instance & static block the execution order is top to bottom
+		
+When we will use switch & else if statments in application?
+Ans. -> else-if :- when we want check multiple condition then we use elseif else if will execute based on the condition 
+Switch :- in switch based on the argument data the matched case will be executed switch code will execute based on the argument
+
+Explane System.out.println()?
+Ans. -> System is a class present in lang package
+		out is static variable of System class 
+		println is method present in PrintStream to print the data 
+		

@@ -1,0 +1,96 @@
+---------------------------------------------
+Control statements Interview Questions
+---------------------------------------------
+
+1. What is the meaning of control statement?
+
+2. What is the difference between conditional, loop & branching statements?
+
+3. What is condition value type allowed in if?
+
+4. Is "if(1)}" a valid statement in Java? 
+
+5. What is the difference between if & else?
+
+6. What is the difference between if...else & switch?
+
+7. What is the difference betweer case & default in switch block
+
+8. What is the difference between while & do..while? 
+
+9. When should we use while, do... while, for loops?
+
+10. What is enhanced for loop; what is the use of it?
+
+11. "enhanced for" loop & "foreach looprare both same?
+
+12. What is the difference between break, continue, return? 
+
+13. What's the difference between "return;" & "retun value;"?
+
+14. Can we place break & contente & return statements anywhere in the method?
+
+15. When will you get CE: unreachable statement? 
+
+16. How can we create infinite loop using while & for?
+
+17. Can we place while(false){} in a java program? 
+
+18. What is the difference between infinite loop & recursive method call?
+
+19. What is an inner loop? 20. What is the use of label concept?
+
+21. What is a label, is it a keyword?
+
+22. What is the syntax to create a label?
+
+23. What are the rules we must follow in creating a label?
+
+24. How can we break outer loop from inner loop?
+============================================================================
+
+
+Q6. What are Loops in Java? What are three types of loops?
+Ans: Looping is used in programming to execute a statement or a block of statement repeatedly. There are three types of loops in Java:
+1) For Loops
+For loops are used in java to execute statements repeatedly for a given number of times. For loops are used when number of times to execute the
+statements is known to programmer.
+2) While Loops
+While loop is used when certain statements need to be executed repeatedly until a condition is ful􀃕lled. In while loops, condition is checked 􀃕rst
+before execution of statements.
+3) Do While Loops
+Do While Loop is same as While loop with only di􀃡erence that condition is checked after execution of block of statements. Hence in case of do while
+loop, statements are executed at least once.
+
+Q7: What is an in􀃕nite Loop? How in􀃕nite loop is declared?
+Ans: An in􀃕nite loop runs without any condition and runs in􀃕nitely. An in􀃕nite loop can be broken by de􀃕ning any breaking logic in the body of the
+statement blocks.
+In􀃕nite loop is declared as follows:
+for (;;)
+{
+// Statements to execute
+// Add any loop breaking logic
+}
+
+Q8. What is the di􀃡erence between continue and break statement?
+Ans: break and continue are two important keywords used in Loops. When a break keyword is used in a loop, loop is broken instantly while when
+continue keyword is used, current iteration is broken and loop continues with next iteration.
+In below example, Loop is broken when counter reaches 4.
+for (counter = 0; counter & lt; 10; counter++) system.out.println(counter); if (counter == 4) { break;} }
+In the below example when counter reaches 4, loop jumps to next iteration and any statements after the continue keyword are skipped for current
+iteration.
+for (counter = 0; counter < 10; counter++) system.out.println(counter); if (counter == 4) { continue;}system.out.println(“This will not get printed
+when counter is 4”);}
+
+Q13. What is default switch case? Give example.
+Ans: In a switch statement, default case is executed when no other switch condition matches. Default case is an optional case .It can be declared only
+once all other switch cases have been coded.
+In the below example, when score is not 1 or 2, default case is used.
+public class switchExample { int score = 4; public static void main(String args[]) { switch (score) { case 1: system.out.println(“Score
+is 1”); break; case 2: system.out.println(“Score is 2”); break; default: system.out.println(“Default
+Case”); } }}
+
+Q39. What’s the purpose of using Break in each case of Switch Statement?
+Ans: Break is used after each case (except the last one) in a switch so that code breaks after the valid case and doesn’t 􀃖ow in the proceeding cases
+too.
+If break isn’t used after each case, all cases after the valid case also get executed resulting in wrong results.

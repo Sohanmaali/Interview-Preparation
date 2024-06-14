@@ -1,0 +1,14 @@
+10 Remote Method Invocation (RMI) 22
+10.1 What is RMI ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+10.2 What is the basic principle of RMI architecture ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+10.3 What are the layers of RMI Architecture ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+10.4 What is the role of Remote Interface in RMI ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+10.5 What is the role of the java.rmi.Naming Class ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+10.6 What is meant by binding in RMI ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+10.7 What is the difference between using bind() and rebind() methods of Naming Class ? . . . . . . . . . . . . . . . 23
+10.8 What are the steps involved to make work a RMI program ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+10.9 What is the role of stub in RMI ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+10.10What is DGC ? And how does it work ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+10.11What is the purpose of using RMISecurityManager in RMI ? . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+10.12Explain Marshalling and demarshalling. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+10.13Explain Serialization and Deserialization.

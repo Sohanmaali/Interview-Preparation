@@ -1,0 +1,228 @@
+-------------------------------------
+Constructor Interview Questions
+-------------------------------------
+
+1. What is a constructor?
+Ans -> constructor is a special type of method that is automatically called when an instance of a class is created using the new keyword. The purpose of a constructor is to initialize the newly created object. 
+
+2. What is the use of constructor?
+Ans -> Constructors are used to initialize the state of an object when it is created. They initialize the instance variables of the object to specific values or perform other initialization tasks required by the object.
+
+3. What are the rules in creating a constructor?
+Ans -> The constructor's name must be the same as the class's name.
+		A constructor cannot be abstract, final, static, or synchronized.
+		A Java constructor must not have a return type.
+		You cannot define an explicit value to a constructor.
+		Access modifiers can be used in constructor declaration to control its access. 
+
+
+4. What is the rule in invoking a constructor? 
+
+5. Why constructor should be called with new keyword?
+Ans -> constructor should be called with the new keyword because it creates a new instance of the class and initializes it with the values passed to the constructor. Without the new keyword, the constructor would not be called and the object would not be properly initialized.
+
+6. What are the other ways of calling constructor?
+Ans -> 	Using the this() keyword: This is used when we want to call the current class constructor within the same class.
+		Using the super() keyword: This is used when we want to call the superclass constructor from the base class.
+
+7. If we call constructor using this() or using super() will new object created?
+Ans -> No, calling a constructor using this() or super() does not create a new object. Instead, it calls the constructor of the current class or the superclass, respectively.
+
+8. Why constructor name should be same as its class name?
+
+9. Why return type is not allowed for constructor? 
+
+10. If we place return type in constructor declaration, is it leads to CE?
+Ans -> No, it will not lead to a CE(Compilation Error) but it will be treated as a method.
+
+11. Can we define a method with class name, if yes, is it recommended, if no why?
+Ans -> We can have a method name same as a class name in Java but it is not a good practice to do so. 
+
+12. How compiler and JVM can differentiate method and constructor blocks, if a method is also created with class name?
+Ans -> A compiler and a JVM can differentiate between the definitions of the the constructor and method with the help of return type. If there is a return type then it is considered as a method else it is a constructor.
+
+13. Are setXXX, mutator method & getXXX & accessor methods same?
+Ans -> In Java accessors are used to get the value of a private field and mutators are used to set the value of a private field. Accessors are also known as getters and mutators are also known as setters. If we have declared the variables as private then they would not be accessible by all so we need to use getter and setter methods.
+
+14. Explain about mutator and accessor methods?
+Ans -> accessors are used to get the value of a private field and mutators are used to set the value of a private field.
+
+15. Why 8 execution level modifiers are not allowed to constructor?
+
+16. How many types of constructors will java supports?
+Ans -> There are two types of constructors in Java: no-arg constructor, and parameterized constructor.
+
+17. What is a copy constructor; will Java supports its creation?
+Ans -> A copy constructor is a special type of constructor that creates an object using another object of the same class. It initializes all the data members of the newly created object by copying the contents of an existing object.
+
+18. What is the alternative given in Java for copy constructor functionality?
+
+19. What is a static constructor; will Java supports its creation?
+
+20. Why is a default constructor?
+Ans -> A default constructor is a constructor that is automatically provided by Java if no constructor is explicitly defined within a class. It is called "default" because it is provided by default by the Java compiler.
+
+21. What are the differences between default and no-arg constructor?
+Ans -> Default Constructor in java:
+
+ When we write a class without any constructor then at compilation time java compiler creates a default constructor in our class.
+The accessibility modifier of the default constructor is same as accessibility modifier of class.
+The allowed accessibility modifier are public and default.
+Default constructor added by java compiler this constructor does not have anything except super(); call.
+
+No-argument Constructor in java:
+
+As a developer we can create our own constructor with no arguments is known as no-argument constructor.
+It can have all four accessibility modifiers as it is defined by developer.
+So allowed accessibility modifiers are public, private, protected and default
+It can have logic including super call.
+
+22. When will compiler provide constructor in a class?
+Ans -> when developer not provide any constructor then compiler provide default constructor?
+
+23. Can we have both default & no-arg constructor in class?
+Ans -> No we can not provide both default & no-arg constructor at a time ?
+
+24. Can we have both default & parameterized constructor in class?
+ANs -> Yes we can provide both default & parameterized constructor at a time ?
+
+25. Can we have both no-arg & parameterized constructor in class?
+Ans -> Yes we can provide both no-arg & parameterized constructor at a time ?
+
+26. What is the constructor overloading?
+Ans -> Constructor overloading is the process of defining multiple constructors with the same class name, but different signatures or input parameters it is called constructor overloading.
+
+27. If we invoke one constructor, will all other constructors are executed?
+Ans -> No, if we invoke one constructor, all other constructors will not be executed.
+
+28. How can we execute overloaded constructors of a class without creating new object?
+Ans -> Create a class in which you want to implement constructor overloading using this(). Declare multiple constructors, and use the this() keyword to call another constructor within the same class.
+
+29. What is the difference between this() & this(5)?
+
+30. How non-static variables will be differentiated from one object to another object in a constructor in its initialization logic? 
+
+31. How can we initialize non-static variables in different instances with different values at the time of object creation & after object creation?
+
+
+---------------------------------------------------------
+Constructor overloading & chaining Interview Questions
+---------------------------------------------------------
+
+1. What are the rules we must follow in overloading a constructor?
+
+2. What is constructor chaining?
+Ans -> Constructor chaining is the process of calling a sequence of constructors. We can do it in two ways: by using this() keyword for chaining constructors in the same class. by using super() keyword for chaining constructors from the parent class
+
+3. Can we override constructor? 
+Ans -> No, we cannot override constructor in Java.
+
+4. If we overload constructors, which constructor is executed?
+
+5. When should we overload constructor? 
+Ans -> The purpose of constructor overloading is to provide different ways to initialize an object of a class. 
+
+6. Can we create constructor in abstract class ?
+Ans -> We can create constructor in abstract class , it does’nt give any compilation error. But when we cannot
+instantiate class there is no use in creating a constructor for abstract class.
+
+7. How can we chain subclass constructors with super constructors
+Ans -> To call a non-default superclass constructor from a subclass, use the super() keyword.
+
+8. How can we chain subclass overloaded constructors? 
+Ans -> To call a non-default superclass constructor from a subclass, use the this() keyword.
+
+9. When we invoke a constructor using this() or using super(), will new object created?
+
+10. Explain this() execution flow Text
+
+11. Write a program to count number of objects created from a class?
+
+12. What are the rules we must follow in constructor chaining? 
+	1) Why this() or super() call should be placed as first statement in a constructor?
+	Ans -> In Java, the this() or super() call must be placed as the first statement in a constructor. This is because the constructor is responsible for initializing the object, and the this() or super() call ensures that the parent class is initialized before the child class.
+	
+	2) Can we place both this() & super() in the a constructor? a constructor?
+	Ans-> we can not place both this() and super() at a time.
+	
+	3) Can we place this() or super() twice in
+	4) Can we place this() or super() in a method?
+	Ans -> we Can not place this() or super() in a method.
+	
+	5) Can we place this() call in the same matching parameter constructor?
+	Ans -> we can not call same matching parameter constructor it give CE:.
+	
+	6) When will you get CE: recursive constructor call? 
+	Ans -> You will get a CE: recursive constructor call when a constructor calls itself. This is a compile-time error that occurs because the compiler detects that the constructor is calling itself and throws an error.
+	
+	7) For example in a no-arg constructor, why we cannot place this() call but we can place constructor call with new keyword?
+	8) In a subclass, why we should not place this() in all constructors, at least one constructor should contain super()?
+
+
+=============================================================================
+Copy Constructor
+
+what is copy constructor?
+Ans. -> In Java, a copy constructor is a special type of constructor that creates an object using another object of the same Java class. It returns a duplicate copy of an existing object of the class.
+
+what is the Use of Copy Constructor ?
+We can use the copy constructor if we want to:
+Create a copy of an object that has multiple fields.
+Generate a deep copy of the heavy objects.
+Avoid the use of the Object.clone() method.
+
+what is the Advantages of Copy Constructor ?
+If a field declared as final, the copy constructor can change it.
+There is no need for typecasting.
+Its use is easier if an object has several fields.
+Addition of field to the class is easy because of it. We need to change only in the copy constructor.
+
+Copy Constructor Vs clone() Method
+Both the copy constructor and the clone() method are used to create a copy of an existing object of the class. But the use of copy constructor is easier and better in comparison to the clone() method because of the reasons given below:
+
+If we are using the clone() method it is necessary to import the Cloneable The method may throw the exception CloneNotSupportException. So, handling the exception in a program is a complex task. While in copy constructor there are no such complexities.
+We cannot assign a value if the fields are final. While in the copy constructor we can assign values to the final fields.
+The object returned by the clone() method must be typecast. While in copy constructor there is no such requirement.
+
+what is cloning?
+Ans. -> The object cloning is a way to create exact copy of an object. The clone() method of Object class is used to clone an object.
+
+which type copy create a clone method in java?
+Ans. -> The clone() method in Java creates a shallow copy of an object. 
+
+How to create Deep copy of an object using clone method?
+Ans. -> 
+		class Test { 
+			int x, y; 
+		} 
+		class Test2 implements Cloneable { 
+			int a, b; 
+			Test c = new Test(); 
+			public Object clone() throws CloneNotSupportedException 
+			{ 
+				Test2 t = (Test2)super.clone(); 
+				// Creating a deep copy for c 
+				t.c = new Test(); 
+				t.c.x = c.x; 
+				t.c.y = c.y; 
+				return t; 
+			} 
+		} 
+		public class Main { 
+			public static void main(String args[]) throws CloneNotSupportedException 
+			{ 
+				Test2 t1 = new Test2(); 
+				t1.a = 10; 
+				t1.b = 20; 
+				t1.c.x = 30; 
+				t1.c.y = 40; 
+
+				Test2 t3 = (Test2)t1.clone(); 
+				t3.a = 100; 
+
+				t3.c.x = 300; 
+
+				System.out.println(t1.a + " " + t1.b + " " + t1.c.x 	+ " " + t1.c.y); 
+				System.out.println(t3.a + " " + t3.b + " " + t3.c.x 	+ " " + t3.c.y); 
+			} 
+		}

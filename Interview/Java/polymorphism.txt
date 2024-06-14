@@ -1,0 +1,372 @@
+Polymorphism
+
+1. What is a polymorphism?
+Ans. ->  polymorphic is concept which we can perform a single action in different way polymorphic take from greek word poly and morphs poly me many 
+		and morphs mea form.
+
+2. How can we develop polymorphism In Java?
+Ans. -> we can achieve Polymorphism in two ways i.e., method overloading and method overriding. 
+		Polymorphism in Java is mainly divided into two types. Compile-time polymorphism can be achieved by method overloading, and Runtime polymorphism can be achieved by method overriding.
+
+3. Explain it 
+	1) What is compile-time/static/early binding polymorphism 
+	Ans. -> it is also known as early binding or static polymorphism. The binding is performed during compilation time and hence the name compile-time polymorphism. Binding Means to connecting the method call to the method body. It is achieved by methods overloading ,
+	
+	2) What is run-time/dynamic/latebinding polymorphism
+	Ans. -> whenever an object is bound with the functionality at the run time this is know as runtime polymorphism the runtime polymorphism achieve by method overriding 
+
+
+4.	What is a method overloading?
+Ans. ->  If a class content multiple methods having same name but different parameters, it is known as Method Overloading.
+
+5. What is a method overloading?
+Ans. -> Method overriding occurs when a subclass provides a specific implementation of a method already provided by its parent class.
+
+6.	In how many ways we can show differences in parameter in overloading method?
+Ans. ->  In Java, you can show differences in parameters in overloaded methods in several ways.
+		a.	Number of Parameters:
+		b.	Data Types of Parameters:
+		c.	Order of Parameters:
+		d.	Varargs (Variable-Length Parameter Lists):
+		e.	Different Parameter Types:
+		f.	Different Parameter Order and Types:
+
+7.	On what basis overloaded method execution is resolved?
+Ans. -> Method Name: The name of the method must match. 
+		Number of Parameters: The number of parameters in the method call must match the number of 	parameters in the method definition.
+		Parameter Types: The types of parameters must match in the same order. If a parameter is a subclass of the expected type, the compiler can still match the method.
+		Varargs (Variable-Length Parameter Lists): If a method has varargs (variable-length parameter lists), it can match a call with any number of arguments, including none.
+
+8.	Identify what is the output in the below cases?
+	1. Assume we have overloaded a m1() method with char & int parameters, then 
+		a. for m1('a') call which parameter method is executed? 
+		Ans. -> char
+		
+		b. for m1(97) call which parameter method is executed?
+		Ans. -> int
+		
+		c. for m1('a'+'b') call which parameter method is executed ?
+		Ans. -> int
+		
+		d. for m1((char)'a'+'b') call which parameter method is executed? 
+		Ans. -> int
+		
+		e. for m1((char) ('a'+'b')) call which parameter method is executed?
+		Ans. -> char
+		
+9.	If the given argument types parameter method is not found, Is it leads to CE?
+Ans. ->  Yes, if the compiler cannot find a suitable method based on the given argument types during a method call, it will result in a compilation 
+		error (CE). This error occurs because the compiler cannot determine which method to invoke due to the absence of a matching method signature.
+
+10.	If the given argument is matched with widening parameter type, what will compiler do?
+Ans. ->  If the given argument matches with a widening parameter type, the compiler will choose the method with the widened parameter type. Widening 
+		conversions, which involve converting a narrower type to a wider type, are considered safe by the compiler. This allows the compiler to select a method that can accept a broader range of input types.
+
+11.	Will compiler allow us to call narrow parameter type method?
+Ans. ->  Yes, the compiler will allow you to call a method with a narrower parameter type than the declared parameter type. Where a value of a 
+		narrower type can be implicitly converted to a wider type without loss of information.
+
+12.	How can we call narrow parameter method?
+Ans. ->  In Java, calling a method with a narrower parameter type requires an explicit type cast. You need to explicitly cast the argument to the 
+		narrower type to match the parameter type of the method. Keep in mind that this approach is applicable when the narrowing conversion is safe, and there is no risk of losing information
+
+13.	Identify what is the output from below cases?
+	1. Assume we have overloaded m1() method with int & float parameters, then for m1('a') & m1(50L) calls which method is executed?
+	Ans. -> m1('a') => Int
+		m1(50L)=> float
+
+	2. Assume we have overloaded m1() method with byte & short parameters, then for m1(5) call which method is executed?
+	Ans. ->  m1(5) => no suitable method found for m1()
+
+	3. Assume we have overloaded m1() method with byte & int parameters, then for m1(5) call which method is executed?
+	Ans. ->  m1(5) => int
+
+	4. Assume we have m1() method with only byte parameter, What will be the output from the method calls m1(5), m1('a') & m1((byte)5), m1((byte)'a')?
+	Ans. ->  m1(5) => no suitable method found for m1()
+			m1('a') => incompatible types: possible lossy conversion from char to byte
+			m1((byte)5) => byte
+			m1((byte)'a') => byte
+
+14.	When will we get ambiguous error in calling overloading methods? 
+	1. What will happen if the method arguments are matched with widening parameters in multiple overloaded methods with different order? 
+	Ans. ->  If the method arguments match with widening parameters in multiple overloaded methods with different order, the Java compiler will still be able to determine the most specific method to call based on the widening conversions. It follows a set of rules to select the most specific method during compilation.
+
+	2. Assume we have overloaded m1() method with String & Integer parameters, then for m1(null) which parameter method is executed? 
+	Ans. ->  CE reference to m() is ambiguous
+
+	3. Assume we have overloaded a m1() method with Object & String parameters, then for m1 (null) which parameter method is executed?
+	Ans. ->  String
+
+15.	differences between Method overriding & method hiding
+Ans. -> overriding :- If a class content multiple methods having same name but different parameters, it is known as Method Overloading.
+	
+		Method Hiding :- when a subclass has the same method name as the parent class, but different parameters. Both the parent class and child class methods are static. When the method is called, the subclass method hides the superclass method.
+
+16.	differences between Method overriding & method overloading
+Ans. ->  Method Overloading	Method Overriding
+		Method overloading is a compile-time polymorphism.	
+		Method overriding is a run-time polymorphism.
+
+		Method overloading helps to increase the readability of the program.	
+		Method overriding is used to grant the specific implementation of the method which is already provided by its parent class or superclass
+		
+		It occurs within the class.	
+		It is performed in two classes with inheritance relationships.
+		
+		Method overloading may or may not require inheritance.	
+		Method overriding always needs inheritance.
+
+		In method overloading, methods must have the same name and different signatures.	
+		In method overriding, methods must have the same name and same signature.
+	
+		In method overloading, the return type can or can not be the same, but we just have to change the parameter.	
+		In method overriding, the return type must be the same or co-variant.
+
+		Static binding is being used for overloaded methods.	
+		Dynamic binding is being used for overriding methods.
+		
+		Poor Performance due to compile time polymorphism.
+		It gives better performance. The reason behind this is that the binding of overridden methods is being done at runtime.
+
+		Private and final methods can be overloaded.	
+		Private and final methods can’t be overridden.
+
+		The argument list should be different while doing method overloading.
+		The argument list should be the same in method overriding.
+
+17.	Who will resolve hidden method execution, will it compiler or JVM?
+Ans. ->  In Java, the compiler resolves hidden method execution at compile time based on the reference type. This is known as compile-time polymorphism, static polymorphism, or early binding.
+
+18.	Who will resolve overridden method execution, will it compiler or JVM?
+Ans. ->  The resolution of overridden method execution in Java is performed by the Java Virtual Machine (JVM) during runtime. When a subclass provides 
+		a specific implementation for a method that is already defined in its superclass, it is known as method overriding. During program execution, the JVM determines which version of the method to execute based on the actual type of the object at runtime.
+
+19.	Why compiler resolves hidden & overloaded methods?
+Ans. ->  The resolution of hidden and overloaded methods in Java is primarily a responsibility of the compiler during the compilation process. The 	
+		concepts of hidden and overloaded methods involve the selection of the appropriate method to be invoked based on the method signature and parameter types, and this resolution occurs at compile time.
+
+20.	Why JVM resolves overridden method execution?
+Ans. ->  The Java Virtual Machine (JVM) resolves overridden method execution at runtime because it does not know which method will be called until the 
+		program is running. This is because a subclass can override a method from its parent class, and the JVM needs to determine which version of the method to call based on the type of the object that is being referenced.
+
+21.	
+
+=======================================================================================
+1.	When a method is considered as overloading method?
+Ans. ->  A method is considered overloaded when there are multiple methods in the same class (or subclass) with the same name but different parameter 
+
+2. When we should overload a method, what are the advantages?
+Ans. ->  Method overloading in Java is useful when you want to provide multiple methods with the same name but different parameters in the same class. 
+		This offers advantages like improved code readability, default parameter values, code reusability, and convenience for users. It also contributes to compile-time polymorphism, allowing the compiler to determine the appropriate method based on the method signature. In simple terms, method overloading makes your code more readable, maintainable, and flexible.
+
+3. In overloading, why we should create methods with same name, if we create them with different names what will be the problem, will it be there any CE or RE?
+Ans. ->  In Java, creating methods with different names instead of overloading can be done, and it won't result in compilation errors (CE) or runtime 
+		errors (RE). However, there are certain advantages to using method overloading with the same name, and not doing so might lead to code redundancy and decreased readability.
+		Consider the following points:
+		Readability: Using the same name for related operations makes the code more readable and intuitive. Developers can easily understand that these methods perform similar tasks but might have different parameter sets. 
+		Consistency: Overloading provides a consistent method-naming convention for similar operations. It helps maintain a clean and uniform API design. Code 
+		Maintenance: If you have multiple methods with similar functionality but different names, it can be harder to maintain and update the code. With overloading, you only need to modify a single method if changes are required.	
+
+4. What are the rules we must follow in overloading method? 
+	1. Is it possible to overload a method with the same parameter?
+	Ans. ->  No, it's not possible to overload a method with the same parameter. Trying to do so will result in a compile-time error.
+	
+	2. Is it possible to overload a method by just changing return type of the method?
+	Ans. ->  No, it's not possible to overload a method by changing its return type.
+	
+	3.	Is it possible to overload a method with different return type & modifiers?
+	Ans. ->  No, it's not possible to overload a method in Java solely based on differences in return type or modifiers.
+	
+	4. Is it possible to overload a static method as non-static method?
+	Ans. ->  No, it is not possible to overload a static method with a non-static (instance) method in Java. Overloaded methods must have different parameter lists, and the return type alone is not sufficient to differentiate between overloaded methods.
+	
+	5. Is it possible to overload a non-static method as static method?
+	Ans. ->  No, it is not possible to overload a non-static method with a static (instance) method in Java.
+	
+	6. Is it possible to overload a private method?
+	Ans. ->   Yes, we can overload private methods in Java but, you can access these from the same class.
+	
+	7. is it possible to overload a final method? 
+	Ans. ->  Yes, we can overload final methods in Java
+
+	8. Is it possible to overload a method in the same class?
+	Ans. ->  Yes, it's possible to overload a method in the same class in Java
+
+	9. Is it possible to overload a method in subclass?
+	Ans. ->  Yes, a subclass can overload methods of a superclass in Java. Method overloading occurs when a subclass provides a different implementation of a method with the same name and different parameters than the method in the superclass.
+
+	10. Is it possible to override a overloaded method?
+	Ans. ->  Yes, it is possible to override an overloaded method in Java.
+
+5.	How many types of polymorphisms Java supports?
+Ans. ->  Java supports two main types of polymorphism: compile-time polymorphism (also known as static polymorphism) and runtime polymorphism (also 
+		known as dynamic polymorphism). These are achieved through method overloading and method overriding.
+
+6. 	What is the meaning of dynamic method dispatching?
+Ans. ->  dynamic dispatch is the process of selecting which implementation method  to call at run time.
+
+7. What are the conditions should meet to achieve runtime polymorphism?
+Ans. -> To achieve runtime polymorphism, the following conditions must be met: 
+		The child and parent classes must have the same method names.
+		The child and parent class methods must have the same parameters.
+		An IS-A relationship must be established.
+		The overridden base method must be abstract, or override.
+		Both the override method and the virtual method must have the same access level modifier.
+		Virtual functions must be called using a reference.
+
+8.	How can we find a method call comes under compile time (or) runtime polymorphism?
+Ans. ->  Compile-time Polymorphism: Look for methods with the same name in the same class but different parameters.
+		Runtime Polymorphism: Look for a method in a subclass that has the same name as a method in its superclass.
+
+9.	Why static method and overloaded method comes under compile - time polymorphism?
+Ans. ->  
+
+10.	Why non-private, non-static method comes under run-time polymorphism?
+Ans. -> 
+
+===============================================================================================
+===============================================================================================
+
+1.	Can you override a static method in Java?
+Ans. ->  No, you cannot override a static method in Java. This is because static methods are not associated with an instance of a class, but with the class itself. Therefore, when a subclass inherits a static method from its parent class, it cannot modify the behavior of the static method in any way.
+
+2.	Explain the concept of "upcasting" in Java.
+Ans. ->  Upcasting is a type of object typecasting in which a child object is typecasted to a parent class object
+
+3.	What is the significance of the @Override annotation in Java, especially in the context of polymorphism?
+Ans. ->  The @override annotation is used when the subclass method overrides its superclass method. By using Java @override annotation to indicate that the method is overriding its parent class method, a compiler issues a warning if the annotated method is not overridden
+
+4.	Discuss the importance of the "IS-A" relationship in the context of polymorphism. How does it relate to inheritance?
+Ans. ->  
+
+5.	How does polymorphism enhance code flexibility and maintainability in Java programs?
+Ans. ->  Reuse Code: Polymorphism lets you reuse code. You can use the same method names or interfaces across different classes.
+		Easy Changes: If you need to change something, you can do it in one place (like a superclass). The changes automatically apply to all the related classes (subclasses).
+		Add New Stuff: You can easily add new features without messing up existing code. New classes can join the party without causing a ruckus.
+		Readability: The code is easier to read. If you see a method or interface, you have an idea of what it does, no matter which specific class is using it.
+		Less Tied Together: Classes are less tied together. They communicate through common interfaces rather than being tightly connected. This makes your code more flexible.
+
+6.	Discuss the concept of functional interfaces and how they contribute to achieving polymorphism in Java through the introduction of lambda expressions.
+Ans. ->  
+
+7.	How does the introduction of default methods in interfaces impact polymorphism in Java? Provide an example.
+Ans. ->  
+
+8.	Explain the limitations and challenges associated with achieving polymorphism in a multithreaded environment in Java.
+Ans. ->  Thread Safety:
+Challenge: Making sure that polymorphic code works correctly when multiple threads are using it.
+Limitation: If not done carefully, different threads might interfere with each other, leading to unexpected results.
+Mutable State:
+Challenge: Dealing with objects that can be changed by one thread while another is using them.
+Limitation: If not handled properly, this can result in unpredictable behavior and bugs.
+Synchronization Overhead:
+Challenge: Adding locks or synchronization to make sure threads don't interfere.
+Limitation: Too much synchronization can slow down the program and might lead to other issues like deadlocks.
+Visibility Issues:
+Challenge: Making sure changes made by one thread are immediately seen by others.
+Limitation: Without proper synchronization, changes might not be visible to all threads, causing problems.
+Race Conditions:
+Challenge: Dealing with situations where the outcome depends on the order and timing of thread execution.
+Limitation: This can lead to unexpected results and hard-to-find bugs.
+Atomicity Concerns:
+Challenge: Ensuring that certain operations happen all at once, without interruption from other threads.
+Limitation: Breaking operations into smaller steps can lead to unexpected behavior if not carefully managed.
+Deadlocks:
+Challenge: Threads getting stuck because they're waiting for each other.
+Limitation: Designing code to avoid deadlocks can be tricky, especially with polymorphism involved.
+Thread-Safe Design Patterns:
+Challenge: Applying safe coding patterns to handle multiple threads.
+Limitation: Not all code patterns are naturally safe for multithreading, and changing existing code can be complex.
+Shared Resources:
+Challenge: Managing resources (like data or objects) that multiple threads are using.
+Limitation: Without careful handling, threads might step on each other's toes, causing issues.
+Testing and Debugging:
+Challenge: Figuring out and fixing problems in code that runs with multiple threads.
+Limitation: Debugging multithreaded code can be more complex and might require advanced tools.
+
+9. Explain the concept of "adapters" and how they can be used to achieve polymorphism in Java. Provide an example where adapters enhance code flexibility.
+Ans. ->  Adapter class is a simple java class that implements all methods of an interface with empty implementation for every method.
+		If we implement an interface directly for each and every method compulsory we should provide implementation whether it is required or not. This approach increases length of the code and reduces readability. Ex. Servlet, generic Servtet
+
+10.	Explain the concept of "package-private" access in Java and how it relates to data hiding within a package
+Ans. ->  In Java, the concept of "package-private" access, also known as "default" access, is a level of access control that restricts the visibility 
+		of members (classes, interfaces, methods, and fields) to the same package. This means that only classes and members within the same package can access or modify the package-private elements.
+
+11.	What are the differences between Polymorphism and Inheritance in Java?
+Ans. -> Polymorphism	Inheritance
+Whereas polymorphism is that which can be defined in multiple forms.	
+Inheritance is one in which a new class is created (derived class) that inherits the features from the already existing class (Base class).
+
+Whereas it is basically applied to functions or methods.	
+It is basically applied to classes.
+
+Polymorphism allows the object to decide which form of the function to implement at compile-time (overloading) as well as run-time (overriding).	Inheritance supports the concept of reusability and reduces code length in object-oriented programming.
+
+Whereas it can be compiled-time polymorphism (overload) as well as run-time polymorphism (overriding).	
+Inheritance can be single, hybrid, multiple, hierarchical and multilevel inheritance.
+
+12.	How Java compiler differentiate between methods in Compile time Polymorphism?
+Ans. ->  Number of Parameters: Different methods can have the same name if they take a different number of parameters.
+		Data Types of Parameters: Methods with the same name can coexist if they have different types of parameters.
+		Order of Parameters: The order of parameters matters. If it's different, the compiler can tell them apart.
+		Return Type: Return type alone isn't enough. Methods need different parameter lists to coexist.
+
+13.	How to achieve/implement dynamic polymorphism in Java?
+Ans. ->  Dynamic polymorphism in Java is achieved through method overriding and the use of inheritance. It is also known as runtime polymorphism or 
+		late binding. 
+
+14.	What is Binding in Java?
+Ans. ->  Connecting a method call to the method body is known as binding. There are two types of binding in Java: static binding and dynamic binding.
+
+15.	What is Static binding in Java?
+Ans. ->  Static binding refers to the process of connecting a method call to the method implementation at compile time. It is also known as compile-time binding or early binding.
+
+16.	How Java compiler performs static binding?
+Ans. ->  The Java compiler performs static binding by analyzing the code and determining which method will be called at compile time. This is possible because the compiler knows the types of the variables and expressions used in the code.
+
+17.	What is the dynamic binding?
+Ans. ->  
+
+18.	What is the difference between early and late binding?
+Ans. ->  Early Binding	Late Binding
+		It is a compile-time process	
+		It is a run-time process
+		
+		The method definition and method call are linked during the compile time.					
+		The method definition and method call are linked during the run time. 
+		
+		Actual object is not used for binding.	
+		Actual object is used for binding.
+	
+		For example: Method overloading	For example: Method overriding
+		Program execution is faster	Program execution is slower
+
+19.	How JVM performs dynamic binding in Java?
+Ans. ->  Dynamic binding in Java is achieved by the Java Virtual Machine (JVM) during runtime. The process involves determining the actual method to be executed based on the runtime type of the object. Here's how the JVM performs dynamic binding:
+
+20.	Is it possible to achieve polymorphism using data members in Java?
+Ans. ->  No, it is not possible to achieve polymorphism using data members in Java.
+
+21.	Can you give some examples of when runtime polymorphism may not work as expected?
+Ans. ->  Private Methods : If a superclass has a private method, even if a subclass defines a similar private method, it's not considered an override. 
+		Polymorphism won't apply.
+		Static Methods : Polymorphism doesn't work with static methods. If a subclass defines a static method with the same name as a static method in the superclass, it doesn't override it.
+		Final Methods : If a method in the superclass is marked as final, it cannot be overridden in the subclass. Dynamic binding won't happen.
+		Constructors : Constructors are not inherited or overridden. The superclass constructor is always called first when an object of the subclass is created.
+		Mismatched Method Signatures : If the method signatures are different in the superclass and subclass, dynamic binding won't work. They are treated as separate methods
+
+22.	Explain the memory implications of method overriding and dynamic method dispatch in polymorphic scenarios.
+Ans. -> 
+ 
+23.	Can we override static method?
+Ans. ->  We cannot override static methods. Static methods are belongs to class, not belongs to object. Inheritance will not be applicable for class members.
+
+24.	What is the difierence between super() and this()?
+Ans. ->  super() is used to call super class constructor, 
+		whereas this() used to call constructors in the same class.
+
+25.	Can we overload a method by just changing the return type and without changing the signature of method?
+Ans. ->  No, we cannot do this. To overload a method, the method signature must be different, return type doesn’t play any role in method overloading.
+
+26.	Can we override a method by using same method name and arguments but different return types?
+Ans. ->  The basic condition of method overriding is that method name, arguments as well as return type must be exactly same as is that of the method being overridden. Hence using a different return type doesn’t override a method.
