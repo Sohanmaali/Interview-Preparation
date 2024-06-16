@@ -235,17 +235,10 @@ Ans. -> It is open-sourced and lightweight.
 		Provides facilities to automatically create a table.
 		It provides query statistics and database status.
 		
-Difference between get() vs load() method in Hibernate?
-Ans. -> load(): It will throw an exception if an object with an ID passed to them is not found.
-		get():  Will return null.
-
-		load(): It can return proxy without hitting the database unless required.
-		get(): It always goes to the database.
-
-		So sometimes using load() can be faster than the get() method.		
 		
 Difference between the first and second level cache in Hibernate? 
-Ans. -> The first-level cache is maintained at Session level while the second level cache is maintained at a SessionFactory level and is shared by all sessions.
+Ans. -> The first-level cache is maintained at Session level 
+		while the second level cache is maintained at a SessionFactory level and is shared by all sessions.
 
 Difference between the transient, persistent and detached state in Hibernate?
 Ans. -> Transient state: New objects are created in the Java program but are not associated with any Hibernate Session.
@@ -299,40 +292,238 @@ How do I save a Python request session?
 
 ========================================================================================================================
 4. Explain architecture of Hibernate?
+
 5. What are some core interfaces of hibernate?
+Ans. -> Session
+SessionFactory
+Configuration
+Transaction
+Query and Criteria interface.
+
 6. Explain brief about Session interface used in hibernate?
+Ans. -> The Session interface in Hibernate is a central API that provides a bridge between the application and the database. It is used to interact with the database by performing CRUD (Create, Read, Update, Delete) operations. Here’s a brief overview
+
 7. Are session objects thread safe?
+Ans. -> Session objects are not thread safe and need to be used in single thread. Every thread should have their own session object and close it once it is done with the work.
+
 8. Explain brief about SessionFactory object used in hibernate?
+Ans. -> SessionFactory is heavy weight object and it should be created one per database. SessionFactory object is shared by multiple sessions.
+
 9. What is Configuration class in hibernate?
+Ans. -> Configuration class is used to load required hibernate configuration. It is used to bootstrap hibernate and it is used to locate to hibernate mapping file.
+
 10. Explain brief about Criteria API in Hibernate?
+Ans. -> The Criteria API in Hibernate is a powerful, flexible, and type-safe way to create and execute database queries programmatically. It allows developers to build complex queries using Java objects and methods, without writing raw SQL, making the code more readable and maintainable.
+
 11. Explain brief about Query interface in Hibernate?
+Ans. -> Query interface is object oriented representation of Hibernate Query. You can get query object bu calling Session.createQuery() method.
+		Here is simple example to execute Native query using Query APIs.
+	
+	SQLQuery query = session.createSQLQuery("select name, age from Employee");
+	List<Object[]> rows = query.list();
+	for(Object[] row : rows){
+		Employee e = new Employee();
+		e.setName(row[0].toString());
+		e.setAge(Integer.parseInt(row[1].toString()));
+		System.out.println(e);
+	}
+
 12. What are differences between openSession and getCurrentSession in hibernate?
+Ans. -> Parameter								openSession      						getCurrentSession
+		Session object					It always create new Session object     	It creates a new Session if not exists , 
+																					else use same session which is in current hibernate context
+	
+	Flush and close					You need to explicitly flush and 
+										close session objects						You do not need to flush and close session objects,
+																					it will be 	automatically taken care by Hibernate internally
+	Performance						In single threaded environment , 
+									It is slower than getCurrentSession				In single threaded environment , It is faster than getOpenSession
+
+	Configuration					You do not need to configure any 
+									property to call this method					You need to configure additional property 
+																					“hibernate.current_session_context_class” to call getCurrentSession method, otherwise it will throw exceptions.
+
+
 13. What are differences between get and load methods in hibernate?
+Ans. -> Parameter									get													load
+		Database retrieval					It always hits the database								It does not hit database
+	
+		If null								If it does not get the object with id, 					If it does get the object with id, it throws 
+											it returns null 										ObjectNotFoundException
+		
+		Proxy 								It returns real object									It returns proxy object
+		
+		Use									If you are not sure if object with id 					If you are sure about existence of object,
+											exists or not, you can use get							you can use load
+ 
+
 14. Can you declare Entity class as final in hibernate?
-15. Differentiate between first level cache and second level cache?
+Ans. -> Yes, you can declare entity class as final but it is not considered as a good practice because hibernate uses proxy pattern for lazy initialisation, If you declare it as final then hibernate won’t be able to create sub class and won’t be able to use proxy pattern, so it will limit performance and improvement options.
+
+15. Differentiate between first level cache and second level cache?		
+Ans. -> Parameter								First level Cache										Second level Cache
+		Association						It is associated at Session level.				It is associated at SessionFactory level and is 
+																						generally exists one per application.
+		Default							It is enabled by default						It is not enabled by default, you need to enable it explicitly
+
 16. What are states of object in hibernate?
+Ans. -> Transient : If object is in transient state, it means it was never associated with session and just created.
+		Persistent :  If object is in persistent state, it means it is associated with session and you just saved or retrieved object from database.
+		Detached : If object is in detached state, it means session is closed and object is no more part of session. If you call merge or update, object goes back to persistent state.
+
 17. Does entity class in hibernate require no arg constructor?
+Ans. -> Yes, Entity class in hibernate requires no arg constructor because Hibernate use reflection to create instance of entity class and it mandates no arg constructor in Entity class.
+
 19. What are differences between save and saveOrUpdate method of session object?
+Ans. -> save(): stores object in database. It generates identifier for tQhe object and returns it. If object already exists in database, it will throw an error.
+saveOrUpdate(): SaveOrUpdate method save the object if identifies does not exist. If it exists , it calls update method.
+
 20. What are two types of Collections in hibernate?
+Ans. -> Sorted Collection
+		Ordered Collection
+		
 21. What are differences between sorted and ordered collection in hibernate?
+Ans. -> Parameter											Sorted Collection								Ordered Collection
+		Sorting						Sorted collection uses java’s sorting API							Ordered Collections uses order by 
+									 to sort the collection.											clause while retrieval of objects
+		Default 					It is enabled by default							It is not enabled by default, you need to enable it explicitly
+
+
 22. What is lazy loading in hibernate?
+Ans. -> It is used for performance improvement. Lazy loading means when you load parent, child objects won’t get loaded until requested. Infact hibernate loads child objects automatically when you access them. It improves performance as you are not loading whole object at once.
+
 23. What is LazyInitializationException in Hibernate? Why do you get it?
+Ans. -> This exception generally occurs when you use lazy loading and child objects are accessed after closing session.
+That’s all about hibernate interview questions.
+
 24. What are different collection types available in hibernate?
+Ans. -> There are 5 collection types available in Hibernate for one to many relationship mappings.
+		Bag
+		Set
+		List
+		Map
+		Array
+
 25. How can you log sql queries executed by Hibernate?
+Ans. -> You can set hibernate.show_sql to true for logging sql queries in Hibernate configuration file.
+		<property name="hibernate.show_sql">true</property>
+
 26. Can you execute native sql in hibernate?
-27. What are inheritance mapping strategies are available in Hibernate?
+Ans. -> Yes, you can use execute native sql with the help of SQLQuery object in Hibernate.
+
+// Crate session object
+SessionFactory sf = HibernateUtil.getSessionFactory();
+Session session = sf.getCurrentSession();
+
+// Get list of employees with help of SQLQuery.
+Transaction tx = session.beginTransaction();
+SQLQuery sqlQuery = session.createSQLQuery("select id, name, age from Employee");
+List<Object[]> rows = sqlQuery.list();
+for(Object[] row : rows){
+    Employee employee = new Employee();
+    employee.setId(Long.parseLong(row[0].toString()));
+    employee.setName(row[1].toString());
+    employee.setAge(Integer.parseInt(row[2].toString()));
+    System.out.println(employee);
+}
+
 28. How to make an class immutable in Hibernate?
+Ans. -> You can mark class as mutable=false and the class will become immutable.
+
 29. What is autamatic dirty checking in Hibernate?
+Ans. -> if object is modified in the transaction, then its state will be updated automatically when you committ the transaction.
+
+Here is an example:
+
+ 
+SessionFactory factory = cfg.buildSessionFactory();
+Session session = factory.openSession();
+Transaction tx=session.beginTransaction();
+ 
+Employee e1 = (Employee) session.get(Employee.class, Integer.valueOf(10001));
+ 
+e1.setAge(32);
+ 
+tx.commit();
+session.close();
+
 30. What do you understand by Hibernate tuning?
+Ans. -> Hibernate tuning is process of optimizing performance of Hibernate application.
+Some of the performance tuning strategies are:
+Data Caching
+Session management
+SQL optimization
+
 31. What types of joins can you use in Hibernate?
+Ans. -> There are multiple ways to use join in Hibernate.
+
+Using relationships such as one-to-one, one-to-many or many-to-many
+Using joins in native SQL query
+Using joins in HQL
+
 32. What is dialect in Hibernate?
+Ans. -> Dialect specifies type of database used in Hibernate, so that Hibernate can generate type of SQL statements.
+For example:
+Dialect for mysql database: org.hibernate.dialect.MySQL5Dialect
+Dialect for sqlserver database: org.hibernate.dialect.SQLServer2005Dialect
+
 33. Can you share some of the databases supported by Hibernate?
+Ans. -> MySQL
+SQLServer
+PostgreSQL
+FrontBaase
+Oracle
+Sybase SQL Server
+
 34. What is Named queries in Hibernate?
+Ans. -> Named queries helps you to group HQL/SQL statements at single location. You can refer it by name in code when you want to use them. It helps you to avoid code mess that can happend because of scattered queriest through the project.
+
 35. What is Query cache in Hibernate?
+Ans. -> If you have queries that run over and over again,with same parameters, then query caching can you performance improvements in the application.
+
+Benifit from caching query results is very limited and dependent on the usage of the application. This is reason Hibernate disables query level cache by default.
+
+To enable, you need to do following:
+
+Set hibernate.cache.use_query_cache in hibernate config file.
+ 
+ <property name="hibernate.cache.use_query_cache">true</property>
+ 
+You need to enable query cache for specific queries. Here is an example:
+ 
+List<Employees> employee = session.createQuery("from Employee e where e.name = :name")
+        .setEntity("employee", employee)
+        .setMaxResults(15)
+        .setCacheable(true)
+        .setCacheRegion("employeeReg")
+        .list();
+
 36. What are benefits of Criteria API in Hibernate?
+Ans. -> Criteria API can be used to fetch entity from database using object oriented apporach.
+Here are the advantages of criteria APIs.
+
+Criteria API is cleanm nice and Object oriented API.
+Criteria API provides Projection that can be used for aggregate functions like sum(), min() etc.
+You can write more flexible and dynamic queries as compared to HQL.
+It has addOrder() method which can be used for ordering the results.
+
 37. What is cascading in Hiberante and can you list types of cascading?
 38. How to integrate log4j with Hibernate?
+Ans. -> Add log4j dependencies for maven project. If it is not maven project, then add required log4j jars to classpath.
+Create [log4j.xml](https://java2blog.com/log4j-xml-configuration-example/ “log4j.xml”) or log4j.properties and put in the classpath.
+Use DOMConfigurator or PropertyConfigurator to configure log4j in static block for standalone application. If you have web application, then you can use ServletContextListener to configure it.
+
 39. What is hibernate configuration file?
+Ans. -> Hibernate configuration file contains database configurations such as database url, username, password and dialect etc and is used to initialize SessionFactory. It also contains mapping files and entity class details.
+
 40. Can you list down important annotations used for Hibernate mapping?
+Ans. -> 
+
 41. What are the design patterns used in Hibernate?
+Ans. -> Proxy pattern for lazy loading
+Factory pattern in SessionFactory
+Query object for Criteria API
+Data Mapper: A pattern in which layer of matters that flows data between object and databases while keeping them independent of each other
+Domain Model pattern: An object model of the domain that incorporates both data and behavior.
+
 42. Given a Customer class, you need to persist customer data in the database with customer ID as primary key. Please list down the changes you need to make?
