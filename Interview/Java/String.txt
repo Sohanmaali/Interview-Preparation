@@ -101,9 +101,6 @@ Ans. -> String is a class in Java. It is not a primitive data type.
 25. How many ways can we create string object in Java?
 Ans. -> You can create a String object in Java in multiple ways, including using string literals, the new keyword, character arrays, and the StringBuffer or StringBuilder classes.
 
-26. What is String Constant Pool in Java?
-Ans. -> The String Constant Pool in Java is a pool of String objects that are cached by the JVM. When you create a String using a string literal, the JVM checks the pool to see if an identical String already exists. If it does, the new String references the existing one, saving memory.
-
 27. Why string object is immutable in java?
 Ans. -> String objects are immutable in Java to ensure that their content cannot be changed once created. This immutability has benefits in terms of security, thread-safety, and performance.
 

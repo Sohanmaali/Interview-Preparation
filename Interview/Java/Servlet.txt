@@ -594,3 +594,11 @@ How to get the IP address of client in servlet?
 What are important features of Servlet 3?
 What are different ways for servlet authentication?
 How can we achieve transport layer security for our web application?
+What is the purpose of RequestDispatcher?
+2. In How many ways we can get RD?
+3. What is the difference b/w getting RD from request and context objects?
+4. what are differences b/w forward() and include()?
+5. what are differences b/w forward() and sendRedirect()?
+6. What is Foreign RequestDispatcher and how we can get it?
+7.What are the attributes added by web container while forwarding and including the request.
+8. What is the purpose of these attributes and explain meaning?
