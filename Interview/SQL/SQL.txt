@@ -121,10 +121,7 @@ WHERE salary < (
 );
 
 37. Write an SQL query to show one row twice in results from a table.
-Ans. -> SELECT * FROM your_table_name
-UNION ALL
-SELECT * FROM your_table_name
-LIMIT 1;
+Ans. -> SELECT * FROM your_table_name UNION ALL SELECT * FROM your_table_name LIMIT 1;
 
 38. Write an SQL query to list worker_id who does not get bonus.
 Ans. -> 
@@ -136,26 +133,16 @@ Ans. -> SELECT TOP 50 PERCENT * from Employee;
 Ans. -> SELECT department FROM your_table_name GROUP BY department HAVING COUNT(*) < 4;
 
 41. Write an SQL query to show all departments along with the number of people in there.
-Ans. -> SELECT department, COUNT(*) AS number_of_people
-FROM your_table_name
-GROUP BY department;
+Ans. -> SELECT department, COUNT(*) AS number_of_people FROM your_table_name GROUP BY department;
 
 42. Write an SQL query to show the last record from a table.
-Ans. -> SELECT *
-FROM your_table_name
-ORDER BY some_column DESC
-LIMIT 1;
+Ans. -> SELECT * FROM your_table_name ORDER BY some_column DESC LIMIT 1;
 
 43. Write an SQL query to fetch the first row of a table.
-Ans. -> SELECT *
-FROM your_table_name
-LIMIT 1;
+Ans. -> SELECT * FROM your_table_name LIMIT 1;
 
 44. Write an SQL query to fetch the last five records from a table.
-Ans. -> SELECT *
-FROM your_table_name
-ORDER BY some_column DESC
-LIMIT 5;
+Ans. -> SELECT * FROM your_table_name ORDER BY some_column DESC LIMIT 5;
 
 45. Write an SQL query to print the name of employees having the highest salary in each department.
 Ans. -> SELECT name, department, salary

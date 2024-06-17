@@ -14,7 +14,7 @@ class  MaximumLengthWord{
 			if(words[i].length()>max)
 			{
 				max = words[i].length();
-				index =i;
+				index = i;
 			}
 		}
 		System.out.println(words[index]);

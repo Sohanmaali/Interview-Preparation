@@ -1,3 +1,4 @@
+
 2. Explain Differences between executeQuery(), executeUpdate() and execute() methods?
 Ans. -> There are 4 execute Methods in JDBC.
 		1. executeQuery(): can be used for Select Queries
@@ -39,7 +40,6 @@ Ans. -> Sometimes as the Part of programming Requirement, we have to Insert and 
 			CLOB can be used to Store Large Text Documents (May Plain Text OR XML Documents)
 			CLOB Type can store Maximum of 4 GB Data.
 			Eg: hydhistory.txt
-
 
 7. Explain about Batch Updates?
 Ans. -> When we Submit Multiple SQL Queries to the Database one by one then lot of time will be wasted in Request and Response.
@@ -458,8 +458,6 @@ public class CallStoredProcedureWithInputParameters {
     }
 }
 
-
-
 69) How can you call the procedure from Java Application using output parameter of the procedure?
 Ans. -> To call a stored procedure from a Java application using output parameters, you can follow these steps:
 Establish a Database Connection: Connect to your database using JDBC by providing the JDBC URL, username, and password.
@@ -632,7 +630,6 @@ public class ResultSetMetadataExample {
         }
     }
 }
-
 
 75) Can I access Statement and ResultSet after closing the connection?
 Ans. -> No, you can't use any resources, including statements, prepared statements, and result sets, once a connection is closed
@@ -833,7 +830,6 @@ public class BatchUpdateExample {
     }
 }
 
-
 81) Can I submit delete Statement using Batch Update?
 Ans. -> Yes, you can submit delete statements using batch update in JDBC. Batch update functionality allows you to execute multiple SQL statements of the same type (such as INSERT, UPDATE, DELETE) as a single batch operation.
 import java.sql.*;
@@ -866,7 +862,6 @@ public class BatchDeleteExample {
         }
     }
 }
-
 
 82) Can I submit select Statement using Batch Update?
 Ans. -> No, batch updates do not support SQL statements such as SELECT and CREATE DATABASE. 
@@ -923,8 +918,9 @@ public class DatabaseMetaDataExample {
 90) What is the use of DatabaseMetaData?
 Ans. -> We can use DatabaseMetaData to get information about our database like database product name, driver name, version, number of tables etc..
 
-91) How can I access the Database Product Name?
+91) How can I access the Database Product Name ?
 Ans. -> You can access the database product name using the getDatabaseProductName() method of the DatabaseMetaData interface. Here's how you can do it:
+
 import java.sql.*;
 
 public class DatabaseProductNameExample {
@@ -947,7 +943,6 @@ public class DatabaseProductNameExample {
         }
     }
 }
-
 
 92) How can I access the Database Product version?
 Ans. -> You can access the database product version using the getDatabaseProductVersion() method of the DatabaseMetaData interface. Here's how you can do it:
@@ -973,7 +968,6 @@ public class DatabaseProductVersionExample {
         }
     }
 }
-
 
 93) How can I access the Driver Name?
 Ans. -> You can access the driver name using the getDriverName() method of the DatabaseMetaData interface. Here's how you can do it:
@@ -1001,7 +995,7 @@ public class DriverNameExample {
 
             } catch (SQLException e) {
                 e.printStackTrace();
-            }
+			}
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -1070,7 +1064,6 @@ public class BatchUpdateSupportExample {
     }
 }
 
-
 96) How can I check whether Database supports Full Outer Join or not?
 Ans. -> To check whether a database supports a full outer join, you can use the getCrossJoinSupport() method of the DatabaseMetaData interface. The DatabaseMetaData.CrossJoinSupport enum defines the level of support for cross joins, which includes full outer joins.
 import java.sql.*;
@@ -1105,8 +1098,6 @@ public class FullOuterJoinSupportExample {
         }
     }
 }
-
-
 
 97) What is ResultSetMetadata?
 Ans. -> It is an interface present in java.sql package. Driver software vendor is responsible to provide implementation. It provides information about database table represented by ResultSet object.
@@ -1154,7 +1145,6 @@ public class ResultSetMetadataExample {
     }
 }
 
-
 101) What is the use of ResultSetMetadata type?
 Ans. -> It is an interface present in java.sql package. Driver software vendor is responsible to provide implementation. It provides information about database table represented by ResultSet object. Useful to get number of columns, column types etc.. We can get ResultSetMetaData object by using getMetaData() method of ResultSet interface.
 
@@ -1186,7 +1176,6 @@ public class ColumnCountExample {
         }
     }
 }
-
 
 103) How can I access the name & order of the columns available in Resultset?
 Ans. -> import java.sql.*;
@@ -1585,6 +1574,7 @@ Ans. -> It is alternative to ResultSet.
 		RowSet implementations will be provided by Java vendor and database vendor.
 
 151) What is the super type for RowSet?
+Ans. -> ResultSet
 
 152) How to get the object of RowSet?
 Ans. -> We can create different types of RowSet objects as follows
@@ -1613,16 +1603,13 @@ Ans. -> Yes, a CachedRowSet object can be serialized.
 Ans. -> Yes, a JDBC RowSet object can be serialized. 
 
 159) What is the difference between ResultSet and RowSet?
-Ans. -> 1) ResultSet present in java.sql Package. 
-		1) RowSet present in javax.sql Package.
-
-		2) By Default ResultSet is Non Scrollable and Non Updatable (Forward only and Read only).
+Ans. -> 2) By Default ResultSet is Non Scrollable and Non Updatable (Forward only and Read only).
 		2) By Default RowSet is Scrollable and Updatable.
 		
 		3) ResultSet Objects are Non Serializable and we can't send over Network.
 		3) RowSet Objects are Serializable and hence we can send over Network.
 
-		4) ResultSet Objects are Connection oriented i.e. we can access ResultSet Data as long as Connection is available once Connection closed we can't access ResultSet Data.
+		4) we can access ResultSet Data as long as Connection is available once Connection closed we can't access ResultSet Data.
 		4) RowSet Objects are Connection Less Objects i.e. we can access RowSet Data without having Connection to DB (except JdbcRowSet).
 
 		5) ResultSet Object is used to store Records returned by Select Query.
@@ -1692,8 +1679,7 @@ Ans. ->
 What is the difference Between getting Connection object by using DriverManager and DataSource object?
 Ans. -> In the case of DriverManager.getConnection(), always a new Connection object will be created
 and returned.
-But in the case of DataSourceObject.getConnection(), a new Connection object won't be created
-and existing Connection object will be returned from Connection Pool.
+But in the case of DataSourceObject.getConnection(), a new Connection object won't be createdand existing Connection object will be returned from Connection Pool.
 
 
 Disable auto commit mode of JDBC

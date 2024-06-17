@@ -200,52 +200,38 @@ Ans -> 	collection :- A generic term referring to any group of items or objects
 			• You want fast operations for adding, removing, and checking if an item is in the set.
 
 35. What is the difference between Set, List, Queue and Map?
-Ans -> 	Set: It is the Child Interface of the Collection.If we want to Represent a Group of Individual Objects as a Single Entity where Duplicates are Not allowed and Insertion Order won't be Preserved. Then we should go for Set Interface.
+Ans -> 	Set:- It is the Child Interface of the Collection.If we want to Represent a Group of Individual Objects as a Single Entity where Duplicates are Not allowed and Insertion Order won't be Preserved. Then we should go for Set Interface.
 		
 		List:- It is the Child Interface of Collection. If we want to Represent a Group of Individual Objects as a Single Entity where Duplicates are allowed and Insertion Order Preserved. Then we should go for List. 
 		
 		Queue: It is the Child Interface of Collection. If we want to Represent a Group of Individual Objects Prior to Processing then we should go for Queue.
 
-36. What is the difference between Set & Sortedset?
-Ans. ->  Set
-		set not preserve any order
-		set Allbase store unique elemet
-		Extends the Collection interface.
-		Common Implementations: HashSet, LinkedHashSet, TreeSet (without sorting).
+36. What is the difference between Set and Sortedset?
+Ans. -> Set: General collection without duplicates and with no specific order (except in LinkedHashSet which maintains insertion order).
 		
-		SortedSet
-		SortedSet preserve sorted order.
-		Sortedset Allbase store unique elemet
-		Extends the Set interface with additional sorting-related methods.
-		Common Implementations: TreeSet (with sorting).
+		SortedSet: A specialized Set that maintains its elements in a sorted order, providing additional methods to deal with range views and ordering specifics.
 
 37. What is the difference between Map & SortedMap? 
-Ans. -> Map
-		Map dose not preserve any order of keys.
-		Stores key-value pairs where keys are unique.
-		 Part of the java.util package.
-		Common Implementations: HashMap, LinkedHashMap, Hashtable, WeakHashMap.
+Ans. -> Map: General collection of key-value pairs with unique keys and no specific order for the keys (except in LinkedHashMap which maintains insertion order).
 
-	SortedMap
-		Maintains keys in a sorted order.
-		Stores key-value pairs where keys are unique.
-		Extends the Map interface with additional methods related to sorting and navigation.
-		Common Implementations: TreeMap.
+		SortedMap: A specialized Map that maintains its keys in a sorted order, providing additional methods to deal with range views and ordering specifics.
 
 What is the difference between HashSet and HashMap?
-Ans. -> HashSet :-
-		HashSet class implements the Set interface
-		In HashSet, we store objects(elements or values) e.g. If we have a HashSet of string elements then it could depict a set of HashSet elements: {“Hello”, “Hi”, “Bye”, “Run”}
-		HashSet does not allow duplicate elements that mean you can not store duplicate values in HashSet.
-		HashSet permits to have a single null value.
-		HashSet is not synchronized which means they are not suitable for thread-safe operations until unless synchronized explicitly.
+Ans. -> HashSet
+			Purpose: Stores unique elements.
+			Element Type: Only values (no key-value pairs).
+			Order: No guaranteed order.
+			Duplicates: Does not allow duplicate elements.
+			Implementation: Internally uses a HashMap with dummy values.
+			Usage: When you need a collection of unique items.
 	
-	HashMap :-
-		HashMap class implements the Map interface
-		HashMap is used for storing key & value pairs. 
-		HashMap does not allow duplicate keys however it allows having duplicate values.
-		HashMap permits single null key and any number of null values.
-		HashMap is not synchronized which means they are not suitable for thread-safe operations until unless synchronized explicitly.
+	HashMap
+			Purpose: Stores key-value pairs.
+			Element Type: Both keys and values.
+			Order: No guaranteed order.
+			Duplicates: Keys must be unique; values can be duplicated.
+			Implementation: Uses a hash table to store entries.
+			Usage: When you need to map keys to values and retrieve values based on keys.
 
 38. What is the difference between SortedSet & NavigableSet ?
 Ans ->SortedSet
@@ -308,8 +294,8 @@ Ans. -> 	Every Method Present Inside ArrayListis Non – Synchronized.
 		Introduced in 1.0 Version and it is Legacy.
 
 42. What is the difference between ArrayList & LinkedList? 
-Ans. -> 	1) ArrayList internally uses a dynamic array to store the elements.	
-			LinkedList internally uses a doubly linked list to store the elements.
+Ans. -> 1) ArrayList internally uses a dynamic array to store the elements.	
+		LinkedList internally uses a doubly linked list to store the elements.
 
 		2) Manipulation with ArrayList is slow because it internally uses an array. If any element is removed from the array, all the other elements are shifted in memory.	
 		Manipulation with LinkedList is faster than ArrayList because it uses a doubly linked list, so no bit shifting is required in memory.
@@ -359,7 +345,7 @@ Ans. ->	HashMap	LinkedHashMap
 		Introduced in 1.4 Version.
 
 45. What is the difference between HashSet & TreeSet?
-Ans. -> 	The Hash set is executed with the help of a HashTable.	
+Ans. -> The Hash set is executed with the help of a HashTable.	
 		The tree set is executed with the help of a tree structure.
 
 		It authorises a heterogeneous object.

@@ -6,11 +6,11 @@ class FirstRepeatingElement
 		
 		boolean b= new boolean[arr.length];
 		int c =-1;
-		for(int i =0; i<arr.length;i++)
+		for(int i = 0; i<arr.length;i++)
 		{
 			if(b[i]) continue;
-			c= 0;
-			for(int j =i+1;j<arr.length;j++)
+			c = 0;
+			for(int j = i+1; j < arr.length; j++)
 			{
 				if(arr[i]==arr[j])
 				{
