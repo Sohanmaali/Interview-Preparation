@@ -1,17 +1,29 @@
 Hibernate Interview Questions
 
 1) What is Hibernate?
-Ans. -> Hibernate is an open-source and lightweight ORM tool that is used to store, manipulate, and retrieve data from the database.
+Ans. -> Hibernate is an object-relational mapping (ORM) framework. that is used to store, manipulate, and retrieve data from the database.
 
 2) What is ORM?
-Ans. -> ORM, which stands for Object-Relational Mapping it is acts as a translator that converts the Java object into the relational database. It makes it easier to store and retrieve information on Java objects, by using the ORM technique which reduces a lot of manual work.
-		ORM stands for Object Relational mapping. It is programming paradigm which is used to persist java objects  to database tables.
+Ans. ->ORM stands for Object-Relational Mapping (ORM) is a technique that allows developers to interact with a relational database using object-oriented programming languages. It converts mapping classes to database tables and objects to rows, so developers can manipulate database records using code without writing SQL queries.
 
 3) What does an ORM solution comprises of?
-Ans. -> • It should have an API for performing basic CRUD (Create, Read, Update, Delete) operations on objects of persistent classes
-		• Should have a language or an API for specifying queries that refer to the classes and the properties of classes
-		• An ability for specifying mapping metadata
-		• It should have a technique for ORM implementation to interact with transactional objects to perform dirty checking, lazy association 		fetching, and other optimization functions
+Ans. ->	Object-Relational Mapping (ORM): Hibernate maps Java classes to database tables and Java data types to SQL data types. This allows developers to work with objects and collections directly.
+
+		Database Independence: Hibernate provides a layer of abstraction over the database, enabling applications to be database-agnostic. You can switch between different databases without changing the code.
+
+		Automatic SQL Generation: Hibernate automatically generates SQL queries based on the mapping and operations performed on the Java objects. This reduces the need for manual SQL writing.
+
+		Transaction Management: Hibernate integrates with Java's transaction management and ensures that data integrity is maintained through proper transaction handling.
+
+		Lazy Loading: Hibernate supports lazy loading, which means it loads data only when it is actually needed, thus improving performance.
+
+		Caching: Hibernate provides a caching mechanism that reduces database access and improves application performance.
+
+		Query Language (HQL): Hibernate provides its own query language (Hibernate Query Language or HQL) which is similar to SQL but operates on the object level.
+
+		Annotations and XML Configuration: Hibernate supports both XML configuration and JPA (Java Persistence API) annotations for mapping classes to database tables.
+
+		Criteria API: Hibernate provides a Criteria API for building queries in a programmatic and type-safe way.
 
 4) What are the different levels of ORM quality?
 There are four levels defined for ORM quality.
@@ -50,33 +62,31 @@ Ans. -> Code Readability : Write code in your preferred language (Python, Java, 
 		Persistence : Data managed by Hibernate will outlive the application process, ensuring long-term storage.
 
 10) How does hibernate code looks like?
-Ans. -> Configuration con = new configuration();
-		con.configure();
-		SessionFactory sf = con.buildSessionFactory();
-		Session session = sf.openSession();
-		Transaction tx = sf.beginTransaction();
-		Student st= new Student(101,"Sohan");
-		session.save(st);
-		tx.commit();
-		session.close();
-		sf.close();
+Ans. -> 
+	import org.hibernate.Session;
+	import org.hibernate.SessionFactory;
+	import org.hibernate.Transaction;
+	import org.hibernate.cfg.Configuration;
+
+	public class HibernateExample {
+		public static void main(String[] args) {
+			Configuration configuration = new Configuration().configure();
+			SessionFactory sessionFactory = configuration.buildSessionFactory();
+			Session session = sessionFactory.openSession();
+			Transaction transaction = session.beginTransaction();
+	
+			YourEntity entity = new YourEntity();
+			entity.setId(1L);
+			entity.setName("Example Name");
+
+			session.save(entity);
+			transaction.commit();
+			session.close();
+		}
+	}
 
 11) What is a hibernate xml mapping document and how does it look like?
-Ans. -> Hibernate Mapping Files is an XML file that specifies the mapping between POJO classes and database tables
-
-	<?xml version="1.0"?>
-	<!DOCTYPE hibernate-mapping PUBLIC "http://hibernate.sourceforge.net/hibernate-mapping->
-	<hibernate-mapping>
-		<class name="sample.MyPersistanceClass" table="MyPersitaceTable">
-			<id name="id" column="MyPerId">
-				<generator class="increment"/>
-			</id>
-			<property name="text" column="Persistance_message"/>
-			<many-to-one name="nxtPer" cascade="all" column="NxtPerId"/>
-		</class>
-	</hibernate-mapping>
-
-12) Show Hibernate overview?
+Ans. -> Hibernate Mapping Files is an XML file that specifies the mapping between POJO classes and database tables and between POJO class variables and table columns. It includes the mapping relationship between the Java class and the database table. It often goes by the name "xx. hbm.
 
 13) What are some of the important interfaces of the Hibernate framework?
 Ans. ->	1.SessionFactory: SessionFactory is an Interface which is present in org.hibernate package and it is used to create Session Object. It is 
@@ -97,23 +107,23 @@ Ans. ->	1.SessionFactory: SessionFactory is an Interface which is present in org
 			The Session is a factory for Criteria. Criterion instances are usually obtained via the factory methods on Restrictions.
 
 14) What are Callback interfaces?
-Ans. -> Callback interfaces of hibernate are useful in receiving event notifications from objects. For example, when an object is loaded or deleted, an event is generated and notification is sent using callback interfaces.
+Ans. -> In Hibernate, callback interfaces are mechanisms that allow you to perform custom actions during different stages of an entity's lifecycle, such as before or after saving, updating, or deleting the entity. These actions are specified using certain methods or annotations that get triggered automatically by Hibernate.
 
 15) What are Extension interfaces?
-Ans. -> When the built-in functionalities provided by hibernate is not sufficient enough, it provides a way so that user can include other interfaces and implement those interfaces for user desire functionality. These interfaces are called as Extension interfaces.
+Ans. -> Extension interfaces in Hibernate are a set of interfaces that allow you to customize and extend the behavior of Hibernate. By implementing these interfaces, you can add custom logic or modify how Hibernate interacts with the database.
 
 16) What are the Extension interfaces that are there in hibernate?
-There are many extension interfaces provided by hibernate.
-• ProxyFactory interface - used to create proxies
-• ConnectionProvider interface – used for JDBC connection management
-• TransactionFactory interface – Used for transaction management
-• Transaction interface – Used for transaction management
-• TransactionManagementLookup interface – Used in transaction management.
-• Cahce interface – provides caching techniques and strategies
-• CacheProvider interface – same as Cache interface
-• ClassPersister interface – provides ORM strategies
-• IdentifierGenerator interface – used for primary key generation
-• Dialect abstract class – provides SQL support
+Ans. -> There are many extension interfaces provided by hibernate.
+		• ProxyFactory interface - used to create proxies
+		• ConnectionProvider interface – used for JDBC connection management
+		• TransactionFactory interface – Used for transaction management
+		• Transaction interface – Used for transaction management
+		• TransactionManagementLookup interface – Used in transaction management.
+		• Cahce interface – provides caching techniques and strategies
+		• CacheProvider interface – same as Cache interface
+		• ClassPersister interface – provides ORM strategies
+		• IdentifierGenerator interface – used for primary key generation
+		• Dialect abstract class – provides SQL support
 
 17) What are different environments to configure hibernate?
 There are mainly two types of environments in which the configuration of hibernate application differs.
@@ -121,50 +131,26 @@ i. Managed environment – In this kind of environment everything from database 
 ii. Non-managed environment – This kind of environment provides a basic configuration template. Tomcat is one of the best examples that provide this kind of environment.
 
 18) What is the file extension you use for hibernate mapping file?
-The name of the file should be like this : filenam.hbm.xml The filename varies here. The extension of these files should be “.hbm.xml”. This is just a convention and it’s not mandatory. But this is the best practice to follow this extension.
-
-19) What do you create a SessionFactory?
-Configuration cfg = new Configuration();
-cfg.addResource("myinstance/MyConfig.hbm.xml");
-cfg.setProperties( System.getProperties() );
-SessionFactory sessions = cfg.buildSessionFactory();
-First, we need to create an instance of Configuration and use that instance to refer to the location of the configuration file. After configuring this instance is used to create the SessionFactory by calling the method buildSessionFactory().
+Ans. -> The name of the file should be like this : filenam.hbm.xml The filename varies here. The extension of these files should be “.hbm.xml”. This is just a convention and it’s not mandatory. But this is the best practice to follow this extension.
 
 20) What is meant by Method chaining?
-Method chaining is a programming technique that is supported by many hibernate interfaces. This is less readable when compared to actual java code. And it is not mandatory to use this format. Look how a SessionFactory is created when we use method chaining. 
-SessionFactory sessions = new Configuration().addResource("myinstance/MyConfig.hbm.xml").setProperties( System.getProperties() ).buildSessionFactory();
+Ans. -> Method chaining is a common syntax in object-oriented programming languages that allows you to invoke multiple method calls in a single statement. It's also known as method cascading
 
 21) What does hibernate.properties file consist of?
-This is a property file that should be placed in application class path. So when the Configuration object is created, hibernate is first initialized. At this moment the application will automatically detect and read this hibernate.properties file.
-hibernate.connection.datasource = java:/comp/env/jdbc/AuctionDB
-hibernate.transaction.factory_class = net.sf.hibernate.transaction.JTATransactionFactory
-hibernate.transaction.manager_lookup_class = net.sf.hibernate.transaction.JBossTransactionManagerLookup
-hibernate.dialect = net.sf.hibernate.dialect.PostgreSQLDialect
 
 22) What should SessionFactory be placed so that it can be easily accessed?
-As far as it is compared to J2EE environment, if the SessionFactory is placed in JNDI then it can be easily accessed and shared between different threads and various components that are hibernate aware. You can set the SessionFactory to a JNDI by configuring a property hibernate.session_factory_name in the hibernate.properties file.
 
 23) What are POJOs?
-POJO stands for plain old java objects. These are just basic JavaBeans that have defined setter and getter methods for all the properties that are there in that bean. Besides they can also have some business logic related to that property. Hibernate applications works efficiently with POJOs rather then simple java classes.
+Ans. -> POJO stands for plain old java objects. These are just basic JavaBeans that have defined setter and getter methods for all the properties that are there in that bean. Besides they can also have some business logic related to that property. Hibernate applications works efficiently with POJOs rather then simple java classes.
 
 24) What is object/relational mapping metadata?
-ORM tools require a metadata format for the application to specify the mapping between classes and tables, properties and columns, associations and foreign keys, Java types and SQL types. This information is called the object/relational mapping metadata. It defines the transformation between the different data type systems and relationship representations.
+Ans. -> Object/relational mapping (ORM) metadata is information that defines how Java objects (classes) map to database tables. It specifies how class fields map to table columns and how relationships between classes are represented in the database. This metadata can be provided using annotations in the Java code or XML configuration files.
 
 25) What is HQL?
-HQL stands for Hibernate Query Language. Hibernate allows the user to express queries in its own portable SQL extension and this is called as HQL. It also allows the user to express in native SQL.
+Hibernate Query Language (HQL) is a powerful, object-oriented query language used in Hibernate, a popular Java-based ORM framework. HQL is similar to SQL but is designed to work with Hibernate's data objects, allowing developers to write queries against the object model rather than the database tables directly.
 
 26) What are the different types of property and class mappings?
-• Typical and most common property mapping
-<property name="description" column="DESCRIPTION" type="string"/>
-Or
-<property name="description" type="string">
-<column name="DESCRIPTION"/>
-</property>
-• Derived properties
-<property name="averageBidAmount" formula="( select AVG(b.AMOUNT) from BID b • Typical and most common property mapping
-<property name="description" column="DESCRIPTION" type="string"/>
-• Controlling inserts and updates
-<property name="name" column="NAME" type="string" insert="false" update="false"/>
+Ans. ->
 
 27) What is Attribute Oriented Programming?
 XDoclet has brought the concept of attribute-oriented programming to Java. Until JDK 1.5, the Java language had no support for annotations; now XDoclet uses the Javadoc tag format (@attribute) to specify class-, field-, or method-level metadata attributes. These attributes are used to generate hibernate mapping file automatically when the application is built. This kind of programming that works on attributes is called as Attribute Oriented Programming.

@@ -1,11 +1,11 @@
 HR
 Tell me about yourself.
-Ans. -> 	Good morning, sir or mam.
+Ans. -> Good morning, sir or mam.
 		My name is Sohan Maali, and my native city is Khategaon. I am currently living in Indore.
 		Recently, I completed my graduation from Adrsh College, Harda, affiliated with Barkatullah University, Bhopal, in 2023.
 		Currently, I am pursuing my MCA. Patel College of Science and Technology is affiliated with RGPV University in Bhopal.
 		Coming to my technical ability, I have good knowledge of Java, HTML, CSS, Tailwind, BootStrap, JavaScript, React, and MySQL databases.
-		I recently worked on a project about a bank management system using Java J2SE, html,CSS, BootStrap, JavaScript, and I am currently working on a project called Scrape Second Life using Java full-stack development.
+		I recently worked on a project about a Libreay management system using Java J2SE, html,CSS, BootStrap, JavaScript, and I am currently working on a project called Scrape Second Life using Java full-stack development.
 		My strength is that I am a self-motivated and disciplined person.
  
 		This is all about me.
