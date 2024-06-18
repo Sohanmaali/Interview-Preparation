@@ -1,5 +1,3 @@
-Servlets
-
 1. What is a Servlet ?
 Ans. -> A Servlet is a Java program that runs on a server and handles requests and responses in a web application.
 		Servlet is a server side webcomponent which is responsible to generate dynamic responses.
