@@ -153,17 +153,10 @@ Hibernate Query Language (HQL) is a powerful, object-oriented query language use
 Ans. ->
 
 27) What is Attribute Oriented Programming?
-XDoclet has brought the concept of attribute-oriented programming to Java. Until JDK 1.5, the Java language had no support for annotations; now XDoclet uses the Javadoc tag format (@attribute) to specify class-, field-, or method-level metadata attributes. These attributes are used to generate hibernate mapping file automatically when the application is built. This kind of programming that works on attributes is called as Attribute Oriented Programming.
+Ans. -> Attribute-Oriented Programming (AOP) is a programming style where attributes (or annotations) are used to add metadata to code elements (like classes, methods, and fields). This metadata can be used to influence the behavior or configuration of the program, often without changing the actual code.
 
-28) What are the different methods of identifying an object?
-There are three methods by which an object can be identified.
-i. Object identity – Objects are identical if they reside in the same memory location
-in the JVM. This can be checked by using the = = operator.
-ii. Object equality – Objects are equal if they have the same value, as defined by the equals( ) method. Classes that don’t explicitly override this method inherit the implementation defined by java.lang.Object, which compares object identity.
-iii. Database identity – Objects stored in a relational database are identical if they represent the same row or, equivalently, share the same table and primary key value.
 
-29) What are the different approaches to represent an
-inheritance hierarchy?
+29) What are the different approaches to represent an inheritance hierarchy?
 i. Table per concrete class.
 ii. Table per class hierarchy.
 iii. Table per subclass.
@@ -225,6 +218,16 @@ Ans. -> It is open-sourced and lightweight.
 Difference between the first and second level cache in Hibernate? 
 Ans. -> The first-level cache is maintained at Session level 
 		while the second level cache is maintained at a SessionFactory level and is shared by all sessions.
+		
+			
+		It is enabled by default.
+		It is not enabled by default.
+		
+		It is available for a session 
+		It is available across all session.
+		
+		No Extra configuration required
+		We have to decide  which concurrency strategy to use and also need to configure cache expiration and physical cache attributes.
 
 Difference between the transient, persistent and detached state in Hibernate?
 Ans. -> Transient state: New objects are created in the Java program but are not associated with any Hibernate Session.
@@ -240,9 +243,6 @@ Ans. -> Hibernate is an ORM tool.
 		This Java framework also has an Auto Primary Key Generation support.
 		Supports cache memory.
 		Exception handling is not mandatory in the case of Hibernate.
-
-
-HQL queries could be dynamic and flexible which supports the aggregation and joins as well such as SUM, and AVG, and uses joins to combine data from the different tables. HQL supports polymorphic queries, meaning you can write a single query that operates on a superclass and retrieves instances of both the superclass and its subclasses.
 		
 How to achieve mapping in Hibernate?
 Ans. -> One-to-One associations
@@ -250,32 +250,44 @@ Ans. -> One-to-One associations
 		Many-to-Many associations
 		
 When do you use merge() and update() in Hibernate?
-Ans. -> This is one of the tricky Hibernate Interview Questions asked.
-		update(): If you are sure that the Hibernate Session does not contain an already persistent instance with the same id .
+Ans. -> update(): If you are sure that the Hibernate Session does not contain an already persistent instance with the same id .
 		merge():  Helps in merging your modifications at any time without considering the state of the Session.
 		
 What’s the difference between session.save() and session.saveOrUpdate() methods in hibernate?
-Ans. -> Sessionsave() method saves a record only if it’s unique with respect to its primary key and will fail to insert if primary key already exists 
+Ans. -> Session.save() method saves a record only if it’s unique with respect to its primary key and will fail to insert if primary key already exists 
 		in the table.
 		saveOrUpdate() method inserts a new record if primary key is unique and will update an existing record if primary key exists in the table already.
 		
 What is transient instance state in Hibernate?
 Ans. -> If an instance is not associated with any persistent context and also, it has never been associated with any persistent context, then it’s said to be in transient state.
 
-Is the ejbCreate() method mandatory while defining a session bean?
 What type of methods in therapy sessions exist?
 Among the call transaction and session method, which is faster?
 What is the difference between a connection and a session?
 How is a session maintained?
-What are the best day-to-day time-saving tips?
-What is the difference between session.save() and session.flush() in hibernate?
-How are sessions created?
-Why is an Adonis session not persisting between tests (node.js, session, testing, adonis.js and development)?
-Why are sessions not working on live server, showing blank page but it is working in localhost (PHP, MySQL, session, session cookies, session variables, development)?
-What are the steps to execute the session method?
-What are the differences between forward() method and sendRedirect() methods?
-How do I save a Python request session?
+Ans. -> Sessions are maintained automatically by a session cookie that is sent to the client when the session is first created.
 
+What is the difference between session.save() and session.flush() in hibernate?
+
+What are the advantages of Hibernate over JDBC?
+Ans. ->	Database independence - Hibernate is database-independent, so the same code can work for many databases with only minor changes. In contrast, JDBC is database-dependent and requires different code for different databases.
+		
+		Exception management - Hibernate manages exceptions by marking them as unchecked, while JDBC code needs to be written in a try-catch databases block.
+		
+		Object-oriented programming - Hibernate allows developers to code Java applications based on object-oriented principles and best practices, without worrying about database semantics. This can speed up development, especially for developers who aren't familiar with SQL and relational databases.
+		
+		Higher-level API - Hibernate abstracts JDBC and provides a higher-level API for developers.
+		
+		Automated database access - Hibernate automates many aspects of database access, while JDBC is more manually code-intensive.
+		
+		Associations - Hibernate makes it easier to create associations between relations, such as one-to-one, one-to-many, many-to-one, and many-to-many, using annotations. 
+
+What is a Session in Hibernate?
+Ans. -> A session is an object that maintains the connection between Java object application and database. Session also has methods for storing, retrieving, modifying or deleting data from database using methods like persist(), load(), get(), update(), delete(), etc. Additionally, It has factory methods to return Query, Criteria, and Transaction objects.
+
+What is a SessionFactory?
+Ans. -> SessionFactory provides an instance of Session. It is a factory class that gives the Session objects based on the configuration parameters in order to establish the connection to the database. As a good practice, the application generally has a single instance of SessionFactory. The internal state of a SessionFactory which includes metadata about ORM is immutable, i.e once the instance is created, it cannot be changed.
+This also provides the facility to get information like statistics and metadata related to a class, query executions, etc. It also holds second-level cache data if enabled.
 ========================================================================================================================
 4. Explain architecture of Hibernate?
 
@@ -511,5 +523,3 @@ Factory pattern in SessionFactory
 Query object for Criteria API
 Data Mapper: A pattern in which layer of matters that flows data between object and databases while keeping them independent of each other
 Domain Model pattern: An object model of the domain that incorporates both data and behavior.
-
-42. Given a Customer class, you need to persist customer data in the database with customer ID as primary key. Please list down the changes you need to make?
