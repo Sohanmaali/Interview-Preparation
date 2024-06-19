@@ -1,15 +1,15 @@
 1. What is React.Js ? Explain the Features of React.js
-Ans. -> React.js is a JavaScript library used to build interactive and dynamic web page developt by Fb And  released in May 2013 . 
+Ans. -> React.js is a JavaScript library used to build interactive and dynamic web pages, it is developt by Fb And released in May 2013. 
 
 2. What is difference between Actual DOM and Virtual DOM?
-Ans. ->  DOM stand for document object model , it is a programming interface, thats represent structure of html in tree, 
+Ans. -> DOM stand for document object model, it is a programming interface, thats represent structure of html node tree, 
 		Virtual DOM : Virtual DOM exists which is like a lightweight copy of the actual DOM(a virtual representation of the DOM). So for every object that exists in the original DOM, there is an object for that in React Virtual DOM. It is exactly the same, but it does not have the power to directly change the layout of the document. 
 
-3. What is  component in react?
-Ans. -> A component is an independent, reusable Piece of code which divides the UI into smaller pieces. For example, if we were building the UI of React website using Reactjs we can break its UI into smaller parts is called components.
+3. What is component in react?
+Ans. -> A component is an independent, reusable Piece of code, which divides the UI into smaller pieces. For example, if we were building the UI of React website using Reactjs we can break its UI into smaller parts is called components.
 
 4. How many types of components in react? Explain class component and functional component?
-Ans. -> 	Functional components are just JavaScript functions that accept props (properties) as arguments and return React elements. They are simpler and more lightweight compared to class components. They don't have their own state or lifecycle methods.
+Ans. -> Functional components are just JavaScript functions that accept props (properties) as arguments and return React elements. Functional components are also known as stateless components because they simply accept data and display them. They are simpler and more lightweight compared to class components. They don't have their own state or lifecycle methods.
 
 		Class components are ES6 classes that extend from React.Component. They have their own state and lifecycle methods (like componentDidMount, componentDidUpdate, componentWillUnmount, etc.).
 
@@ -82,7 +82,7 @@ import React, { useEffect } from 'react';
 	}
 
 7. What do you mean by stateful and stateless component ?
-Ans. -> stateful : A stateful component is a React component that maintains its own state. This state can be changed over time, and the component will re-render when the state changes. Stateful components are typically used to represent data that changes over time, 
+Ans. -> stateful : Stateful components, also known as class components in ReactJS, A stateful component is a React component that maintains its own state. This state can be changed over time, and the component will re-render when the state changes. Stateful components are typically used to represent data that changes over time, 
 
 Stateless components, also known as functional components, do not manage their own state. They receive data and callbacks as props and render based on that input. These components are typically written as simple functions.
 
@@ -92,12 +92,12 @@ Ans. -> Definition: State is a built-in object in a React component where we can
 Mutability of state: Unlike props, state is mutable. This means that it can be changed, and when it does change, the component re-renders to reflect those changes.
 When and why to use state: State is used when a component has data that may change over time and should cause a re-render when it does. For example, if you're building a counter application, the counter's value would be stored in the state, and it would change each time the user clicks a button.
 
-Props in ReactJS :Props is a special keyword in React that stands for properties and is used for passing data from one component to another component. They are similar to function arguments in that they allow you to pass values from one component to another. Props are immutable, which means that once they are passed to a component, they cannot be changed. They are read-only and help components receive values from their parents.
+Props in ReactJS : Props is a special keyword in React that stands for properties and is used for passing data from one component to another component. They are similar to function arguments in that they allow you to pass values from one component to another. Props are immutable, which means that once they are passed to a component, they cannot be changed. They are read-only and help components receive values from their parents.
 Immutability of props : In React, props are immutable, meaning once they are set by the parent component, they cannot be changed or modified by the child component. This immutable nature ensures predictable behavior of components.
 
 9. What is difference between an Element and components ?
-Ans. -> Definition: Elements are the smallest building blocks of a React application. They are plain JavaScript objects that describe what to render on the screen. Elements are immutable, meaning once created, they cannot be changed.
-Definition: Components are reusable pieces of code that encapsulate the structure, behavior, and state of a React application. Components can be defined as functions or classes.
+Ans. -> Definition : Elements are the smallest building blocks of a React application. They are plain JavaScript objects that describe what to render on the screen. Elements are immutable, meaning once created, they cannot be changed.
+		Definition : Components are reusable pieces of code that encapsulate the structure, behavior, and state of a React application. Components can be defined as functions or classes.
 
 10. What happen when we call setState method
 Ans. -> When we call the setState method in a React component, it updates the component's state and schedules a re-render. This triggers React to compare the new state with the previous state, determine what changes are needed, and efficiently update the UI to reflect those changes.
@@ -219,17 +219,13 @@ export default MyComponent;
 
 
 27.	Can we update props ?
-Ans. -> In React, props are immutable, meaning once they are set by the parent component, they cannot be changed or modified by the child component. This immutable nature ensures predictable behavior of components.
+Ans. -> props are immutable, meaning once they are set by the parent component, they cannot be changed or modified by the child component. This immutable nature ensures predictable behavior of components.
 
 28. How to update parent state data from child component ?
 Ans. -> To update the state of a parent component from a child component in React, you typically pass a function as a prop from the parent to the child. This function, when called in the child component, updates the state of the parent component.
 
 29. What is context api in react.js
 Ans. -> The Context API is a way to share data that can be accessed by any component without having to pass props down through the component tree. It is a more efficient way to share data than prop drilling, which can make your code difficult to read and maintain.
-To use the Context API, you first need to create a context object. This is done by calling the React.createContext() function. The context object will have a Provider and a Consumer component. The Provider component is used to wrap the components that will be providing the data. The Consumer component is used to wrap the components that will be consuming the data.
-To provide data to the context, you need to wrap the components that will be providing the data in the Provider component. The Provider component takes a value prop, which is the data that you want to share.
-To consume data from the context, you need to wrap the components that will be consuming the data in the Consumer component. The Consumer component takes a function prop, which is used to access the data from the context.
-The Context API is a powerful tool that can be used to make your React code more efficient and easier to maintain. However, it is important to use it sparingly, as it can make your code more difficult to understand if it is overused.
 
 30. What is redux ? Explain the components of redux (Store, Action, Reducer) ?
 Ans. ->Redux is a state management library that allows you to manage the state of your JavaScript applications globally.
@@ -240,9 +236,9 @@ Reducer: Reducers are the pure functions that contain the logic and calculation 
 Store: Store is an object which provides the state of the application. This object is accessible with help of the provider in the files of the project.
 
 31. What is difference between useState and useReducer
-Ans. -> useState: This hook is used to manage simple state changes in a component. It takes an initial state value and returns an array with two elements: the current state value, and a function to update the state. When the update function is called, React will re-render the component with the new state value. The useState hook is a more straightforward and easier-to-use option for managing state when you don't need complex logic.
+Ans. -> useState: This hook is used to manage simple state changes in a component. It takes an initial state value and returns an array with two elements the current state value, and a function to update the state. When the update function is called, React will re-render the component with the new state value. The useState hook is a more straightforward and easier-to-use option for managing state when you don't need complex logic.
 
-useReducer: This hook is used to manage more complex state changes and is useful when you need to implement a more complex state transition or data flow. It takes a reducer function, an initial state value, and returns an array with two elements: the current state value, and a function to dispatch an action that will trigger the reducer function. The reducer function takes in the current state and an action object and returns the new state. The useReducer hook provides a more flexible and powerful way to manage state, especially when you have complex state transitions and multiple actions to handle.
+useReducer: This hook is used to manage more complex state changes and is useful when you need to implement a more complex state transition or data flow. It takes a reducer function, an initial state value, and returns an array with two elements the current state value, and a function to dispatch an action that will trigger the reducer function. The reducer function takes in the current state and an action object and returns the new state. The useReducer hook provides a more flexible and powerful way to manage state, especially when you have complex state transitions and multiple actions to handle.
 
 32. What is call, bind, apply in js
 Ans. -> 
@@ -255,15 +251,13 @@ Redux is a state managing library used in JavaScript apps. It is very popular fo
 
 Building Parts of Redux
 Ans. -> Action: Actions are JavaScript object that contains information. Actions are the only source of information for the store.
-
-	Reducer: Reducers are the pure functions that contain the logic and calculation that needed to be performed on the state.
-
-	Store: Store is an object which provides the state of the application. This object is accessible with help of the provider in the files of the project.
+		Reducer: Reducers are the pure functions that contain the logic and calculation that needed to be performed on the state.
+		Store: Store is an object which provides the state of the application. This object is accessible with help of the provider in the files of the project.
 
 34. What is RTK ?
-Ans. -> RTK stands for Redux Toolkit. It is an official, recommended approach for writing Redux logic. It is a package that wraps around the core Redux package and contains API methods and common dependencies that are considered essential for building a Redux app. RTK simplifies the process of writing Redux code by providing a number of helpful features, such as:
+Ans. -> RTK stands for Redux Toolkit. It is an official, recommended approach for writing Redux logic. It is a package that wraps around the core Redux package and contains API methods and common dependencies that are considered essential for building a Redux app. RTK simplifies the process of writing Redux code by providing a number of helpful features
 
-35.  what is the use async thunk (createAsyncThunk) ?
+35. what is the use async thunk (createAsyncThunk) ?
 Ans. -> In Redux Toolkit, createAsyncThunk is a utility function that uses thunks and middleware to perform asynchronous tasks in a slice. It accepts two arguments:
 A string that will be used as the prefix for the generated action types
 A callback function that returns a promise containing some data, or a rejected promise with an error
@@ -349,7 +343,7 @@ React Router also provides a number of hooks that can be used to access routing 
 48. How modify each request and response (Interceptor) in react.js
 Ans. -> 
 
-49. What is rest api ? How to call api from react ?
+49. What is rest api? How to call api from react ?
 Ans. -> A REST API (Representational State Transfer API) allows different applications to communicate with each other over the internet. It uses standard HTTP methods like GET, POST, PUT, and DELETE to perform operations on data.
 
 In React, you can call APIs using the built-in fetch method or a library like axios.
@@ -496,12 +490,29 @@ Ans. -> Component-Based Architecture :-React applications are built using compon
 	
 	Hooks:-Hooks are functions that let developers use state and other React features without writing a class. Common hooks include useState, useEffect, and useContext. Hooks make it easier to manage state and side effects in functional components.
 
+61. difference between fetch and axios
+Ans. -> 		 	axios															fetch
+		1. Axios allows cancelling request and request timeout.						Fetch does not.
+		
+		2. Axios is a third-party JavaScript library that is  						Fetch API is a native JavaScript API that is built into modern 
+			not built into browsers.												browsers.
+			
+		3. Axios performs automatic transforms of JSON data.						Fetch is a two-step process when handling JSON data- first, to 
+																					make the actual request; second, to call the .json() method on the 
+																					response.
+																					
+		4. Axios allows cancelling request and request timeout.						Fetch does not.
+	
+what is redux thunk?
+Ans. -> Redux Thunk is a middleware for Redux that allows you to write action creators that return a function instead of an action. This is particularly useful for handling asynchronous operations, such as API requests, in a Redux application.
+
+why use redux thunk?
+Ans. -> The primary purpose of Redux-Thunk is to handle asynchronous actions in Redux. Asynchronous actions, such as fetching data from an API or performing asynchronous computations, are common in web applications.
 =================================================================================================================================
 ======================================================== PAWAN SIR END ===========================================================
 =================================================================================================================================
 
 2	What is the history behind React evolution?
-6	How to create components in React?
 7	When to use a Class Component over a Function Component?
 12	Why should we not update the state directly?
 13	What is the purpose of callback function as an argument of setState()?

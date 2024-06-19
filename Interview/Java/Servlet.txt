@@ -7,9 +7,11 @@ Ans. -> 1. Stand Alone web containers
 		2. In process web containers
 		3. Out process web containers
 
-Servlet Container
+what is Servlet Container?
+Ans. -> A servlet container is a program that runs on a web server and manages the execution of Java servlets. It provides the runtime environment for servlets and handles the details of network programming, such as receiving and parsing requests, transmitting responses, and managing connections. 
+Apache Tomcat, Jetty, GlassFish, JBoss, and Oracle WebLogic Server.
 
-whay use javax.servlet?
+why use javax.servlet?
 Ans. -> This package defines several classes and interfaces used for developing protocol independent servlets(Generic Servlets)
 
 whay use javax.servlet.http?
@@ -25,7 +27,7 @@ Ans. -> 1.Servlet
 		7.SingleThreadModel
 
 what is RequestDispatcher(I)
-Ans. -> The RequestDispacher interface provides the facility of dispatching the request to another resource it may be html, servlet or jsp. This interceptor can also be used to include the content of antoher resource.
+Ans. -> RequestDispatcher is an interface that provides a way to dispatch requests from a servlet to other resources (such as HTML, JSP, or another servlet) within the same application. It is primarily used for forwarding requests and including content from other resources. The RequestDispatcher interface provides two main methods: forward() and include().
 
 Important classes of javax.servlet package:
 Ans. -> 1.GenericServlet
@@ -34,11 +36,11 @@ Ans. -> 1.GenericServlet
 		4.ServletException
 
 How many method defines in Servlet interface?
-Ans. -> 1.init()
-		2.service()
-		3.destroy()
-		4.getServletConfig()
-		5.getServletInfo()
+Ans. -> 1. init(ServletConfig config): Initializes the servlet.
+		2. service(ServletRequest req, ServletResponse res): Handles requests and generates responses.
+		3. destroy(): Cleans up resources before the servlet is destroyed.
+		4. getServletConfig(): Returns servlet configuration information.
+		5. getServletInfo(): Returns servlet metadata.
 
 Explane All five method work?
 Ans. -> 1.init() method: public void init(ServletConfig config) throws ServletException
@@ -60,8 +62,7 @@ Ans. -> 1.init() method: public void init(ServletConfig config) throws ServletEx
 		Note: init(),service() and destroy() methods are called callback methods because these methods will be executed automatically by the web container.
 
 What is Deployment Descriptor(web.xml)?
-Ans. -> For every web application we have to provide one xml file named with web.xml. This web.xml file is also known as Deployment Descriptor.
-
+Ans. -> The Deployment Descriptor (web.xml) is an XML file that describes the configuration and deployment settings for a web application in a Java EE environment.
 how to Create web.xml file ?
 Ans. -> <web-app>
 			<servlet>
@@ -126,7 +127,7 @@ Ans. -> public void init()throws SE{
 		
 why GenericServlet class contains 2 init() methods?
 Ans. -> init(SC) is for web container purpose
-init() for programmer purpose
+		init() for programmer purpose
 
 In our servlet which init() method is recommended to override?
 Ans. -> no-arg init() method
@@ -215,13 +216,10 @@ Ans. -> Most of the methods present inside HttpServlet class are implemented to 
 Internally how web container will create servlet object?
 Ans. -> If we know class name at the beginning then we can create object by using new operator.
 If we don't know class name at the beginning and it is available dynamically at runtime then we can create object by using newInstance() method.
-Web container don't know our servlet class names at the beginning and hence it is always using
-newInstance() method to create Servlet object.
+Web container don't know our servlet class names at the beginning and hence it is always using newInstance() method to create Servlet object.
 
 Why every servlet should contains public no-arg constructor?
-web container will create servlet object by using newInstance() method.Internally newInstance()
-method will call public no-arg constructor. Hence every servlet class should compulsary contain
-public no-arg constructor,otherwise we will get java.lang.InstantiationException.
+Ans. -> web container will create servlet object by using newInstance() method.Internally newInstance() method will call public no-arg constructor. Hence every servlet class should compulsary contain public no-arg constructor,otherwise we will get java.lang.InstantiationException.
 
 The main purpose of constructor is to perform initilization and every servlet compulsary contains public no-arg constructor.Then what is need of init() method?
 Ans. -> To perform initialization of servlet compulsary we should pass ServletConfig argument.But in servlets constructor cannot take any arguments b'z newInstance() method.
@@ -246,7 +244,7 @@ Ans. -> 3 ways
 		By extending GenericServlet
 		By extending HttpServlet
 
-In Http based servlets , is it recommended to override service() method?
+In Http based servlets, is it recommended to override service() method?
 Ans. -> No. If we override service() method then for any type of request same service() method will be executed.
 
 whay use getParameter();
@@ -271,10 +269,11 @@ Ans. -> public Enumeration getParmeterNames()
 			returns all form parameter names.
 
 what is difference between PrintWriter And ServletOutputStream?
-Ans. -> By using PrintWriter we can send text data as response but by using ServletOutputStream we can send both text data and binary data as response.
+Ans. -> By using PrintWriter we can send text data as response but 
+		by using ServletOutputStream we can send both text data and binary data as response.
 
 
-2. Explain the architecture of a Servlet ?
+2. Explain the architecture of a Servlet?
 
 3. What is the difference between an Applet and a Servlet ?
 Ans. -> Applet: Runs on the client side within a browser.
@@ -328,25 +327,48 @@ Ans. -> By using request.getRemoteAddr() method.
 
 11. What is the structure of the HTTP response ?
 
-12. What is a cookie ? What is the difference between session and cookie ?
+12. What is a cookie ? 
+Ans. -> A cookie is a small piece of data sent from a web server and stored on the client's computer by the web browser while the client is browsing. Cookies are used to remember information about the client, such as login credentials, user preferences, or tracking information, across different pages of a website or between visits to the website.
 
+What is the difference between session and cookie ?
+Ans. -> 				Cookies 													Session
+				Cookies are client-side files on a local 				Sessions are server-side files that contain user data.
+				computer that hold user information.
+				
+				Cookies end on the lifetime set by the user.		When the user quits the browser or logs out of the programmed, the session is over.
+				
+				It can only store a certain amount of info.			It can hold an indefinite quantity of data.
+				
+				The browser’s cookies have a maximum capacity 		We can keep as much data as we like within a session, however there
+				of 4 KB.											is a maximum memory restriction of 128 MB that a script may consume at one time.
+				
+				Because cookies are kept on the local				To begin the session, we must use the session start()
+				computer, we don’t need to run a function 
+				to start them.
+				
+				Cookies are not secured.							Session are more secured compare than cookies.
+				Cookies stored data in text file.					Session save data in encrypted form.
+				Cookies stored on a limited data.					Session stored a unlimited data.
+				
 13. Which protocol will be used by browser and servlet to communicate ?
 Ans. -> HTTP or HTTPS.
 
 14. What is HTTP Tunneling ? 
 
 15. What’s the difference between sendRedirect and forward methods ?
-Ans. -> RequestDispatcher Interface -> Servlets provide RequestDispatcher in javax.servlet package. It defines an object to dispatch the client request from one servlet to another servlet on the same server. Basically, this can be used to receive the client request object and send that object to any other resource such as Servlet, JSP, HTML file, etc. We can get the RequestDispatcher object using the below syntax:
-	RequestDispatcher r = req.getRequestDispatcher(String arg);
+Ans. -> Feature								sendRedirect										forward
+		Operation Type					Client-side redirect(HTTP 302)						Server-side forward
+		URL in Browser					Changes to the new URL								Remains the same as the original request
+		Request and Response			New request and response							Same request and response
+		Request Parameters				Lost unless encoded in URL							Preserved
+		Cross-Domain					Can redirect to different domains					Can only forward within the same context
+		Visibility						Client is aware of the new URL						Client is unaware (transparent)
+		Use Case						External site or different web app					Internal navigation within the same app
 
-	forward() method -> This method forwards a request from a servlet to another servlet on the same server. It allows one servlet to do the initial processing of a request, obtains the RequestDispatcher object, and forwards the request to another servlet to generate the response.
-	Syntax of forward():
-		// r - requestDispatcher object 
-		r.forward(req, resp);
 
-16. What is URL Encoding and URL Decoding ?
+16. What is URL Encoding and URL Decoding?
 
-what is SingleThreadModel 
+what is SingleThreadModel
 witch version SingleThreadModel is deprecated?
 
 SingleThreadModel is witch type of interface
@@ -435,13 +457,11 @@ Servlet technology is platform
 independent.
 
 What is servlet collaboration?
-When one servlet communicates to another servlet, it is known as servlet collaboration. There are many ways of servlet collaboration:
-
+Ans. -> When one servlet communicates to another servlet, it is known as servlet collaboration. There are many ways of servlet collaboration:
 RequestDispacher interface sendRedirect() method etc.
 
 Can you call a jsp from the servlet?
-Yes, one of the way is RequestDispatcher interface for example:
-
+Ans. -> Yes, one of the way is RequestDispatcher interface for example:
 RequestDispatcher rd=request.getRequestDispatcher("/login.jsp");  
 rd.forward(request,response);  
 

@@ -7,6 +7,7 @@ class ReverseWords
 		System.out.println(withOutMethod(input));
 		System.out.println(usingMethod(input));
 	}
+	
 	public static String withOutMethod(String input)
 	{
 		int length = input.length();
@@ -14,7 +15,7 @@ class ReverseWords
 		
 		for(int i = length-1; i>=0; i--)
 		{
-			if(input.charAt(i)== ' ' || i == 0)
+			if(input.charAt(i) == ' ' || i == 0)
 			{
 				int start = (i==0) ? i : i+1;
 				int end = length;
@@ -32,18 +33,6 @@ class ReverseWords
 	}
 	
 	public static String usingMethod(String input)
-	{
-		String result = "";
-		String[]a = input.split("\\s+");
-		
-		for(int i = a.length-1; i>=0;i--)
-		{
-			result += a[i];
-			if(i!=0) result+= " ";
-		}
-		return result;
-	}
-	public static String usingCollection(String input)
 	{
 		String result = "";
 		String[]a = input.split("\\s+");
