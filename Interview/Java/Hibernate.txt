@@ -1,5 +1,3 @@
-Hibernate Interview Questions
-
 1) What is Hibernate?
 Ans. -> Hibernate is an object-relational mapping (ORM) framework. that is used to store, manipulate, and retrieve data from the database.
 

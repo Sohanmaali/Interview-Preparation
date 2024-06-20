@@ -1,13 +1,5 @@
 1. What is Spring Boot?
-Ans. -> Java Spring Bootis is a popular Framework (Spring Framework), open source, enterprise-level framework for creating stand-alone, production-grade applications that run on the Java virtual machine (JVM).
-
-2. What are the Features of Spring Boot?
-Ans. -> There are many useful features of Spring Boot.
-		Auto-configuration – Spring Boot automatically configures dependencies by using @EnableAutoconfiguration annotation and reduces boilerplate code.
-		Spring Boot Starter POM – These Starter POMs are pre-configured dependencies for functions like database, security, maven configuration etc.
-		Spring Boot CLI (Command Line Interface) – This command line tool is generally for managing dependencies, creating projects and running the applications.
-		Actuator – Spring Boot Actuator provides health check, metrics and monitors the endpoints of the application. It also simplifies the troubleshooting management.
-		Embedded Servers – Spring Boot contains embedded servers like Tomcat and Jetty for quick application run. No need of external servers.
+Ans. -> Java Spring Boot is a popular Framework (Spring Framework), open source, enterprise-level framework for creating stand-alone, production-grade applications that run on the Java virtual machine (JVM).
 
 3. What are the advantages of using Spring Boot?
 Ans. -> It is very easy to develop Spring Based applications with Java.
@@ -34,36 +26,25 @@ Ans. -> Spring Boot Starters
 		Spring Boot Actuator is a feature of Spring Boot that provides production-ready features for Spring Boot applications, such as health checks, metrics, and auditing. This can be very useful for developers, as it can help them to monitor and manage their applications in production.
 
 5. Why do we prefer Spring Boot over Spring?
-Here is a table that summarizes why we use Spring Boot over Spring framework.
+Ans. -> 	Feature						Spring							Spring Boot
 
-Feature						Spring							Spring Boot
-
-Ease of use					More complex					Easier
-Production readiness			Less production-ready			More production-ready
-Scalability					Less scalable						More scalable
-Speed						Slower							Faster
-Customization				Less Customizable				More Customizable
+		Ease of use					More complex					Easier
+		Production readiness		Less production-ready			More production-ready
+		Scalability					Less scalable					More scalable
+		Speed						Slower							Faster
+		Customization				Less Customizable				More Customizable
 
 6. Explain the internal working of Spring Boot.
 Ans. -> 
 
 7. What are the Spring Boot Starter Dependencies?
-Ans. -> spring Boot Starter dependencies are a set of convenient dependency descriptors that you can include in your Spring Boot application. They are a way to reduce the time developers spend on dependency management.
+Ans. -> spring Boot Starter is a set of convenient dependency descriptors that you can include in your Spring Boot application. They are a way to reduce the time developers spend on dependency management.
 Spring Boot Starter dependencies are auto-configurable, which means that they don't need any particular configuration to work out of the box. However, you can configure them to fit your particular needs.
 
 8. How does a spring application get started?
 Ans. -> A Spring application is started by calling the run() method of the SpringApplication class. This method takes a list of arguments, which can be used to configure the application. For example, you can specify the location of the application's configuration files, or the port that the application should listen on.
 Once the run() method is called, Spring Boot will create an ApplicationContext. The ApplicationContext is a container that holds all of the beans that make up your application. Spring Boot will then start all of the beans in the ApplicationContext.
 When all of the beans have been started, your application is ready to use. You can then interact with your application's beans through the ApplicationContext.
-
-9. What does the @SpringBootApplication annotation do internally?
-Ans. -> The @SpringBootApplication annotation combines three annotations. Those three annotations are: @Configuration, @EnableAutoConfiguration, and @ComponentScan.
-		
-		@AutoConfiguration: This annotation automatically configuring beans in the class path and automatically scans the dependencies according to the application need.
-		@ComponentScan: This annotation scans the components (@Component, @Service, etc.) in the package of annotated class and its sub-packages.
-		@Configuration: This annotation configures the beans and packages in the class path.
-		@SpringBootApplication automatically configures the application based on the dependencies added during project creation and bootstraps the application by using run() method inside the main class of an application.
-		@SpringBootApplication = @Configuration + @EnableAutoConfiguration + @ComponentScan
 
 10. What is Spring Initializr?
 Ans. -> Spring Initializer is a tool that helps us to create skeleton of spring boot project or project structure by providing a maven or gradle file to build the application. It set up the framework from scratch.
@@ -93,7 +74,6 @@ Ans. -> Spring Boot dependency management makes it easier to manage dependencies
 
 14. Is it possible to change the port of the embedded Tomcat server in Spring Boot?
 Ans. - > Yes, it is possible to change the port of the embedded Tomcat server in a Spring Boot application.
-The simple way is to set the server. port property in your application’s application.properties file. For example, to set the port to 8081, add the following property to the application.properties file:
 server.port=8081
 
 15. What is the starter dependency of the Spring boot module?
@@ -110,7 +90,7 @@ To use a Spring Boot starter dependency, we simply need to add it to our project
 </dependency>
 
 16. What is the default port of Tomcat in spring boot?
-Ans. -> The default port of the embedded Tomcat server in Spring Boot is 8080. We can change the default port by setting the server.port property in your application’s application.properties file.
+Ans. -> The default port of the embedded Tomcat server in Spring Boot is 8080.
 
 17. Can we disable the default web server in the Spring Boot application?
 Ans. -> Yes, we can disable the default web server in the Spring Boot application. To do this, we need to set the server.port property to “-1” in the application’s application.properties file.
@@ -123,13 +103,11 @@ Ans. -> To disable a specific auto-configuration class in a Spring Boot applicat
 Ans. -> Yes, we can create a non-web application in Spring Boot. Spring Boot is not just for web applications. Using Spring Boot, we can create applications like Microservices, Console applications, and batch applications.
 
 20. Describe the flow of HTTPS requests through the Spring Boot application.
-Ans. -> The flow of HTTPS requests through a Spring Boot application is as follows:
-Spring Boot HTTP Request Flow
-First client makes an HTTP request (GET, POST, PUT, DELETE) to the browser.
-After that the request will go to the controller, where all the requests will be mapped and handled.
-After this in Service layer, all the business logic will be performed. It performs the business logic on the data that is mapped to JPA (Java Persistence API) using model classes.
-In repository layer, all the CRUD operations are being done for the REST APIs.
-A JSP page is returned to the end users if no errors are there.
+Ans. ->	First client makes an HTTP request (GET, POST, PUT, DELETE) to the browser.
+		After that the request will go to the controller, where all the requests will be mapped and handled.
+		After this in Service layer, all the business logic will be performed. It performs the business logic on the data that is mapped to JPA (Java Persistence API) using model classes.
+		In repository layer, all the CRUD operations are being done for the REST APIs.
+		A JSP page is returned to the end users if no errors are there.
 
 21. Explain @RestController annotation in Spring Boot.
 Ans. -> @RestController annotation is like a shortcut to building RESTful services. It combines two annotations:
@@ -141,13 +119,13 @@ Ans. ->   Features						@Controller									@RestController
 
 		Usage						It marks a class as a controller class.			It combines two annotations i.e. @Controller and @ResponseBody.
 
-		Application					Used for Web applications.					Used for RESTful APIs.
+		Application					Used for Web applications.						Used for RESTful APIs.
 
-		Request handling and Mapping	Used with @RequestMapping annotation to map HTTP requests with methods.	Used to handle requests like GET, PUT, POST, and DELETE.
-		
+		Request handling and Mapping	Used with @RequestMapping annotation 		Used to handle requests like GET, PUT, POST, and DELETE.
+										to map HTTP requests with methods.
 
 23. What is the difference between RequestMapping and GetMapping?
-Features								@RequestMapping							@GetMapping
+Ans. -> Features								@RequestMapping							@GetMapping
 
 Annotations							@RequestMapping							@GetMapping
 
@@ -156,14 +134,16 @@ Purpose		Handles various types of HTTP requests (GET, POST, etc.)					Specifical
 Example	@RequestMapping(value = “/example”, method = RequestMethod.GET)	@GetMapping(“/example”)
 
 24. What are the differences between @SpringBootApplication and @EnableAutoConfiguration annotation?
-Features									@SpringBootApplication									@EnableAutoConfiguration
+Ans. -> Features									@SpringBootApplication									@EnableAutoConfiguration
 
-When to use			When we want to use auto-configuration							When we want to customize auto-configuration
+		When to use			When we want to use auto-configuration							When we want to customize auto-configuration
 
-Entry point		Typically used on the main class of a Spring Boot application, serving as the entry point.		Can be used on any configuration class or in conjunction with @SpringBootApplication.
+		Entry point			Typically used on the main class of a Spring 					Can be used on any configuration class or in conjunction 
+							Boot application, serving as the entry point.					with @SpringBootApplication.
 
-Component Scanning		Includes @ComponentScan annotation to enable component scanning. 				Does not perform component scanning by itself.
-
+		Component Scanning		Includes @ComponentScan annotation to 						Does not perform component scanning by itself.
+								 enable component scanning.
+			
 Example	@SpringBootApplication public class MyApplication { public static void main(String[] args) { SpringApplication.run(MyApplication.class, args); } }		@Configuration @EnableAutoConfiguration public class MyConfiguration { }
 
 25. What are Profiles in Spring?
@@ -184,13 +164,27 @@ Security		Can be deployed to a web server that is configured with security featu
 
 
 27. What is Spring Boot Actuator?
-Ans. -> Spring Boot Actuator is a component of the Spring Boot framework that provides production-ready operational monitoring and management capabilities. We can manage and monitor your Spring Boot application while it is running.
-
+Ans. -> Spring Boot Actuator is a set of tools that helps to monitor and manage over Spring Boot application by providing various built-in endpoints to expose application metrics, health checks, and other useful operational information.
 Note: To use Spring Boot Actuator, we simply need to add the spring-boot-starter-actuator dependency to our project.
+	Common Actuator Endpoints
+	Health Check:
+		Endpoint: /actuator/health
+		Description: Shows the health status of the application.
 
+	Application Info:
+		Endpoint: /actuator/info
+		Description: Displays arbitrary application info, often build or version information.
+
+	Metrics:
+		Endpoint: /actuator/metrics
+		Description: Shows various metrics related to the application, such as memory usage, CPU usage, and more.
+
+	Environment:
+		Endpoint: /actuator/env
+		Description: Provides information about the application's environment, including configuration properties.
 
 28. How to enable Actuator in the Spring boot application?
-Ans. -> 	Below are the steps to enable actuator in Spring Boot Application:
+Ans. -> Below are the steps to enable actuator in Spring Boot Application:
 		Add Actuator dependency.
 		Enable endpoints in application.properties.
 		Run your Spring Boot app.
@@ -211,26 +205,26 @@ HTTP method – GET, POST, PUT, DELETE
 
 31. How to get the list of all the beans in your Spring boot application?
 Using the ApplicationContext object in Spring Boot, we can retrieve a list of all the beans in our application. The ApplicationContext is responsible for managing the beans and their dependencies. 
-Example :- import org.springframework.beans.factory.annotation.Autowired;
-			import org.springframework.context.ApplicationContext;
-			import org.springframework.stereotype.Component;
-			import java.util.Arrays;
+Example :- 
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.context.ApplicationContext;
+	import org.springframework.stereotype.Component;
+	import java.util.Arrays;
 
-			@Component
-			public class BeanListPrinter {
+	@Component
+	public class BeanListPrinter {
 
-				@Autowired
-				private ApplicationContext applicationContext;
+		@Autowired
+		private ApplicationContext applicationContext;
 
-				public void printAllBeans() {
-					String[] allBeanNames = applicationContext.getBeanDefinitionNames();
-					Arrays.sort(allBeanNames);
-					for (String beanName : allBeanNames) {
-						System.out.println(beanName);
-					}
-				}
+		public void printAllBeans() {
+			String[] allBeanNames = applicationContext.getBeanDefinitionNames();
+			Arrays.sort(allBeanNames);
+			for (String beanName : allBeanNames) {
+				System.out.println(beanName);
 			}
-
+		}
+	}
 
 32. Can we check the environment properties in your Spring boot application explain how?
 Ans. -> Yes, we can check the environment properties in our Spring Boot Application. The Environment object in a Spring Boot application can be used to check the environment’s properties.
@@ -255,7 +249,6 @@ public class EnvironmentPropertyReader {
     }
 }
 
-
 33. How to enable debugging log in the spring boot application?
 Ans. -> To enable debugging log in Spring Boot Application, follow the below steps:
 		Add the logging level property to application.properties.
@@ -267,13 +260,16 @@ Ans. -> To enable debugging log in Spring Boot Application, follow the below ste
 		\ -H 'content-type: application/json' \-d '{"configuredLevel": "DEBUG"}'
 
 36. What is the difference between Constructor and Setter Injection?
-Ans. -> 	Features								Constructor Injection														Setter Injection
+Ans. -> 							Constructor Injection							Setter Injection
 
-Dependency		Dependencies are provided through constructor parameters.				Dependencies are set through setter methods after object creation.
+		Dependencies are provided through constructor parameters.
+		Dependencies are set through setter methods after object creation.
 
-Immutability		Promotes immutability as dependencies are set at creation.				Dependencies can be changed dynamically after object creation.
+		Promotes immutability as dependencies are set at creation.				
+		Dependencies can be changed dynamically after object creation.
 
-Dependency Overriding	Harder to override dependencies with different implementations.		Allows easier overriding of dependencies using different setter values.
+		Harder to override dependencies with different implementations.		
+		Allows easier overriding of dependencies using different setter values.
 
 What is Connection Pooling?
 Ans. -> Connection Pooling is a technique used to manage database connections efficiently by reusing existing connections rather than opening and closing them repeatedly. It is a common performance optimization in applications that interact with databases.
@@ -286,25 +282,18 @@ Ans. -> Spring Boot helps to create stand-alone applications which can be starte
 		Spring Boot was developed with the intention of lessening the lines of code.
 		It offers production-ready support like monitoring and apps developed using spring boot are easier to launch
 
-3. Differentiate between Spring and Spring Boot.
-The Spring Framework provides multiple features like dependency injection, data binding, aspect-oriented programming (AOP), data access, and many more that help easier development of web applications whereas Spring Boot helps in easier usage of the Spring Framework by simplifying or managing various loosely coupled blocks of Spring which are tedious and have a potential of becoming messy.
-Spring boot simplifies commonly used spring dependencies and runs applications straight from a command line. It also doesn’t require an application container and it helps in monitoring several components and configures them externally
+How does Spring Boot works?
+Ans. -> Spring Boot automatically configures your application based on the dependencies you have added to the project by using annotation. The entry point of the spring boot application is the class that contains @SpringBootApplication annotation and the main method.
 
-What are the features of Spring Boot?
-Spring Boot CLI – This allows you to Groovy / Maven for writing Spring boot application and avoids boilerplate code.
-Starter Dependency – With the help of this feature, Spring Boot aggregates common dependencies together and eventually improves productivity and reduces the burden on
-Spring Initializer – This is a web application that helps a developer in creating an internal project structure. The developer does not have to manually set up the structure of the project while making use of this feature.
-Auto-Configuration – This helps in loading the default configurations according to the project you are working on. In this way, unnecessary WAR files can be avoided.
-Spring Actuator – Spring boot uses actuator to provide “Management EndPoints” which helps the developer in going through the Application Internals, Metrics etc.
-Logging and Security – This ensures that all the applications made using Spring Boot are properly secured without any hassle.
-
-What does @SpringBootApplication annotation do internally?
+Spring Boot automatically scans all the components included in the project by using @ComponentScan annotation.
 
 What are the effects of running Spring Boot Application as “Java Application”?
 The application automatically launches the tomcat server as soon as it sees that we are running a web application.
 7. What is Spring Boot dependency management system?
 It is basically used to manage dependencies and configuration automatically without the need of specifying the version for any of that dependencies.
 
+1.Differentiate between Spring MVC and Spring Boot.
+3.How can you implement exception handling in a Spring Boot application?
 
 ==============================================
 What is the importance of @SpringBootApplication?
@@ -312,10 +301,7 @@ What is Auto Configuration?
 Ans. -> Auto Configuration in Spring Boot simplifies the setup of applications by automatically configuring necessary components based on the available dependencies. It helps in reducing boilerplate code, speeds up the development process, and ensures that applications are easily maintainable and extendable.
 
 How can we find more information about Auto Configuration?
-What is an embedded server? Why is it important?
-What is the default embedded server with Spring Boot?
 What are the other embedded servers supported by Spring Boot?
-What are Starter Projects?
 Can you give examples of important starter projects?
 What is Starter Parent?
 What are the different things that are defined in Starter Parent?
@@ -331,29 +317,30 @@ How do you have different configuration for different environments?
 How do you monitor web services using Spring Boot Actuator?
 How do you find more information about your application envrionment using Spring Boot?
 What is a CommandLineRunner?
-What is the difference between Spring Boot and Spring Framework?
-What are the starter dependencies in Spring Boot?
-What is the purpose of the @SpringBootApplication annotation?
-What is the purpose of the @Configuration annotation?
-What is the purpose of the @Bean annotation?
-What is the purpose of the @Autowired annotation?
 What is the purpose of the @Value annotation?
 What is the purpose of the @Profile annotation?
-What is the purpose of the @EnableAutoConfiguration annotation?
-How to access actuator endpoints in Spring Boot?
 ======================
-1. What do you understand by the term ‘Spring Boot’?
-2. Explain the advantages of using Spring Boot for application development.
 3. Differentiate between Spring and Spring Boot.
-Ans. ->	 Feature							Spring Framework									Spring Boot
-Purpose						Comprehensive framework for enterprise Java development	Simplifies Spring application development, especially for microservices
-Configuration				Requires extensive configuration (XML or Java)				Auto-configuration with sensible defaults
-Modularity					Modular, multiple projects and configurations				Integrated, convention over configuration
-Application Type				Suitable for complex, enterprise-level applications			Ideal for microservices and rapid development
-Server Support				Requires external server setup								Supports embedded servers (Tomcat, Jetty, Undertow)
-Production-Ready Features	Requires manual setup									Built-in Actuator for health checks, metrics, etc.
-Development Speed			Slower due to extensive setup								Faster with minimal setup
+Ans. ->	 							Spring Framework									Spring Boot
+		Comprehensive framework for enterprise Java development	Simplifies Spring application development, especially for microservices
+		
+		Requires extensive configuration (XML or Java)				
+		Auto-configuration with sensible defaults
 
+		Modular, multiple projects and configurations				
+		Integrated, convention over configuration
+
+		Suitable for complex, enterprise-level applications			I
+		deal for microservices and rapid development
+
+		Requires external server setup								
+		Supports embedded servers (Tomcat, Jetty, Undertow)
+
+		Requires manual setup									
+		Built-in Actuator for health checks, metrics, etc.
+
+		Slower due to extensive setup								
+		Faster with minimal setup
 
 4. What are the features of Spring Boot?
 Ans. ->	Auto-Configuration:
@@ -430,7 +417,7 @@ Ans. -> Factory Design Pattern: Use when object creation logic is complex, dynam
 Spring Data REST is a framework that exposes Spring Data repositories as RESTful web services. It allows us to expose repositories as REST endpoints with minimal configuration by following Spring Data REST Technologies like Spring Data and Spring MVC.
 
 9. Mention the steps to connect the Spring Boot application to a database using JDBC.
-Ans. -> 	Add Dependencies: Include Spring Boot Starter JDBC and the database driver.
+Ans. -> Add Dependencies: Include Spring Boot Starter JDBC and the database driver.
 		Configure Properties: Set up the database connection properties in application.properties or application.yml.
 		JDBC Template Bean: Utilize the automatically configured JdbcTemplate bean.
 		Repository Class: Create a repository class to perform database operations using JdbcTemplate.
@@ -475,29 +462,6 @@ web.xml is also known as the Deployment Descriptor which has definitions of the 
 Ans. -> To enable the spring actuator feature, we need to add the dependency of “spring-boot-starter-actuator” in pom.xml
 
 14. What is Spring Actuator? What are its advantages?
-
-6. Can we override or replace the Embedded tomcat server in Spring Boot?
-Yes, we can replace the Embedded Tomcat server with any server by using the Starter dependency in the pom.xml file. Like you can use spring-boot-starter-jetty as a dependency for using a jetty server in your project.
-
-7. Can we disable the default web server in the Spring boot application?
-Yes, we can use application.properties to configure the web application type i.e spring.main.web-application-type=none.
-
-8. How to disable a specific auto-configuration class?
-You can use exclude attribute of @EnableAutoConfiguration if you want auto-configuration not to apply to any specific class.
-
-9. Explain @RestController annotation in Spring boot?
-It is a combination of @Controller and @ResponseBody, used for creating a restful controller. It converts the response to JSON or XML. It ensures that data returned by each method will be written straight into the response body instead of returning a template.
-
-10. What is the difference between @RestController and @Controller in Spring Boot?
-@Controller Map of the model object to view or template and make it human readable but @RestController simply returns the object and object data is directly written in HTTP response as
-json or xml
-
-12. What is the difference between RequestMapping and GetMapping?
-RequestMapping can be used with GET, POST, PUT, and many other request methods using the method attribute on the annotation. Whereas getMapping is only an extension of RequestMapping which helps you to improve on clarity on request.
-
-13. What is the use of Profiles in spring boot?
-Ans. -> While developing the application we deal with multiple environments such as dev, QA, Prod, and each environment requires a different configuration. For eg., we might be using an embedded H2 database for dev but for prod, we might have proprietary Oracle or DB2. Even if DBMS is the same across the environment, the URLs will be different.
-
 
 What Is Spring Security?
 Spring Security is a separate module of the Spring framework that focuses on providing authentication and authorization methods in Java applications. It also takes care of most of the common security vulnerabilities such as CSRF attacks.

@@ -2,7 +2,7 @@
 Ans. -> Spring Framework (Spring) is an open source lightweight, loosely coupled and integrated framework for developing enterprise applications in java.
 
 2) what is the features of  Spring boot ?
-Ans. -> • Lightweight : Spring is lightweight when it comes to size and transparency. Thebasic version of spring framework is around 1MB. 	And the processing overhead is also very negligible.
+Ans. -> • Lightweight : Spring is lightweight when it comes to size and transparency. Thebasic version of spring framework is around 1MB.
 		• Inversion of control (IoC) : Loose coupling is achieved in spring using the technique Inversion of Control. The objects give their dependencies instead of creating or looking for dependent objects.
 		• Aspect oriented (AOP) : Spring supports Aspect oriented programming and enables cohesive development by separating application business logic from system services.	
 		• Container : Spring contains and manages the life cycle and configuration of application objects.
@@ -123,7 +123,7 @@ Ans. -> 1.singleton Scope[Default Scope] -> It is default scope in Spring applic
 			websocket scope allows to create a seperate bean object for single websocket lifecycle.
 
 What is the difference between "id" attribute and "name" attribute in <bean> tag?
-Ans.- > 'id' attribute is able to take exactly one identity to the bean object, it will not allow more than one identity.
+Ans. -> 'id' attribute is able to take exactly one identity to the bean object, it will not allow more than one identity.
 'name' attribute in <bean> tag is able to allow more than one identity name to the bean object, where in multiple values only first value is treated as th actual bean identity and the remaining names are alias names for the bean object. In this context, while providing alias names to the bean object we have to use either ',' or ';' or [space] as delimiter[seperator]
 
 lifecycle of Ioc Container?

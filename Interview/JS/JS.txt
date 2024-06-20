@@ -1,10 +1,10 @@
 JAVA SCRIPT
 
-1 :   What is Javascript  ?
+1 : What is Javascript  ?
 Ans :  Java script is an scripting language, it is client side as well as server side technology, by using java script we can manipulate html and css and we can make  dynamic user attractive websites
 
 2. How Browser Executes Javascript.
-Ans : Everything executes in call stack : The call stack is a  component of the JavaScript engine's runtime  environment.
+Ans : Everything executes in call stack : The call stack is a component of the JavaScript engine's runtime environment.
 
 Global Execution Context  : The global execution context is the initial execution context that is created when a JavaScript program starts running. It represents the environment in which the top-level code of a script is executed.
 
@@ -26,14 +26,14 @@ The JavaScript engine manages the memory that is used by the JavaScript code. Th
 
 
 3. What are features of Javascript?
-Ans :   java script is object oriented,multi paradigm scripting language
-JavaScript is a dynamic type language . -> A dynamically typed language is a programming language that assigns variables type at runtime based on the variable's value
+Ans : java script is object oriented,multi paradigm scripting language 
+JavaScript is a dynamic type language. -> A dynamically typed language is a programming language that assigns variables type at runtime based on the variable's value
 JavaScript have capability to convert html to dhtml
 it is a single threaded,
 It is platform independent
 
 4. What is DOM ?
-Ans. -> DOM stand for document object model , it is js feature it is a programming interface, thats represent structure of html in tree, by using dom we can manipulate html code using js
+Ans. -> DOM stand for document object model, it is a programming interface, thats represent structure of html in tree, by using dom we can manipulate html code using js
 └── document
 └──html
 	├──head
@@ -52,7 +52,7 @@ Like:	const button = document.getElementById("button");
 
 
 6. What is alert() and confirm() ?
-Ans : alert() and confirm() are two functions  that are used to interact with users by dialog boxes in web applications.
+Ans : alert() and confirm() are two functions that are used to interact with users by dialog boxes in web applications.
 
 The alert() function display a simple dialog box with a message to the user.
 alert("Hello ");
@@ -102,11 +102,10 @@ console.log(true === 1);
 
 9.  What is a function? Can we overload functions in javascript?
 Ans: A function in JavaScript is a reusable block of code that performs a specific tast when called. Functions can accept inputs (parameters) and can return a result.
-
 JavaScript does not support  function overloading as seen in languages like Java
 
 
-10.  What is a callback ? Explain with suitable examples.
+10. What is a callback ? Explain with suitable examples.
 Ans: callback is an function which is pass as a argument to another function and it is executed after a specific event or task completes.
 
 function greet(name, callback) {
@@ -283,7 +282,7 @@ callback Que
 browser api
 event loop
 
-21.   What are different types of popup boxes available in javascript ?
+21. What are different types of popup boxes available in javascript ?
 	
  Popup boxes are synchronous
  Popup box provided by the window object. The main types of popup boxes 
@@ -316,7 +315,6 @@ Use await inside async functions to wait for Promises to resolve.
 
 The keyword await makes JavaScript wait until that promise settles and returns its result.
 It is the egonre need of nested callbacks or complex Promise chains, making our code cleaner and more maintainable.
-
 
 25 How to handle the exception in javascript.
 exception is handled by writing the code into the try catch block. If an error is present, the catch block will execute, else only the try block statements will get executed.
@@ -357,14 +355,12 @@ Node.js use synchronous/blocking and asynchronous/non-blocking library both
 Node.js application is synchronous by default
 Node.js is referred to as a "runtime environment" for JavaScript because it provides an environment where JavaScript code can be executed outside of the browser environment. on server side
 
-29 .  What are the limitation of Node.Js
+29. What are the limitation of Node.Js
 
 Single-threaded and Event Loop:   
 Managing asynchronous operations in Node.js like call back hell problems
 Node.js has a smaller built-in library compared to some other server-side technologies like Java or .NET
 JavaScript, the language used in Node.js, is dynamically typed,
-
-
 
 31.  How Node.js is single threaded
 
@@ -521,7 +517,7 @@ Streams are a sequence of data that is processed sequentially, allowing develope
  There are four types of Node streams: Readable streams, Writable streams, Duplex streams, and Transform streams.
  
 What is the Temporal Dead Zone?
-Ans. -> The Temporal Dead Zone (TDZ) is  the period  of a JavaScript script where a variable has been declared but has not yet been initialized. During this phase, the variable is inaccessible.
+Ans. -> The Temporal Dead Zone (TDZ) is  the period  of a JavaScript where a variable has been declared but has not yet been initialized. During this phase, the variable is inaccessible Temporal Dead Zone.
 
 what is  Lexical scoping?
 
@@ -531,311 +527,7 @@ Wow, these are some of the best doubts. ️
 3. Does the web API environment stores only the callback function and pushes the same callback to queue/microtask queue? - Yes, the callback functions are stored, and a reference is scheduled in the queues. Moreover, in the case of event listeners(for example click handlers), the original callbacks stay in the web API environment forever, that's why it's advised to explicitly remove the listeners when not in use so that the garbage collector does its job.
 4. How does it matter if we delay for setTimeout would be 0ms. Then callback will move to queue without any wait? 
 No, there are trust issues with setTimeout() . The callback function needs to wait until the Call Stack is empty. So the 0 ms callback might have to wait for 100ms also if the stack is busy.  It's a very beautiful concept, and I've covered this in detail in the next episode of Namaste JavaScript. 
- =========================================================  OTHER  ========================================================
- =========================================================  OTHER  ========================================================
- =========================================================  OTHER  ========================================================
- =========================================================  OTHER  ========================================================
 
- Date : 24/04/2024
-What is Javascript?
- Ans: Java-script : Java Script is high-level, interpreted,prototype based and multi -       paradigm scripting language primarily used for web development to create interactive user-interfaces and dynamic web-pages. Javascript runs on browsers and we can also use it as a server side with an environment like Node.js.
-2.How Browsers Execute Javascript.
-Ans : Every Web-browser comes with a java-script engine that allow to browser runs and execute a javascript file which is responsible to execute js file on browser   here agenral example how browser execute java-script
-Parsing :  The browser first parse the html and build the document object model(DOM) Tree , which presents the structure of web - pages.  
-If you use script tag and js file in html file browser identify js file throw <script>
-Tag and load and execute the javascript file
-
-   Execution Context : Every Browser have different-different java-script engines
-Eg . Chrome have v8 and safari have JavaScriptCore etc
-Inside the javascript engine a global execution context and in this execution context there is a call-stack inside the call stack there is global object and this global object refer to this and this refer to window object in browser  everything happened in call stack in call stack there is 2 phases for execute a js program when we define a javascript code browser engine execute in two phases first is creational phase and second we called execution phase.
-The first thing the code runs a [Global Execution Context] is created. During this creation phase the engine will do a couple of things
-Fits it create a global object and this object called in browser window object
-Create a this object binding with point to the object created above
-Set Up a memory  for storing variables and assign undefined by default to all variables 
-	After this phase is done the engine moves to the execution phase.
-During the execution phase the code is run line by line. It is in this phase that variables are assigned their value and function are invoked.
-If you declare any function js engine, create a separate execution context and repeat all steps and every function stored in the call stack in last in first out order.
-3.What are the features of Javascript?
-Ans: There are following key feature of java script
-Light-Weight Scripting Language
-JavaScript is a lightweight scripting language because it is made for data handling in the browser or the client side.
-Dynamic Typing
-JavaScript supports dynamic typing which means types of the variable are defined based on the stored value
-Object-Oriented Programming support
-Starting from ES6,the concept of class and oops is better defined.
-also , in java script ,two important principle with oops in javascript are 
-Object creation PAtterns (Encapsulation)
-Code Reuse Pattern (Inheritance)
-	    4. Functional Style 
-		Many important javascript concept and feature like callbacks, clouser etc           are implementations of functions only
-	  5. Single threaded : Java script doesn’t support multi-threading,by default it is single threaded,which means it can execute only a single task a time.
-	But Javascript provides some feature using which you can implement parallel execution.They are :  Asynchronous Programming
-	6. Prototype-based Language : Java script is a Prototype based scripting language This  means javascript uses prototype behavior instead of classes or inheritance in java we create a class and then we create objects for those classes but in java script, we define an object prototype,and then more object can be created using this object prototype.
-7. InterPreted Language : Javascript interpreted language which means the script written inside javascript is processed line by line and the js code is interpreted by javascript interpreter which is a built in component of web browser but these days many javascript engine like the v8 engine in chrome use just in time compilation fro js code.
-4.What is DOM ?
-Ans : In java script DOM stand for Document object model basically it is representation of our html code in tree formate dom give many method using those method we access
-Any html element and manipulate using dom method like document.remove add class list get element by id and many more methods.
-DCUMENT OBJECT MODEL
-Window — Document — html — head and body — head – title and meta and body has like diva and p obejct/tag   
-5. How to perform click event on Dom Using Javascript
-Ans : We perform click event in javascript there are three way first using addEventlistener and by getElement and third is using Event Disptach method.
-Eg . 1. Using Event listener 
-	document.getElementById(‘mybtn’).addEventlistner(‘click’,()=>{})
-        2. Using Basic click() function  
-	   document.getElementById(‘mybtn’).click()
-        3. Using dispachEvent() method and the Mouse Event construtore to perform click event in js
-    document.getElementById(‘mybtn’).dipatchEvent(new Event(‘click’);
-    Var event = new MouseEvent(‘click’);
-    document.getElementById(‘mybtn’).dipatchEvent(event);
-6. What is alert() and confirm() ?
-Ans:Alert box is used if we want the information comes through to the user. Confirm box is used if we want the user to verify or accept something.
-
-7. What is difference between undefined and null
-Ans : You can differentiate null from undefined as undefined is the default state of a declared variable that hasn't been assigned a value, whereas null is an explicit assignment indicating the deliberate absence of a value.
-8. What is difference between == and ===
-Ans: The difference between == and === in JavaScript is that == is a loose equality operator that compares values after type coercion, while === is a strict equality operator that compares both values and types. === requires both values to be of the same type and have the same value, making it a safer choice for most comparisons to avoid unexpected type conversions.
-9. What is a function? Can we overload functions in javascript?
-Ans : Java script does not support function overloading because it is dynamically typed.
- 
-10. What is a callback ? Explain with suitable examples.
-Ans : A callback is a function that is passed as an argument to another function and is executed after some operation has been completed. Callbacks are commonly used in JavaScript to handle asynchronous operations, such as fetching data from a server or handling user events.
-function greet(name, callback) {
-callback();	
-console.log( name');
-}
-
-function sayNamaste() {
-	console.log('Namaste!');
-}
-greet('mohan', sayNamaste);
-
-
-
-11. What is a promise? What are the advantages of a promise over a callback?
-Ans: Promises is an function and object that is based on concept of real life promise which is give result in future results will be resolve and reject promises has 3 state default state is pending second is resolve when promise give wanted result and rejected when you request is rejected.
-Advantages : 1. Better readability  
-2. Clean code avoid call back hell problem 
-3. Handle promises result throw promises changing using .then and catch
-4. Better error handling
-12. What is callback hell?
-Ans : Callback Hell occurs when multiple nested callback functions are used in asynchronous JavaScript code, leading to deeply indented and hard-to-read code structures making code maintenance and debugging challenging and it is also called the pyramid of doom.
-13. What is closure ?
-Ans : Clouser is concept where a inner function access the variable of auteur function after the outer function executed in term of inner function access the lexical environment of outer function .
-Eg : function outer(){
-		let a = 2
-		let b = 3
-		function inner(){
-		c= a+b;
-console.log(c)
-}
-return inner;
-}
-let innerFunc = outer() // when outer is called innerFunc  hold the reference of inner function 
-innerFunc(); ecute inner funcion 
-14. What is an Immediately Invoked Function Expression (IIFE)?
-Ans : An Immediately Invoked Function Expression (or IIFE) is a JavaScript function that is defined and executed immediately after its creation.
-Example : (function() {
-			console.log("hello");
-})();
-15 What is anonymous function ?
-Ans : Anonymous function declare with without name it use as to passing as call back function i java script which function passing as argument in another function and anonymous function are basically use to inline functions.
-16. What is hoisting in javascript.
-Ans : Variable Hoisting is a concept or behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase.
-17. What is the difference between var, let and const keywords?
-Ans :The difference between let, const, and var is that var declarations are globally scoped or function scoped while let and const are block scoped. var and let allows for reassignment, const creates a read-only reference, meaning the value it holds cannot be changed after declaration.
-18. Explain use strict?It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables.
-Ans:In simple terms, "use strict" is a way to tell JavaScript to be more careful and strict about how it executes your code. When you use "use strict", JavaScript will enforce stricter rules. For example, you must declare variables before using them, and certain unsafe actions are not allowed. This helps prevent common mistakes and makes your code more reliable.
-19. What is event bubbling and event capturing
-Ans : The event bubbling and event capturing concept of event propagation in event propagation we now browser create document object model using this object model that perform event propagation in this there two concept 
-Capturing in event capturing the event goes down from the parent to the child in the capturing phase.
-Bubbling :This phase is the opposite of the capturing phase. Here, the event is propagated from the child to the parent.
-20.What are the primitive data type in javascript
-Ans :There are seven primitive data types in JavaScript: String, Number, BigInt, Boolean, Null, Undefined, and Symbol.
-21.. What are different types of popup boxes available in javascript
-Ans: There are three types  of pop - up boxes confirm , alert and prompt.
-22. What will happen if an infinite while loop is run in javascript
-Ans:  Infinite Loop is run in javascript it can crash your program or browser and freeze your computer.
-23. List HTML DOM mouse events
-onclick,ondblclick, onmouseover, onmouseout, onmouseup,onmove
-Ans : There 6 type of mouse event mention in question 
-	onClick = When you apply onClikc event any html object when mouse click it occur execute what you want
-Ondbclick = when user double click on html object it execute the event what we perform
-onMouse Move  - The curose moving over the element we perform any event when mouse move any element
-onMouseOut - Event occurs when mouse out for element.
-Onmouseup - Event occurs when mouse cursor goes up 
-onOver - when mouse goes out of the element 
-24. Explain await and async ? How to use await and async?
-Ans : In javascript, the async keyword is used to define an asynchronous function.Async function enable to write asunchronus code that looks and behaves similar to synchronous code, making it easier to wrok with asynchronous operations like fetching data, making API Calls and handling promises.
-When you declare a function with the async keyword it automatically return a promise.The function it self will always return a promise, which resolve with the vale always returned the function, or rejects with an error thrown from with the function.
-Inside
-
-25 How to handle the exception in javascript.
-
-exception is handled by writing the code into the try catch block. If an error is present, the catch block will execute, else only the try block statements will get executed.
-
-try {
-  // risky code
-} catch (error) {
-  // Code for handle
-} finally {
-  // Code  will always execute,
-}
-
-
-
-
-26. How to get the last index of a string in javascript lastIndexOf
-by using - lastIndexOf()
-const str = 'Hello world, welcome to JavaScript world';
-const lastIndex = str.lastIndexOf('world',10);
-
-console.log(lastIndex);
-
-
-27. Describe negative infinity in javascript?
-
-negative infinity is a special  value that is returned when an arithmetic operation or mathematical function generates a negative value greater than the largest representable number in JavaScript
-
-console.log(-10/0);
-
-
-28. What is Node.js? Explain the advantage of Node.js Over java and php
-
-Node.js is an open-source, server-side JavaScript runtime environment that allows the user to run JavaScript code on the server.
-it is developed by Dahl in 2009,
-it's a not a programming language,
-Node.js support asynchronous programming!
-Node.js is superfast
-33 % fewer line of code
-35 % faster response time
-Node.js use synchronous/blocking and asynchronous/non-blocking library both
-
-Node.js application is synchronous by default
-Node.js is referred to as a "runtime environment" for JavaScript because it provides an environment where JavaScript code can be executed outside of the browser environment. on server side
-
-
-
-29 .  What are the limitation of Node.Js
-
-Single-threaded and Event Loop:   
-Managing asynchronous operations in Node.js like call back hell problems
-Node.js has a smaller built-in library compared to some other server-side technologies like Java or .NET
-JavaScript, the language used in Node.js, is dynamically typed,
-
-
-
-31.  How Node.js is single threaded
-
-Node.js is Single-Threaded: This means that Node.js uses a single main thread to execute JavaScript code. All JavaScript code, including event handlers and asynchronous callbacks, runs on this single thread managed by the Node.js event loop.
-32.  Explain any five built-in package/Dependency name in node.js,
-
-1. http Module:
-The http module is to create HTTP servers and make HTTP requests.
-
-import http from 'http'
-const server = http.createServer((req, res) => {
-   res.end('hello server');
-});
-server.listen(3000, () => {
-  console.log('HTTP Server running on port 3000');
-});
-
-2. fs module
-The fs module provides an API for interacting with the file system in Node.js.
-import fs = from 'fs'
-
-fs.readFile('test.txt', (err, data) => {
-  if (err) {
-    console.log('Error reading file:', err);
-  } else {
-    console.log('Text :', data.toString());
-  }
-});
-
-3. path Module:
-It allows you to manipulate file paths,
-import path from 'path'
-const filePath = '/myfolder/inner/test.txt';
-console.log('File name:', path.basename(filePath)); // output: test.txt
-console.log('Directory name:', path.dirname(filePath));
-// output: /myfolder/inner
-
-
-
-
-
-
-33. What is a Module in Node.js?
-modules are the same as JavaScript libraries.
-It's a set of functions we want to include in our application.
-
-
-34. What is Module.exports ?
-module.exports in Node.js is like a special object that determines what a module shares with other parts of our program when it's imported
-
-const add = (a, b) => {
-  return a + b;
-};
-
-const subtract = (a, b) => {
-  return a - b;
-};
-
-module.exports = {
-  add,
-  subtract
-};
-
-35. How to create server in node.js
-
- by using http module we can create our server,
-
-import http from "http”
-
-const server = http.creatServer((request,response)=>{
-
-response.end("Server");
-});
-
-server.listen(3000,"localhost",()=>{
-
-clg("server start on 3000 port);
-});
-
-36. How node.js handle multiple request
-Node.js handles multiple requests using its event-driven, non-blocking I/O model.
-Node.js uses non-blocking operations, meaning that it doesn't wait for an I/O operation like reading from a file or database , to complete before moving on to the next task.
-37. How to use url module in node.js
-The url module is used to parse URLs into components and to resolve or format URLs. It provides several functions to work with urls
-const urlString = 'https://example.com/path/to/resource?query=string';
-const parsedUrl = url.parse(urlString);
-console.log(parsedUrl);
-38.What is setInterval, setTimeout
-setInterval and setTimeout are both functions in JavaScript that allow you to execute a specific block of code after a specified delay.
-
-setTimeout(() => {
-  console.log("test");
-}, 2000);
-
- setInterval(() => {
-  console.log("execute in evry one second.");
-}, 1000);
-39. What is __dirname and __filename  ?
-__dirname and __filename are special global variables that provide information about the directory name and the file name of the currently executing script,
-console.log(__dirname);  		 /Users/username/projects/myapp
-console.log(__filename); 		 /Users/username/projects/myapp/app.js
-40. What is synchronous/Blocking and Asynchronous/Non-blocking code in node.js
-Synchronous or blocking code executes in a sequential manner where each operation waits for the previous one to complete before proceeding
-
-41. What is file system in node.js
-Ans : In nOde js file system deals with the file read write on file it all about the file handling in node js fs module to handle the file system.
-42. What are the different type of flag using in node.js
-Ans: There are two types of flag in node js environment  flag and command line flag 
-Environment flag  - : These flag can used to set the values of environment variable that are used in node js application for example the NODE_ENV , NODE_PATH and DEBUG environment variable can be used to print the result of an expression.
-Command line   - : These flags can be used to change the behaviour of the Node.js process when it is started. For example -p flag can be used to print the result of an expression. 
-Ex: -p or –print  , -e or –eval , -v or –version and -h or –help
-43. What is the stream in node.js? Explain the types of stream
-Ans:
 44. How are pipe streams in node.js ?
 Ans: Piping in node.js is the process of  connecting the output of one stream to the input of another streams. This allows you to chain together multiple streams to perform complex data processing tasks.
 pipe() method in node js on a readable stream connect it to a writable stream. When the readable stream emits a data event, the data is written to the writable stream. The pipe()
@@ -843,7 +535,6 @@ Method returns the writable stream,so you can chain together multiple streams.
 Const readableStream = fs.createReadStream(‘input.txt’)
 Const writtableStream = fs.createWriteStream(‘output.txt);
 readablestream.pipe(writableStream) 
-
 
 45. What is request and response in node.js
 Ans:In Node.js the request object represents the HTTP request from the client. And response object represents the HTTP response that the server sends back to the client.

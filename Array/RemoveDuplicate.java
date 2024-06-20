@@ -1,23 +1,27 @@
-import java.util.Scanner;
+import java.util.*;
 
 class RemoveDuplicate {
 
 	public static void main(String arg[]) {
 		int size = 10;
 
-		Scanner sc = new Scanner(System.in);
-
-		System.out.println("Enter array elemet");
-		int ar[] = new int[size];
-		for (int i = 0; i < size; i++) {
-			ar[i] = sc.nextInt();
-		}
-
+		int ar[] = {5,  4,  5,  2,  3,  1,  6,  7,  5,  1, };
+		
 		System.out.println("array elemet");
 		for (int i : ar) {
 			System.out.print(i + "  ");
 		}
 
+		// size = withoutCollection(ar,size);
+		usingCollection(ar);
+		
+		// System.out.println("\nremove duplicate array elemet");
+		// for (int i = 0; i < size; i++) {
+			// System.out.print(ar[i] + "  ");
+		// }
+	}
+	public static int withoutCollection(int ar[],int size) {
+	
 		for (int i = 0; i < size; i++) {
 			for (int j = i + 1; j < size; j++) {
 				if (ar[i] == ar[j]) {
@@ -28,13 +32,24 @@ class RemoveDuplicate {
 					j--;
 				}
 			}
-
 		}
-
-		System.out.println("remove duplicate array elemet");
-		for (int i = 0; i < ar.length; i++) {
-			System.out.print(ar[i] + "  ");
-		}
+		return size;
+	}
+	
+	public static void usingCollection(int ar[]) {
+	
+		Set<Integer> set = new HashSet<>();
+	   
+		for(int i : ar) set.add(i);
+		
+		int arr[] = new int[set.size()];
+		
+		int i = 0;
+		
+		for(Integer j : set) arr[i++] = j;
+		
+		System.out.print("\n"+Arrays.toString(set));
+		
 	}
 
 }
