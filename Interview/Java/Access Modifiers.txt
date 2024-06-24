@@ -1,7 +1,7 @@
 1. what is modifiers?
 Ans -> In programming, modifiers are keywords or annotations that provide additional information or behavior to various program elements such as classes, methods, variables, and interfaces. Modifiers are used to control access, visibility, behavior, and other characteristics of these program elements. They help define the structure, behavior, and interactions within a program.
 
-2. List out All 13 Modifier?
+2. List out All 11 Modifier?
 Ans -> Access Modifiers:
 		public : The element is accessible from any other class.
 		protected : The element is accessible within the same package or by subclasses, even if they are in different packages.

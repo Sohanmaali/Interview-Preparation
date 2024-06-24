@@ -12,19 +12,6 @@ Memory Component  : The memory component refers to the memory allocation and man
  
 Code Component  : The code component in JavaScript refers to the actual JavaScript code written by developers to define the behavior, logic, and functionality of web applications or scripts.
 
-When a browser encounters a JavaScript code, it sends the code to its JavaScript engine for execution. The JavaScript engine is a program that interprets and executes JavaScript code.
-The JavaScript engine first converts the JavaScript code into an intermediate representation, which is a more efficient form of the code that can be executed by the computer. The intermediate representation is then executed by the JavaScript engine, which produces the desired result.
-The JavaScript engine is responsible for managing the execution of JavaScript code, including the following tasks:
-Parsing the code:
-The JavaScript engine parses the code to identify the different elements of the code, such as variables, functions, and expressions.
-Compiling the code:
-The JavaScript engine compiles the code into an intermediate representation, which is a more efficient form of the code that can be executed by the computer.
-Executing the code:
-The JavaScript engine executes the intermediate representation, which produces the desired result.
-Managing the memory:
-The JavaScript engine manages the memory that is used by the JavaScript code. This includes allocating memory for variables and objects, and freeing memory when it is no longer needed.
-
-
 3. What are features of Javascript?
 Ans : java script is object oriented,multi paradigm scripting language 
 JavaScript is a dynamic type language. -> A dynamically typed language is a programming language that assigns variables type at runtime based on the variable's value
@@ -70,22 +57,19 @@ if (result) {
 }
 
 7. What is difference between undefined and null
+Ans : Undefined represent a variable which is declared but not assigned any value, if we access this variable we always get undefined.
+	Like: let m;
+		console.log(m);
+		function hello() { }
+		console.log(hello());
+		// Output: undefined
 
- Ans :  Undefined represent a variable which is declared but not assigned any value, if we access this variable we always get undefined.
-Like:
-let m;
-console.log(m);
-function hello() { }
-console.log(hello());
-// Output: undefined
+	Null is an assignment value. It can be assigned to a variable as a representation of no value. 
+		let y = null; // variable intentionally set to null
+		console.log(y); // Output: null
 
-Null is an assignment value. It can be assigned to a variable as a representation of no value. 
-let y = null; // variable intentionally set to null
-console.log(y); // Output: null
-
-let obj = { property: null }; // property intentionally set to null
-console.log(obj.property); // Output: null
-
+	let obj = { property: null }; // property intentionally set to null
+	console.log(obj.property); // Output: null
 
 8. What is difference between == and ===
 == equal operator represent Loose Equality, it compare only value,  if value are equal then it will return true else false
@@ -170,9 +154,11 @@ asyncFunction1(arg1, function(err, result1) {
 });
 
 13. What is closure ?
-Ans. -> The ability of an inner function to access the outer function’s variables after completing  outer function  is called  clousure .
-The inner function can access variables from the outer function, even after the outer function has finished running. This ability of the inner function to remember and access the variables from its parent function. i called  clousure .
-	function outerFunction() {
+Ans. -> A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment). In other words,
+The ability of an inner function to access the outer function’s variables after completing outer function is called clousure.
+The inner function can access variables from the outer function, even after the outer function has finished running. This ability of the inner function to remember and access the variables from its parent function. i called clousure.
+	
+	function outerFunction(){
 		let a = 'Hello';
 		function innerFunction() {
 			console.log(a);
@@ -195,8 +181,8 @@ Event Listeners
 Callbacks
 
 
-16.  Explain variable hoisting.
-Ans. -> Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution during the compilation phase. This means that a variable or function can be used before it has been declared. Declaration hoisted to the top but not initialization, function expression and class expression are not hoisted
+16. Explain variable hoisting.
+Ans. -> Hoisting is a mechanism in js where variables and function declarations are moved to the top of their scope before code execution during the compilation phase. This means that a variable or function can be used before it has been declared. Declaration hoisted to the top but not initialization, function expression and class expression are not hoisted
 There are two types of hoisting in JavaScript:
 Variable hoisting :- Variable declarations are hoisted to the top of their scope, but not initialized. This means that variables can be used before they are declared, but they will be undefined.
 Function hoisting :- Function declarations are hoisted to the top of their scope, and initialized with a function object. This means that functions can be called before they are declared.
@@ -214,19 +200,19 @@ console.log(a); //  ReferenceError: Cannot access 'age' before initialization
 let a= 30;
 
 
-17.  What is the difference between let, const, and var?
+17. What is the difference between let, const, and var?
 Ans. ->				 var											let									const
-		The scope of a var variable 					The scope of a let variable 						The scope of a const variable 
-		is functional or global scope.					is block scope.								is block scope.
+		The scope of a var variable 					The scope of a let variable 					The scope of a const variable 
+		is functional or global scope.					is block scope.									is block scope.
 		
 		It can be updated and re-declared 				It can be updated but cannot 					It can neither be updated or 
-		in the same scope.							be re-declared in the same scope.				re-declared in any scope.
+		in the same scope.								be re-declared in the same scope.				re-declared in any scope.
 
-		It can be declared 							It can be declared 							It cannot be declared 
+		It can be declared 								It can be declared 								It cannot be declared 
 		without initialization.							without initialization.							without initialization.
 		
 		It can be accessed  							It cannot be accessed without  					It cannot be accessed without 
-		without initialization as its						initialization otherwise						initialization, as it cannot 
+		without initialization as its					initialization otherwise						initialization, as it cannot 
 		default value is “undefined”.					it will give ‘referenceError’.					be declared without initialization.
 
 		These variables are hoisted.					These variables are hoisted 					These variables are hoisted but  
@@ -252,7 +238,6 @@ function example() {
 	}
 	console.log(x); // Output: 10
 }
-
 
 18. Explain use strict?
 Ans. ->  The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
@@ -293,18 +278,17 @@ alert("hello), confirm ("are you sure "), prompt("enter your name);
 22. What will happen if an infinite while loop is run in javascript
 An infinite loop can crash our program or browser and freeze our computer.
 
-23.	 List HTML DOM mouse events
-
-click: Occurs when the mouse button is clicked (pressed and released) on an element.
-dblclick: Occurs when the mouse button is double-clicked on an element.
-mousedown: Occurs when the mouse button is pressed down on an element.
-mouseup: Occurs when the mouse button is released over an element.
-mouseenter: Occurs when the mouse pointer enters the boundaries of an element.
-mouseleave: Occurs when the mouse pointer leaves the boundaries of an element.
-mousemove: Occurs when the mouse pointer is moved while it is over an element.
-mouseover: Occurs when the mouse pointer enters the boundaries of an element or its child elements.
-mouseout: Occurs when the mouse pointer leaves the boundaries of an element or its child elements.
-contextmenu: Occurs when the right mouse button is clicked to open the context menu.
+23.	List HTML DOM mouse events
+Ans. -> click: Occurs when the mouse button is clicked (pressed and released) on an element.
+		dblclick: Occurs when the mouse button is double-clicked on an element.
+		mousedown: Occurs when the mouse button is pressed down on an element.
+		mouseup: Occurs when the mouse button is released over an element.
+		mouseenter: Occurs when the mouse pointer enters the boundaries of an element.
+		mouseleave: Occurs when the mouse pointer leaves the boundaries of an element.
+		mousemove: Occurs when the mouse pointer is moved while it is over an element.
+		mouseover: Occurs when the mouse pointer enters the boundaries of an element or its child elements.
+		mouseout: Occurs when the mouse pointer leaves the boundaries of an element or its child elements.
+		contextmenu: Occurs when the right mouse button is clicked to open the context menu.
  
 24  Explain await and async ? How to use await and async?
 async and await

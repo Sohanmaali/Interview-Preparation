@@ -129,7 +129,7 @@ i. Managed environment – In this kind of environment everything from database 
 ii. Non-managed environment – This kind of environment provides a basic configuration template. Tomcat is one of the best examples that provide this kind of environment.
 
 18) What is the file extension you use for hibernate mapping file?
-Ans. -> The name of the file should be like this : filenam.hbm.xml The filename varies here. The extension of these files should be “.hbm.xml”. This is just a convention and it’s not mandatory. But this is the best practice to follow this extension.
+Ans. -> The name of the file should be like this : filename.hbm.xml The filename varies here. The extension of these files should be “.hbm.xml”. This is just a convention and it’s not mandatory. But this is the best practice to follow this extension.
 
 20) What is meant by Method chaining?
 Ans. -> Method chaining is a common syntax in object-oriented programming languages that allows you to invoke multiple method calls in a single statement. It's also known as method cascading
@@ -216,7 +216,6 @@ Ans. -> It is open-sourced and lightweight.
 Difference between the first and second level cache in Hibernate? 
 Ans. -> The first-level cache is maintained at Session level 
 		while the second level cache is maintained at a SessionFactory level and is shared by all sessions.
-		
 			
 		It is enabled by default.
 		It is not enabled by default.
@@ -289,13 +288,6 @@ This also provides the facility to get information like statistics and metadata 
 ========================================================================================================================
 4. Explain architecture of Hibernate?
 
-5. What are some core interfaces of hibernate?
-Ans. -> Session
-SessionFactory
-Configuration
-Transaction
-Query and Criteria interface.
-
 6. Explain brief about Session interface used in hibernate?
 Ans. -> The Session interface in Hibernate is a central API that provides a bridge between the application and the database. It is used to interact with the database by performing CRUD (Create, Read, Update, Delete) operations. Here’s a brief overview
 
@@ -325,32 +317,32 @@ Ans. -> Query interface is object oriented representation of Hibernate Query. Yo
 	}
 
 12. What are differences between openSession and getCurrentSession in hibernate?
-Ans. -> Parameter								openSession      						getCurrentSession
-		Session object					It always create new Session object     	It creates a new Session if not exists , 
-																					else use same session which is in current hibernate context
+Ans. -> 								openSession      						getCurrentSession
+		It always create new Session object    
+		It creates a new Session if not exists, else use same session which is in current hibernate context
 	
-	Flush and close					You need to explicitly flush and 
-										close session objects						You do not need to flush and close session objects,
-																					it will be 	automatically taken care by Hibernate internally
-	Performance						In single threaded environment , 
-									It is slower than getCurrentSession				In single threaded environment , It is faster than getOpenSession
+		You need to explicitly flush and close session objects  
+		You do not need to flush and close session objects, it will be 	automatically taken care by Hibernate internally
+	
+		In single threaded environment, It is slower than getCurrentSession 
+		In single threaded environment , It is faster than getOpenSession
 
-	Configuration					You do not need to configure any 
-									property to call this method					You need to configure additional property 
-																					“hibernate.current_session_context_class” to call getCurrentSession method, otherwise it will throw exceptions.
-
+		You do not need to configure any property to call this method 
+		You need to configure additional property “hibernate.current_session_context_class” to call getCurrentSession method, otherwise it will throw exceptions.
 
 13. What are differences between get and load methods in hibernate?
-Ans. -> Parameter									get													load
-		Database retrieval					It always hits the database								It does not hit database
+Ans. -> get				load
+		It always hits the database								
+		It does not hit database
 	
-		If null								If it does not get the object with id, 					If it does get the object with id, it throws 
-											it returns null 										ObjectNotFoundException
+		If it does not get the object with id, it returns null
+		If it does get the object with id, it throws ObjectNotFoundException
 		
-		Proxy 								It returns real object									It returns proxy object
+		It returns real object									
+		It returns proxy object
 		
-		Use									If you are not sure if object with id 					If you are sure about existence of object,
-											exists or not, you can use get							you can use load
+		If you are not sure if object with id exists or not, you can use get
+		If you are sure about existence of object, you can use load
  
 
 14. Can you declare Entity class as final in hibernate?
