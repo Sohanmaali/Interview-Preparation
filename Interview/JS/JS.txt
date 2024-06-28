@@ -154,8 +154,7 @@ asyncFunction1(arg1, function(err, result1) {
 });
 
 13. What is closure ?
-Ans. -> A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment). In other words,
-The ability of an inner function to access the outer function’s variables after completing outer function is called clousure.
+Ans. -> A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment). In other words, The ability of an inner function to access the outer function’s variables after completing outer function is called clousure.
 The inner function can access variables from the outer function, even after the outer function has finished running. This ability of the inner function to remember and access the variables from its parent function. i called clousure.
 	
 	function outerFunction(){
@@ -179,7 +178,6 @@ Ans:  An anonymous function is a function that is defined without a name.  This 
 Immediately Invoked Function Expressions (IIFEs)
 Event Listeners
 Callbacks
-
 
 16. Explain variable hoisting.
 Ans. -> Hoisting is a mechanism in js where variables and function declarations are moved to the top of their scope before code execution during the compilation phase. This means that a variable or function can be used before it has been declared. Declaration hoisted to the top but not initialization, function expression and class expression are not hoisted
@@ -258,7 +256,7 @@ Event capturing is the opposite of event bubbling. It involves the event which i
 use for it event.stopPropagation
 
 20. What are the primitive data type in javascript
-Number , boolean ,string , Bigint, symbol undefined,null
+Ans. -> Number , boolean ,string , Bigint, symbol undefined,null
 
 . What is an asynchronous task ?
 an asynchronous task refers to an operation that doesn't block the main execution thread,
@@ -291,17 +289,12 @@ Ans. -> click: Occurs when the mouse button is clicked (pressed and released) on
 		contextmenu: Occurs when the right mouse button is clicked to open the context menu.
  
 24  Explain await and async ? How to use await and async?
-async and await
-Inside an async function, we can use the await keyword before a call to a function that returns a promise.
+Ans. -> async Keyword : The async keyword is used to declare a function. As a asynchronous function returns a promise, and the value that is returned by the function is automatically wrapped in a resolved promise.
 
-Use async functions  to define asynchronous operations.
-Use await inside async functions to wait for Promises to resolve.
-
-The keyword await makes JavaScript wait until that promise settles and returns its result.
-It is the egonre need of nested callbacks or complex Promise chains, making our code cleaner and more maintainable.
+await Keyword : The await keyword can only be used inside an async function. It makes the JavaScript engine wait until the promise is resolved or rejected, and returns the resolved value. If the promise is rejected, it throws the rejected value.
 
 25 How to handle the exception in javascript.
-exception is handled by writing the code into the try catch block. If an error is present, the catch block will execute, else only the try block statements will get executed.
+Ans. -> exception is handled by writing the code into the try catch block. If an error is present, the catch block will execute, else only the try block statements will get executed.
 
 try {
   // risky code
@@ -326,8 +319,7 @@ console.log(-10/0);
 
 
 28. What is Node.js? Explain the advantage of Node.js Over java and php
-
-Node.js is an open-source, server-side JavaScript runtime environment that allows the user to run JavaScript code on the server.
+Ans. -> Node.js is an open-source, cross-platform runtime environment that allows you to run JavaScript code outside of a web browser.
 it is developed by Dahl in 2009,
 it's a not a programming language,
 Node.js support asynchronous programming!
@@ -340,17 +332,16 @@ Node.js application is synchronous by default
 Node.js is referred to as a "runtime environment" for JavaScript because it provides an environment where JavaScript code can be executed outside of the browser environment. on server side
 
 29. What are the limitation of Node.Js
-
+Ans. -> 
 Single-threaded and Event Loop:   
 Managing asynchronous operations in Node.js like call back hell problems
 Node.js has a smaller built-in library compared to some other server-side technologies like Java or .NET
 JavaScript, the language used in Node.js, is dynamically typed,
 
-31.  How Node.js is single threaded
+31. How Node.js is single threaded
+Ans. -> Node.js is Single-Threaded: This means that Node.js uses a single main thread to execute JavaScript code. All JavaScript code, including event handlers and asynchronous callbacks, runs on this single thread managed by the Node.js event loop.
 
-Node.js is Single-Threaded: This means that Node.js uses a single main thread to execute JavaScript code. All JavaScript code, including event handlers and asynchronous callbacks, runs on this single thread managed by the Node.js event loop.
-
-32.  Explain any five built-in package/Dependency name in node.js,
+32. Explain any five built-in package/Dependency name in node.js,
 
 1. http Module:
 The http module is to create HTTP servers and make HTTP requests.
@@ -402,27 +393,18 @@ module.exports = {
   subtract
 };
 
-15. How to create server in node.js
-
- by using http module we can create our server,
-
-import http from "http”
-
-const server = http.creatServer((request,response)=>{
-
-response.end("Server");
-});
-
-server.listen(3000,"localhost",()=>{
-
-clg("server start on 3000 port);
-});
-
-
+15. How to create server in node.js by using http module we can create our server,
+Ans. -> import http from "http”
+	const server = http.creatServer((request,response)=>{
+		response.end("Server");
+	});
+	server.listen(3000,"localhost",()=>{
+		clg("server start on 3000 port);
+	});
 
 36. How node.js handle multiple request
 
-Node.js handles multiple requests using its event-driven, non-blocking I/O model.
+Node.js handles multiple requests using its event-driven, non-blocking I/O architecture.
 Node.js uses non-blocking operations, meaning that it doesn't wait for an I/O operation like reading from a file or database , to complete before moving on to the next task.
 
 
@@ -460,9 +442,6 @@ Synchronous or blocking code executes in a sequential manner where each operatio
 
 Asynchronous or non-blocking code does not wait for operations to complete and allows the program to continue executing
 
-
-27/04/2024
-
 41. What is file system in node.js
 
 The file system module (fs) in Node.js allows  to work with files and directories on our computer
@@ -475,8 +454,6 @@ fs.readFile('example.txt', 'utf8', (err, data) => {
   }
   console.log(data);
 });
-
-
 
 42. What are the different type of flag using in node.js
 
@@ -493,17 +470,12 @@ fs.writeFile('example.txt', content, { flag: 'w' }, (err) => {
   console.log('File written successfully');
 });
 
-
-
 43. What is the stream in node.js? Explain the types of stream
-
-Streams are a sequence of data that is processed sequentially, allowing developers to read and process data piece by piece or in chunks, instead of reading all the data into memory at once.
+Ans. -> Streams are a sequence of data that is processed sequentially, allowing developers to read and process data piece by piece or in chunks, instead of reading all the data into memory at once.
  There are four types of Node streams: Readable streams, Writable streams, Duplex streams, and Transform streams.
  
 What is the Temporal Dead Zone?
 Ans. -> The Temporal Dead Zone (TDZ) is  the period  of a JavaScript where a variable has been declared but has not yet been initialized. During this phase, the variable is inaccessible Temporal Dead Zone.
-
-what is  Lexical scoping?
 
 Wow, these are some of the best doubts. ️
 1. When does the event loop actually start? - Event loop, as the name suggests, is a single-thread, loop that is `almost infinite`. It's always running and doing its job. ️
@@ -523,26 +495,34 @@ readablestream.pipe(writableStream)
 45. What is request and response in node.js
 Ans:In Node.js the request object represents the HTTP request from the client. And response object represents the HTTP response that the server sends back to the client.
 The request object contains information about the request , like request method, the request headers, and request body and response object contains information about the response , such as the response status code, the response headers, and the response body.
+
 46. What is package.json and package.lock
-Ans:package.json is metadata file in a node js project that contains information about teh project such version , entry pint , dependencies
+Ans.-> package.json is metadata file in a node js project that contains information about the project such version, entry point, dependencies
 Package.lock.json is file automatically generated by npm to local down the version of dependencies install in a project. That makes sure the same version and dependencies are installed on all machines.
-47.What is npm ? How to install dependency/module at application level and       Environment level
-Ans:npm is stand for (Node Package Manager) is the default package manager form Node.js used to install , manage and publish packages or modules of reusable javascript code. It allows developers to easily share and reuse code,manage project dependencies.
+
+47.What is npm ? How to install dependency/module at application level and Environment level
+Ans:npm is stand for (Node Package Manager) is the default package manager form Node.js used to install, manage and publish packages or modules of reusable javascript code. It allows developers to easily share and reuse code,manage project dependencies.
+
 48.How do you manage packages in your node.js project 
 Ans:Using npm command line or yarn.
+
 49.How Node.js is better then other framework
-Ans: Node js is js runtime environment taht allows developers to write server-sdie applications it is built on chrome’s V8 js engine and uses an event loop , non-blocikng I/O model that make it lightweight and efficient. Node,js open source and has a large community of developers.
+Ans: Node js is js runtime environment that allows developers to write server-side applications it is built on chrome’s V8 js engine and uses an event loop , non-blocikng I/O model that make it lightweight and efficient. Node,js open source and has a large community of developers.
+
 1. Performance
 2. Scalability
 3.Easy to use
 4.large community support 
+
 50.What are the some commonly used timing features of Node.js
 Ans: setTimeout(()=>{},1000),setIntervel(()=>{},2000) and setImmediate(()=>{})
+
 51.What is fork in node.js
 Ans:
+
 52. How do you create a simple server in node.js that return hello world
 Ans: Using  HTTP  builtine module 
-	const http = require(‘htttp);
+	const http = require("htttp");
 	const port = 3000;
 	Const server = http.createServer((req,res)=>{
 	res.end(‘Hello HTTP SERVER’);
@@ -575,15 +555,19 @@ Ans:Node js is Java script runtime environment that is built on CHrome’s V8 Ja
 Whena request a received, Node.js will create a new event and add it to the evenet queue.The evenet loop then monitors the event queue and executes events as that ready to execute.
 If any event or request/event is blocking so event loop will wait until the complete before moving on the next event.when most I/O operations in node.js are non-blocking,which means that do not block the event loop.This allows Node.js to handle multiple requests concurrently without having to wait for each request to complete before moving on to the next one.
 Node js used to thread pool to handle CPU- intensive task. The thread pool have threads that can used to execute task in parallel.This allow Node.js to decrease the load of cpu intensive task to the thread pool.freeing up main thread to handle other requests. 
+
 57. If Node.js is single threaded then how does it handle multiple request/ concurrency
-Ans: Node js is Java script runtime environment that is built on CHrome’s V8 Javascript engine. Node.js is single-threaded,which means that is can only exceute one task at a time but it is able to handle multiple request by using asynchronous  event loop programming model.
+Ans: Node js is Java script runtime environment that is built on Chrome’s V8 Javascript engine. Node.js is single-threaded,which means that is can only exceute one task at a time but it is able to handle multiple request by using asynchronous  event loop programming model.
 Whena request a received, Node.js will create a new event and add it to the evenet queue.The evenet loop then monitors the event queue and executes events as that ready to execute.
 If any event or request/event is blocking so event loop will wait until the complete before moving on the next event.when most I/O operations in node.js are non-blocking,which means that do not block the event loop.This allows Node.js to handle multiple requests concurrently without having to wait for each request to complete before moving on to the next one.
 Node js used to thread pool to handle CPU- intensive task. The thread pool have threads that can used to execute task in parallel.This allow Node.js to decrease the load of cpu intensive task to the thread pool.freeing up main thread to handle other requests.   
+
 58. Differentiate between process.nextTick() and setImmediate()
 Ans:
+
 59. What is node.js stream
 Ans:
+
 60. What is middleware
 Ans:Middleware in Node.js is a software design pattern that allows developers to add functionality to their application without modifying the core code. It is a functionality that is executed between the request and response cycle of an application. Middleware can be used for performing different  tasks, like authentication,logging and error handling.
 Middleware functions are written js and have access to request and response objects. They can also call next middleware functions.  
@@ -596,39 +580,29 @@ app.use(auth);
 app.use(‘/users’,auth);
 
 1. Explain what a reactor pattern in node.js
-
-
-The reactor pattern, also known as the event-driven architecture, is a fundamental design pattern used in Node.js and other event-driven systems to handle I/O operations asynchronously without blocking the main execution thread
+Ans. -> The reactor pattern, also known as the event-driven architecture, is a fundamental design pattern used in Node.js and other event-driven systems to handle I/O operations asynchronously without blocking the main execution thread
 
 2. Describes the exit code of Node.js
-
-The exit code is a simple way for Node.js processes to report their status when they finish running. A code of 0 means success,
+Ans. -> The exit code is a simple way for Node.js processes to report their status when they finish running. A code of 0 means success,
  If we run a Node. js script, and it completes its tasks without encountering any issues, it will typically return an exit code of 0.
 
-
 3. What is an EventEmitter in node.js
+Ans. -> EventEmitter is a class in node. js that is responsible for handling the events created using the 'events' module in node. js.
+	import EventEmitter from 'events';
+	const myemt  = new EventEmitter();
+	
+	myemt.on('myEvent', () => {
+		console.log('Event handler for myEvent');
+	});
+	myemt.emit('myEvent');
 
-EventEmitter is a class in node. js that is responsible for handling the events created using the 'events' module in node. js.
-
- import EventEmitter from 'events';
-
-const myemt  = new EventEmitter();
-
-myemt.on('myEvent', () => {
-  console.log('Event handler for myEvent');
-});
-myemt.emit('myEvent');
-
-removeListener(eventName, listener):
-Removes a specific listener for the specified eventName.
-once(eventName, listener):
-Registers a one-time listener for the eventName. The listener is automatically removed after being invoked once.
-
-
+	removeListener(eventName, listener):
+	Removes a specific listener for the specified eventName.
+	once(eventName, listener):
+	Registers a one-time listener for the eventName. The listener is automatically removed after being invoked once.
 
 4.What is a thread pool and which library handles it in node.js
-
-thread pool js is responsible for executing asynchronous tasks such as file I/O, network operations, and other CPU-bound operations efficiently in parallel
+Ans. -> thread pool js is responsible for executing asynchronous tasks such as file I/O, network operations, and other CPU-bound operations efficiently in parallel
 managed by Libuv
 
 5. What is purpose of NODE_ENV
@@ -641,41 +615,48 @@ console.log(process.env.DATABASE_URL);
 6 How would you connection mongodb database to node application
 
 7. What are different type of http request
-GET: Retrieve data from the server.
-POST:  Submit High amount data to be processed to a specified resource.
-PUT : Update an existing resource or create a new resource if it does not exist at a specified URL.
-DELETE : Delete a specified resource at a given URL.
-PATCH : Apply partial modifications to a resource.
+Ans. -> GET: Retrieve data from the server.
+		POST:  Submit High amount data to be processed to a specified resource.
+		PUT : Update an existing resource or create a new resource if it does not exist at a specified URL.
+		DELETE : Delete a specified resource at a given URL.
+		PATCH : Apply partial modifications to a resource.
+
 8. What is difference between get and post
 GET is for fetching data, appending parameters in the URL,. POST, used for updates, sends data securely in the request body, perfect for forms
+
 9.  What is query string and how to send the data in get request
 A query string is a part of a URL that attaches information to the end. It's essentially a way to pass data to a web server when making a GET request.
 http://localhost:8000/api/getProfile?parameter1=value1&parameter2=value2
 
 10. What is the use body parser
-The body-parser middleware was commonly used to parse incoming request bodies in various formats like JSON, URL-encoded, and multipart form data and make them available in req.body for easy handling in route handlers and middleware.
+Ans. -> The body-parser middleware was commonly used to parse incoming request bodies in various formats like JSON, URL-encoded, and multipart form data and make them available in req.body for easy handling in route handlers and middleware.
 
 12. What are types of Middleware in express ? Explain with suitable example
-application-level middleware include logging middleware, authentication middleware, and error handling middleware.
-Application Level Middleware
-app.use((req, res, next) => {
-  console.log("abcd");
-  next();
-});
-route Level Middleware
-router.get('/profile', (req, res) => {
- console.log("abcd");
-});
-Error handling Middleware
-app.use((err, req, res, next) => {
-  console.error(err);
- });
-Built-in Middleware:
-app.use(express.json());
-Third-party Middleware:
-import cors from  "cors"
-app.use(cors());
-Third Party Like bodyparser
+Ans. -> application-level middleware include logging middleware, authentication middleware, and error handling middleware.
+	Application Level Middleware
+		app.use((req, res, next) => {
+		console.log("abcd");
+		next();
+		});
+
+	route Level Middleware
+		router.get('/profile', (req, res) => {
+			console.log("abcd");
+		});
+
+	Error handling Middleware
+		app.use((err, req, res, next) => {
+			console.error(err);
+		});
+	
+	Built-in Middleware:
+		app.use(express.json());
+	
+	Third-party Middleware:
+		import cors from  "cors"
+		app.use(cors());
+		Third Party Like bodyparser
+		
 13. Does order of middleware matters in express.
 The order of middleware registration matters and each middleware function can modify the request and response objects or terminate the request-response cycle. app. use((req, res, next) => { console.log("helloo");
 
@@ -684,6 +665,7 @@ Express.js is a popular framework for building web servers and API in Node.js, p
 
 15  What are some distinctive features of Express
 Middleware, Routing, HTTP Interceptors, Lightweight and Unopinionated:
+
 16. Is Express.js fron-end or backend framework?
 Express.js is a backend framework. It's specifically designed to simplify the development of the server-side logic of web applications.
 17. Why do we use express.js
@@ -708,6 +690,3 @@ Ans : Scaffolding  is process in express refer to generating the basic utilities
 Ans : There 4 argument available we use to according to need name of augment err,request , response, next
 
 21. What is generator function in js
-===========================================================================================================================================
-===========================================================================================================================================
-===========================================================================================================================================
