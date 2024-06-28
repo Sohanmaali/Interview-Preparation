@@ -117,12 +117,14 @@ Ans. -> @RestController annotation is like a shortcut to building RESTful servic
 22. Difference between @Controller and @RestController
 Ans. ->   Features						@Controller									@RestController
 
-		Usage						It marks a class as a controller class.			It combines two annotations i.e. @Controller and @ResponseBody.
+		It marks a class as a controller class.			
+		It combines two annotations i.e. @Controller and @ResponseBody.
 
-		Application					Used for Web applications.						Used for RESTful APIs.
-
-		Request handling and Mapping	Used with @RequestMapping annotation 		Used to handle requests like GET, PUT, POST, and DELETE.
-										to map HTTP requests with methods.
+		Used for Web applications.			
+		Used for RESTful APIs.
+	
+		Used with @RequestMapping annotation to map HTTP requests with methods.
+		Used to handle requests like GET, PUT, POST, and DELETE.
 
 23. What is the difference between RequestMapping and GetMapping?
 Ans. -> Features								@RequestMapping							@GetMapping
@@ -136,14 +138,15 @@ Example	@RequestMapping(value = “/example”, method = RequestMethod.GET)	@Get
 24. What are the differences between @SpringBootApplication and @EnableAutoConfiguration annotation?
 Ans. -> Features									@SpringBootApplication									@EnableAutoConfiguration
 
-		When to use			When we want to use auto-configuration							When we want to customize auto-configuration
+		When we want to use auto-configuration		
+		When we want to customize auto-configuration
 
-		Entry point			Typically used on the main class of a Spring 					Can be used on any configuration class or in conjunction 
-							Boot application, serving as the entry point.					with @SpringBootApplication.
+		Typically used on the main class of a Spring Boot application, serving as the entry point.	
+		Can be used on any configuration class or in conjunction with @SpringBootApplication.
 
-		Component Scanning		Includes @ComponentScan annotation to 						Does not perform component scanning by itself.
-								 enable component scanning.
-			
+		Includes @ComponentScan annotation to enable component scanning.
+		Does not perform component scanning by itself.
+		
 Example	@SpringBootApplication public class MyApplication { public static void main(String[] args) { SpringApplication.run(MyApplication.class, args); } }		@Configuration @EnableAutoConfiguration public class MyConfiguration { }
 
 25. What are Profiles in Spring?
@@ -154,13 +157,15 @@ Ans. -> Spring Profiles are like different scenarios for the application dependi
 		To use Spring Profiles, we simply need to define the spring.profiles.active property to specify which profile we want to use.
 
 26. Mention the differences between WAR and embedded containers.
-Feature									WAR																		Embedded containers
-
-Packaging			Contains all of the files needed to deploy a web application to a web server.			It is a web application server included in the same JAR file as the application code.
-
-Configuration		Requires external configuration files (e.g., web.xml, context.xml) to define the web application.		Uses configuration properties or annotations within the application code.
-
-Security		Can be deployed to a web server that is configured with security features.						Can be made more secure by using security features that are provided by JRE.
+Ans. -> 
+		Contains all of the files needed to deploy a web application to a web server.			
+		It is a web application server included in the same JAR file as the application code.
+	
+		Requires external configuration files (e.g., web.xml, context.xml) to define the web application.		
+		Uses configuration properties or annotations within the application code.
+	
+		Can be deployed to a web server that is configured with security features.						
+		Can be made more secure by using security features that are provided by JRE.
 
 
 27. What is Spring Boot Actuator?
@@ -206,11 +211,6 @@ HTTP method – GET, POST, PUT, DELETE
 31. How to get the list of all the beans in your Spring boot application?
 Using the ApplicationContext object in Spring Boot, we can retrieve a list of all the beans in our application. The ApplicationContext is responsible for managing the beans and their dependencies. 
 Example :- 
-	import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.context.ApplicationContext;
-	import org.springframework.stereotype.Component;
-	import java.util.Arrays;
-
 	@Component
 	public class BeanListPrinter {
 
@@ -233,10 +233,6 @@ property files
 command-line arguments
 environment variables
 We can get the Environment instance by calling the getEnvironment() method.
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Component;
-
 @Component
 public class EnvironmentPropertyReader {
 
@@ -260,8 +256,7 @@ Ans. -> To enable debugging log in Spring Boot Application, follow the below ste
 		\ -H 'content-type: application/json' \-d '{"configuredLevel": "DEBUG"}'
 
 36. What is the difference between Constructor and Setter Injection?
-Ans. -> 							Constructor Injection							Setter Injection
-
+Ans. -> 
 		Dependencies are provided through constructor parameters.
 		Dependencies are set through setter methods after object creation.
 

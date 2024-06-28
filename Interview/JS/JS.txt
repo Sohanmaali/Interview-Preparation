@@ -706,3 +706,8 @@ Ans : Scaffolding  is process in express refer to generating the basic utilities
 
 20. Which are the argument available to an Express.Js route handler function
 Ans : There 4 argument available we use to according to need name of augment err,request , response, next
+
+21. What is generator function in js
+===========================================================================================================================================
+===========================================================================================================================================
+===========================================================================================================================================

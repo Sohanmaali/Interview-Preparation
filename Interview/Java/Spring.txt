@@ -1,3 +1,4 @@
+
 1) What is Spring?
 Ans. -> Spring Framework (Spring) is an open source lightweight, loosely coupled and integrated framework for developing enterprise applications in java.
 
@@ -47,14 +48,14 @@ What is ApplicationContext?
 Ans. -> The ApplicationContext is a sub-interface of BeanFactory and provides more functionality. It adds Application-layer specific contexts such as the WebApplicationContext for web applications.
 
 		implementations of ApplicationContext interface:
-		ClassPathXmlApplicationContext --> It able to get all the beans configuration details from confguration file which is existed in application classpath.
+		ClassPathXmlApplicationContext -> It able to get all the beans configuration details from confguration file which is existed in application classpath.
 		
-		XmlWebApplicationContext --> It able to get all the beans configuration details from configuration file which is existed in web application.
+		XmlWebApplicationContext -> It able to get all the beans configuration details from configuration file which is existed in web application.
 		
-		FileSystemXmlApplicationContext --> It able to get all the beans configuration details from Configuration file which is existed at our system harddisk.
+		FileSystemXmlApplicationContext -> It able to get all the beans configuration details from Configuration file which is existed at our system harddisk.
 
 what is defference between BeanFactory And ApplicationContext
-Ans. -> BeanFactory				ApplicationContext
+Ans. -> 	BeanFactory						ApplicationContext
 
 	It is a fundamental container that provides the basic functionality for managing beans.	
 	It is an advanced container that extends the BeanFactory that provides all basic functionality and adds some advanced features.
