@@ -1,5 +1,6 @@
 JAVA SCRIPT
 
+websocket
 1 : What is Javascript  ?
 Ans :  Java script is an scripting language, it is client side as well as server side technology, by using java script we can manipulate html and css and we can make  dynamic user attractive websites
 
@@ -36,7 +37,6 @@ Like:	const button = document.getElementById("button");
 		button.addEventListener("click", function() {
 			console.log("Button clicked!");
 		});
-
 
 6. What is alert() and confirm() ?
 Ans : alert() and confirm() are two functions that are used to interact with users by dialog boxes in web applications.
@@ -173,7 +173,7 @@ An Immediately Invoked Function Expression (IIFE) is a JavaScript design pattern
 Like : (function() {console.log("Hello"); })();
 
 15. What is an anonymous function ?
-Ans:  An anonymous function is a function that is defined without a name.  This means it cannot be called by a specific name anonymous functions can take arguments and return values.
+Ans:  An anonymous function is a function that is defined without a name. This means it cannot be called by a specific name anonymous functions can take arguments and return values.
 
 Immediately Invoked Function Expressions (IIFEs)
 Event Listeners
@@ -200,22 +200,26 @@ let a= 30;
 
 17. What is the difference between let, const, and var?
 Ans. ->				 var											let									const
-		The scope of a var variable 					The scope of a let variable 					The scope of a const variable 
-		is functional or global scope.					is block scope.									is block scope.
+		The scope of a var variableis functional or global scope.
+		The scope of a let variable is block scope.
+		The scope of a const variable is block scope.
 		
-		It can be updated and re-declared 				It can be updated but cannot 					It can neither be updated or 
-		in the same scope.								be re-declared in the same scope.				re-declared in any scope.
+		It can be updated and re-declared in the same scope.	
+		It can be updated but cannot be re-declared in the same scope.
+		It can neither be updated or re-declared in any scope.
 
-		It can be declared 								It can be declared 								It cannot be declared 
-		without initialization.							without initialization.							without initialization.
+		It can be declared without initialization.		
+		It can be declared without initialization.
+		It cannot be declared without initialization.
 		
-		It can be accessed  							It cannot be accessed without  					It cannot be accessed without 
-		without initialization as its					initialization otherwise						initialization, as it cannot 
-		default value is “undefined”.					it will give ‘referenceError’.					be declared without initialization.
+		It can be accessed without initialization as its default value is “undefined”.
+		It cannot be accessed without initialization otherwise it will give ‘referenceError’.
+		It cannot be accessed without initialization, as it cannot be declared without initialization.
 
-		These variables are hoisted.					These variables are hoisted 					These variables are hoisted but  
-		                                                                                         but stay in the temporal dead zone 				stays in the temporal dead zone
-													untill the initialization.						until the initialization.
+		These variables are hoisted.					
+		These variables are hoisted but stay in the temporal dead zone untill the initialization.			
+		These variables are hoisted but stay in the temporal dead zone untill the initialization.	
+
 // VAR
 function example() {
 	var x = 10;
@@ -256,7 +260,7 @@ Event capturing is the opposite of event bubbling. It involves the event which i
 use for it event.stopPropagation
 
 20. What are the primitive data type in javascript
-Ans. -> Number , boolean ,string , Bigint, symbol undefined,null
+Ans. -> Number, boolean, string, Bigint, symbol, undefined, null
 
 . What is an asynchronous task ?
 an asynchronous task refers to an operation that doesn't block the main execution thread,
@@ -288,7 +292,7 @@ Ans. -> click: Occurs when the mouse button is clicked (pressed and released) on
 		mouseout: Occurs when the mouse pointer leaves the boundaries of an element or its child elements.
 		contextmenu: Occurs when the right mouse button is clicked to open the context menu.
  
-24  Explain await and async ? How to use await and async?
+24  Explain await and async? How to use await and async?
 Ans. -> async Keyword : The async keyword is used to declare a function. As a asynchronous function returns a promise, and the value that is returned by the function is automatically wrapped in a resolved promise.
 
 await Keyword : The await keyword can only be used inside an async function. It makes the JavaScript engine wait until the promise is resolved or rejected, and returns the resolved value. If the promise is rejected, it throws the rejected value.
@@ -342,43 +346,40 @@ JavaScript, the language used in Node.js, is dynamically typed,
 Ans. -> Node.js is Single-Threaded: This means that Node.js uses a single main thread to execute JavaScript code. All JavaScript code, including event handlers and asynchronous callbacks, runs on this single thread managed by the Node.js event loop.
 
 32. Explain any five built-in package/Dependency name in node.js,
+Ans. ->	1. http Module: The http module is to create HTTP servers and make HTTP requests.
 
-1. http Module:
-The http module is to create HTTP servers and make HTTP requests.
+			import http from 'http'
+			const server = http.createServer((req, res) => {
+				res.end('hello server');
+			});
+	
+			server.listen(3000, () => {
+				console.log('HTTP Server running on port 3000');
+			});
 
-import http from 'http'
-const server = http.createServer((req, res) => {
-   res.end('hello server');
-});
-server.listen(3000, () => {
-  console.log('HTTP Server running on port 3000');
-});
+		2. fs module: The fs module provides an API for interacting with the file system in Node.js.
+			import fs = from 'fs'
 
-2. fs module
-The fs module provides an API for interacting with the file system in Node.js.
-import fs = from 'fs'
+			fs.readFile('test.txt', (err, data) => {
+				if (err) {
+					console.log('Error reading file:', err);
+				} else {
+					console.log('Text :', data.toString());
+				}
+			});
 
-fs.readFile('test.txt', (err, data) => {
-  if (err) {
-	console.log('Error reading file:', err);
-  } else {
-	console.log('Text :', data.toString());
-  }
-});
-
-3. path Module:
-It allows you to manipulate file paths,
-import path from 'path'
-const filePath = '/myfolder/inner/test.txt';
-console.log('File name:', path.basename(filePath)); // output: test.txt
-console.log('Directory name:', path.dirname(filePath)); 
-// output: /myfolder/inner
+		3. path Module: It allows you to manipulate file paths,
+			import path from 'path'
+			const filePath = '/myfolder/inner/test.txt';
+			console.log('File name:', path.basename(filePath)); // output: test.txt
+			console.log('Directory name:', path.dirname(filePath)); 
+			// output: /myfolder/inner
 
 33. What is a Module in Node.js?
 modules are the same as JavaScript libraries. It's a set of functions we want to include in our application.
 
 34. What is Module.exports ?
-module.exports in Node.js is like a special object that determines what a module shares with other parts of our program when it's imported
+Ans. -> module.exports in Node.js is like a special object that determines what a module shares with other parts of our program when it's imported
 
 const add = (a, b) => {
   return a + b;
@@ -403,14 +404,11 @@ Ans. -> import http from "http”
 	});
 
 36. How node.js handle multiple request
-
-Node.js handles multiple requests using its event-driven, non-blocking I/O architecture.
+Ans. -> Node.js handles multiple requests using its event-driven, non-blocking I/O architecture.
 Node.js uses non-blocking operations, meaning that it doesn't wait for an I/O operation like reading from a file or database , to complete before moving on to the next task.
 
-
 37. How to use url module in node.js
-
-The url module is used to parse URLs into components and to resolve or format URLs. It provides several functions to work with urls
+Ans. -> The url module is used to parse URLs into components and to resolve or format URLs. It provides several functions to work with urls
 
 const urlString = 'https://example.com/path/to/resource?query=string';
 const parsedUrl = url.parse(urlString);
@@ -418,8 +416,7 @@ const parsedUrl = url.parse(urlString);
 console.log(parsedUrl);
 
 38.What is setInterval, setTimeout
-
-setInterval and setTimeout are both functions in JavaScript that allow you to execute a specific block of code after a specified delay.
+Ans. -> setInterval and setTimeout are both functions in JavaScript that allow you to execute a specific block of code after a specified delay.
 
 setTimeout(() => {
   console.log("test");
@@ -431,20 +428,17 @@ setTimeout(() => {
 
 
 39. What is __dirname and __filename  ?
-__dirname and __filename are special global variables that provide information about the directory name and the file name of the currently executing script,
+Ans. -> __dirname and __filename are special global variables that provide information about the directory name and the file name of the currently executing script,
 console.log(__dirname);       	/Users/username/projects/myapp
 console.log(__filename);      	/Users/username/projects/myapp/app.js
 
 
 40. What is synchronous/Blocking and Asynchronous/Non-blocking code in node.js
-
-Synchronous or blocking code executes in a sequential manner where each operation waits for the previous one to complete before proceeding
-
+Ans. -> Synchronous or blocking code executes in a sequential manner where each operation waits for the previous one to complete before proceeding
 Asynchronous or non-blocking code does not wait for operations to complete and allows the program to continue executing
 
 41. What is file system in node.js
-
-The file system module (fs) in Node.js allows  to work with files and directories on our computer
+Ans. -> The file system module (fs) in Node.js allows  to work with files and directories on our computer
 const fs = require('fs');
 
 fs.readFile('example.txt', 'utf8', (err, data) => {
@@ -456,26 +450,24 @@ fs.readFile('example.txt', 'utf8', (err, data) => {
 });
 
 42. What are the different type of flag using in node.js
+Ans. -> using flags to specify how the file should be opened or manipulated. Flags are optional parameters passed to methods like fs.open(), fs.readFile(), fs.writeFile(), etc.
+	import fs from "fs";
 
-using flags to specify how the file should be opened or manipulated. Flags are optional parameters passed to methods like fs.open(), fs.readFile(), fs.writeFile(), etc.
-
-import fs from "fs";
-
-const content = 'Hello, Node.js!';
-fs.writeFile('example.txt', content, { flag: 'w' }, (err) => {
-  if (err) {
-	console.error(err);
-	return;
-  }
-  console.log('File written successfully');
-});
+	const content = 'Hello, Node.js!';
+	fs.writeFile('example.txt', content, { flag: 'w' }, (err) => {
+		if (err) {
+			console.error(err);
+			return;
+		}
+		console.log('File written successfully');
+	});
 
 43. What is the stream in node.js? Explain the types of stream
 Ans. -> Streams are a sequence of data that is processed sequentially, allowing developers to read and process data piece by piece or in chunks, instead of reading all the data into memory at once.
  There are four types of Node streams: Readable streams, Writable streams, Duplex streams, and Transform streams.
  
 What is the Temporal Dead Zone?
-Ans. -> The Temporal Dead Zone (TDZ) is  the period  of a JavaScript where a variable has been declared but has not yet been initialized. During this phase, the variable is inaccessible Temporal Dead Zone.
+Ans. -> The Temporal Dead Zone (TDZ) is  the period of a JavaScript where a variable has been declared but has not yet been initialized. During this phase, the variable is inaccessible Temporal Dead Zone.
 
 Wow, these are some of the best doubts. ️
 1. When does the event loop actually start? - Event loop, as the name suggests, is a single-thread, loop that is `almost infinite`. It's always running and doing its job. ️
@@ -500,13 +492,13 @@ The request object contains information about the request , like request method,
 Ans.-> package.json is metadata file in a node js project that contains information about the project such version, entry point, dependencies
 Package.lock.json is file automatically generated by npm to local down the version of dependencies install in a project. That makes sure the same version and dependencies are installed on all machines.
 
-47.What is npm ? How to install dependency/module at application level and Environment level
+47. What is npm ? How to install dependency/module at application level and Environment level
 Ans:npm is stand for (Node Package Manager) is the default package manager form Node.js used to install, manage and publish packages or modules of reusable javascript code. It allows developers to easily share and reuse code,manage project dependencies.
 
-48.How do you manage packages in your node.js project 
+48. How do you manage packages in your node.js project 
 Ans:Using npm command line or yarn.
 
-49.How Node.js is better then other framework
+49. How Node.js is better then other framework
 Ans: Node js is js runtime environment that allows developers to write server-side applications it is built on chrome’s V8 js engine and uses an event loop , non-blocikng I/O model that make it lightweight and efficient. Node,js open source and has a large community of developers.
 
 1. Performance
@@ -542,8 +534,9 @@ Synchronous function are function that block the main thread of execution uitl i
 fs.readFileSynch() ,fs.writeFileSych,http,request()
 
 54. What is REPL and how to use it?
-Ans: REPL is shell toole that run node js in terminal adn it is single line expression and stand fro Read Evel Print Loop
+Ans. -> REPL is shell toole that run node js in terminal and it is single line expression and stand for Read Evel Print Loop
 Ex : $node — ⇒ 3+3 => 6 
+
 55. What is the purpose of module.exports.
 Ans: The purpose of module.exports is a object that is used to export any function and primitive values from a module so taht they can be used in other nodules. It is part of the CommonJS.
 Example  module.export = function add(a,b){return a + b;}
@@ -551,14 +544,14 @@ Const add = require(‘./name of module file.js)
 log(add(1,2));
 
 56. What is an event-loop in Node.js
-Ans:Node js is Java script runtime environment that is built on CHrome’s V8 Javascript engine. Node.js is single-threaded,which means that is can only exceute one task at a time but it is able to handle multiple request by using asynchronous  event loop programming model.
+Ans. -> Node js is Java script runtime environment that is built on Chrome’s V8 Javascript engine. Node.js is single-threaded,which means that is can only exceute one task at a time but it is able to handle multiple request by using asynchronous  event loop programming model.
 Whena request a received, Node.js will create a new event and add it to the evenet queue.The evenet loop then monitors the event queue and executes events as that ready to execute.
 If any event or request/event is blocking so event loop will wait until the complete before moving on the next event.when most I/O operations in node.js are non-blocking,which means that do not block the event loop.This allows Node.js to handle multiple requests concurrently without having to wait for each request to complete before moving on to the next one.
 Node js used to thread pool to handle CPU- intensive task. The thread pool have threads that can used to execute task in parallel.This allow Node.js to decrease the load of cpu intensive task to the thread pool.freeing up main thread to handle other requests. 
 
 57. If Node.js is single threaded then how does it handle multiple request/ concurrency
-Ans: Node js is Java script runtime environment that is built on Chrome’s V8 Javascript engine. Node.js is single-threaded,which means that is can only exceute one task at a time but it is able to handle multiple request by using asynchronous  event loop programming model.
-Whena request a received, Node.js will create a new event and add it to the evenet queue.The evenet loop then monitors the event queue and executes events as that ready to execute.
+Ans. -> Node js is Java script runtime environment that is built on Chrome’s V8 Javascript engine. Node.js is single-threaded,which means that is can only exceute one task at a time but it is able to handle multiple request by using asynchronous event loop programming model.
+When a request received, Node.js will create a new event and add it to the evenet queue.The evenet loop then monitors the event queue and executes events as that ready to execute.
 If any event or request/event is blocking so event loop will wait until the complete before moving on the next event.when most I/O operations in node.js are non-blocking,which means that do not block the event loop.This allows Node.js to handle multiple requests concurrently without having to wait for each request to complete before moving on to the next one.
 Node js used to thread pool to handle CPU- intensive task. The thread pool have threads that can used to execute task in parallel.This allow Node.js to decrease the load of cpu intensive task to the thread pool.freeing up main thread to handle other requests.   
 
@@ -569,9 +562,7 @@ Ans:
 Ans:
 
 60. What is middleware
-Ans:Middleware in Node.js is a software design pattern that allows developers to add functionality to their application without modifying the core code. It is a functionality that is executed between the request and response cycle of an application. Middleware can be used for performing different  tasks, like authentication,logging and error handling.
-Middleware functions are written js and have access to request and response objects. They can also call next middleware functions.  
-Middleware is powerful tool ytaht can be used extend the functionality of node.js application 
+Ans. -> Middleware in Node.js is a software design pattern that enables developers to insert functions between the request and response cycle of an application. These functions can perform various tasks such as logging, authentication, error handling, and data parsing. Middleware provides a modular and flexible way to extend the functionality of Node.js applications without modifying the core code.
 Example : function auth(req,res,next){
 		// apply logic like send otp and any check and error handling and auth
 next();
@@ -606,8 +597,7 @@ Ans. -> thread pool js is responsible for executing asynchronous tasks such as f
 managed by Libuv
 
 5. What is purpose of NODE_ENV
-
-NODE_ENV is an environment variable that stands for Node environment in the Express server. The NODE_ENV environment variable specifies the environment in which an application is running,
+Ans. -> NODE_ENV is an environment variable that stands for Node environment in the Express server. The NODE_ENV environment variable specifies the environment in which an application is running,
 export DATABASE_URL=mongodb://localhost/mydatabase
 const databaseUrl = process.env.DATABASE_URL;
 require('dotenv').config();
@@ -678,7 +668,7 @@ Middleware
 Templating
 Faster Development:
 
-18.   What is difference between express.js and node.js
+18. What is difference between express.js and node.js
 Node.js is a runtime environment that executes JavaScript code on the server-side, whereas Express.js is a web framework that runs on top of Node.js,
 Node.js provides low-level APIs for handling network and file system operations, whereas Express.js s by providing higher-level abstractions like routing and middleware.
 express do simplify our code management
