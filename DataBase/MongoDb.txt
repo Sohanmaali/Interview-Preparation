@@ -1,0 +1,2 @@
+What is MongoDB?
+MongoDB is an open source, nonrelational database management system (DBMS) that uses flexible documents instead of tables and rows to process and store various forms of data.
