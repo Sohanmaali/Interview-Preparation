@@ -1,0 +1,290 @@
+1-10: Hoisting & Scope
+
+1. What will be the output?
+
+console.log(a);
+var a = 10;
+
+Answer: undefined (Because of hoisting, var a is declared but not initialized)
+
+
+2. What will be logged?
+
+function test() {
+    console.log(x);
+    let x = 5;
+}
+test();
+
+Answer: ReferenceError: Cannot access 'x' before initialization
+
+
+3. What happens here?
+
+function foo() {
+    var a = b = 10;
+}
+foo();
+console.log(typeof a, typeof b);
+
+Answer: undefined, number (Because b becomes global but a is function-scoped)
+
+
+4. What will be the output?
+
+let x;
+console.log(x);
+x = 5;
+
+Answer: undefined (Declared but not initialized before logging)
+
+
+5. What happens here?
+
+console.log(a);
+let a = 10;
+
+Answer: ReferenceError: Cannot access 'a' before initialization
+
+
+6. What’s the difference?
+
+console.log(typeof null);
+console.log(typeof undefined);
+
+Answer: "object", "undefined"
+
+
+7. How many times does i print in setTimeout?
+
+for (var i = 0; i < 5; i++) {
+    setTimeout(() => console.log(i), 1000);
+}
+
+Answer: 5 (Because var is function-scoped and i updates globally)
+
+
+8. What happens if we replace var with let in the above question?
+Answer: It prints 0 1 2 3 4 (because let creates block-scoped variables)
+
+
+9. What will this return?
+
+function test() {
+    var x = 1;
+    function nested() {
+        console.log(x);
+    }
+}
+test();
+
+Answer: Nothing (Because nested is never called)
+
+
+10. What’s logged here?
+
+function test() {
+    let x = 10;
+    if (true) {
+        let x = 20;
+        console.log(x);
+    }
+    console.log(x);
+}
+test();
+
+Answer: 20, 10 (Because let is block-scoped)
+
+
+
+
+---
+
+11-20: Closures & Functions
+
+11. What’s logged?
+
+function outer() {
+    let a = 5;
+    return function inner() {
+        console.log(a);
+    };
+}
+let closure = outer();
+closure();
+
+Answer: 5 (Closure captures a)
+
+
+12. What’s the output?
+
+let x = (function() {
+    let y = 10;
+    return function() {
+        console.log(y);
+    };
+})();
+x();
+
+Answer: 10
+
+
+13. What’s logged?
+
+function makeCounter() {
+    let count = 0;
+    return () => count++;
+}
+let counter = makeCounter();
+console.log(counter());
+console.log(counter());
+
+Answer: 0, 1
+
+
+14. What does this return?
+
+function f() {
+    console.log(this);
+}
+f();
+
+Answer: window or undefined (Strict mode)
+
+
+15. What will happen?
+
+function foo() {
+    'use strict';
+    console.log(this);
+}
+foo();
+
+Answer: undefined (Because this is not bound in strict mode)
+
+
+16. What’s the output?
+
+let obj = {
+    a: 10,
+    fn: function() {
+        console.log(this.a);
+    }
+};
+obj.fn();
+
+Answer: 10 (Because this refers to obj)
+
+
+17. What happens if we extract fn?
+
+let test = obj.fn;
+test();
+
+Answer: undefined (Since this refers to window)
+
+
+18. What will be printed?
+
+let obj = {
+    a: 10,
+    fn: () => console.log(this.a)
+};
+obj.fn();
+
+Answer: undefined (Arrow function does not bind this)
+
+
+19. What happens here?
+
+let obj = {
+    a: 10,
+    fn: function() {
+        let inner = () => console.log(this.a);
+        inner();
+    }
+};
+obj.fn();
+
+Answer: 10 (Arrow function captures this from outer function)
+
+
+20. What will this return?
+
+function foo(x, y = 5) {
+    return x + y;
+}
+console.log(foo(10));
+
+Answer: 15
+
+
+
+
+---
+
+21-30: Promises & Async
+
+21. What will be logged?
+
+console.log('Start');
+setTimeout(() => console.log('Timeout'), 0);
+Promise.resolve().then(() => console.log('Promise'));
+console.log('End');
+
+Answer:
+
+Start
+End
+Promise
+Timeout
+
+
+22. What happens here?
+
+async function test() {
+    return 5;
+}
+test().then(console.log);
+
+Answer: 5
+
+
+23. What will this print?
+
+async function test() {
+    return Promise.resolve(5);
+}
+test().then(console.log);
+
+Answer: 5
+
+
+24. What is printed?
+
+console.log(1);
+setTimeout(() => console.log(2), 0);
+Promise.resolve().then(() => console.log(3));
+console.log(4);
+
+Answer: 1 4 3 2
+
+
+25. What happens here?
+
+function delay() {
+    return new Promise(res => setTimeout(res, 1000));
+}
+async function test() {
+    console.log('Start');
+    await delay();
+    console.log('End');
+}
+test();
+console.log('Outside');
+
+Answer:
+
+Start
+Outside
+End

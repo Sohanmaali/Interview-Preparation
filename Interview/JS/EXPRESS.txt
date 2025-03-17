@@ -1,50 +1,81 @@
-what is express
-How to Install Express JS in Node JS Projects
-what are the key features of express
-How does express handle routing
-what is middleware
-how can you handle form data in express
-how can you handle static files
-what is the purpose of next() function middleware
-How to handle Route Parameters in Express
-How can you implement authentication in Express?
-explain the concept of middleware chaining
-how can you handle error in express
-what are route handle in express
-How can you access request query parameters in express
-How can you send json respo in express
-How to Upload File in Express
-explain the diff app.get app.use
-how can youset res in header
-what is the purpose of app.locals object
-how can you implement session management
-how to handle cross origin resource sharing in express
-explain the concept of route prefixing 
-how to implement rate limiting in express
-what is the purpose of view engines
-How to Implement Authentication Middleware in Express
-how can you handle redirect in express
-How Can You Access Req Header In Express
-How to Enable Compressing (Gzip) in Express
-what is the purpose of app.route() 
-how can you implement imput validation 
-How to Handle Cookies in Express
-How can you implement caching in express
-explain the concept of view rendering 
-How can you implement logging in express
-How can you handle async/await in express route?
-How can implement HTTPS(SSL/TLS) in explain
-what is the purpose of th express.Router class in express
-how can handle WebSocket communication
-How can you implement Input Sanitization Express
-how can you implement role-based access control 
-handle session timeout in express
-Handle Server Side Rendering in Express
-implement req throttling in express
-implement API version in express
-Implement pagination in express
-impliment websockets alongside traditional HTTP routes
-implement server sent event 
-handle file downloads in express
-implement req logging in express
-how to convert JSON to string in express
+    1. Introduction to Express.js**  
+- What is Express.js?  
+- What are the key features of Express.js?  
+- How does Express handle routing?  
+
+
+    2. Installation and Setup**  
+- How to install Express.js in a Node.js project?  
+- What is middleware in Express.js?  
+
+
+    3. Routing in Express.js**  
+- How does Express handle routing?  
+- How to handle route parameters in Express?  
+- What are route handlers in Express?  
+- How to access request query parameters in Express?  
+- Explain the concept of route prefixing.  
+- What is the purpose of `app.route()` in Express?  
+
+
+    4. Middleware in Express.js**  
+- What is the purpose of the `next()` function in middleware?  
+- Explain the concept of middleware chaining.  
+- How to implement authentication middleware in Express?  
+- How can you implement input sanitization in Express?  
+- How to implement role-based access control in Express?  
+
+
+    5. Handling Requests & Responses**  
+- How can you handle form data in Express?  
+- How can you handle static files in Express?  
+- How can you send JSON responses in Express?  
+- How can you set response headers in Express?  
+- How can you access request headers in Express?  
+- How can you handle redirects in Express?  
+- How can you handle file downloads in Express?  
+- How to convert JSON to a string in Express?  
+
+
+    6. Authentication & Session Management**  
+- How can you implement authentication in Express?  
+- How can you implement session management in Express?  
+- How to handle session timeouts in Express?  
+
+
+    7. Error Handling & Security**  
+- How can you handle errors in Express?  
+- How to implement input validation in Express?  
+- How to handle Cross-Origin Resource Sharing (CORS) in Express?  
+- How to implement rate limiting in Express?  
+
+
+    8. Performance Optimization & Caching**  
+- How can you enable compression (Gzip) in Express?  
+- How can you implement caching in Express?  
+
+
+    9. View Engines & Server-Side Rendering (SSR)**  
+- What is the purpose of view engines in Express?  
+- Explain the concept of view rendering in Express.  
+- How to handle Server-Side Rendering (SSR) in Express?  
+
+
+    10. Logging & Monitoring**  
+- How can you implement logging in Express?  
+- How can you implement request logging in Express?  
+
+
+    11. Advanced Topics in Express.js**  
+- How can you handle async/await in Express routes?  
+- How to implement HTTPS (SSL/TLS) in Express?  
+- What is the purpose of the `express.Router` class?  
+- How to implement API versioning in Express?  
+- How to implement pagination in Express?  
+
+
+    12. WebSockets & Real-time Communication**  
+- How can you handle WebSocket communication in Express?  
+- How can you implement WebSockets alongside traditional HTTP routes?  
+- How to implement Server-Sent Events (SSE) in Express?  
+

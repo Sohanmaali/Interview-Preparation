@@ -18,6 +18,7 @@
 4.Conditional Statements
 5.Loops
 6.Arrays
+7.String
 7.Methods
 8.Object-oriented Programming
 9.Constructor

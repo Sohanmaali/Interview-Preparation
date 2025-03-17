@@ -1,0 +1,117 @@
+    1. Basic Node.js Questions
+1. What is Node.js, and how does it work?
+2. Why is Node.js single-threaded?
+3. What is the difference between JavaScript and Node.js?
+4. What is the V8 engine?
+5. What are the key features of Node.js?
+6. What is the event loop in Node.js?
+7. How does the event loop handle asynchronous operations?
+8. What is non-blocking I/O in Node.js?
+9. What is the difference between synchronous and asynchronous programming in Node.js?
+10. What is the REPL in Node.js?
+
+    2. Node.js Module System
+11. What are modules in Node.js?
+12. What is the difference between CommonJS and ES Modules?
+13. How do you create a custom module in Node.js?
+14. What is the purpose of the require() function?
+15. What is the difference between require() and import?
+16. What is the use of module.exports in Node.js?
+17. What is the difference between global and local modules in Node.js?
+18. How can you avoid circular dependencies in Node.js modules?
+19. What is the difference between fs.readFileSync() and fs.readFile()?
+20. What is the path module used for in Node.js?
+
+    3. npm & Package Management
+21. What is npm in Node.js?
+22. What is the difference between dependencies and devDependencies?
+23. What is package.json and what is its purpose?
+24. What is the purpose of package-lock.json?
+25. How do you install a package globally and locally in Node.js?
+26. How do you update a package using npm?
+27. How do you uninstall a package using npm?
+28. What is npx and how is it different from npm?
+29. How do you create a new Node.js project using npm?
+30. How can you check the version of npm installed?
+
+    4. Node.js Event Loop & Asynchronous Programming
+31. What is the difference between setTimeout(), setImmediate(), and process.nextTick()?
+32. How does process.nextTick() work in Node.js?
+33. What is the difference between microtasks and macrotasks in Node.js?
+34. What is a callback function in Node.js?
+35. What is callback hell, and how do you avoid it?
+36. What is a Promise in JavaScript?
+37. What is async/await in JavaScript?
+38. How do you handle errors in an async/await function?
+
+    5. Express.js & API Development
+39. What is Express.js?
+40. How do you create a simple Express.js server?
+41. What are middleware functions in Express.js?
+42. What is the difference between app.use() and app.get()?
+43. What is CORS, and how do you enable it in Express?
+44. What is the difference between res.send() and res.json()?
+45. What is routing in Express.js?
+46. What are the HTTP methods used in REST API?
+47. How do you handle errors in Express.js?
+48. How do you send custom headers in an Express.js response?
+
+    6. Database Integration
+49. How do you connect Node.js with MongoDB using Mongoose?
+50. What is the difference between SQL and NoSQL databases?
+51. How do you perform CRUD operations using MongoDB in Node.js?
+52. What is an ORM, and why is it useful?
+53. What is the difference between findOne() and findById() in Mongoose?
+54. How do you handle database connections efficiently in Node.js?
+55. What is indexing in databases, and how does it improve performance?
+56. How do you implement transactions in MongoDB?
+57. What is the difference between populate() and join?
+58. How do you use PostgreSQL with Node.js?
+
+    7. Authentication & Security
+59. What is JWT, and how does it work?
+60. How do you implement JWT authentication in Node.js?
+61. How do you hash passwords securely in Node.js?
+62. What is the difference between session-based and token-based authentication?
+63. What is the purpose of bcrypt in Node.js?
+64. How do you protect API routes in Express.js?
+65. What is Cross-Site Request Forgery (CSRF) and how do you prevent it?
+66. What is SQL Injection, and how can you prevent it?
+67. What is rate limiting, and how do you implement it in Express?
+68. How do you secure environment variables in a Node.js application?
+
+    8. Performance Optimization
+69. How do you improve the performance of a Node.js application?
+70. What are worker threads in Node.js?
+71. What is clustering in Node.js?
+72. What is caching, and how can you implement it in Node.js?
+73. What are memory leaks in Node.js, and how do you prevent them?
+74. What is the purpose of process.env?
+75. How do you monitor performance in a Node.js application?
+76. What are the best practices for writing scalable Node.js code?
+77. How do you optimize database queries for better performance?
+78. How do you use PM2 to manage Node.js applications?
+
+    9. Advanced Topics & Miscellaneous
+79. What is WebSockets, and how do you use them in Node.js?
+80. What is GraphQL, and how is it different from REST?
+81. What are event emitters in Node.js?
+82. How do you create an HTTP server without Express.js?
+83. What is the difference between cluster.fork() and worker_threads?
+84. How does Node.js handle file uploads?
+85. What is a stream in Node.js, and how does it work?
+86. How does Node.js handle backpressure in streams?
+87. What is the purpose of the dns module in Node.js?
+
+    10. Debugging & Error Handling
+88. How do you debug a Node.js application?
+89. What is the purpose of console.error() in Node.js?
+90. What is the difference between try-catch and Promise.catch()?
+91. How do you handle uncaught exceptions in Node.js?
+92. What is the purpose of process.on('uncaughtException')?
+93. How do you use the debug module in Node.js?
+94. What is the purpose of logging in Node.js applications?
+95. How do you log errors in a production Node.js application?
+96. How do you set up a logging system using Winston or Morgan?
+97. How do you track API errors using external monitoring tools?
+
