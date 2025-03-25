@@ -115,3 +115,50 @@
 96. How do you set up a logging system using Winston or Morgan?
 97. How do you track API errors using external monitoring tools?
 
+What are the advantages of Node.js over Java and PHP?
+31. How is Node.js single-threaded?  
+
+    Modules & Packages
+32. What are modules in Node.js?  
+33. What is `module.exports`?  
+34. How do you create a simple server in Node.js?  
+35. What are built-in modules in Node.js?  
+
+    Concurrency & Execution
+36. How does Node.js handle multiple requests?  
+37. What is the event loop in Node.js?  
+38. What is the difference between `process.nextTick()` and `setImmediate()`?  
+
+    File System & Streams
+39. What is the file system module (`fs`) in Node.js?  
+40. What are streams in Node.js? What are their types?  
+41. What are pipe streams in Node.js?  
+
+    Networking & APIs
+42. What are HTTP request methods in Node.js?  
+43. What is the difference between `GET` and `POST` requests?  
+44. What is a query string and how do you send data in a `GET` request?  
+
+    Middleware & Express.js
+45. What is middleware in Node.js?  
+46. What are the types of middleware in Express.js?  
+47. Does the order of middleware matter in Express.js?  
+48. What is Express.js?  
+49. What are the features of Express.js?  
+50. Why do we use Express.js?  
+51. What is the difference between Express.js and Node.js?  
+
+    Package Management
+52. What is `package.json` and `package-lock.json`?  
+53. What is `npm`? How do you install dependencies at the application and environment levels?  
+54. How do you manage packages in a Node.js project?  
+
+    Advanced Topics
+55. What is REPL in Node.js?  
+56. What is an `EventEmitter` in Node.js?  
+57. What is a thread pool in Node.js?  
+58. What is the purpose of `NODE_ENV`?  
+59. How do you connect a MongoDB database to a Node.js application?  
+60. What is scaffolding in Express.js?  
+
+61. 

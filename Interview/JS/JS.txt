@@ -1,98 +1,490 @@
 
-    Basics
 1. What is JavaScript?  
-2. How does a browser execute JavaScript?  
+Ans-> JavaScript is a high-level, interpreted programming language that is primarily used for making web pages interactive. It is one of the core technologies of the web, along with HTML and CSS.
+------------------------------------------------------------------------------------------------------------------
+
+2. How does a browser execute JavaScript? 
+------------------------------------------------------------------------------------------------------------------
+
 3. What are the features of JavaScript?  
-4. What is the DOM (Document Object Model)?  
+Ans-> JavaScript is a powerful, versatile programming language primarily used for web development. Some key features of JavaScript include:
 
-    Events and Functions
-5. How do you perform a click event in JavaScript?  
+     1. Lightweight & Interpreted
+   - JavaScript is an interpreted language, meaning it does not require compilation before execution.
+   - It runs directly in the browser, making it lightweight and fast.
+
+    2. Client-Side Scripting
+   - JavaScript is mainly used for front-end development to create interactive and dynamic web pages.
+   - It runs in the user's browser without requiring server interaction.
+
+    3. Dynamic Typing
+   - Variables in JavaScript are not bound to specific data types.
+   - A variable can hold different data types at different times.
+
+    4. Prototype-Based Object-Oriented
+   - JavaScript supports object-oriented programming using prototypes instead of classes (ES6 introduced classes, but they are syntactic sugar over prototypes).
+
+    5. Functional Programming
+   - Functions in JavaScript are first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions.
+
+    6. Event-Driven & Asynchronous
+   - JavaScript supports event-driven programming, handling user actions like clicks and keypresses.
+   - It uses asynchronous programming with `setTimeout`, `setInterval`, and Promises (introduced in ES6).
+
+    7. Single-Threaded & Non-Blocking
+   - JavaScript follows a single-threaded event loop model, handling multiple tasks using asynchronous callbacks and Promises.
+
+    8. Cross-Browser Compatibility
+   - JavaScript runs in almost all modern web browsers, ensuring compatibility across different platforms.
+
+    9. ECMAScript Standardization
+   - JavaScript follows the ECMAScript (ES) standard, with updates introducing new features (e.g., ES6 introduced `let`, `const`, arrow functions, and classes).
+
+    10. DOM Manipulation
+   - JavaScript allows developers to interact with and modify the Document Object Model (DOM), updating the content and style of web pages dynamically.
+
+    11. Modules & Import/Export (ES6)
+   - JavaScript supports modular programming using `import` and `export`, making code reusable and maintainable.
+
+    12. Extensive Libraries & Frameworks
+   - JavaScript has a rich ecosystem with frameworks like React, Angular, Vue, and libraries like jQuery, making development easier.
+
+    13. Backend Development with Node.js
+   - JavaScript is not limited to the client side; with Node.js, it can be used for server-side development as well.
+
+    14. Memory Management & Garbage Collection
+   - JavaScript has an automatic garbage collection mechanism that manages memory allocation and deallocation.
+
+------------------------------------------------------------------------------------------------------------------
+
+
+4. What is the DOM (Document Object Model)? 
+Ans-> The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree-like structure, where each element in the document is treated as an object that can be manipulated using JavaScript. 
+------------------------------------------------------------------------------------------------------------------
+
+5. How do you perform a click event in JavaScript?
+Ans-> You can add an event listener using:
+document.getElementById("btn").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+------------------------------------------------------------------------------------------------------------------
+
+
 6. What are `alert()` and `confirm()` functions?  
+Ans-> alert(): Displays a popup message. Example: alert("Hello World!");
+confirm(): Displays a confirmation box with OK/Cancel. Example:
+let result = confirm("Are you sure?");
+if (result) alert("Confirmed");
+------------------------------------------------------------------------------------------------------------------
+
+
+
 7. What is the difference between `undefined` and `null`?  
+Ans-> undefined: A variable that has been declared but not assigned a value.
+null: A deliberate assignment indicating no value.
+------------------------------------------------------------------------------------------------------------------
+
+
+
 8. What is the difference between `==` and `===`?  
+Ans-> == (loose equality): Compares values but allows type conversion.
+=== (strict equality): Compares both value and type.
+------------------------------------------------------------------------------------------------------------------
+
 9. What is a function? Can we overload functions in JavaScript?  
+Ans-> A function is a reusable block of code that is parform some operation JavaScript does not support function overloading like Java, but we can handle it manually using arguments.
+------------------------------------------------------------------------------------------------------------------
+
 10. What is a callback function?  
+Ans-> A callback is a function passed as an argument to another function, commonly used in asynchronous programming.
+function greet(name, callback) {
+    console.log("Hello, " + name);
+    callback();
+}
+greet("Alice", function() { console.log("Callback executed!"); });
 
-    Asynchronous JavaScript
+------------------------------------------------------------------------------------------------------------------
+
 11. What is a promise? What are the advantages of promises over callbacks?  
-12. What is callback hell?  
-13. What is `async` and `await`? How do you use them?  
+Ans-> A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+It can be in one of three states: pending, fulfilled, or rejected.
+------------------------------------------------------------------------------------------------------------------
 
-    Scope and Closures
-14. What is a closure?  
-15. What is an Immediately Invoked Function Expression (IIFE)?  
-16. What is an anonymous function?  
 
-    Hoisting & Variable Declaration
-17. Explain variable hoisting in JavaScript.  
+12. What is callback hell?
+Ans-> Callback Hell (also known as "Pyramid of Doom") is a situation in JavaScript where multiple nested callback functions make the code hard to read, maintain, and debug. This happens when dealing with multiple asynchronous operations that depend on each other.
+------------------------------------------------------------------------------------------------------------------
+
+
+13. What is `async` and `await`? How do you use them?
+And-> async and await are modern JavaScript features that make working with Promises easier. They allow us to write asynchronous code in a way that looks and behaves more like synchronous code, making it cleaner, more readable, and easier to debug.
+The async keyword is used to declare a function that always returns a Promise.
+Inside an async function, you can use await to pause execution until a Promise is resolved.
+await is used inside an async function to pause execution until a Promise is resolved or rejected.
+It makes the code behave synchronously while still being non-blocking.
+------------------------------------------------------------------------------------------------------------------
+
+14. What is a closure?
+Ans-> A closure is a function that remembers the variables from its outer scope, even after the outer function has finished executing.
+
+In simple terms, a closure allows a function to access variables from its parent function, even after the parent function has returned.
+------------------------------------------------------------------------------------------------------------------
+
+
+
+15. What is an Immediately Invoked Function Expression (IIFE)?
+Ans-> An Immediately Invoked Function Expression (IIFE) is a JavaScript function that runs immediately after it is defined.
+
+It is a self-executing function that helps in encapsulation and avoiding global scope pollution.
+(function() {
+    console.log("This function runs immediately!");
+})();
+------------------------------------------------------------------------------------------------------------------
+  
+16. What is an anonymous function?
+Ans-> An anonymous function is a function without a name. It is often used when a function does not need to be reused multiple times.
+const greet = function() {
+    console.log("Hello, World!");
+};
+
+greet(); // Output: Hello, World!
+
+------------------------------------------------------------------------------------------------------------------
+ 
+17. Explain variable hoisting in JavaScript.
+Ans-> Hoisting is a JavaScript mechanism where variable and function declarations are moved to the top of their scope before code execution. This means you can use variables and functions before they are declared in your code.
+1. Hoisting with var
+Variables declared with var are hoisted but are initialized as undefined.
+
+Example:
+console.log(a); // Output: undefined
+var a = 10;
+console.log(a); // Output: 10
+👉 Why?
+The declaration var a; is hoisted to the top, but its assignment (a = 10) remains in place.
+
+Internally, JavaScript treats the code like this:
+var a;  // Declaration hoisted to the top
+console.log(a); // undefined
+a = 10;
+console.log(a); // 10
+2. Hoisting with let and const
+Variables declared with let and const are also hoisted, but they are not initialized. They remain in the "Temporal Dead Zone" (TDZ) until the declaration is encountered.
+
+Example:
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+let b = 20;
+console.log(b);
+👉 Why?
+Unlike var, let does not initialize to undefined. Instead, JavaScript keeps it in a "dead zone" until it is declared.
+
+3. Hoisting with Functions
+Function declarations are fully hoisted, meaning you can call the function before its definition.
+
+Example:
+sayHello(); // Output: "Hello, JavaScript!"
+
+function sayHello() {
+  console.log("Hello, JavaScript!");
+}
+👉 Why?
+The entire function is hoisted, so it can be called before it appears in the code.
+
+4. Function Expressions Are NOT Hoisted
+If you assign a function to a variable (var, let, const), the function is not hoisted.
+greet(); // TypeError: greet is not a function
+
+var greet = function () {
+  console.log("Hello!");
+};
+👉 Why?
+Only var greet; is hoisted, but the function assignment (greet = function() {...}) happens later.
+
+
+
+Type    	Hoisted?          Initialized?          	Usable before declaration?
+var	        ✅ Yes	        ✅ Yes (undefined)	    ✅ Yes (but undefined)
+let 	    ✅ Yes	        ❌ No (TDZ error)	    ❌ No
+const	    ✅ Yes	        ❌ No (TDZ error)	    ❌ No
+Fun Decla	✅ Yes           ✅ Yes	                ✅ Yes
+Express(var)✅ Yes	        ❌ No	                ❌ No (TypeError)
+
+------------------------------------------------------------------------------------------------------------------
+
 18. What is the difference between `let`, `const`, and `var`?  
+Ans-> var:
+Scope: Function-scoped (or global if declared outside any function). 
+Reassignment: Variables declared with var can be reassigned. 
+Redeclaration: Variables declared with var can be redeclared within the same scope. 
+Hoisting: Variables declared with var are hoisted, meaning they are moved to the top of their scope during execution, but initialized with undefined. 
+
+let:
+Scope: Block-scoped (meaning it's only accessible within the block of code where it's declared, such as inside an if statement, for loop, or function). 
+Reassignment: Variables declared with let can be reassigned. 
+Redeclaration: Variables declared with let cannot be redeclared within the same block. 
+Hoisting: Variables declared with let are hoisted, but accessing them before declaration results in a ReferenceError (they are in a "temporal dead zone"). 
+
+const:
+Scope: Block-scoped. 
+Reassignment: Variables declared with const cannot be reassigned after initialization. 
+Redeclaration: Variables declared with const cannot be redeclared within the same block. 
+Hoisting: Variables declared with const are hoisted, but accessing them before declaration results in a ReferenceError (they are in a "temporal dead zone"). 
+
+------------------------------------------------------------------------------------------------------------------
+
 19. What is `"use strict"` in JavaScript?  
+------------------------------------------------------------------------------------------------------------------
 
-    Event Handling
-20. What is event bubbling and event capturing?  
+20. What is event bubbling and event capturing?
+------------------------------------------------------------------------------------------------------------------
 
-    Data Types and Operators
+
 21. What are primitive data types in JavaScript?  
+------------------------------------------------------------------------------------------------------------------
+
 22. What is the difference between synchronous and asynchronous tasks?  
+------------------------------------------------------------------------------------------------------------------
 
-    Browser and Popups
-23. What are the different types of popup boxes in JavaScript?  
+23. What are the different types of popup boxes in JavaScript? 
+Ans-> Alert (alert()) – Displays a message with an OK button. Used for notifications or warnings.
+Confirm (confirm()) – Shows a message with OK and Cancel buttons. Used to confirm user actions (returns true or false).
+Prompt (prompt()) – Displays a message with a text input field and OK and Cancel buttons. Used to take user input (returns input value or null). 
+
+------------------------------------------------------------------------------------------------------------------
+
 24. What happens if an infinite `while` loop runs in JavaScript?  
+Ans-> Browser Environment:
+An infinite loop will likely freeze the browser tab or the entire browser application. The browser may become unresponsive, and the user might have to force-close it. Some browsers might detect the infinite loop and display a dialog box asking the user to stop the script.
+Node.js Environment:
+In Node.js, an infinite loop will block the event loop, preventing other tasks from being executed. This can lead to the application becoming unresponsive and potentially crashing if it consumes too many resources.
 
-    DOM Events & Execution
-25. List some common mouse events in JavaScript.  
-26. How do you get the last index of a string in JavaScript?  
-27. What is negative infinity in JavaScript?  
+------------------------------------------------------------------------------------------------------------------
+25. List some common mouse events in JavaScript.
+Ans-> click	Single mouse click
+dblclick	Double-click event
+mousedown	Mouse button pressed
+mouseup	    Mouse button released
+mousemove	Mouse moving over an element
+mouseenter	Mouse enters an element (does not bubble)
+mouseleave	Mouse leaves an element (does not bubble)
+mouseover	Mouse moves over an element (bubbles)
+mouseout	Mouse leaves an element (bubbles)
+contextmenu	Right-click event
+------------------------------------------------------------------------------------------------------------------
 
----
+26. what is temporal dead zone? 
+Ans-> The temporal dead zone (TDZ) is a specific period in the execution of JavaScript code where variables declared with let and const exist but cannot be accessed or assigned any value. During this phase, accessing or using the variable will result in a ReferenceError.
 
-## **Node.js Questions
+------------------------------------------------------------------------------------------------------------------
+27. Js is strictly type or loose type language? 
+Ans-> JavaScript is a loosely typed (or dynamically typed) language. You don't have to specify the data type of a variable when declaring it. A variable's type can change at runtime.
+------------------------------------------------------------------------------------------------------------------
 
-    Introduction & Basics
-28. What is Node.js?  
-29. What are the advantages of Node.js over Java and PHP?  
-30. What are the limitations of Node.js?  
-31. How is Node.js single-threaded?  
+28. What is different between reference error type error and syntax error
+Ans-> ReferenceError	When accessing a variable that is not declared or out of scope.
+TypeError	When performing an invalid operation on a variable of a specific type.
+SyntaxError	When there is an invalid JavaScript syntax that prevents the code from executing
+------------------------------------------------------------------------------------------------------------------
+29. Are let and const hosted?
+Ans-> Yes, in JavaScript, both let and const declarations are hoisted, meaning the JavaScript engine is aware of them at the top of their scope, but they are not initialized until their declaration is reached. This creates a "temporal dead zone" where attempting to access them before their declaration results in a ReferenceError  
+------------------------------------------------------------------------------------------------------------------
+30. What is a Block in JavaScript?
+A block in JavaScript is a section of code enclosed within curly braces {}. It is used to group multiple statements together.
+------------------------------------------------------------------------------------------------------------------
+31. What are arrow functions?
+Ans-> Arrow functions in JavaScript are a shorter and more concise way to write functions. They were introduced in ES6 (ECMAScript 2015) and provide a more compact syntax compared to traditional function expressions.
+------------------------------------------------------------------------------------------------------------------
 
-    Modules & Packages
-32. What are modules in Node.js?  
-33. What is `module.exports`?  
-34. How do you create a simple server in Node.js?  
-35. What are built-in modules in Node.js?  
+What is the difference between == and ===?
+Ans-> == (loose equality) compares values only, allowing type conversion if needed.
+=== (strict equality) compares both value and data type, without type conversion.
+------------------------------------------------------------------------------------------------------------------
 
-    Concurrency & Execution
-36. How does Node.js handle multiple requests?  
-37. What is the event loop in Node.js?  
-38. What is the difference between `process.nextTick()` and `setImmediate()`?  
+Explain the difference between forEach, map, filter, and reduce.
+Ans-> forEach() – Executes a Function for Each Element
+    Used only for iterating over an array.
+    Does not return a new array; modifies the original array if needed.
+    Does not support chaining.
+    arr.forEach(num => console.log(num * 2));
 
-    File System & Streams
-39. What is the file system module (`fs`) in Node.js?  
-40. What are streams in Node.js? What are their types?  
-41. What are pipe streams in Node.js?  
+map() – Transforms Each Element & Returns a New Array
+Creates a new array by applying a function to each element.
+Does not modify the original array.
+Supports chaining.
+let doubled = numbers.map(num => num * 2);
 
-    Networking & APIs
-42. What are HTTP request methods in Node.js?  
-43. What is the difference between `GET` and `POST` requests?  
-44. What is a query string and how do you send data in a `GET` request?  
+filter() – Returns a New Array with Matching Elements
+Creates a new array with elements that pass a condition.
+Does not modify the original array.
+let evenNumbers = numbers.filter(num => num % 2 === 0);
 
-    Middleware & Express.js
-45. What is middleware in Node.js?  
-46. What are the types of middleware in Express.js?  
-47. Does the order of middleware matter in Express.js?  
-48. What is Express.js?  
-49. What are the features of Express.js?  
-50. Why do we use Express.js?  
-51. What is the difference between Express.js and Node.js?  
+reduce() – Reduces an Array to a Single Value
+Applies a function to reduce the array to a single value.
+Can be used for sum, product, finding max/min, etc..
+let sum = numbers.reduce((acc, num) => acc + num, 0);
 
-    Package Management
-52. What is `package.json` and `package-lock.json`?  
-53. What is `npm`? How do you install dependencies at the application and environment levels?  
-54. How do you manage packages in a Node.js project?  
+------------------------------------------------------------------------------------------------------------------
+How does the typeof operator work?
+Ans-> The typeof operator in JavaScript is used to determine the data type of a given value or variable. It returns a string representing the type of the operand.
 
-    Advanced Topics
-55. What is REPL in Node.js?  
-56. What is an `EventEmitter` in Node.js?  
-57. What is a thread pool in Node.js?  
-58. What is the purpose of `NODE_ENV`?  
-59. How do you connect a MongoDB database to a Node.js application?  
-60. What is scaffolding in Express.js?  
+------------------------------------------------------------------------------------------------------------------
+What is the difference between function declaration and function expression?
+Ans-> Function Declaration
+A function declared using the function keyword with a name.
+It is hoisted to the top of its scope, meaning it can be called before it is defined in the code.
+
+ Function Expression
+A function assigned to a variable.
+Not hoisted, meaning it cannot be called before it is defined.
+------------------------------------------------------------------------------------------------------------------
+
+Explain event delegation.
+------------------------------------------------------------------------------------------------------------------
+
+What are promises, and how do they work?
+------------------------------------------------------------------------------------------------------------------
+
+Explain async/await with an example.
+------------------------------------------------------------------------------------------------------------------
+What is the difference between synchronous and asynchronous code?
+------------------------------------------------------------------------------------------------------------------
+
+How does JavaScript handle concurrency (Event Loop, Call Stack, and Web APIs)?
+------------------------------------------------------------------------------------------------------------------
+
+What are the different ways to clone an object in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+
+What is destructuring in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+
+Explain call(), apply(), and bind().
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between shallow copy and deep copy?
+------------------------------------------------------------------------------------------------------------------
+
+What is the prototype chain in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+
+How does JavaScript handle memory management and garbage collection?
+------------------------------------------------------------------------------------------------------------------
+
+What is debouncing and throttling? Explain with examples.
+------------------------------------------------------------------------------------------------------------------
+
+Explain the difference between setTimeout and setInterval.
+------------------------------------------------------------------------------------------------------------------
+
+What is the this keyword in JavaScript, and how does it behave in different contexts?
+------------------------------------------------------------------------------------------------------------------
+
+What are generators in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between microtasks and macrotasks?
+------------------------------------------------------------------------------------------------------------------
+
+How does JavaScript handle deep comparison of objects?
+------------------------------------------------------------------------------------------------------------------
+
+What are WeakMap and WeakSet?
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between Object.freeze(), Object.seal(), and Object.preventExtensions()?
+------------------------------------------------------------------------------------------------------------------
+What is the difference between typeof and instanceof?
+
+------------------------------------------------------------------------------------------------------------------
+How does JavaScript handle type coercion?
+
+------------------------------------------------------------------------------------------------------------------
+What are arrow functions, and how do they differ from regular functions?
+
+------------------------------------------------------------------------------------------------------------------
+What is hoisting, and how does it work with functions?
+------------------------------------------------------------------------------------------------------------------
+What is the difference between shallow copy and deep copy?
+------------------------------------------------------------------------------------------------------------------
+
+How do you clone an object in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+What are Object.freeze(), Object.seal(), and Object.preventExtensions()?
+------------------------------------------------------------------------------------------------------------------
+
+What are getters and setters in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+What is the difference between find() and filter()?
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between push() and unshift()?
+------------------------------------------------------------------------------------------------------------------
+
+How do you convert an array-like object to an array?
+------------------------------------------------------------------------------------------------------------------
+What is a Promise in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+What is the difference between setTimeout and setInterval?
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between microtasks and macrotasks in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between throw and console.error()?
+------------------------------------------------------------------------------------------------------------------
+
+How does the try...catch statement work in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+
+What is the purpose of finally in a try...catch block?
+------------------------------------------------------------------------------------------------------------------
+
+How can you debug JavaScript code?
+------------------------------------------------------------------------------------------------------------------
+
+What is the onerror event in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+What is the DOM (Document Object Model)?
+
+------------------------------------------------------------------------------------------------------------------
+How do you select elements in the DOM using JavaScript?
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between innerHTML, textContent, and innerText?
+------------------------------------------------------------------------------------------------------------------
+
+What is localStorage, sessionStorage, and cookies?
+------------------------------------------------------------------------------------------------------------------
+
+How do you dynamically add elements to the DOM?
+------------------------------------------------------------------------------------------------------------------
+What is debouncing and throttling?
+
+------------------------------------------------------------------------------------------------------------------
+What is the difference between requestAnimationFrame and setTimeout?
+
+------------------------------------------------------------------------------------------------------------------
+How do you optimize loops in JavaScript?
+
+------------------------------------------------------------------------------------------------------------------
+How do you improve JavaScript execution speed?
+
+------------------------------------------------------------------------------------------------------------------
+What are memory leaks in JavaScript, and how can you prevent them?
+
+------------------------------------------------------------------------------------------------------------------
+What are template literals in JavaScript?
+
+------------------------------------------------------------------------------------------------------------------
+What is destructuring in JavaScript?
+------------------------------------------------------------------------------------------------------------------
+
+What are default parameters in JavaScript functions?
+------------------------------------------------------------------------------------------------------------------
+
+What are the rest and spread operators (...)?
+------------------------------------------------------------------------------------------------------------------
+
+What are JavaScript modules (import and export)?
+------------------------------------------------------------------------------------------------------------------
+
