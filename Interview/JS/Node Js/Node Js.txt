@@ -1,164 +1,737 @@
-    1. Basic Node.js Questions
 1. What is Node.js, and how does it work?
+Ans-> Node.js is an open-source, cross-platform runtime environment that allows you to run JavaScript code outside of a web browser, typically on the server side.
+
+------------------------------------------------------------------------------------------------------------------
+
 2. Why is Node.js single-threaded?
+Ans-> Node.js is single-threaded because it is designed to handle multiple client requests efficiently using an event-driven, non-blocking I/O model.
+
+------------------------------------------------------------------------------------------------------------------
+
 3. What is the difference between JavaScript and Node.js?
+Ans-> JavaScript	                                    Node.js
+JavaScript is a programming language.	            Node.js is a runtime environment to run JavaScript outside the browser.
+Runs in the browser (like Chrome, Firefox).        	Runs on the server (using Chrome’s V8 engine).
+Mainly used for frontend development.	U           sed for backend/server-side development.
+Has access to DOM and browser APIs.                	Has access to file system, OS, network, etc.
+Example: Form validation, animations.	            Example: Creating APIs, handling databases.
+
+
+------------------------------------------------------------------------------------------------------------------
+
 4. What is the V8 engine?
+Ans-> The V8 Engine is an open-source JavaScript engine developed by Google. It is used in Google Chrome and Node.js to execute JavaScript code.
+
+------------------------------------------------------------------------------------------------------------------
+
 5. What are the key features of Node.js?
+Ans-> Asynchronous & Non-blocking I/O
+👉 Handles multiple requests at the same time without waiting.
+
+Single-threaded Event Loop
+👉 Uses one thread to handle many connections efficiently.
+
+Very Fast
+👉 Built on Google’s V8 engine, which converts JS to machine code quickly.
+
+Scalable
+👉 Perfect for building apps that can handle many users (like chat apps or APIs).
+
+Cross-platform
+👉 Works on Windows, macOS, Linux, etc.
+
+Built-in Modules
+👉 Has ready-to-use modules like http, fs, path, etc., for faster development.
+
+NPM (Node Package Manager)
+👉 Huge library of reusable packages to speed up development.
+
+------------------------------------------------------------------------------------------------------------------
+
 6. What is the event loop in Node.js?
+Ans-> The Event Loop is the core of Node.js that allows it to handle multiple requests using a single thread in a non-blocking way.
+
+------------------------------------------------------------------------------------------------------------------
+
 7. How does the event loop handle asynchronous operations?
+Ans-> The Event Loop handles asynchronous operations by offloading them to the background and then processing their results later when they’re ready — without blocking the main thread.
+
+------------------------------------------------------------------------------------------------------------------
+
 8. What is non-blocking I/O in Node.js?
+Ans-> Non-blocking I/O means Node.js can start a task (like reading a file) and move on to the next task without waiting for the first one to finish.
+
+------------------------------------------------------------------------------------------------------------------
+
 9. What is the difference between synchronous and asynchronous programming in Node.js?
+Ans->Feature	                Synchronous	                                        Asynchronous
+    Execution	                Tasks run one after another.	                    Tasks run independently, without waiting.
+    Blocking	                Blocks the next line until current one finishes.	Doesn’t block, continues to the next task.
+    Speed	                    Slower for I/O tasks.	                            Faster, suitable for heavy I/O operations.
+    Example	                    Reading file and waiting for result.            	Reading file and handling result via callback.
+
+------------------------------------------------------------------------------------------------------------------
+
 10. What is the REPL in Node.js?
+Ans-> The REPL (Read-Eval-Print-Loop) in Node.js is an interactive shell environment that allows users to execute JavaScript code and immediately see the results. It is a built-in feature of Node.js and can be accessed by running the node command in the terminal without any arguments.
 
-    2. Node.js Module System
+------------------------------------------------------------------------------------------------------------------
 11. What are modules in Node.js?
+Ans-> Modules in Node.js are reusable blocks of code that help you organize your application into smaller parts.
+
+------------------------------------------------------------------------------------------------------------------
+
 12. What is the difference between CommonJS and ES Modules?
+Ans->   Feature	                CommonJS (CJS)	                    ES Modules (ESM)
+        Syntax	                require() / module.exports	        import / export
+        Used in             	Node.js by default (older)	        Modern JavaScript (ES6+)
+        Loading             	Synchronously	                    Asynchronously
+        File extension	        .js (default)                   	.mjs or set "type": "module" in package.json
+        Support             	Fully supported in Node.js	        Supported in newer Node.js versions (v12+)
+
+
+------------------------------------------------------------------------------------------------------------------
+
 13. How do you create a custom module in Node.js?
+Ans-> To create a custom module in Node.js:
+Write your code in a separate file.
+Export it using module.exports.
+Import it using require() in another file.
+
+------------------------------------------------------------------------------------------------------------------
+
 14. What is the purpose of the require() function?
+Ans-> The require() function is used to import modules in Node.js — whether they are built-in, custom, or third-party modules.
+
+------------------------------------------------------------------------------------------------------------------
+
 15. What is the difference between require() and import?
+Ans-> While both require() and import are used for including modules, require() is a function in the CommonJS module system, while import is a statement in the newer ECMAScript Modules (ESM) system, offering features like tree-shaking and asynchronous loading. 
+
+------------------------------------------------------------------------------------------------------------------
+
 16. What is the use of module.exports in Node.js?
+Ans-> module.exports in Node.js serves as the mechanism for exporting values (functions, objects, variables) from a module so they can be accessed and utilized in other parts of an application. When a file is executed in Node.js, it's treated as a module. module.exports allows defining what parts of that module should be made available to other modules via the require() function.
+
+------------------------------------------------------------------------------------------------------------------
+
 17. What is the difference between global and local modules in Node.js?
+Ans-> Feature	            Local Module	                                Global Module
+    Scope               	Only available in your current project	        Available anywhere on your system
+    Installation        	npm install package-name	                    npm install -g package-name
+    Use case	            App-specific dependencies (e.g., Express)	    CLI tools (e.g., Nodemon, PM2)
+    Location	            Stored in node_modules inside project       	Stored in global NPM directory
+
+------------------------------------------------------------------------------------------------------------------
+
 18. How can you avoid circular dependencies in Node.js modules?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 19. What is the difference between fs.readFileSync() and fs.readFile()?
+Ans->   Feature	                fs.readFileSync()	                fs.readFile()
+        Type	                Synchronous (blocking)             	Asynchronous (non-blocking)
+        Execution	            Blocks the code until file is read	Executes in background without blocking
+        Callback              	❌ Not needed	                   ✅ Requires a callback
+        Performance         	Slower for large apps               Faster and better for performance
+
+
+------------------------------------------------------------------------------------------------------------------
+
 20. What is the path module used for in Node.js?
+Ans-> The path module in Node.js is a built-in module used to work with file and directory paths.
+It helps you handle paths in a safe and cross-platform way (Windows, macOS, Linux).
 
-    3. npm & Package Management
+------------------------------------------------------------------------------------------------------------------
+
 21. What is npm in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 22. What is the difference between dependencies and devDependencies?
+Ans->   Feature	                dependencies	                        devDependencies
+        Used for	            Code required to run the app        	Code required to develop or test the app
+        Installed in        	Production & development            	Only in development
+        Examples	            express, mongoose, cors	                nodemon, eslint, jest
+        Declared in	            "dependencies" in package.json	        "devDependencies" in package.json
+        Install with           	npm install package-name	            npm install package-name --save-dev
+
+
+------------------------------------------------------------------------------------------------------------------
+
 23. What is package.json and what is its purpose?
+Ans-> package.json is a configuration file in a Node.js project.
+It stores important information about the project like:
+Project name, version, description
+Dependencies and devDependencies
+Scripts to run tasks (like start, test)
+Author and license info
+
+------------------------------------------------------------------------------------------------------------------
+
 24. What is the purpose of package-lock.json?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 25. How do you install a package globally and locally in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 26. How do you update a package using npm?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 27. How do you uninstall a package using npm?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 28. What is npx and how is it different from npm?
+Ans-> NPM is a package manager used to install, delete, and update Javascript packages on your machine. NPX is a package executer, and it is used to execute javascript packages directly, without installing them
+
+------------------------------------------------------------------------------------------------------------------
+
 29. How do you create a new Node.js project using npm?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 30. How can you check the version of npm installed?
+Ans->
 
-    4. Node.js Event Loop & Asynchronous Programming
+------------------------------------------------------------------------------------------------------------------
+
 31. What is the difference between setTimeout(), setImmediate(), and process.nextTick()?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 32. How does process.nextTick() work in Node.js?
+Ans-> process.nextTick() is a function in Node.js that schedules a callback to be invoked after the current operation completes, but before the event loop continues.
+
+It adds the callback to the nextTick queue, which is processed immediately after the current function, giving it highest priority.
+
+------------------------------------------------------------------------------------------------------------------
+
 33. What is the difference between microtasks and macrotasks in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 34. What is a callback function in Node.js?
+Ans-> A callback function is a function that is passed as an argument to another function and is called after that function completes its task.
+
+In Node.js, callbacks are commonly used to handle asynchronous operations like reading files, making API calls, or accessing a database.
+A callback function is not called automatically — you have to call it manually inside your function where it's meant to execute.
+
+------------------------------------------------------------------------------------------------------------------
+
 35. What is callback hell, and how do you avoid it?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 36. What is a Promise in JavaScript?
+Ans-> In JavaScript, a Promise is an object representing the eventual result of an asynchronous operation. It acts as a placeholder for a value that might not be available immediately. A Promise can be in one of three states: 
+Pending:
+The initial state, representing that the asynchronous operation is still in progress.
+Fulfilled:
+Indicates that the asynchronous operation completed successfully, and a result value is available.
+Rejected:
+Signifies that the asynchronous operation failed, and an error or reason for failure is available.
+
+------------------------------------------------------------------------------------------------------------------
+
 37. What is async/await in JavaScript?
+Ans-> async/await is a modern way to handle Promises in JavaScript.
+
+It lets you write asynchronous code that looks and behaves like synchronous code — making it easier to read, write, and debug.
+
+------------------------------------------------------------------------------------------------------------------
+
 38. How do you handle errors in an async/await function?
+Ans->
 
-    5. Express.js & API Development
+------------------------------------------------------------------------------------------------------------------
+
 39. What is Express.js?
+Ans-> Express.js is a minimalist and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications. It simplifies the process of creating server-side applications by offering tools for routing, middleware integration, and template engines. It is often used for building APIs and handling HTTP requests. 
+
+------------------------------------------------------------------------------------------------------------------
+
 40. How do you create a simple Express.js server?
+Ans-> const express = require('express');
+const app = express();
+
+// Define a simple route
+app.get('/', (req, res) => {
+  res.send('Hello, Express!');
+});
+
+// Start the server
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
+
+
+------------------------------------------------------------------------------------------------------------------
+
 41. What are middleware functions in Express.js?
+Ans-> A middleware function in Express.js is a function that runs between the request and response cycle. It can:
+
+✔ Modify the request (req) or response (res)
+✔ End the request-response cycle
+✔ Pass control to the next middleware
+
+------------------------------------------------------------------------------------------------------------------
+
 42. What is the difference between app.use() and app.get()?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 43. What is CORS, and how do you enable it in Express?
+Ans-> CORS (Cross-Origin Resource Sharing) is a security feature in web browsers that blocks requests coming from a different origin (domain, port, or protocol).
+
+🔒 For example:
+If your frontend runs on http://localhost:3000 and your backend API is on http://localhost:5000, browsers block the request by default.
+
+🔥 Why use CORS?
+To allow or restrict requests from other origins (domains) to your server. It’s important for API security and frontend-backend communication.
+
+------------------------------------------------------------------------------------------------------------------
+
 44. What is the difference between res.send() and res.json()?
+Ans-> Feature	            res.send()	                                           res.json()
+    📌 Purpose	            Sends a response (string, buffer, object, etc.)	       Sends a JSON response (object or array)
+    📄 Data Type        	Can send HTML, text, objects, or buffers	           Automatically converts objects to JSON
+    🛠️ Auto JSON Conversion Yes (for objects)	                                    Yes (only for JSON data)
+    📝 Content-Type Header	Changes based on the data type	                       Always sets Content-Type: application/json
+ 
+------------------------------------------------------------------------------------------------------------------
+
 45. What is routing in Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 46. What are the HTTP methods used in REST API?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 47. How do you handle errors in Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 48. How do you send custom headers in an Express.js response?
+Ans->
 
-    6. Database Integration
+------------------------------------------------------------------------------------------------------------------
+
 49. How do you connect Node.js with MongoDB using Mongoose?
-50. What is the difference between SQL and NoSQL databases?
-51. How do you perform CRUD operations using MongoDB in Node.js?
-52. What is an ORM, and why is it useful?
-53. What is the difference between findOne() and findById() in Mongoose?
-54. How do you handle database connections efficiently in Node.js?
-55. What is indexing in databases, and how does it improve performance?
-56. How do you implement transactions in MongoDB?
-57. What is the difference between populate() and join?
-58. How do you use PostgreSQL with Node.js?
+Ans->
 
-    7. Authentication & Security
+------------------------------------------------------------------------------------------------------------------
+
+50. What is the difference between SQL and NoSQL databases?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+51. How do you perform CRUD operations using MongoDB in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+52. What is an ORM, and why is it useful?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+53. What is the difference between findOne() and findById() in Mongoose?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+54. How do you handle database connections efficiently in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+55. What is indexing in databases, and how does it improve performance?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+56. How do you implement transactions in MongoDB?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+57. What is the difference between populate() and join?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+58. How do you use PostgreSQL with Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 59. What is JWT, and how does it work?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 60. How do you implement JWT authentication in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 61. How do you hash passwords securely in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 62. What is the difference between session-based and token-based authentication?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 63. What is the purpose of bcrypt in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 64. How do you protect API routes in Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 65. What is Cross-Site Request Forgery (CSRF) and how do you prevent it?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 66. What is SQL Injection, and how can you prevent it?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 67. What is rate limiting, and how do you implement it in Express?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 68. How do you secure environment variables in a Node.js application?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 
     8. Performance Optimization
 69. How do you improve the performance of a Node.js application?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 70. What are worker threads in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 71. What is clustering in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 72. What is caching, and how can you implement it in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 73. What are memory leaks in Node.js, and how do you prevent them?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 74. What is the purpose of process.env?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 75. How do you monitor performance in a Node.js application?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 76. What are the best practices for writing scalable Node.js code?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 77. How do you optimize database queries for better performance?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 78. How do you use PM2 to manage Node.js applications?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 
     9. Advanced Topics & Miscellaneous
 79. What is WebSockets, and how do you use them in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 80. What is GraphQL, and how is it different from REST?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 81. What are event emitters in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 82. How do you create an HTTP server without Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 83. What is the difference between cluster.fork() and worker_threads?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 84. How does Node.js handle file uploads?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 85. What is a stream in Node.js, and how does it work?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 86. How does Node.js handle backpressure in streams?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 87. What is the purpose of the dns module in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 
     10. Debugging & Error Handling
 88. How do you debug a Node.js application?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 89. What is the purpose of console.error() in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 90. What is the difference between try-catch and Promise.catch()?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 91. How do you handle uncaught exceptions in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 92. What is the purpose of process.on('uncaughtException')?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 93. How do you use the debug module in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 94. What is the purpose of logging in Node.js applications?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 95. How do you log errors in a production Node.js application?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 96. How do you set up a logging system using Winston or Morgan?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 97. How do you track API errors using external monitoring tools?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 
 What are the advantages of Node.js over Java and PHP?
-31. How is Node.js single-threaded?  
+Ans->
 
-    Modules & Packages
-32. What are modules in Node.js?  
-33. What is `module.exports`?  
-34. How do you create a simple server in Node.js?  
-35. What are built-in modules in Node.js?  
+
+------------------------------------------------------------------------------------------------------------------
+
+35. What are built-in modules in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 
     Concurrency & Execution
-36. How does Node.js handle multiple requests?  
-37. What is the event loop in Node.js?  
-38. What is the difference between `process.nextTick()` and `setImmediate()`?  
+36. How does Node.js handle multiple requests?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------
+>
+
+------------------------------------------------------------------------------------------------------------------
+
 
     File System & Streams
-39. What is the file system module (`fs`) in Node.js?  
-40. What are streams in Node.js? What are their types?  
-41. What are pipe streams in Node.js?  
+39. What is the file system module (`fs`) in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+40. What are streams in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+ What are their types?
+ Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+41. What are pipe streams in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 
     Networking & APIs
-42. What are HTTP request methods in Node.js?  
-43. What is the difference between `GET` and `POST` requests?  
-44. What is a query string and how do you send data in a `GET` request?  
+42. What are HTTP request methods in Node.js?
+Ans->
 
-    Middleware & Express.js
-45. What is middleware in Node.js?  
-46. What are the types of middleware in Express.js?  
-47. Does the order of middleware matter in Express.js?  
-48. What is Express.js?  
-49. What are the features of Express.js?  
-50. Why do we use Express.js?  
-51. What is the difference between Express.js and Node.js?  
+------------------------------------------------------------------------------------------------------------------
+
+43. What is the difference between `GET` and `POST` requests?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+44. What is a query string and how do you send data in a `GET` request?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------
+
+46. What are the types of middleware in Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+47. Does the order of middleware matter in Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+48. What is Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+49. What are the features of Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+50. Why do we use Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+51. What is the difference between Express.js and Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 
     Package Management
-52. What is `package.json` and `package-lock.json`?  
-53. What is `npm`? How do you install dependencies at the application and environment levels?  
-54. How do you manage packages in a Node.js project?  
+52. What is `package.json` and `package-lock.json`?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+53. What is `npm`?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+ How do you install dependencies at the application and environment levels?
+ Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+54. How do you manage packages in a Node.js project?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 
     Advanced Topics
-55. What is REPL in Node.js?  
-56. What is an `EventEmitter` in Node.js?  
-57. What is a thread pool in Node.js?  
-58. What is the purpose of `NODE_ENV`?  
-59. How do you connect a MongoDB database to a Node.js application?  
-60. What is scaffolding in Express.js?  
+55. What is REPL in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+56. What is an `EventEmitter` in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+57. What is a thread pool in Node.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+58. What is the purpose of `NODE_ENV`?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+59. How do you connect a MongoDB database to a Node.js application?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
+60. What is scaffolding in Express.js?
+Ans->
+
+------------------------------------------------------------------------------------------------------------------
+
 
 61. 
