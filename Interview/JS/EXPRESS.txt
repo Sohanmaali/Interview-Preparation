@@ -9,8 +9,6 @@
 - What is middleware in Express.js?  
 
 
-    3. Routing in Express.js**  
-- How does Express handle routing?  
 - How to handle route parameters in Express?  
 - What are route handlers in Express?  
 - How to access request query parameters in Express?  

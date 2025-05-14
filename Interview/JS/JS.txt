@@ -341,11 +341,6 @@ Not hoisted, meaning it cannot be called before it is defined.
 Explain event delegation.
 ------------------------------------------------------------------------------------------------------------------
 
-What are promises, and how do they work?
-------------------------------------------------------------------------------------------------------------------
-
-Explain async/await with an example.
-------------------------------------------------------------------------------------------------------------------
 What is the difference between synchronous and asynchronous code?
 ------------------------------------------------------------------------------------------------------------------
 
@@ -353,15 +348,39 @@ How does JavaScript handle concurrency (Event Loop, Call Stack, and Web APIs)?
 ------------------------------------------------------------------------------------------------------------------
 
 What are the different ways to clone an object in JavaScript?
+Ans-> Shallow Clone
+        Object.assign()
+          const obj = { a: 1, b: 2 };
+          const clone = Object.assign({}, obj);
+        Spread Operator (...)
+          const obj = { a: 1, b: 2 };
+          const clone = { ...obj };
+      Deep Clone
+          JSON.parse(JSON.stringify(obj))
+          const obj = { a: 1, b: { c: 2 } };
+          const clone = JSON.parse(JSON.stringify(obj));
+      Structured Clone
+          const clone = structuredClone(obj);
+
 ------------------------------------------------------------------------------------------------------------------
 
 What is destructuring in JavaScript?
-------------------------------------------------------------------------------------------------------------------
-
-Explain call(), apply(), and bind().
+Ans-> Destructuring in JavaScript is a way to extract values from arrays or objects and assign them to variables in a clean and simple way.
 ------------------------------------------------------------------------------------------------------------------
 
 What is the difference between shallow copy and deep copy?
+Ans-> Shallow Copy	Deep Copy
+      Shallow Copy stores the references of objects to the original memory address.   	
+      Deep copy stores copies of the object’s value.
+
+      Shallow Copy reflects changes made to the new/copied object in the original object.	
+      Deep copy doesn’t reflect changes made to the new/copied object in the original object.
+
+      Shallow Copy stores the copy of the original object and points the references to the objects.
+      Deep copy stores the copy of the original object and recursively copies the objects as well.
+
+      A shallow copy is faster.	
+      Deep copy is comparatively slower.
 ------------------------------------------------------------------------------------------------------------------
 
 What is the prototype chain in JavaScript?
