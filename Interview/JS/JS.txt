@@ -384,126 +384,147 @@ Ans-> Shallow Copy	Deep Copy
 ------------------------------------------------------------------------------------------------------------------
 
 What is the prototype chain in JavaScript?
+Ans-> in JavaScript, the prototype chain is a mechanism by which objects inherit features (properties and methods) from other objects.
 ------------------------------------------------------------------------------------------------------------------
 
 How does JavaScript handle memory management and garbage collection?
+Ans-> JavaScript uses a garbage collector to automatically manage memory. The garbage collector identifies and frees memory occupied by objects
 ------------------------------------------------------------------------------------------------------------------
 
 What is debouncing and throttling? Explain with examples.
+Ans-> Debouncing and throttling are performance optimization techniques in JavaScript, especially useful when dealing with high-frequency events like scroll, resize, input, or mousemove.
+
 ------------------------------------------------------------------------------------------------------------------
 
 Explain the difference between setTimeout and setInterval.
+Ans-> setTimeout() and setInterval() are both used to execute a function after a specified delay, but they differ in their behavior: setTimeout() executes the function once after the delay, while setInterval() executes the function repeatedly at the specified interval. 
 ------------------------------------------------------------------------------------------------------------------
 
 What is the this keyword in JavaScript, and how does it behave in different contexts?
+Ans-> The this keyword in JavaScript refers to the current execution context of a function. It can behave differently depending on how a function is called, such as in a method, as a constructor, or as a standalone function.
 ------------------------------------------------------------------------------------------------------------------
 
 What are generators in JavaScript?
+Ans-> Generators in JavaScript are a type of iterable, similar to arrays or sets, but the values ar not computed until you iterate over them. They allow you to write more efficient and memory-friendly code.
 ------------------------------------------------------------------------------------------------------------------
 
 What is the difference between microtasks and macrotasks?
+Ans-> Microtasks are small tasks that are executed by the event loop, such as promise resolution or DOM mutations . Macrotasks are larger tasks, such as setTimeout or setInterval, that are executed by the event loop. Microtasks are executed before macrotasks. 
 ------------------------------------------------------------------------------------------------------------------
 
 How does JavaScript handle deep comparison of objects?
+Ans-> JavaScript uses the === operator to compare objects, which checks for reference equality. To compare objects deeply,
 ------------------------------------------------------------------------------------------------------------------
 
 What are WeakMap and WeakSet?
+Ans-> WeakMap and WeakSet are data structures in JavaScript that allow you to store objects as keys or values , but with a twist: they don’t prevent the garbage collector from collecting the objects, even if they are still referenced elsewhere in the code. This makes them useful for caching and other use cases where you don’t want to prevent objects from being
 ------------------------------------------------------------------------------------------------------------------
 
 What is the difference between Object.freeze(), Object.seal(), and Object.preventExtensions()?
+Ans-> Object.freeze() prevents any modifications to the object, including adding new properties or modifying existing ones. Object .seal() prevents adding new properties but allows modifying existing ones. Object.preventExtensions() prevents adding new properties but allows modifying existing ones. 
 ------------------------------------------------------------------------------------------------------------------
 What is the difference between typeof and instanceof?
-
+Ans-> typeof returns the type of the variable, while instanceof returns true if the variable is an instance of the specified constructor. 
 ------------------------------------------------------------------------------------------------------------------
 How does JavaScript handle type coercion?
+Ans-> JavaScript performs type coercion when comparing values of different types, such as numbers and strings. It converts the values to a common type before comparing them. 
 
 ------------------------------------------------------------------------------------------------------------------
 What are arrow functions, and how do they differ from regular functions?
-
-------------------------------------------------------------------------------------------------------------------
-What is hoisting, and how does it work with functions?
+Ans-> 
 ------------------------------------------------------------------------------------------------------------------
 What is the difference between shallow copy and deep copy?
+Ans-> A shallow copy creates a new object and copies the references of the original object, while a deep copy creates a new object and recursively copies the values of the original object.
 ------------------------------------------------------------------------------------------------------------------
 
 How do you clone an object in JavaScript?
-------------------------------------------------------------------------------------------------------------------
-What are Object.freeze(), Object.seal(), and Object.preventExtensions()?
+Ans-> You can use the spread operator (…) to clone an object, or use the JSON.parse(JSON.stringify (obj)) method. 
 ------------------------------------------------------------------------------------------------------------------
 
 What are getters and setters in JavaScript?
+Ans-> Getters and setters are methods that allow you to access and modify the value of a property. Get terms are used to get the value of a property, while setters are used to set the value of
 ------------------------------------------------------------------------------------------------------------------
 What is the difference between find() and filter()?
+Ans-> find() returns the first element in the array that satisfies the provided testing function, while filter() returns a new array with all elements that satisfy the provided testing function. 
 ------------------------------------------------------------------------------------------------------------------
 
 What is the difference between push() and unshift()?
+Ans-> push() adds an element to the end of the array, while unshift() adds an element to the beginning of the array.  
 ------------------------------------------------------------------------------------------------------------------
 
 How do you convert an array-like object to an array?
-------------------------------------------------------------------------------------------------------------------
-What is a Promise in JavaScript?
-------------------------------------------------------------------------------------------------------------------
-What is the difference between setTimeout and setInterval?
-------------------------------------------------------------------------------------------------------------------
+Ans-> You can use the Array.from() method or the spread operator (…) to convert an array-like object
 
-What is the difference between microtasks and macrotasks in JavaScript?
 ------------------------------------------------------------------------------------------------------------------
 
 What is the difference between throw and console.error()?
+Ans-> throw is used to throw an error, which can be caught by a try-catch block, whill console.error() is used to log an error to the console, but it does not stop the execution of the code. 
 ------------------------------------------------------------------------------------------------------------------
 
 How does the try...catch statement work in JavaScript?
+Ans-> The try...catch statement is used to handle errors in JavaScript. The try block contains the code that may throw an error, and the catch block contains the code that will be executed if an error is thrown. 
 ------------------------------------------------------------------------------------------------------------------
 
 What is the purpose of finally in a try...catch block?
+Ans-> The finally block is used to execute code regardless of whether an error was thrown or not. It is typically used to release resources or perform cleanup tasks. 
 ------------------------------------------------------------------------------------------------------------------
 
 How can you debug JavaScript code?
+Ans-> You can use the browser's developer tools, such as the console, debugger, and network panel, to debug JavaScript code. You can also use tools like Node.js Inspector and Chrome DevTools. 
 ------------------------------------------------------------------------------------------------------------------
 
 What is the onerror event in JavaScript?
+Ans-> The onerror event is a built-in event in JavaScript that is triggered when an error occurs. It can be used to handle errors in a more robust way. 
 ------------------------------------------------------------------------------------------------------------------
 What is the DOM (Document Object Model)?
-
+Ans-> The DOM is a programming interface for HTML and XML documents. It represents the structure of a document as a tree-like data structure, and provides a way to access and modify the document's elements. 
 ------------------------------------------------------------------------------------------------------------------
 How do you select elements in the DOM using JavaScript?
+Ans-> You can use the document.querySelector() method or the document.querySelectorAll() method to select elements in the DOM . You can also use the document.getElementById() method to select an element by its ID. 
 ------------------------------------------------------------------------------------------------------------------
 
 What is the difference between innerHTML, textContent, and innerText?
+Ans-> innerHTML sets the HTML content of an element, textContent sets the text content of an element, and innerText sets the text content of an element, but it also removes any HTML tags. 
 ------------------------------------------------------------------------------------------------------------------
 
 What is localStorage, sessionStorage, and cookies?
+Ans-> localStorage, sessionStorage, and cookies are all ways to store data on the client-side. localStorage and sessionStorag are used to store data locally, while cookies are used to store data on the server-side. 
 ------------------------------------------------------------------------------------------------------------------
 
 How do you dynamically add elements to the DOM?
-------------------------------------------------------------------------------------------------------------------
-What is debouncing and throttling?
-
+Ans-> You can use the document.createElement() method to create a new element, and then use the appendChild () method or the insertBefore() method to add it to the DOM. 
 ------------------------------------------------------------------------------------------------------------------
 What is the difference between requestAnimationFrame and setTimeout?
-
+Ans-> requestAnimationFrame is used to schedule a function to be called before the next repaint, while setTimeout is used to schedule a function to be called after a certain amount of time. 
 ------------------------------------------------------------------------------------------------------------------
 How do you optimize loops in JavaScript?
+Ans-> You can use the for...of loop or the for...of loop with a map to optimize loops in JavaScript. You can also use the Array.prototype.forEach() method to iterate over a array. 
 
 ------------------------------------------------------------------------------------------------------------------
 How do you improve JavaScript execution speed?
+Ans-> You can use the following techniques to improve JavaScript execution speed: 
 
 ------------------------------------------------------------------------------------------------------------------
 What are memory leaks in JavaScript, and how can you prevent them?
+Ans-> Memory leaks occur when a web page consumes increasing amounts of memory over time, causing the browser to slow down or even crash. You can prevent memory leaks by avoiding circular references, using weak references, and properly cleaning up event listeners. 
 
 ------------------------------------------------------------------------------------------------------------------
 What are template literals in JavaScript?
+Ans-> Template literals are a new way of creating strings in JavaScript. They allow you to embed expressions inside string literals using the backtick character. 
 
 ------------------------------------------------------------------------------------------------------------------
 What is destructuring in JavaScript?
+Ans-> Destructuring is a feature in JavaScript that allows you to extract values from arrays or objects and assign them to variables. 
 ------------------------------------------------------------------------------------------------------------------
 
 What are default parameters in JavaScript functions?
+Ans-> Default parameters are a feature in JavaScript that allows you to specify a default value for a function parameter if it is not provided. 
 ------------------------------------------------------------------------------------------------------------------
 
 What are the rest and spread operators (...)?
+Ans-> The rest operator is used to capture all the remaining elements of an array or object into a single array or object. The spread operator is used to expand an array or object into individual elements. 
 ------------------------------------------------------------------------------------------------------------------
 
 What are JavaScript modules (import and export)?
+Ans-> JavaScript modules are a way to organize and reuse code in JavaScript. They allow you to import and export functions, variables, and classes. 
 ------------------------------------------------------------------------------------------------------------------
-

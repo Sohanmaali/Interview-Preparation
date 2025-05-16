@@ -1,14 +1,14 @@
-1. What is Node.js, and how does it work?
+What is Node.js, and how does it work?
 Ans-> Node.js is an open-source, cross-platform runtime environment that allows you to run JavaScript code outside of a web browser, typically on the server side.
 
 ------------------------------------------------------------------------------------------------------------------
 
-2. Why is Node.js single-threaded?
+Why is Node.js single-threaded?
 Ans-> Node.js is single-threaded because it is designed to handle multiple client requests efficiently using an event-driven, non-blocking I/O model.
 
 ------------------------------------------------------------------------------------------------------------------
 
-3. What is the difference between JavaScript and Node.js?
+What is the difference between JavaScript and Node.js?
 Ans-> JavaScript	                                    Node.js
 JavaScript is a programming language.	            Node.js is a runtime environment to run JavaScript outside the browser.
 Runs in the browser (like Chrome, Firefox).        	Runs on the server (using Chrome’s V8 engine).
@@ -16,15 +16,14 @@ Mainly used for frontend development.	U           sed for backend/server-side de
 Has access to DOM and browser APIs.                	Has access to file system, OS, network, etc.
 Example: Form validation, animations.	            Example: Creating APIs, handling databases.
 
-
 ------------------------------------------------------------------------------------------------------------------
 
-4. What is the V8 engine?
+What is the V8 engine?
 Ans-> The V8 Engine is an open-source JavaScript engine developed by Google. It is used in Google Chrome and Node.js to execute JavaScript code.
 
 ------------------------------------------------------------------------------------------------------------------
 
-5. What are the key features of Node.js?
+What are the key features of Node.js?
 Ans-> Asynchronous & Non-blocking I/O
 👉 Handles multiple requests at the same time without waiting.
 
@@ -48,22 +47,22 @@ NPM (Node Package Manager)
 
 ------------------------------------------------------------------------------------------------------------------
 
-6. What is the event loop in Node.js?
+What is the event loop in Node.js?
 Ans-> The Event Loop is the core of Node.js that allows it to handle multiple requests using a single thread in a non-blocking way.
 
 ------------------------------------------------------------------------------------------------------------------
 
-7. How does the event loop handle asynchronous operations?
+How does the event loop handle asynchronous operations?
 Ans-> The Event Loop handles asynchronous operations by offloading them to the background and then processing their results later when they’re ready — without blocking the main thread.
 
 ------------------------------------------------------------------------------------------------------------------
 
-8. What is non-blocking I/O in Node.js?
+What is non-blocking I/O in Node.js?
 Ans-> Non-blocking I/O means Node.js can start a task (like reading a file) and move on to the next task without waiting for the first one to finish.
 
 ------------------------------------------------------------------------------------------------------------------
 
-9. What is the difference between synchronous and asynchronous programming in Node.js?
+What is the difference between synchronous and asynchronous programming in Node.js?
 Ans->Feature	                Synchronous	                                        Asynchronous
     Execution	                Tasks run one after another.	                    Tasks run independently, without waiting.
     Blocking	                Blocks the next line until current one finishes.	Doesn’t block, continues to the next task.
@@ -72,16 +71,16 @@ Ans->Feature	                Synchronous	                                       
 
 ------------------------------------------------------------------------------------------------------------------
 
-10. What is the REPL in Node.js?
+What is the REPL in Node.js?
 Ans-> The REPL (Read-Eval-Print-Loop) in Node.js is an interactive shell environment that allows users to execute JavaScript code and immediately see the results. It is a built-in feature of Node.js and can be accessed by running the node command in the terminal without any arguments.
 
 ------------------------------------------------------------------------------------------------------------------
-11. What are modules in Node.js?
+What are modules in Node.js?
 Ans-> Modules in Node.js are reusable blocks of code that help you organize your application into smaller parts.
 
 ------------------------------------------------------------------------------------------------------------------
 
-12. What is the difference between CommonJS and ES Modules?
+What is the difference between CommonJS and ES Modules?
 Ans->   Feature	                CommonJS (CJS)	                    ES Modules (ESM)
         Syntax	                require() / module.exports	        import / export
         Used in             	Node.js by default (older)	        Modern JavaScript (ES6+)
@@ -92,7 +91,7 @@ Ans->   Feature	                CommonJS (CJS)	                    ES Modules (E
 
 ------------------------------------------------------------------------------------------------------------------
 
-13. How do you create a custom module in Node.js?
+How do you create a custom module in Node.js?
 Ans-> To create a custom module in Node.js:
 Write your code in a separate file.
 Export it using module.exports.
@@ -100,22 +99,22 @@ Import it using require() in another file.
 
 ------------------------------------------------------------------------------------------------------------------
 
-14. What is the purpose of the require() function?
+What is the purpose of the require() function?
 Ans-> The require() function is used to import modules in Node.js — whether they are built-in, custom, or third-party modules.
 
 ------------------------------------------------------------------------------------------------------------------
 
-15. What is the difference between require() and import?
+What is the difference between require() and import?
 Ans-> While both require() and import are used for including modules, require() is a function in the CommonJS module system, while import is a statement in the newer ECMAScript Modules (ESM) system, offering features like tree-shaking and asynchronous loading. 
 
 ------------------------------------------------------------------------------------------------------------------
 
-16. What is the use of module.exports in Node.js?
+What is the use of module.exports in Node.js?
 Ans-> module.exports in Node.js serves as the mechanism for exporting values (functions, objects, variables) from a module so they can be accessed and utilized in other parts of an application. When a file is executed in Node.js, it's treated as a module. module.exports allows defining what parts of that module should be made available to other modules via the require() function.
 
 ------------------------------------------------------------------------------------------------------------------
 
-17. What is the difference between global and local modules in Node.js?
+What is the difference between global and local modules in Node.js?
 Ans-> Feature	            Local Module	                                Global Module
     Scope               	Only available in your current project	        Available anywhere on your system
     Installation        	npm install package-name	                    npm install -g package-name
@@ -124,12 +123,12 @@ Ans-> Feature	            Local Module	                                Global Mo
 
 ------------------------------------------------------------------------------------------------------------------
 
-18. How can you avoid circular dependencies in Node.js modules?
+How can you avoid circular dependencies in Node.js modules?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-19. What is the difference between fs.readFileSync() and fs.readFile()?
+What is the difference between fs.readFileSync() and fs.readFile()?
 Ans->   Feature	                fs.readFileSync()	                fs.readFile()
         Type	                Synchronous (blocking)             	Asynchronous (non-blocking)
         Execution	            Blocks the code until file is read	Executes in background without blocking
@@ -139,18 +138,18 @@ Ans->   Feature	                fs.readFileSync()	                fs.readFile()
 
 ------------------------------------------------------------------------------------------------------------------
 
-20. What is the path module used for in Node.js?
+What is the path module used for in Node.js?
 Ans-> The path module in Node.js is a built-in module used to work with file and directory paths.
 It helps you handle paths in a safe and cross-platform way (Windows, macOS, Linux).
 
 ------------------------------------------------------------------------------------------------------------------
 
-21. What is npm in Node.js?
+What is npm in Node.js?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-22. What is the difference between dependencies and devDependencies?
+What is the difference between dependencies and devDependencies?
 Ans->   Feature	                dependencies	                        devDependencies
         Used for	            Code required to run the app        	Code required to develop or test the app
         Installed in        	Production & development            	Only in development
@@ -161,7 +160,7 @@ Ans->   Feature	                dependencies	                        devDependen
 
 ------------------------------------------------------------------------------------------------------------------
 
-23. What is package.json and what is its purpose?
+What is package.json and what is its purpose?
 Ans-> package.json is a configuration file in a Node.js project.
 It stores important information about the project like:
 Project name, version, description
@@ -171,59 +170,59 @@ Author and license info
 
 ------------------------------------------------------------------------------------------------------------------
 
-24. What is the purpose of package-lock.json?
+What is the purpose of package-lock.json?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-25. How do you install a package globally and locally in Node.js?
+How do you install a package globally and locally in Node.js?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-26. How do you update a package using npm?
+How do you update a package using npm?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-27. How do you uninstall a package using npm?
+How do you uninstall a package using npm?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-28. What is npx and how is it different from npm?
+What is npx and how is it different from npm?
 Ans-> NPM is a package manager used to install, delete, and update Javascript packages on your machine. NPX is a package executer, and it is used to execute javascript packages directly, without installing them
 
 ------------------------------------------------------------------------------------------------------------------
 
-29. How do you create a new Node.js project using npm?
+How do you create a new Node.js project using npm?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-30. How can you check the version of npm installed?
+How can you check the version of npm installed?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-31. What is the difference between setTimeout(), setImmediate(), and process.nextTick()?
+What is the difference between setTimeout(), setImmediate(), and process.nextTick()?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-32. How does process.nextTick() work in Node.js?
+How does process.nextTick() work in Node.js?
 Ans-> process.nextTick() is a function in Node.js that schedules a callback to be invoked after the current operation completes, but before the event loop continues.
 
 It adds the callback to the nextTick queue, which is processed immediately after the current function, giving it highest priority.
 
 ------------------------------------------------------------------------------------------------------------------
 
-33. What is the difference between microtasks and macrotasks in Node.js?
+What is the difference between microtasks and macrotasks in Node.js?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-34. What is a callback function in Node.js?
+What is a callback function in Node.js?
 Ans-> A callback function is a function that is passed as an argument to another function and is called after that function completes its task.
 
 In Node.js, callbacks are commonly used to handle asynchronous operations like reading files, making API calls, or accessing a database.
@@ -231,12 +230,12 @@ A callback function is not called automatically — you have to call it manually
 
 ------------------------------------------------------------------------------------------------------------------
 
-35. What is callback hell, and how do you avoid it?
+What is callback hell, and how do you avoid it?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-36. What is a Promise in JavaScript?
+What is a Promise in JavaScript?
 Ans-> In JavaScript, a Promise is an object representing the eventual result of an asynchronous operation. It acts as a placeholder for a value that might not be available immediately. A Promise can be in one of three states: 
 Pending:
 The initial state, representing that the asynchronous operation is still in progress.
@@ -247,24 +246,24 @@ Signifies that the asynchronous operation failed, and an error or reason for fai
 
 ------------------------------------------------------------------------------------------------------------------
 
-37. What is async/await in JavaScript?
+What is async/await in JavaScript?
 Ans-> async/await is a modern way to handle Promises in JavaScript.
 
 It lets you write asynchronous code that looks and behaves like synchronous code — making it easier to read, write, and debug.
 
 ------------------------------------------------------------------------------------------------------------------
 
-38. How do you handle errors in an async/await function?
+How do you handle errors in an async/await function?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-39. What is Express.js?
+What is Express.js?
 Ans-> Express.js is a minimalist and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications. It simplifies the process of creating server-side applications by offering tools for routing, middleware integration, and template engines. It is often used for building APIs and handling HTTP requests. 
 
 ------------------------------------------------------------------------------------------------------------------
 
-40. How do you create a simple Express.js server?
+How do you create a simple Express.js server?
 Ans-> const express = require('express');
 const app = express();
 
@@ -281,7 +280,7 @@ app.listen(3000, () => {
 
 ------------------------------------------------------------------------------------------------------------------
 
-41. What are middleware functions in Express.js?
+What are middleware functions in Express.js?
 Ans-> A middleware function in Express.js is a function that runs between the request and response cycle. It can:
 
 ✔ Modify the request (req) or response (res)
@@ -290,12 +289,12 @@ Ans-> A middleware function in Express.js is a function that runs between the re
 
 ------------------------------------------------------------------------------------------------------------------
 
-42. What is the difference between app.use() and app.get()?
+What is the difference between app.use() and app.get()?
 Ans->
 
 ------------------------------------------------------------------------------------------------------------------
 
-43. What is CORS, and how do you enable it in Express?
+What is CORS, and how do you enable it in Express?
 Ans-> CORS (Cross-Origin Resource Sharing) is a security feature in web browsers that blocks requests coming from a different origin (domain, port, or protocol).
 
 🔒 For example:
@@ -306,7 +305,7 @@ To allow or restrict requests from other origins (domains) to your server. It’
 
 ------------------------------------------------------------------------------------------------------------------
 
-44. What is the difference between res.send() and res.json()?
+What is the difference between res.send() and res.json()?
 Ans-> Feature	            res.send()	                                           res.json()
     📌 Purpose	            Sends a response (string, buffer, object, etc.)	       Sends a JSON response (object or array)
     📄 Data Type        	Can send HTML, text, objects, or buffers	           Automatically converts objects to JSON
@@ -645,8 +644,6 @@ Ans->
 
 44. What is a query string and how do you send data in a `GET` request?
 Ans->
-
-------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------------------------
 
