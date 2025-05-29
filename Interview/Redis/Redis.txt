@@ -1,93 +1,379 @@
 
-1. What is Redis?  
+What is Redis?
+Ans -> Redis is an open-source, in-memory database that stores data in key-value pairs. It is commonly used for caching, real-time data processing, and messaging because it is extremely fast. Redis supports various data types like strings, lists, sets, and more, and it can also save data to disk.
 ------------------------------------------------------------------------------------------------------------------
 
-
-2. How does Redis differ from other databases like MySQL or MongoDB?  
+How does Redis differ from other databases like MySQL or MongoDB?  
+Ans -> Redis differs from other databases like MySQL or MongoDB in several ways. It is an in-memory data structurere, which means that it stores data in RAM, making it faster than traditional databases. It also supports data structures such as sets, maps, and lists, which are not typically found in traditional databases . Additionally, Redis is designed for high-performance and high availability, making it a good choice for applications that require fast data access and low latency. 
 ------------------------------------------------------------------------------------------------------------------
 
-
-3. What data structures does Redis support?  
+What data structures does Redis support?  
+Ans -> Redis supports several data structures, including strings, hashes, lists, sets, and maps. It also supports more complex data structures such as sorted sets and geospatial indexes. These data structures are designed to provide fast and efficient access to data, making Redis a good choice for applications that require fast data access and low latency. 
 ------------------------------------------------------------------------------------------------------------------
 
-
-4. What is the default port for Redis?  
+What is the default port for Redis?  
+Ans -> 6379
 ------------------------------------------------------------------------------------------------------------------
 
-
-5. How do you install Redis on a Linux system?  
+How do you install Redis on a Linux system?  
+Ans -> You can install Redis on a Linux system using the package manager. For example, on Ubuntu or Debian , you can use the following command to install Redis: `sudo apt-get install redis-server`. On Red Hat or CentOS, you can use the following command: `sudo yum install redis`. 
 ------------------------------------------------------------------------------------------------------------------
 
-
-6. How do you start and stop a Redis server?  
+How do you start and stop a Redis server?  
+Ans -> You can start a Redis server by running the following command: `redis-server`. To stop a Redis server, you can use the following command: `redis-cli shutdown`. You can also use the following command to start a Redis server in the background: `redis-server &`. 
 ------------------------------------------------------------------------------------------------------------------
 
-
-7. What is the role of `redis-cli`?  
+What is the role of `redis-cli`?  
+Ans -> `redis-cli` is a command-line tool that allows you to interact with a Redis server. It can be used to execute Redis commands, such as SET, GET, and DEL,
 ------------------------------------------------------------------------------------------------------------------
 
-
-8. How do you check if Redis is running?  
+How do you check if Redis is running?  
+Ans -> You can check if Redis is running by using the following command: `redis-cli ping`. If Redis is running, it will respond with `PONG`. If Redis is not running, it will not respond. You can also check if Redis is running by using the following command: `ps aux | grep redis`. If Redis is running, you should see a process running with the name `redis-server `.
 ------------------------------------------------------------------------------------------------------------------
 
-
-9. What is the use of `PING` command in Redis?  
-
+What is the use of `PING` command in Redis?  
+Ans -> The `PING` command in Redis is used to test the connection to the Redis server. When you run the `PING` command, Redis responds with `PONG`, indicating that the connection is established . This command is useful for checking if Redis is running and responding correctly.
 ------------------------------------------------------------------------------------------------------------------
 
-10. How do you set and get a key in Redis?  
-
-### **Intermediate Questions**  
-
+How do you set and get a key in Redis?  
+Ans -> You can set a key in Redis using the `SET` command, like this: `SET my key "Hello, World!"`. You can get the value of a key using the `GET ` command, like this: `GET my key`. 
 ------------------------------------------------------------------------------------------------------------------
 
-11. What is the difference between `SETNX` and `SETEX`?  
-
+What is TTL in Redis and how is it used?
+Ans -> TTL stands for "Time To Live." It's a feature that allows you to set an expiration time for a key, meaning the key will be automatically deleted after a specified duration. 
 ------------------------------------------------------------------------------------------------------------------
 
-12. What is a Redis hash, and how do you use it?  
-
+What happens when a Redis key expires?
+Ans -> When a Redis key expires, it's automatically deleted from the database. This is a key feature for managing temporary or outdated data
 ------------------------------------------------------------------------------------------------------------------
 
-13. How does Redis handle persistence?  
-
+What is the difference between SET, SETEX, and EXPIRE in Redis?
+Ans ->  SET: Stores a key with a value (no expiry by default).
+        SETEX: Stores a key with a value and sets an expiry time in one command.
+        EXPIRE: Adds or updates the expiry time for an already existing key.
 ------------------------------------------------------------------------------------------------------------------
 
-14. What is the difference between RDB (Redis Database Backup) and AOF (Append Only File)?  
-
-------------------------------------------------------------------------------------------------------------------
-
-15. What is the purpose of `EXPIRE` and `TTL` commands?  
+Why Redis is so fast?
+Ans ->  Because Redis stores all data in RAM (memory) and uses very efficient data structures. No disk read/write is needed for normal operations.
 
 ------------------------------------------------------------------------------------------------------------------
 
-16. How do you delete all keys in Redis?  
+What are the data types in Redis?
+
+Ans ->  :
+# ============================================
+# 1️⃣ STRING (Basic key-value)
+# ============================================
+
+SET key "value"
+GET key
+SETNX key "only-if-not-exists"
+SETEX key 60 "expires-in-60s"
+PSETEX key 1500 "expires-in-1500ms"
+GETSET key "new-value"
+STRLEN key
+
+INCR key
+INCRBY key 10
+DECR key
+DECRBY key 5
+
+APPEND key "more-text"
+MSET key1 "v1" key2 "v2"
+MGET key1 key2
+
+
+# ============================================
+# 2️⃣ LIST (Ordered collection)
+# ============================================
+
+LPUSH mylist "a" "b"
+RPUSH mylist "c" "d"
+LPOP mylist
+RPOP mylist
+LLEN mylist
+LINDEX mylist 1
+LINSERT mylist BEFORE "b" "x"
+LSET mylist 0 "z"
+LRANGE mylist 0 -1
+LREM mylist 1 "a"       # Remove first occurrence
+LTRIM mylist 0 2
+RPOPLPUSH source dest
+BRPOP list1 list2 5     # Blocking right pop
+BLPOP list1 list2 5     # Blocking left pop
+BRPOPLPUSH src dst 5
+
+
+# ============================================
+# 3️⃣ SET (Unordered, unique values)
+# ============================================
+
+SADD myset "a" "b"
+SREM myset "a"
+SISMEMBER myset "a"
+SMEMBERS myset
+SCARD myset
+SPOP myset
+SRANDMEMBER myset
+SDIFF set1 set2
+SDIFFSTORE result set1 set2
+SINTER set1 set2
+SINTERSTORE result set1 set2
+SUNION set1 set2
+SUNIONSTORE result set1 set2
+SMOVE src dst "a"
+
+
+# ============================================
+# 4️⃣ SORTED SET (ZSET: Score-based sorted elements)
+# ============================================
+
+ZADD zset 10 "one" 20 "two"
+ZREM zset "one"
+ZSCORE zset "two"
+ZINCRBY zset 5 "two"
+ZRANGE zset 0 -1 WITHSCORES
+ZREVRANGE zset 0 -1 WITHSCORES
+ZRANGEBYSCORE zset 0 100
+ZREMRANGEBYRANK zset 0 1
+ZREMRANGEBYSCORE zset 0 10
+ZRANK zset "two"
+ZREVRANK zset "two"
+ZCARD zset
+ZCOUNT zset 10 20
+ZPOPMIN zset 1
+ZPOPMAX zset 1
+
+
+# ============================================
+# 5️⃣ HASH (Dictionary-like key-value pairs)
+# ============================================
+
+HSET myhash field1 "val1" field2 "val2"
+HGET myhash field1
+HGETALL myhash
+HDEL myhash field1
+HEXISTS myhash field1
+HINCRBY myhash field1 5
+HINCRBYFLOAT myhash field1 1.5
+HKEYS myhash
+HVALS myhash
+HLEN myhash
+HMSET myhash field1 "val1" field2 "val2"   # Legacy
+HMGET myhash field1 field2
+
+
+# ============================================
+# 6️⃣ BITMAP (Bitwise operations)
+# ============================================
+
+SETBIT bitmap 1 1
+GETBIT bitmap 1
+BITCOUNT bitmap
+BITCOUNT bitmap 0 1
+BITPOS bitmap 1
+BITFIELD bitmap INCRBY i5 100 1
+
+
+# ============================================
+# 7️⃣ HYPERLOGLOG (Approximate unique count)
+# ============================================
+
+PFADD hll user1 user2 user3
+PFCOUNT hll
+PFMERGE hll_merged hll1 hll2
+
+
+# ============================================
+# 8️⃣ GEO (Geospatial indexing)
+# ============================================
+
+GEOADD places 13.361389 38.115556 "Palermo"
+GEOPOS places "Palermo"
+GEODIST places "Palermo" "Catania" km
+GEORADIUS places 15 37 200 km
+GEORADIUSBYMEMBER places "Palermo" 200 km
+GEOHASH places "Palermo"
+
+
+# ============================================
+# 9️⃣ STREAMS (Log of key-value messages)
+# ============================================
+
+XADD mystream * name "Alice" age "30"
+XRANGE mystream - +
+XREVRANGE mystream + -
+XREAD COUNT 2 STREAMS mystream 0
+XGROUP CREATE mystream mygroup $ MKSTREAM
+XREADGROUP GROUP mygroup consumer1 STREAMS mystream >
+XACK mystream mygroup id
+XDEL mystream id
+XLEN mystream
+XINFO STREAM mystream
+
+
+# ============================================
+# 🔁 KEY MANAGEMENT COMMANDS
+# ============================================
+
+DEL key
+EXISTS key
+EXPIRE key 60
+PEXPIRE key 1500
+TTL key
+PTTL key
+RENAME key newkey
+RENAMENX key newkey
+TYPE key
+KEYS pattern
+SCAN 0 MATCH pattern COUNT 10
+
+
+# ============================================
+# 🧪 TRANSACTIONS
+# ============================================
+
+MULTI
+SET key "value"
+INCR counter
+EXEC
+
+DISCARD    # Cancel transaction
+WATCH key  # Optimistic lock
+UNWATCH
+
+
+# ============================================
+# 📣 PUB/SUB (Messaging)
+# ============================================
+
+SUBSCRIBE channel1
+PUBLISH channel1 "Hello, subscribers!"
+UNSUBSCRIBE channel1
+PSUBSCRIBE news.*
+PUNSUBSCRIBE news.*
+------------------------------------------------------------------------------------------------------------------
+
+How does Redis persist data to disk?
+------------------------------------------------------------------------------------------------------------------
+
+Can Redis store complex JavaScript objects?
+Ans -> Redis does not natively support storing complex JavaScript objects like objects with methods, nested structures, or class instances. However, you can store them by serializing the object into a string format (usually JSON), and deserialize it when retrieving.
+------------------------------------------------------------------------------------------------------------------
+
+What is the default eviction policy in Redis?
+Ans -> By default, Redis uses the noeviction policy for eviction.
+------------------------------------------------------------------------------------------------------------------
+
+How can you list all keys in Redis?
+Ans -> KEYS *
+------------------------------------------------------------------------------------------------------------------
+
+How does Redis handle memory overflow?
+Ans -> Redis handles memory overflow primarily through a combination of configuration settings and eviction policies. It allows users to set a maximum memory limit, and when this limit is reached, Redis will either return an error on write operations or evict data according to a pre-defined policy. 
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between `SETNX` and `SETEX`?  
+Ans -> `SETNX` is used to set a key only if it does not exist, while `SETEX` is used to set a key with a specific expiration time. 
+------------------------------------------------------------------------------------------------------------------
+
+What is a Redis hash, and how do you use it?  
+Ans -> A Redis hash is a data structure that stores key-value pairs. You can use the `HSET ` command to set a hash field, and the `HGET` command to get the value of a hash field. For example: `HSET myhash field1 "value1"` and `HGET myhash field1`. 
+------------------------------------------------------------------------------------------------------------------
+
+How does Redis handle persistence?  
+Ans -> Redis supports several persistence modes, including RDB (Redis Database) and AOF (Append-Only File). RDB is a snapshot of the Redis database at a specific point in time, while A OF is a log of all the operations performed on the database. You can configure Redis to use either or both of these persistence modes. 
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between RDB (Redis Database Backup) and AOF (Append Only File)?  
+Ans -> RDB is a snapshot of the Redis database at a specific point in time, while AOF is a log of all the operations performed on the database. RDB is used for backup and restore, while AOF is used for replication and recovery. 
 
 ------------------------------------------------------------------------------------------------------------------
 
-17. What are Redis transactions?  
+What is the purpose of `EXPIRE` and `TTL` commands?  
+Ans -> EXPIRE : Sets a timeout on a key. After the timeout, the key is automatically deleted.
+        TTL : Returns the remaining time to live (in seconds) for a key that has a timeout.
+ 
+------------------------------------------------------------------------------------------------------------------
+
+How do you delete all keys in Redis?
+Ans -> 1. Delete All Keys in the Current Database
+        FLUSHDB
+        2. Delete All Keys from All Databases
+        FLUSHALL
+------------------------------------------------------------------------------------------------------------------
+
+What are Redis transactions?  
 
 ------------------------------------------------------------------------------------------------------------------
 
-18. How do you implement atomic operations in Redis?  
+How do you implement atomic operations in Redis?  
 
 ------------------------------------------------------------------------------------------------------------------
-
-19. What is Redis pub/sub, and how does it work?  
-
+What is Redis pub/sub, and how does it work?
+Ans -> Redis Pub/Sub (Publish/Subscribe) is a messaging pattern that enables real-time communication between different parts of your system. It allows you to broadcast messages to multiple receivers (subscribers) via channels, without knowing who the receivers are.
 ------------------------------------------------------------------------------------------------------------------
 
-20. How can you use Redis for caching?  
-
-### **Advanced Questions**  
-
+How can you use Redis for caching?
 ------------------------------------------------------------------------------------------------------------------
 
-21. How does Redis achieve high performance?  
-
+How do you integrate Redis in a NestJS application?
+------------------------------------------------------------------------------------------------------------------
+How do you use Redis as a cache in NestJS?
+------------------------------------------------------------------------------------------------------------------
+How do you send emails using Redis queues in NestJS?
+------------------------------------------------------------------------------------------------------------------
+Explain how Bull (Redis-based job queue) works in NestJS.
+------------------------------------------------------------------------------------------------------------------
+How can you implement rate limiting using Redis?
+------------------------------------------------------------------------------------------------------------------
+What’s the purpose of @nestjs/bull and how is it related to Redis?
+------------------------------------------------------------------------------------------------------------------
+How do you retry failed jobs in Bull Queue?
+------------------------------------------------------------------------------------------------------------------
+What is a Redis stream and how is it different from pub/sub?
+------------------------------------------------------------------------------------------------------------------
+How do you use Redis for session management in Node.js?
+------------------------------------------------------------------------------------------------------------------
+How do you debug Redis queue jobs or cache issues in a NestJS project?
 ------------------------------------------------------------------------------------------------------------------
 
-22. What is the maximum key size and value size in Redis?  
+------------------------------------------------------------------------------------------------------------------
+What are Redis eviction policies and which one would you choose for caching?
+------------------------------------------------------------------------------------------------------------------
+
+How do you monitor Redis performance or memory usage?
+------------------------------------------------------------------------------------------------------------------
+
+Explain LRU (Least Recently Used) and how Redis implements it.
+------------------------------------------------------------------------------------------------------------------
+
+What are the differences between Redis and Memcached?
+------------------------------------------------------------------------------------------------------------------
+
+What is Redis Cluster and when would you use it?
+------------------------------------------------------------------------------------------------------------------
+
+What is the difference between Redis DEL and UNLINK?
+------------------------------------------------------------------------------------------------------------------
+
+How would you design a high-throughput email service using Redis?
+------------------------------------------------------------------------------------------------------------------
+
+Explain Redis persistence: RDB vs AOF.
+------------------------------------------------------------------------------------------------------------------
+
+How do you handle concurrent access (race conditions) in Redis?
+------------------------------------------------------------------------------------------------------------------
+
+What happens to Redis jobs if the server restarts?
+------------------------------------------------------------------------------------------------------------------
+
+How does Redis achieve high performance?
+
+------------------------------------------------------------------------------------------------------------------
+What is the maximum key size and value size in Redis?
+Ans -> In Redis, both keys and values are strings and have a maximum size of 512 MB 
 
 ------------------------------------------------------------------------------------------------------------------
 
@@ -120,5 +406,18 @@
 ------------------------------------------------------------------------------------------------------------------
 
 30. What are the limitations of Redis?  
+------------------------------------------------------------------------------------------------------------------
 
-If you're preparing for a **specific role** (e.g., backend developer, DevOps, or database administrator), let me know so I can suggest **role-specific** Redis questions! 🚀
+Write a Redis-based caching middleware for NestJS.
+------------------------------------------------------------------------------------------------------------------
+
+Create a Bull queue to send delayed emails using Redis.
+------------------------------------------------------------------------------------------------------------------
+
+Implement rate limiting in NestJS using Redis (like 10 requests per IP per minute).
+------------------------------------------------------------------------------------------------------------------
+
+Create a Redis key with TTL and retrieve remaining TTL in code.
+------------------------------------------------------------------------------------------------------------------
+
+Simulate a queue of email jobs using Redis and process it.
