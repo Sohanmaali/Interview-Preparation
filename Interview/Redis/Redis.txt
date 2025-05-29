@@ -304,17 +304,19 @@ Ans -> 1. Delete All Keys in the Current Database
 ------------------------------------------------------------------------------------------------------------------
 
 What are Redis transactions?  
+Ans -> Redis transactions allow you to execute a group of commands in a single, isolated operation. This means that either all the commands in the transaction are executed sequentially without interruption, or none are executed if there is an error before execution starts.
 
 ------------------------------------------------------------------------------------------------------------------
 
 How do you implement atomic operations in Redis?  
-
+Ans -> Atomic operations in Redis mean that a command (or group of commands) is executed completely without being interrupted by other commands. This ensures data consistency, even when multiple clients are accessing Redis at the same time.
 ------------------------------------------------------------------------------------------------------------------
 What is Redis pub/sub, and how does it work?
 Ans -> Redis Pub/Sub (Publish/Subscribe) is a messaging pattern that enables real-time communication between different parts of your system. It allows you to broadcast messages to multiple receivers (subscribers) via channels, without knowing who the receivers are.
 ------------------------------------------------------------------------------------------------------------------
 
 How can you use Redis for caching?
+Ans -> Redis caching means storing frequently-used data in Redis (a fast in-memory database) so your app can access it quickly, without querying a slow database or external API every time.
 ------------------------------------------------------------------------------------------------------------------
 
 How do you integrate Redis in a NestJS application?
@@ -324,8 +326,6 @@ How do you use Redis as a cache in NestJS?
 How do you send emails using Redis queues in NestJS?
 ------------------------------------------------------------------------------------------------------------------
 Explain how Bull (Redis-based job queue) works in NestJS.
-------------------------------------------------------------------------------------------------------------------
-How can you implement rate limiting using Redis?
 ------------------------------------------------------------------------------------------------------------------
 What’s the purpose of @nestjs/bull and how is it related to Redis?
 ------------------------------------------------------------------------------------------------------------------
@@ -340,24 +340,38 @@ How do you debug Redis queue jobs or cache issues in a NestJS project?
 
 ------------------------------------------------------------------------------------------------------------------
 What are Redis eviction policies and which one would you choose for caching?
-------------------------------------------------------------------------------------------------------------------
-
-How do you monitor Redis performance or memory usage?
+Ans -> Redis eviction policies determine how keys are removed from memory when the maximum memory limit is reached. For caching applications, the volatile-lru (least recently used) policy is often a good choice.
 ------------------------------------------------------------------------------------------------------------------
 
 Explain LRU (Least Recently Used) and how Redis implements it.
+Ans -> LRU, or Least Recently Used, is a caching algorithm that evicts the least recently accessed items when the cache is full. Redis implements LRU as a key eviction strategy, meaning it uses LRU to decide which keys to remove from memory when the memory limit is reached. 
 ------------------------------------------------------------------------------------------------------------------
 
 What are the differences between Redis and Memcached?
+Ans -> | Feature                      | Redis                                                                                    | Memcached                                                         |
+| ---------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Data Types**               | Supports strings, hashes, lists, sets, sorted sets, bitmaps, hyperloglogs, streams, etc. | Supports only simple key-value string pairs                       |
+| **Persistence**              | Yes — supports snapshotting (RDB), AOF (Append Only File) for durability                 | No persistence; data is stored only in memory and lost on restart |
+| **Replication**              | Supports master-slave replication                                                        | No native replication (some 3rd party tools exist)                |
+| **Eviction Policies**        | Multiple configurable eviction policies (LRU, LFU, TTL, etc.)                            | LRU eviction only when max memory is reached                      |
+| **Memory Efficiency**        | More memory overhead due to richer data structures                                       | More lightweight and simple, so uses less memory per item         |
+| **Transactions & Scripting** | Supports transactions and Lua scripting                                                  | No transaction or scripting support                               |
+| **Use Cases**                | Cache, message broker, real-time analytics, session store, leaderboards, queues, etc.    | Simple caching layer for frequently accessed data                 |
+| **Performance**              | Very fast, slightly slower than Memcached due to richer features                         | Extremely fast for simple get/set operations                      |
+| **Clustering & Scaling**     | Supports clustering with sharding                                                        | No built-in clustering (client-side sharding required)            |
+| **Expiration of Keys**       | Yes, supports key TTLs                                                                   | Yes, supports key TTLs                                            |
+
 ------------------------------------------------------------------------------------------------------------------
 
 What is Redis Cluster and when would you use it?
+Ans -> Redis Cluster is a built-in feature of Redis that provides automatic sharding and high availability by distributing data across multiple Redis nodes (servers).
 ------------------------------------------------------------------------------------------------------------------
 
 What is the difference between Redis DEL and UNLINK?
-------------------------------------------------------------------------------------------------------------------
+Ans -> DEL removes the key and its associated data right away, which can cause Redis to pause if the key is very large.
 
-How would you design a high-throughput email service using Redis?
+UNLINK removes the key from the keyspace instantly but frees the memory asynchronously in a separate thread, so Redis doesn’t block.
+
 ------------------------------------------------------------------------------------------------------------------
 
 Explain Redis persistence: RDB vs AOF.
@@ -377,47 +391,57 @@ Ans -> In Redis, both keys and values are strings and have a maximum size of 512
 
 ------------------------------------------------------------------------------------------------------------------
 
-23. How do you handle Redis cluster sharding?  
+How do you handle Redis cluster sharding?
 
 ------------------------------------------------------------------------------------------------------------------
 
-24. What are Redis pipelines, and how do they work?  
+What are Redis pipelines, and how do they work?
+Ans -> Redis pipelining is a technique to send multiple commands to the Redis server at once without waiting for the response of each command individually.
 
 ------------------------------------------------------------------------------------------------------------------
 
-25. What is the difference between replication and clustering in Redis?  
+What is the difference between replication and clustering in Redis?  
 
 ------------------------------------------------------------------------------------------------------------------
 
-26. What are Redis Sentinel and its use cases?  
+What are Redis Sentinel and its use cases?
+Ans -> Redis Sentinel is a system designed to provide high availability for Redis. It monitors Redis instances, detects failures, and automatically performs failover to keep your Redis service running smoothly without manual intervention.
 
 ------------------------------------------------------------------------------------------------------------------
 
-27. How does Redis handle memory management?  
+How does Redis handle memory management?
+Ans -> Redis is an in-memory data store, so it keeps all data in RAM for fast access. Managing memory efficiently is crucial because RAM is limited.
 
 ------------------------------------------------------------------------------------------------------------------
 
-28. What is `LRU` and `LFU` cache eviction policy?  
+What is `LRU` and `LFU` cache eviction policy?
+Ans -> What is LRU (Least Recently Used)?
+LRU removes the cache entries that haven't been used for the longest time.
+The idea: If a key hasn't been accessed recently, it's less likely to be used soon, so it gets evicted first when memory is full.
+Example: If you access keys A, B, C in order, and later access A again, B is now the least recently used if you need to evict.
+
+What is LFU (Least Frequently Used)?
+LFU removes the cache entries that have been used the least number of times.
+The idea: If a key has a low access frequency over time, it’s less important and can be evicted first.
+Example: If key A is accessed 10 times and key B is accessed 3 times, B is evicted before A when space is needed.
 
 ------------------------------------------------------------------------------------------------------------------
 
-29. How do you monitor Redis performance?  
+How do you monitor Redis performance?
 
 ------------------------------------------------------------------------------------------------------------------
 
-30. What are the limitations of Redis?  
+What are the limitations of Redis?
+Ans -> Limited by RAM – You can only store as much data as your memory allows.
+Not ideal for complex queries – No SQL, no joins, just key-value access.
+Weak security – Basic password protection, not for public access.
+Single-threaded – Can handle only one command at a time (per core).
+Optional persistence – You might lose data if Redis crashes unexpectedly.
+Eviction risk – If memory is full, it may delete old data automatically.
+
 ------------------------------------------------------------------------------------------------------------------
 
 Write a Redis-based caching middleware for NestJS.
 ------------------------------------------------------------------------------------------------------------------
 
-Create a Bull queue to send delayed emails using Redis.
-------------------------------------------------------------------------------------------------------------------
-
 Implement rate limiting in NestJS using Redis (like 10 requests per IP per minute).
-------------------------------------------------------------------------------------------------------------------
-
-Create a Redis key with TTL and retrieve remaining TTL in code.
-------------------------------------------------------------------------------------------------------------------
-
-Simulate a queue of email jobs using Redis and process it.
