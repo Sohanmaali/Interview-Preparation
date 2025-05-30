@@ -1,7 +1,27 @@
 What is Socket.IO, and how does it work?
+Ans -> Socket.IO is a JavaScript library that enables real-time, bi-directional communication between the client and server.
+
+It works over WebSockets but also provides fallback options (like long polling) when WebSockets are not available.
+
 ------------------------------------------------------------------------------------------------------------------
 
 What is the difference between WebSockets and Socket.IO?
+Ans -> WebSockets (Native)
+Protocol: A browser API/protocol (ws://)
+Low-level: You manually manage connection, reconnection, message format, etc.
+No built-in features like rooms, broadcasting, etc.
+No fallback – if WebSocket fails, connection is lost.
+Works only over WebSocket-supported networks.
+
+✅ Socket.IO
+Library built on top of WebSockets (and other transports like polling).
+High-level: Comes with many built-in features:
+Automatic reconnection
+Broadcasting
+Rooms & namespaces
+Event-based communication
+Fallbacks (polling if WebSocket fails)
+
 ------------------------------------------------------------------------------------------------------------------
 
 How do you install and set up Socket.IO in a Node.js application?
@@ -11,12 +31,27 @@ Explain the basic flow of a Socket.IO connection.
 ------------------------------------------------------------------------------------------------------------------
 
 What are events in Socket.IO, and how do you emit and listen for them?
+Ans -> Events are custom names used to send and receive data between client and server.
+Socket.IO uses an event-driven model, just like addEventListener in browsers.
 ------------------------------------------------------------------------------------------------------------------
 
 How do you send and receive messages using Socket.IO?
 ------------------------------------------------------------------------------------------------------------------
 
 What are namespaces in Socket.IO, and why are they used?
+Ans -> Namespaces are separate communication channels on the same Socket.IO server.
+
+They allow you to split the connection into multiple logical endpoints.
+
+Each namespace has its own event handlers and clients.
+
+✅ Why use Namespaces?
+To organize your code and separate concerns.
+
+To reduce unnecessary data sent to clients who don’t need it.
+
+To manage different parts of an app independently (e.g., /chat, /news).
+
 ------------------------------------------------------------------------------------------------------------------
 
 What are rooms in Socket.IO? How do they differ from namespaces?
