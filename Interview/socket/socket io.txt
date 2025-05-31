@@ -55,29 +55,66 @@ To manage different parts of an app independently (e.g., /chat, /news).
 ------------------------------------------------------------------------------------------------------------------
 
 What are rooms in Socket.IO? How do they differ from namespaces?
+Ans -> Rooms are groups within a namespace that allow you to send messages to a selected group of clients.
+
 ------------------------------------------------------------------------------------------------------------------
 
 How do you disconnect a client from a Socket.IO server?
 ------------------------------------------------------------------------------------------------------------------
 
 What are the transport methods used by Socket.IO?
+Ans -> Socket.IO uses two main transport methods to send and receive data between the client and server:
+
+WebSockets
+A full-duplex, real-time connection.
+Preferred and most efficient transport.
+Used if the browser and network support it.
+
+HTTP Long Polling
+A fallback method.
+Client sends a request and waits for server response.
+Used when WebSocket is not supported.
+
 ------------------------------------------------------------------------------------------------------------------
-server side events?
+what is server side events?
 ------------------------------------------------------------------------------------------------------------------
 client side events?
 ------------------------------------------------------------------------------------------------------------------
-what is namespaces in socket io?
-------------------------------------------------------------------------------------------------------------------
 how to create or use namespaces?
+Ans -> A Namespace is a separate communication channel in Socket.IO.
+It helps organize your sockets — like having different sections in your app (/chat, /admin, etc.).
+
+const io = require('socket.io')(3000);
+
+// Create a namespace: /chat
+const chatNamespace = io.of('/chat');
+
+chatNamespace.on('connection', (socket) => {
+  console.log('User connected to /chat');
+
+  socket.on('chatMessage', (msg) => {
+    console.log('Message:', msg);
+    // send to everyone in /chat
+    chatNamespace.emit('chatMessage', msg);
+  });
+});
+
+// Create another namespace: /admin
+const adminNamespace = io.of('/admin');
+
+adminNamespace.on('connection', (socket) => {
+  console.log('Admin connected');
+});
+
 ------------------------------------------------------------------------------------------------------------------
 What are Events?
 ------------------------------------------------------------------------------------------------------------------
 What are the pre reserved events of socket io?
 ------------------------------------------------------------------------------------------------------------------
 how to create a custome event?
+Ans -> A custom event is a user-defined event name you create to send and receive data between the client and server.
 ------------------------------------------------------------------------------------------------------------------ 
 
-🔹 Intermediate-Level Questions
 How do you broadcast a message to all connected clients?
 ------------------------------------------------------------------------------------------------------------------
 
@@ -96,6 +133,16 @@ io.to(room).emit()
 ------------------------------------------------------------------------------------------------------------------
 
 How can you handle reconnections in Socket.IO?
+Ans ->  Automatic Reconnection (Client-Side)
+By default, Socket.IO automatically tries to reconnect if the connection drops.
+You can configure reconnection options when creating the client socket:
+const socket = io('http://localhost:3000', {
+  reconnection: true,          // Enable auto reconnection (default: true)
+  reconnectionAttempts: 5,     // Max number of reconnection attempts (default: Infinity)
+  reconnectionDelay: 1000,     // Initial delay between attempts in ms
+  reconnectionDelayMax: 5000,  // Max delay between attempts in ms
+  timeout: 20000,              // Timeout before a connection attempt fails
+});
 ------------------------------------------------------------------------------------------------------------------
 
 How do you implement error handling in Socket.IO?
@@ -105,44 +152,17 @@ How can you pass data when a user connects to a Socket.IO server?
 ------------------------------------------------------------------------------------------------------------------
 
 How do you authenticate a user before allowing a Socket.IO connection?
+Ans -> Socket.IO supports middleware that runs before the connection is established.
+
+You can check user credentials (like a token) in this middleware and accept or reject the connection.
+
 ------------------------------------------------------------------------------------------------------------------
 
-How do you store and manage user sessions in a Socket.IO application?
+How do you store and manage user sessions in a Socket.IO application?```
 ------------------------------------------------------------------------------------------------------------------
 
 How do you implement middleware in Socket.IO?
 ------------------------------------------------------------------------------------------------------------------
 
 Can Socket.IO be used with a React or Angular frontend? How?
-------------------------------------------------------------------------------------------------------------------
-
-🔹 Advanced-Level Questions
-How do you scale a Socket.IO application across multiple servers?
-------------------------------------------------------------------------------------------------------------------
-
-What is Socket.IO Redis Adapter, and when do you need it?
-------------------------------------------------------------------------------------------------------------------
-
-How do you prevent memory leaks in a Socket.IO server?
-------------------------------------------------------------------------------------------------------------------
-
-How does Socket.IO handle backpressure when there are too many messages?
-------------------------------------------------------------------------------------------------------------------
-
-How do you implement rate limiting in a Socket.IO application?
-------------------------------------------------------------------------------------------------------------------
-
-What are some security best practices for using Socket.IO?
-------------------------------------------------------------------------------------------------------------------
-
-How can you integrate Socket.IO with JWT authentication?
-------------------------------------------------------------------------------------------------------------------
-
-How does Socket.IO work with HTTPS and SSL?
-------------------------------------------------------------------------------------------------------------------
-
-How do you debug a Socket.IO connection issue?
-------------------------------------------------------------------------------------------------------------------
-
-What are some alternatives to Socket.IO, and when would you use them?
 ------------------------------------------------------------------------------------------------------------------

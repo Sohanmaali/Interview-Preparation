@@ -342,9 +342,10 @@ Explain event delegation.
 ------------------------------------------------------------------------------------------------------------------
 
 What is the difference between synchronous and asynchronous code?
-------------------------------------------------------------------------------------------------------------------
-
-How does JavaScript handle concurrency (Event Loop, Call Stack, and Web APIs)?
+Ans -> Synchronous Code:
+Code that runs one line at a time, and each step waits for the previous one to finish.
+🔹 Asynchronous Code:
+Code that can start a task and move on without waiting for it to finish. The result comes later, when it's ready.
 ------------------------------------------------------------------------------------------------------------------
 
 What are the different ways to clone an object in JavaScript?
