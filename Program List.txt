@@ -4,6 +4,7 @@ PROJECT’s
 2.	Aadhar card
 3.	Ayushman card
 4.	Vaccinations card
+
 OPERATOR
 
 1.	WAP to add two int value
@@ -80,19 +81,31 @@ MENSURATION
 
 19.	WAP to calculate width of rectangle
 
+8.	WAP to find sum of first and last digit any five digit numb
+
+9.	WAP to reverse of any four digit numb
+
+
+10.	WAP to convert to lower case to upper case
+
+11.	WAP to convert to upper case to lower case
+
+12.	WAP to convert char to Assci value
+
+13.	WAP to convert temperature from Fahrenheit to Celsius and Celsius to Fahrenheit. 
+
+14.	WAP to input day number and print week day.
+
+15.	WAP to count total number of notes in given amount
+
+16.	WAP count total number of year & month & Week And day numb in given Day
 
 
 IF ELSE
 
-
-
 1.	WAP to check even odd numb
 
 2.	WAP to find greater among two number
-
-1.	WAP to find greater among three number
-
-2.	WAP to check eligible for voting or not
 
 3.	WAP to check negative positive or zero
 
@@ -104,9 +117,7 @@ IF ELSE
 
 7.	WAP to check to numb is greater or not
 
-8.	WAP to find sum of first and last digit any five digit numb
-
-9.	WAP to reverse of any four digit numb
+8.	WAP to check eligible for voting or not
 
 10.	WAP to check inter char Is upper case or lower case
 
@@ -114,33 +125,27 @@ IF ELSE
 
 12.	WAP to take any age and check age criteria (child, teen, young, old)
 
-13.	WAP to convert to lower case to upper case
+13.	WAP to find greater among three number
 
-14.	WAP to convert to upper case to lower case
-
-15.	WAP to convert char to Assci value
+14.	WAP to check elder men among three men
 
 16.	WAP to calculate division of a student
 
-17.	WAP to Check given character is vowel or not
+15.	WAP to check whether the triangle is valid or not
 
-18.	WAP to perform arithmetic operation (Calculator)
+16.	WAP to Check given character is vowel or not
 
-19.	WAP to check given year is a leap year or not
+17.	WAP to perform arithmetic operation (Calculator)
 
-20.	WAP to convert temperature from Fahrenheit to Celsius and Celsius to Fahrenheit. 
+18.	WAP to check given year is a leap year or not
 
-21.	WAP to check whether the triangle is equilateral, scalene, or isosceles. 
+19.	WAP to check whether the triangle is equilateral, scalene, or isosceles. 
 
-22.	WAP to check whether a number is divisible by 5 and 11 or not.
+20.	WAP to check whether a number is divisible by 5 and 11 or not.
 
-23.	WAP to input day number and print week day.
+21.	WAP calculate profit or loss.
 
-24.	WAP to count total number of notes in given amount
-
-25.	WAP calculate profit or loss.
-
-26.	WAP to take input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer.
+22.	WAP to take input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer.
 
 	Calculate percentage and grade according to following:
 
@@ -156,18 +161,11 @@ IF ELSE
 
 	Percentage < 40%: Grade F
 
-27.	WAP to input electricity unit charges and calculate total electricity bill according to the given Condition: For first 100 units Rs. 5/unit for next 101 to 200 units Rs. 7/unit for next 201 to 300 units Rs. 12.0/unit for unit above 300 Rs. 16/unit 
+23.	WAP to input electricity unit charges and calculate total electricity bill according to the given Condition: For first 100 units Rs. 5/unit for next 101 to 200 units Rs. 7/unit for next 201 to 300 units Rs. 12.0/unit for unit above 300 Rs. 16/unit 
 
-28.	WAP to take input month number and print month name.
+24.	WAP to take input month number and print month name.
 
-29.	WAP count total number of year & month & Week And day numb in given Day
-
-30.	WAP to input basic salary of an employee and calculate its Gross salary according to 12.5
-
-31.	WAP to check whether the triangle is valid or not
-
-32.	WAP to check elder men among three men
-
+25.	WAP to input basic salary of an employee and calculate its Gross salary according to 12.5
 
 
 SWITCH
