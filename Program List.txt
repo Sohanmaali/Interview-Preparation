@@ -1,4 +1,5 @@
 
+
 PROJECT’s
 1.	Mark sheet
 2.	Aadhar card
@@ -135,7 +136,7 @@ IF ELSE
 
 16.	WAP to Check given character is vowel or not
 
-17.	WAP to perform arithmetic operation (Calculator)
+17.	WAP to perform arithmet/ic operation (Calculator)
 
 18.	WAP to check given year is a leap year or not
 
@@ -152,8 +153,8 @@ IF ELSE
 	Percentage >= 90%: Grade A
 
 	Percentage >= 80%: Grade B
-
-	Percentage >= 70%: Grade C
+ 
+	Percentage >= 70%: Grade C.
 
 	Percentage >= 60%: Grade D
 
@@ -163,11 +164,11 @@ IF ELSE
 
 23.	WAP to input electricity unit charges and calculate total electricity bill according to the given Condition: For first 100 units Rs. 5/unit for next 101 to 200 units Rs. 7/unit for next 201 to 300 units Rs. 12.0/unit for unit above 300 Rs. 16/unit 
 
-24.	WAP to take input month number and print month name.
+ 24.	WAP to take input month number and print month name.
 
 25.	WAP to input basic salary of an employee and calculate its Gross salary according to 12.5
 
-
+  
 SWITCH
 
 1.	WAP to calculate area of circle rectangle 
@@ -192,9 +193,9 @@ TERNARY
 
 5.	WAP to check greatest numb in three numb
 
-6.	WAP to check profit or loss
+6.	WAP to check profit or loss 
 
-7.	WAP to check Enter numb is divisively or not any numb
+7.	WAP to check Enter numb is divisively or not any numb 
 
 LOOP
 

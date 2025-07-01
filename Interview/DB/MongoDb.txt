@@ -273,3 +273,40 @@ Ans-> Yes, you can combine skip() with other query modifiers. For example, db.co
 What is a Cursor in MongoDB?
 Ans-> In MongoDB, a cursor is a powerful object that enables us to iterate over the results of a query. When we execute a query using methods like find(), MongoDB returns a cursor object that allows you to efficiently retrieve and process documents from the database one by one. Cursors provide various methods for manipulating and accessing query results in MongoDB, making them essential for working with large datasets and complex queries.
 ------------------------------------------------------------------------------------------------------------------
+
+What is the difference between findOne() and findById() in Mongoose?
+
+54. How do you handle database connections efficiently in Node.js?
+Ans ->
+
+55. What is indexing in databases, and how does it improve performance?
+Ans ->
+
+------------------------------------------------------------------------------------------------------------------
+
+56. How do you implement transactions in MongoDB?
+Ans ->
+
+------------------------------------------------------------------------------------------------------------------
+
+57. What is the difference between populate() and join?
+Ans ->
+
+------------------------------------------------------------------------------------------------------------------
+
+58. How do you use PostgreSQL with Node.js?
+Ans ->
+
+------------------------------------------------------------------------------------------------------------------
+
+66. What is SQL Injection, and how can you prevent it?
+Ans ->
+
+------------------------------------------------------------------------------------------------------------------
+77. How do you optimize database queries for better performance?
+Ans ->
+
+------------------------------------------------------------------------------------------------------------------
+
+59. How do you connect a MongoDB database to a Node.js application?
+Ans ->

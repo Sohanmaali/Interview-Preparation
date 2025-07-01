@@ -1,19 +1,19 @@
-hat is React.Js? Explain the Features of React.js
+What is React.Js? Explain the Features of React.js
 Ans -> React.js is a JavaScript library used to build interactive and dynamic web pages, it is developt by Fb And released in May 2013. 
 
-hat is difference between Actual DOM and Virtual DOM?
+What is difference between Actual DOM and Virtual DOM?
 Ans -> DOM : DOM stand for document object model, it is a programming interface, thats represent structure of html node tree, 
 		Virtual DOM : The Virtual DOM is an in-memory representation of the actual DOM elements. It is a lightweight copy of the real DOM and it is used to efficiently update the user interface by making changes in the Virtual DOM first, then applying only the necessary updates to the real DOM. This process makes rendering faster and improves performance.
 
-hat is component in react?
+What is component in react?
 Ans -> A component is an independent, reusable Piece of code, which divides the UI into smaller pieces. For example, if we were building the UI of React website using Reactjs we can break its UI into smaller parts is called components.
 
-ow many types of components in react? Explain class component and functional component?
+how many types of components in react? Explain class component and functional component?
 Ans -> Functional components are just JavaScript functions that accept props (properties) as arguments and return React elements. Functional components are also known as stateless components because they simply accept data and display them. They are simpler and more lightweight compared to class components. They don't have their own state or lifecycle methods.
 
 		Class components are ES6 classes that extend from React.Component. They have their own state and lifecycle methods (like componentDidMount, componentDidUpdate, componentWillUnmount, etc.).
 
-xplain the life cycle of class component (Mounting, Updating, Unmounting)
+Explain the life cycle of class component (Mounting, Updating, Unmounting)
 Ans -> Mounting :
 			constructor(): This is the first method called when a component is created. It's used for initializing state and binding event handlers.
 			render(): This method is required and returns the JSX (UI elements) to be rendered on the screen.
@@ -25,7 +25,7 @@ Ans -> Mounting :
 		Unmounting:
 			componentWillUnmount(): This method is called just before the component is removed from the DOM. It's used for cleanup tasks like removing event listeners or cancelling network requests.
 			
-ow to implement life cycle phase (Mounting, Updating, Unmounting) using functional component.
+How to implement life cycle phase (Mounting, Updating, Unmounting) using functional component.
 Ans -> Mounting : To replicate the componentDidMount() lifecycle method:
 		import React, { useEffect } from 'react';
 
@@ -81,16 +81,16 @@ import React, { useEffect } from 'react';
 		);
 	}
 
-hat do you mean by stateful and stateless component ?
+What do you mean by stateful and stateless component ?
 Ans -> stateful : Stateful components, also known as class components in ReactJS, A stateful component is a React component that maintains its own state. This state can be changed over time, and the component will re-render when the state changes. Stateful components are typically used to represent data that changes over time, 
 
 Stateless components, also known as functional components, do not manage their own state. They receive data and callbacks as props and render based on that input. These components are typically written as simple functions.
 
-hat is the difference between state and props.
+What is the difference between state and props.
 Ans -> State : State is a built-in object in a React component where we can store property values that belong to that component.
 		Props : Props is a special keyword in React that stands for properties and is used for passing data from one component to another component. They are similar to function arguments in that they allow you to pass values from one component to another. Props are immutable, which means that once they are passed to a component, they cannot be changed.
 
-hat is difference between an Element and components ?
+What is difference between an Element and components ?
 Ans -> Elements : Elements are the smallest building blocks of a React application. They are plain JavaScript objects that describe what to render on the screen. Elements are immutable, meaning once created, they cannot be changed.
 		components : Components are reusable pieces of code that encapsulate the structure, behavior, and state of a React application. Components can be defined as functions or classes.
 
@@ -141,7 +141,7 @@ Purpose: To reuse component logic across multiple components, enhancing them wit
 What is protected/private route in react.js
 Ans -> A protected route in React JS is a route that can only be accessed by users who are authenticated in. This is done by using the useAuth hook to check if the user is authenticated in before rendering the component. If the user is not logged in, they will be redirected to the login page.
 
-hat are react fragments?
+What are react fragments?
 Ans -> React Fragments are a way to group a list of children without adding extra nodes to the DOM. They are useful when you need to return multiple elements from a component.
  
 What are the hooks in react.js? Explain some hooks which used in your project?
