@@ -115,7 +115,6 @@ It can be in one of three states: pending, fulfilled, or rejected.
 Ans-> Callback Hell (also known as "Pyramid of Doom") is a situation in JavaScript where multiple nested callback functions make the code hard to read, maintain, and debug. This happens when dealing with multiple asynchronous operations that depend on each other.
 ------------------------------------------------------------------------------------------------------------------
 
-
 13. What is `async` and `await`? How do you use them?
 And-> async and await are modern JavaScript features that make working with Promises easier. They allow us to write asynchronous code in a way that looks and behaves more like synchronous code, making it cleaner, more readable, and easier to debug.
 The async keyword is used to declare a function that always returns a Promise.
@@ -129,8 +128,6 @@ Ans-> A closure is a function that remembers the variables from its outer scope,
 
 In simple terms, a closure allows a function to access variables from its parent function, even after the parent function has returned.
 ------------------------------------------------------------------------------------------------------------------
-
-
 
 15. What is an Immediately Invoked Function Expression (IIFE)?
 Ans-> An Immediately Invoked Function Expression (IIFE) is a JavaScript function that runs immediately after it is defined.
@@ -237,7 +234,6 @@ Hoisting: Variables declared with const are hoisted, but accessing them before d
 
 20. What is event bubbling and event capturing?
 ------------------------------------------------------------------------------------------------------------------
-
 
 21. What are primitive data types in JavaScript?  
 ------------------------------------------------------------------------------------------------------------------

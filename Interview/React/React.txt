@@ -1,17 +1,22 @@
 What is React.Js? Explain the Features of React.js
 Ans -> React.js is a JavaScript library used to build interactive and dynamic web pages, it is developt by Fb And released in May 2013. 
+------------------------------------------------------------------------------------------------------------------
 
 What is difference between Actual DOM and Virtual DOM?
 Ans -> DOM : DOM stand for document object model, it is a programming interface, thats represent structure of html node tree, 
 		Virtual DOM : The Virtual DOM is an in-memory representation of the actual DOM elements. It is a lightweight copy of the real DOM and it is used to efficiently update the user interface by making changes in the Virtual DOM first, then applying only the necessary updates to the real DOM. This process makes rendering faster and improves performance.
+------------------------------------------------------------------------------------------------------------------
 
 What is component in react?
-Ans -> A component is an independent, reusable Piece of code, which divides the UI into smaller pieces. For example, if we were building the UI of React website using Reactjs we can break its UI into smaller parts is called components.
+Ans -> A component is an independent, reusable Piece of code, which divides the UI into smaller pieces. For example, if we were 
+building the UI of React website using Reactjs we can break its UI into smaller parts is called components.
+------------------------------------------------------------------------------------------------------------------
 
 how many types of components in react? Explain class component and functional component?
 Ans -> Functional components are just JavaScript functions that accept props (properties) as arguments and return React elements. Functional components are also known as stateless components because they simply accept data and display them. They are simpler and more lightweight compared to class components. They don't have their own state or lifecycle methods.
 
 		Class components are ES6 classes that extend from React.Component. They have their own state and lifecycle methods (like componentDidMount, componentDidUpdate, componentWillUnmount, etc.).
+------------------------------------------------------------------------------------------------------------------
 
 Explain the life cycle of class component (Mounting, Updating, Unmounting)
 Ans -> Mounting :
@@ -24,7 +29,9 @@ Ans -> Mounting :
 			render(): As mentioned earlier, the render() method is called to update the UI with the new state or props.
 		Unmounting:
 			componentWillUnmount(): This method is called just before the component is removed from the DOM. It's used for cleanup tasks like removing event listeners or cancelling network requests.
-			
+
+------------------------------------------------------------------------------------------------------------------
+
 How to implement life cycle phase (Mounting, Updating, Unmounting) using functional component.
 Ans -> Mounting : To replicate the componentDidMount() lifecycle method:
 		import React, { useEffect } from 'react';
@@ -80,42 +87,52 @@ import React, { useEffect } from 'react';
 			</div>
 		);
 	}
+------------------------------------------------------------------------------------------------------------------
 
 What do you mean by stateful and stateless component ?
 Ans -> stateful : Stateful components, also known as class components in ReactJS, A stateful component is a React component that maintains its own state. This state can be changed over time, and the component will re-render when the state changes. Stateful components are typically used to represent data that changes over time, 
 
 Stateless components, also known as functional components, do not manage their own state. They receive data and callbacks as props and render based on that input. These components are typically written as simple functions.
+------------------------------------------------------------------------------------------------------------------
 
 What is the difference between state and props.
 Ans -> State : State is a built-in object in a React component where we can store property values that belong to that component.
 		Props : Props is a special keyword in React that stands for properties and is used for passing data from one component to another component. They are similar to function arguments in that they allow you to pass values from one component to another. Props are immutable, which means that once they are passed to a component, they cannot be changed.
+------------------------------------------------------------------------------------------------------------------
 
 What is difference between an Element and components ?
 Ans -> Elements : Elements are the smallest building blocks of a React application. They are plain JavaScript objects that describe what to render on the screen. Elements are immutable, meaning once created, they cannot be changed.
 		components : Components are reusable pieces of code that encapsulate the structure, behavior, and state of a React application. Components can be defined as functions or classes.
+------------------------------------------------------------------------------------------------------------------
 
 What happen when we call setState method
 Ans -> When we call the setState method in a React component, it updates the component's state and re-render component. This triggers React to compare the new state with the previous state, determine what changes are needed, and efficiently update the UI to reflect those changes.
+------------------------------------------------------------------------------------------------------------------
 
 Can we re-render component without using setState
 Ans -> The forceUpdate method forcible re-render the component. When forceUpdate is called it directly calls the render method by skiping other lifecycle methods and update the interface.
+------------------------------------------------------------------------------------------------------------------
 
 What is eager loading and lazy loading in react?
 Ans -> Eager loading : Eager loading means loading components or resources as soon as the app starts or when the component is first rendered. Everything is fetched upfront, leading to faster initial rendering but larger initial load times.
 
 		Lazy loading : Lazy loading means loading components or resources only when they are needed. This reduces the initial load time by splitting the app into smaller chunks that are loaded on demand, but it might introduce slight delays when these components are first loaded.
 		const LazyLoadedComponent = React.lazy(() => import('./LazyLoadedComponent'));
+------------------------------------------------------------------------------------------------------------------
 
 How we can load the components eagrly and lazily?
 Ans -> React provides a built-in way to implement lazy loading using React's lazy function and the Suspense component. With lazy loading, we can import components dynamically using import(), which returns a promise that resolves to the module containing the requested component.
+------------------------------------------------------------------------------------------------------------------
 
 What is error boundaries in react?
 Ans -> Error boundaries are a React components that allows developers to catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the entire application. They are a way to handle exceptions in a React application gracefully.
+------------------------------------------------------------------------------------------------------------------
 
 What is Routing How to implement routing in react?
 Ans -> Routing is a mechanism that allows you to navigate between different pages in over React application. It is implemented using the react-router-dom library.
 
- is use of BrowserRouter and Routes?
+------------------------------------------------------------------------------------------------------------------
+what is use of BrowserRouter and Routes?
 Ans ->	BrowserRouter : BrowserRouter in React is a component that helps manage routing within your application. Here’s what it does
 		Routers : Routes is a component used to define the routing configuration for your application. It's typically used inside a BrowserRouter and serves as a declarative way to specify what components should render based on the current URL path.
 		Ex. ->  <Routes>
@@ -128,6 +145,7 @@ Ans ->	BrowserRouter : BrowserRouter in React is a component that helps manage r
           </Route>
         </Route>
       </Routes>
+------------------------------------------------------------------------------------------------------------------
 
 What is props drilling in react?
 Ans -> Props drilling is a process of passing props from a parent component to a child component, and then from that child component to another child component.
@@ -137,17 +155,21 @@ Ans -> Props drilling is a process of passing props from a parent component to a
 What is Higher order component(HOC)
 Ans -> HOC : A Higher Order Component (HOC) is a function that takes a component as an argument and returns a new component with additional props or behavior.
 Purpose: To reuse component logic across multiple components, enhancing them without modifying their original implementation.
+------------------------------------------------------------------------------------------------------------------
 
 What is protected/private route in react.js
 Ans -> A protected route in React JS is a route that can only be accessed by users who are authenticated in. This is done by using the useAuth hook to check if the user is authenticated in before rendering the component. If the user is not logged in, they will be redirected to the login page.
+------------------------------------------------------------------------------------------------------------------
 
 What are react fragments?
 Ans -> React Fragments are a way to group a list of children without adding extra nodes to the DOM. They are useful when you need to return multiple elements from a component.
+------------------------------------------------------------------------------------------------------------------
  
 What are the hooks in react.js? Explain some hooks which used in your project?
 Ans -> Hooks are functions in React that allow functional components to use state, lifecycle methods, context, and other React features without needing to write a class. These are newly added features made available in React 16.8 version. They enable developers to use stateful logic in functional components.
+------------------------------------------------------------------------------------------------------------------
 
-23. Explain following
+Explain following
       a. useState
       b. UseLocation
       c. useNavigate
@@ -177,14 +199,17 @@ Ans -> a. useState : Definition: A hook in React that allows functional componen
 		i. useSelector:Definition: A hook in Redux that allows selecting a part of the Redux store state in a React component.
 	
 		j. useEffect:Definition: A hook in React that allows performing side effects in functional components, such as data fetching or DOM manipulation.
+------------------------------------------------------------------------------------------------------------------
 
 in which life cycle method you would like to make a http call
 Ans -> in class components, the ideal lifecycle method to make HTTP calls (such as fetching data from an API) is componentDidMount. This method is called immediately after a component is mounted (i.e., inserted into the DOM tree).
+------------------------------------------------------------------------------------------------------------------
 
 Where to make a api/http/network call in functional components
 Ans -> In functional components, you typically make API/HTTP/network calls using the useEffect hook. The useEffect hook is used for handling side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM. You can use it to fetch data from an API when the component mounts, updates, or unmounts.
+------------------------------------------------------------------------------------------------------------------
 
- Write a code using useEffect to implement mounting, updating and unmounting in functional components.
+Write a code using useEffect to implement mounting, updating and unmounting in functional components.
 Ans -> import React, { useState, useEffect } from 'react';
 
 function MyComponent() {
@@ -219,63 +244,80 @@ function MyComponent() {
 
 export default MyComponent;
 
+------------------------------------------------------------------------------------------------------------------
 
 Can we update props?
 Ans -> props are immutable, meaning once they are set by the parent component, they cannot be changed or modified by the child component. This immutable nature ensures predictable behavior of components.
+------------------------------------------------------------------------------------------------------------------
 
 How to update parent state data from child component ?
 Ans -> To update the state of a parent component from a child component in React, you typically pass a function as a prop from the parent to the child. This function, when called in the child component, updates the state of the parent component.
+------------------------------------------------------------------------------------------------------------------
 
 What is context api in react.js?
-Ans -> The Context API is a way to share data that can be accessed by any component without having to pass props down through the component tree. It is a more efficient way to share data than prop drilling, which can make your code difficult to read and maintain.
+Ans ->In React, Context is a built-in feature that allows you to share data (like global state, themes, user authentication, etc.) between components without having to manually pass props through every level of the component tree.
+------------------------------------------------------------------------------------------------------------------
 
 What is redux ? Explain the components of redux (Store, Action, Reducer) ?
 Ans -> Redux is a state management library that allows you to manage the state of your JavaScript applications globally.
 		Action: Actions are JavaScript object that contains information. Actions are the only source of information for the store.
 		Reducer: Reducers are the pure functions that contain the logic and calculation that needed to be performed on the state.
 		Store: Store is an object which provides the state of the application. This object is accessible with help of the provider in the files of the project.
+------------------------------------------------------------------------------------------------------------------
 
 What is difference between useState and useReducer
 Ans -> useState: This hook is used to manage simple state changes in a component. It takes an initial state value and returns an array with two elements the current state value, and a function to update the state. When the update function is called, React will re-render the component with the new state value. The useState hook is a more straightforward and easier-to-use option for managing state when you don't need complex logic.
+------------------------------------------------------------------------------------------------------------------
 
 useReducer: This hook is used to manage more complex state changes and is useful when you need to implement a more complex state transition or data flow. It takes a reducer function, an initial state value, and returns an array with two elements the current state value, and a function to dispatch an action that will trigger the reducer function. The reducer function takes in the current state and an action object and returns the new state. The useReducer hook provides a more flexible and powerful way to manage state, especially when you have complex state transitions and multiple actions to handle.
+------------------------------------------------------------------------------------------------------------------
 
 What is call, bind, apply in js
 Ans -> 
+------------------------------------------------------------------------------------------------------------------
 
 Difference between context api and redux?
 Ans -> useContext is a hook that provides a way to pass data through the component tree without manually passing props down through each nested component. It is designed to share data that can be considered global data for a tree of React components, such as the current authenticated user or theme(e.g. color, paddings, margins, font-sizes).
 Redux : Redux is a state managing library used in JavaScript apps. It is very popular for React and React-Native. It simply manages the state and data of your application.
 Building Parts of ReduxRedux
 Redux is a state managing library used in JavaScript apps. It is very popular for React and React-Native. It simply manages the state and data of your application.
+------------------------------------------------------------------------------------------------------------------
 
 ding Parts of Redux
 Ans -> Action: Actions are JavaScript object that contains information. Actions are the only source of information for the store.
 		Reducer: Reducers are the pure functions that contain the logic and calculation that needed to be performed on the state.
 		Store: Store is an object which provides the state of the application. This object is accessible with help of the provider in the files of the project.
+------------------------------------------------------------------------------------------------------------------
 
 What is RTK ?
 Ans -> RTK stands for Redux Toolkit. It is an official, recommended approach for writing Redux logic. It is a package that wraps around the core Redux package and contains API methods and common dependencies that are considered essential for building a Redux app. RTK simplifies the process of writing Redux code by providing a number of helpful features
+------------------------------------------------------------------------------------------------------------------
 
 what is the use async thunk (createAsyncThunk) ?
 Ans -> In Redux Toolkit, createAsyncThunk is a utility function that uses thunks and middleware to perform asynchronous tasks in a slice. It accepts two arguments:
 A string that will be used as the prefix for the generated action types
 A callback function that returns a promise containing some data, or a rejected promise with an error
+------------------------------------------------------------------------------------------------------------------
 
 What is memo in reactjs
 Ans -> React.memo() is a higher-order component (HOC) that lets you memoize a functional component. This means that React will cache the output of the component and only re-render it when its props change. This can be useful for performance optimization, especially for components that are rendered frequently or that have complex calculations.
+------------------------------------------------------------------------------------------------------------------
 
 What is JSX ?
 Ans -> JSX (JavaScript XML) is an extension to JavaScript that allows you to write HTML syntax within JavaScript function. It is used to describe the structure and appearance of React components.
+------------------------------------------------------------------------------------------------------------------
 
 What is reconciliation ?
 Ans -> Reconciliation is the process through which React updates the Browser DOM and makes React work faster. React use a diffing algorithm so that component updates are predictable and faster. React would first calculate the difference between the real DOM and the copy of DOM (Virtual DOM) when there's an update of components. React stores a copy of Browser DOM which is called Virtual DOM. When we make changes or add data, React creates a new Virtual DOM and compares it with the previous one. This comparison is done by Diffing Algorithm. Now React compares the Virtual DOM with Real DOM. It finds out the changed nodes and updates only the changed nodes in Real DOM leaving the rest nodes as it is. This process is called Reconciliation.
+------------------------------------------------------------------------------------------------------------------
 
 What is controlled component and uncontrolled components ?
 Ans -> A controlled component is a component where the form data is handled by React components. The React component that renders the form also controls what happens in that form on subsequent user input.
+------------------------------------------------------------------------------------------------------------------
 
 What does shouldComponentUpdate do and why is it important?
 Ans -> shouldComponentUpdate is a lifecycle method in React class components that determines whether a component should re-render in response to changes in props or state. It is used to optimize performance by preventing unnecessary re-renders.
+------------------------------------------------------------------------------------------------------------------
 
 Describe how events are handled in React.
 Ans -> Events in React are handled using a synthetic event system. This system provides a unified API for handling events across different browsers. When an event occurs, React creates a synthetic event object and passes it to the event handler. The event handler can then use the event object to get information about the event, such as the target element and the type of event.
@@ -284,9 +326,11 @@ Class methods:
 Event handlers can be defined as methods on a component class. This is the most common way to define event handlers.
 Arrow functions:
 Event handlers can also be defined as arrow functions. This is a more concise way to define event handlers, but it can be more difficult to debug.
+------------------------------------------------------------------------------------------------------------------
 
 What is the second argument that can optionally be passed to setState and what is its purpose?
 Ans -> The second argument that can optionally be passed to setState is a callback function which gets called immediately after the setState is completed and the components get re-rendered. 
+------------------------------------------------------------------------------------------------------------------
 
 List down the variation of setState() in reactjs ?
 Ans -> In React, setState can be used in two main ways to update the state in class components
@@ -314,12 +358,15 @@ Example:
   const increment = () => {
     setCount(prevCount => prevCount + 1);
   };
+------------------------------------------------------------------------------------------------------------------
 
 what is props.childrens ?
 Ans -> {this.props.children} refers to children that are a special prop that is used to pass the data from the parent component to the children component but this data must be enclosed within the parent’s opening and closing tag. 
+------------------------------------------------------------------------------------------------------------------
 
 Does react use HTML ?
 Ans -> Yes, React uses HTML in its JavaScript-XML syntax, called JSX (JavaScript and XML). React applications are often built around a single HTML element, which is called the root node. React components encapsulate HTML, CSS, and JavaScript logic, making it easier to manage and maintain code.
+------------------------------------------------------------------------------------------------------------------
 
 Tell me most significant drawback of reactjs?
 Ans -> Virtual DOM : While the virtual DOM is one of the reasons why React is so fast, it can also be a drawback. The virtual DOM is a JavaScript representation of the real DOM, and it is used to calculate the difference between the two. This can be a CPU-intensive process, especially for large applications.
@@ -331,15 +378,18 @@ Ans -> Virtual DOM : While the virtual DOM is one of the reasons why React is so
 	Performance : React is generally very fast, but it can still have performance problems in some cases. For example, if you have a large number of components in your application, React may have difficulty rendering them all quickly.
 
 	Learning curve : React has a relatively steep learning curve. This is because it is a complex library with a lot of features. If you are new to web development, you may find it difficult to learn React.
+------------------------------------------------------------------------------------------------------------------
 
 Explain React Router?
 Ans -> React Router is a popular routing library for React applications. It enables developers to create dynamic, client-side routing in their applications. This means that users can navigate between different parts of the application without having to reload the page.
 
 React Router provides a number of components and hooks that make it easy to implement routing in React applications. The most important component is the <Router>, which wraps around the entire application and listens for changes to the browser's URL. When the URL changes, the <Router> component will render the appropriate component based on the current route.
 React Router also provides a number of hooks that can be used to access routing information and perform navigation within components. The most important hooks are useNavigate(), useParams(), and useLocation().
+------------------------------------------------------------------------------------------------------------------
 
 How modify each request and response (Interceptor) in react.js
 Ans -> 
+------------------------------------------------------------------------------------------------------------------
 
 What is rest api? How to call api from react ?
 Ans -> A REST API (Representational State Transfer API) allows different applications to communicate with each other over the internet. It uses standard HTTP methods like GET, POST, PUT, and DELETE to perform operations on data.
@@ -399,6 +449,7 @@ const AxiosExample = () => {
 
 export default AxiosExample;
 
+------------------------------------------------------------------------------------------------------------------
 
 Why should we not update the state directly ?
 Ans -> Updating a component's state directly in React can be problematic and lead to unexpected behavior. Here's why:
@@ -409,10 +460,12 @@ Re-rendering issues :- React only re-renders components when their state or prop
 	Race conditions :- Updating the state directly can potentially cause issues due to a potential race condition between other state/prop changes and this particular state update.
 	
 	Virtual DOM optimization :- Directly modifying the state object can make it difficult for React to optimize and reconcile the virtual DOM. 
+------------------------------------------------------------------------------------------------------------------
 
 What is the purpose of callback function as an argument of setState()
 Ans -> The callback function is a function that is passed as an argument to another function. It is called after the other function has finished executing. The purpose of the callback function is to allow the caller to be notified when the other function has finished executing.
 
+------------------------------------------------------------------------------------------------------------------
 
 What is the use refs ?
 Ans -> refs are a feature that allows you to directly access and interact with DOM elements or React components that have been rendered in the UI. They provide a way to reference these elements or components imperatively, outside of the typical data flow through props and state. Refs are commonly used for tasks like focusing elements, triggering animations, or integrating with third-party DOM libraries.hem to React elements via the ref attribute. Refs are commonly assigned to an instance property when a component is constructed.
@@ -422,9 +475,11 @@ const inputRef = React.createRef();
 How to create refs?
 Ans -> const inputRef = React.createRef();
 <input ref={inputRef} />
+------------------------------------------------------------------------------------------------------------------
 
 What are forward ref?
 Ans -> In React, forwardRef is a technique that lets a parent component pass a reference (ref) to a child component. This gives the child component access to a DOM entity created by the parent component, allowing it to read and modify the element from anywhere it's used.
+------------------------------------------------------------------------------------------------------------------
 
 Features of React.js
 Ans -> Component-Based Architecture :-React applications are built using components, which are small, reusable pieces of code 
@@ -438,6 +493,7 @@ Ans -> Component-Based Architecture :-React applications are built using compone
 	Lifecycle Methods:-React components go through a lifecycle of events, such as mounting, updating, and unmounting. Developers can hook into these lifecycle methods to execute code at specific times in a component's life.
 	
 	Hooks:-Hooks are functions that let developers use state and other React features without writing a class. Common hooks include useState, useEffect, and useContext. Hooks make it easier to manage state and side effects in functional components.
+------------------------------------------------------------------------------------------------------------------
 
 difference between fetch and axios?
 Ans -> axios
@@ -452,9 +508,11 @@ Ans -> axios
 
 		4. Axios allows cancelling request and request timeout.			
 		Fetch does not.
-	
- is redux thunk?
+------------------------------------------------------------------------------------------------------------------
+
+what is redux thunk?
 Ans -> Redux Thunk is a middleware for Redux that allows you to write action creators that return a function instead of an action. This is particularly useful for handling asynchronous operations, such as API requests, in a Redux application.
 
-use redux thunk?
+what is use of redux thunk?
 Ans -> The primary purpose of Redux-Thunk is to handle asynchronous actions in Redux. Asynchronous actions, such as fetching data from an API or performing asynchronous computations, are common in web applications.
+------------------------------------------------------------------------------------------------------------------
