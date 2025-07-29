@@ -1,0 +1,43 @@
+What is Git?
+
+Difference between Git and GitHub?
+
+What is the purpose of git init?
+
+What is a Git repository?
+
+Explain the three stages of Git: Working Directory, Staging Area, and Repository.
+
+What is a Git branch?
+
+How do you create and switch branches?
+
+What is the difference between merge and rebase?
+
+What is a fast-forward merge?
+
+What is the purpose of git stash?
+
+What is git clone?
+
+What is git pull vs git fetch?
+
+What is git remote?
+
+How do you resolve merge conflicts?
+
+What is a detached HEAD?
+
+What is the .git folder?
+
+What are SHA-1 hashes in Git?
+
+What is the difference between reset, revert, and checkout?
+
+Why use .gitignore?
+
+What is the purpose of a pull request (PR)?
+
+How do you squash commits?
+
+What are hooks in Git?
